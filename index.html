@@ -26,10 +26,21 @@
   html{scroll-behavior:smooth;}
   body{
     font-family:var(--font-body);
-    background:var(--sand);
     color:var(--charcoal);
     line-height:1.5;
     -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+    background-color:var(--sand);
+    /* soft travel-map texture: faint dot grid + two large color washes, fixed so it fills wide screens instead of sitting empty */
+    background-image:
+      radial-gradient(circle at 15% 8%, rgba(47,143,157,0.10), transparent 42%),
+      radial-gradient(circle at 88% 18%, rgba(255,111,89,0.09), transparent 40%),
+      radial-gradient(circle at 50% 92%, rgba(201,162,39,0.08), transparent 45%),
+      radial-gradient(rgba(43,43,43,0.09) 1px, transparent 1px);
+    background-size:auto, auto, auto, 26px 26px;
+    background-position:0 0, 0 0, 0 0, 0 0;
+    background-repeat:no-repeat, no-repeat, no-repeat, repeat;
+    background-attachment:fixed, fixed, fixed, fixed;
   }
   a{color:inherit;text-decoration:none;}
   img,svg{display:block;max-width:100%;}
@@ -61,7 +72,7 @@
   /* ---- HERO: scales with viewport, capped so it never gets huge on large desktops ---- */
   .hero{
     position:relative;
-    max-width:1200px;
+    max-width:1280px;
     margin:0 auto;
     padding:0 20px;
   }
@@ -124,8 +135,17 @@
     font-size:clamp(0.88rem, 1.6vw, 1rem);
   }
 
+  /* full-bleed band so wide screens get a color block edge-to-edge instead of empty margins */
+  .picks-band{
+    background:linear-gradient(180deg, var(--sand-deep) 0%, var(--sand) 100%);
+    padding-top:8px;
+    padding-bottom:8px;
+    border-top:1px solid rgba(43,43,43,0.06);
+    border-bottom:1px solid rgba(43,43,43,0.06);
+  }
+
   .section-head{
-    max-width:1200px;
+    max-width:1280px;
     margin:56px auto 22px;
     padding:0 24px;
     display:flex;
@@ -151,7 +171,7 @@
   /* ---- Carousel: 4 cards on desktop, 3 on small desktop/laptop, 2 on tablet, 1.15 on phone ---- */
   .carousel-wrap{
     position:relative;
-    max-width:1200px;
+    max-width:1280px;
     margin:0 auto;
     padding:0 24px 10px;
   }
@@ -332,9 +352,12 @@
     .p-name{min-height:auto;}
   }
 
-  /* Very large desktop screens: keep content from stretching too wide */
+  /* Large desktop screens: let content breathe a bit more so it doesn't look stranded in empty space */
   @media (min-width:1400px){
-    .hero, .section-head, .carousel-wrap{ max-width:1320px; }
+    .hero, .section-head, .carousel-wrap{ max-width:1400px; }
+  }
+  @media (min-width:1700px){
+    .hero, .section-head, .carousel-wrap{ max-width:1560px; }
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -365,6 +388,7 @@
   </div>
 </section>
 
+<div class="picks-band">
 <div class="section-head">
   <h3>Today's top picks</h3>
   <span class="hint">Swipe to browse →</span>
@@ -551,6 +575,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
     </button>
   </div>
+</div>
 </div>
 <p class="disclosure">As an Amazon Associate, Pinpoint Travel earns from qualifying purchases. This page contains affiliate links — clicking them costs you nothing extra.</p>
 
