@@ -40,8 +40,9 @@
     color:var(--charcoal);
     line-height:1.5;
     -webkit-font-smoothing:antialiased;
-    max-width:1200px;
-    margin:0 auto;
+    width:100%;
+    max-width:none;
+    margin:0;
     overflow-x:hidden;
   }
   a{color:inherit;text-decoration:none;}
@@ -85,10 +86,166 @@
     50% { opacity: 0.8; }
   }
 
+
+  /* Walking Traveler Animation */
+  @keyframes travelerWalkAcross{
+    0%{left:-120px;transform:scaleX(1);}
+    48%{transform:scaleX(1);}
+    50%{left:calc(100% + 20px);transform:scaleX(-1);}
+    98%{transform:scaleX(-1);}
+    100%{left:-120px;transform:scaleX(1);}
+  }
+  @keyframes travelerBob{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-5px);}
+  }
+  @keyframes legWalk{
+    0%,100%{transform:rotate(28deg);}
+    50%{transform:rotate(-28deg);}
+  }
+  @keyframes legWalkReverse{
+    0%,100%{transform:rotate(-28deg);}
+    50%{transform:rotate(28deg);}
+  }
+  @keyframes suitcaseRoll{
+    0%,100%{transform:rotate(-2deg);}
+    50%{transform:rotate(2deg);}
+  }
+  .walking-traveler{
+    position:fixed;
+    left:-120px;
+    bottom:22px;
+    width:100px;
+    height:105px;
+    z-index:50;
+    pointer-events:none;
+    animation:travelerWalkAcross 28s linear infinite;
+    filter:drop-shadow(0 7px 8px rgba(4,32,36,.18));
+  }
+  .traveler-character{
+    position:absolute;
+    left:20px;
+    bottom:24px;
+    width:50px;
+    height:75px;
+    animation:travelerBob .42s ease-in-out infinite;
+  }
+  .traveler-head{
+    position:absolute;
+    top:0;
+    left:16px;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    background:#f0b27a;
+    border:2px solid #042024;
+  }
+  .traveler-hat{
+    position:absolute;
+    top:-4px;
+    left:12px;
+    width:30px;
+    height:9px;
+    border-radius:12px 12px 3px 3px;
+    background:#127980;
+    border:2px solid #042024;
+  }
+  .traveler-body{
+    position:absolute;
+    top:22px;
+    left:10px;
+    width:32px;
+    height:34px;
+    border-radius:12px 12px 8px 8px;
+    background:#11505C;
+    border:2px solid #042024;
+  }
+  .traveler-arm{
+    position:absolute;
+    top:27px;
+    left:4px;
+    width:8px;
+    height:30px;
+    border-radius:8px;
+    background:#f0b27a;
+    transform-origin:top center;
+    animation:legWalk .42s ease-in-out infinite;
+  }
+  .traveler-arm.right{
+    left:38px;
+    animation:legWalkReverse .42s ease-in-out infinite;
+  }
+  .traveler-leg{
+    position:absolute;
+    top:52px;
+    left:14px;
+    width:9px;
+    height:27px;
+    border-radius:8px;
+    background:#042024;
+    transform-origin:top center;
+    animation:legWalkReverse .42s ease-in-out infinite;
+  }
+  .traveler-leg.right{
+    left:29px;
+    animation:legWalk .42s ease-in-out infinite;
+  }
+  .traveler-backpack{
+    position:absolute;
+    top:24px;
+    left:0;
+    width:16px;
+    height:30px;
+    border-radius:7px;
+    background:#F5A623;
+    border:2px solid #042024;
+  }
+  .traveler-suitcase{
+    position:absolute;
+    right:0;
+    bottom:8px;
+    width:27px;
+    height:35px;
+    border-radius:5px;
+    background:#E1FBFC;
+    border:2px solid #042024;
+    animation:suitcaseRoll .42s ease-in-out infinite;
+  }
+  .traveler-suitcase:before{
+    content:"";
+    position:absolute;
+    width:10px;
+    height:8px;
+    left:6px;
+    top:-9px;
+    border:2px solid #042024;
+    border-bottom:0;
+    border-radius:5px 5px 0 0;
+  }
+  .traveler-suitcase:after{
+    content:"";
+    position:absolute;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:#042024;
+    left:3px;
+    bottom:-7px;
+    box-shadow:16px 0 #042024;
+  }
+  .walking-traveler .travel-dots{
+    position:absolute;
+    bottom:5px;
+    left:0;
+    width:100%;
+    height:2px;
+    border-top:2px dotted rgba(18,121,128,.25);
+  }
+
   /* Hero Section */
   .hero{
     position:relative;
-    max-width:1140px;
+    max-width:1400px;
     margin:0 auto;
     padding:0 20px;
   }
@@ -105,7 +262,6 @@
   .hero-image img.scene{
     position:absolute;inset:0;width:100%;height:100%;
     object-fit:cover;
-    animation: floatAnimation 14s ease-in-out infinite;
   }
   .hero-scrim{
     position:relative;
@@ -159,7 +315,7 @@
 
   /* Section Header */
   .section-head{
-    max-width:1140px;
+    max-width:1400px;
     margin:56px auto 24px;
     padding:0 24px;
     display:flex;
@@ -186,7 +342,7 @@
   /* Carousel */
   .carousel-wrap{
     position:relative;
-    max-width:1140px;
+    max-width:1400px;
     margin:0 auto;
     padding:0 24px 10px;
   }
@@ -359,7 +515,7 @@
 
   /* Featured Article Banner - Japan Tour Link */
   .blog-promo-section{
-    max-width:1140px;
+    max-width:1400px;
     margin:60px auto 20px;
     padding:0 24px;
   }
@@ -382,6 +538,8 @@
     min-height:300px;
     overflow:hidden;
   }
+  .blog-promo-img a{display:block;width:100%;height:100%;}
+
   .blog-promo-img img{
     width:100%;
     height:100%;
@@ -458,17 +616,21 @@
 
   /* Responsive Design Tweaks */
   @media (max-width:960px){
+    .walking-traveler{transform:scale(.9);transform-origin:left bottom;}
     .p-card{ flex:0 0 calc((100% - var(--gap)) / 2); }
     .blog-promo-card{ grid-template-columns:1fr; }
     .blog-promo-img{ min-height:240px; }
     .blog-promo-content{ padding:28px 24px; }
   }
   @media (max-width:580px){
+    header{padding:18px 16px;}
+    .hero{padding:0 12px;}
     .hero-image{min-height:340px;}
     .hero-scrim{padding:28px 20px 24px;}
     .p-card{ flex:0 0 85%; }
     .section-head{margin:40px auto 16px;}
-    .blog-promo-section{margin:40px auto 10px;}
+    .blog-promo-section{margin:40px auto 10px;padding:0 12px;}
+    .walking-traveler{bottom:12px;transform:scale(.82);transform-origin:left bottom;}
   }
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
@@ -477,6 +639,22 @@
 </style>
 </head>
 <body>
+
+  <div class="walking-traveler" aria-hidden="true">
+    <div class="traveler-character">
+      <span class="traveler-head"></span>
+      <span class="traveler-hat"></span>
+      <span class="traveler-backpack"></span>
+      <span class="traveler-body"></span>
+      <span class="traveler-arm"></span>
+      <span class="traveler-arm right"></span>
+      <span class="traveler-leg"></span>
+      <span class="traveler-leg right"></span>
+    </div>
+    <span class="traveler-suitcase"></span>
+    <span class="travel-dots"></span>
+  </div>
+
 
 <header>
   <div class="brand">
@@ -682,7 +860,9 @@
 <section class="blog-promo-section">
   <div class="blog-promo-card">
     <div class="blog-promo-img">
-      <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80" alt="Japan Tour Travel Guide">
+      <a href="https://pinpointtravel.store/blog/japan-tour/" target="_blank" rel="noopener">
+        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1000&q=85" alt="Japan Tour Travel Guide">
+      </a>
     </div>
     <div class="blog-promo-content">
       <span class="blog-tag">Featured Travel Guide</span>
