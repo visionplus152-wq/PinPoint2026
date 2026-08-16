@@ -1,42 +1,191 @@
-![Hakone and Mount Fuji day tour views](https://res.klook.com/image/upload/c_crop,h_1412,w_2259,x_0,y_18,z_0.3/w_1265,h_791,c_fill,q_85/activities/vyma3n3oyujr6x1mo970.jpg)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mt. Fuji & Hakone 1-Day Tour Highlights</title>
+  <style>
+    /* Compact Container Styling */
+    .article-card {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 24px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #2c3e50;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border: 1px solid #f0f0f0;
+      line-height: 1.6;
+    }
 
-# One Day, Six Wonders: Tokyo, Hakone & Mount Fuji in a Single Trip
+    .article-card h2 {
+      font-size: 1.5rem;
+      color: #1a202c;
+      margin-top: 0;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
 
-Short on time in Japan but don't want to miss Mount Fuji? This one-day escape from Tokyo packs six unforgettable stops — a floating torii gate, a pirate ship cruise, a volcanic valley, swan-shaped boats, and the crystal-clear springs of Oshino Hakkai — into a single, easy, guided day trip.
+    .badge {
+      display: inline-block;
+      background: #fff5f5;
+      color: #ff5722;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
 
-## Why This Tour Works
+    .intro-text {
+      font-size: 0.95rem;
+      color: #4a5568;
+      margin-bottom: 20px;
+    }
 
-- 🚌 **Hassle-free pickup** from central Tokyo, no train transfers to plan
-- ⛩️ **Heiwa no Torii** — the iconic lakeside gate framed by Fuji
-- 🚢 **Hakone Pirate Ship** cruise across Lake Ashi
-- 🚡 **Hakone Ropeway** ride over the smoking valley of Owakudani
-- 🦢 **Swan Beach, Lake Yamanaka** for postcard Fuji views
-- 💧 **Oshino Hakkai** — eight sacred, spring-fed ponds in a historic village
-- 🗣️ English-speaking guide included, with free cancellation up to 24 hours out
+    /* Hyperlinked Image Styling */
+    .image-link {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      text-decoration: none;
+    }
 
-[**👉 Check Live Prices & Book Your Seat**](https://www.klook.com/activity/173043-oshino-hakkai-hikawa-clock-shop-hakone-en-day-tour/?spm=SearchResult.SearchResult_LIST&clickId=7c49d93eaa)
+    .image-link img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
 
-## What a Day on the Road Looks Like
+    .image-link:hover img {
+      transform: scale(1.04);
+    }
 
-Pickup starts early (around 7:30–8:00 AM) from central Tokyo. From there, it's a scenic ride into Hakone for the torii gate and a pirate-ship crossing of Lake Ashi, followed by the ropeway over Owakudani's steaming vents. The afternoon swings toward Mount Fuji, stopping at Lake Yamanaka's swan-boat beach before wrapping up at the postcard-famous ponds of Oshino Hakkai. You're dropped back in Tokyo by early evening.
+    .image-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.7));
+      color: #ffffff;
+      padding: 12px 16px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
 
-![Hakone Ropeway over Owakudani](https://res.klook.com/image/upload/c_fill,w_750,h_469/activities/wlor3aauk5t0wzzf7sap.jpg)
+    /* Highlights List */
+    .highlights-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px 0;
+    }
 
-Rated **4.8/5 from 200+ travelers**, with guides frequently praised for making the long day feel easy and fun — even on days when Fuji plays hide-and-seek behind the clouds.
+    .highlights-list li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 10px;
+      font-size: 0.92rem;
+      color: #2d3748;
+    }
 
-## Good to Know
+    .highlights-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #ff5722;
+      font-weight: bold;
+    }
 
-- Multiple departure points and times — pick what suits you at checkout
-- Entry to Heiwa no Torii, the ropeway, Owakudani, Yamanaka and Oshino Hakkai is included
-- Meals and the pirate ship fee are paid on-site
-- Free cancellation with 24 hours' notice
+    .anchor-link {
+      color: #ff5722;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
 
-![Oshino Hakkai spring-fed ponds](https://res.klook.com/image/upload/c_fill,w_750,h_469/activities/swkhjg28pqwoxxmfitsk.jpg)
+    .anchor-link:hover {
+      border-color: #ff5722;
+    }
 
-## Ready to See Fuji Up Close?
+    /* CTA Button Styling */
+    .cta-container {
+      text-align: center;
+      margin-top: 20px;
+    }
 
-Seats fill up fast in peak season, and prices shift daily.
+    .btn-cta {
+      display: inline-block;
+      width: 100%;
+      box-sizing: border-box;
+      background: linear-gradient(135deg, #ff5722 0%, #ff7043 100%);
+      color: #ffffff !important;
+      font-weight: 700;
+      font-size: 1rem;
+      text-align: center;
+      padding: 14px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
+      transition: all 0.3s ease;
+    }
 
-### [🎟️ Reserve Your Hakone & Fuji Day Tour Now](https://www.klook.com/activity/173043-oshino-hakkai-hikawa-clock-shop-hakone-en-day-tour/?spm=SearchResult.SearchResult_LIST&clickId=7c49d93eaa)
+    .btn-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 87, 34, 0.4);
+    }
 
-*Booking is instant, refundable, and takes less than 2 minutes.*
+    .cta-subtext {
+      font-size: 0.78rem;
+      color: #718096;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <article class="article-card">
+    <span class="badge">Japan Travel Guide</span>
+    
+    <h2>Explore Mt. Fuji & Hakone in One Unforgettable Day</h2>
+    
+    <p class="intro-text">
+      Want to see Japan’s most iconic landscapes without the hassle of planning transport? This <a href="https://www.klook.com/activity/173043-oshino-hakkai-hikawa-clock-shop-hakone-en-day-tour/?spm=SearchResult.SearchResult_LIST&clickId=7c49d93eaa" target="_blank" rel="nofollow sponsored" class="anchor-link">top-rated Tokyo round-trip tour</a> brings you to 6 unforgettable spots around Mt. Fuji and Hakone in a single day.
+    </p>
+
+    <!-- Hyperlinked Image 1 -->
+    <a href="https://www.klook.com/activity/173043-oshino-hakkai-hikawa-clock-shop-hakone-en-day-tour/?spm=SearchResult.SearchResult_LIST&clickId=7c49d93eaa" target="_blank" rel="nofollow sponsored" class="image-link">
+      <img src="https://res.klook.com/image/upload/c_crop,h_1412,w_2259,x_0,y_18,z_0.3/w_1265,h_791,c_fill,q_85/activities/vyma3n3oyujr6x1mo970.jpg" alt="Mt Fuji Hakone Day Tour">
+      <div class="image-caption"> Click image to view tour availability & deals</div>
+    </a>
+
+    <h3>Tour Highlights You Can't Miss:</h3>
+    <ul class="highlights-list">
+      <li><strong>Oshino Hakkai:</strong> Stroll around crystal-clear spring ponds fed by snowmelt from Mt. Fuji.</li>
+      <li><strong>Hikawa Clock Shop Street:</strong> Capture the famous Instagram photo with Mt. Fuji towering directly over the street.</li>
+      <li><strong>Hakone-en & Ropeway:</strong> Take in panoramic views of Lake Ashi and iconic landscapes.</li>
+      <li><strong>Stress-Free Travel:</strong> Includes comfortable round-trip bus transport direct from Tokyo with an English-speaking guide.</li>
+    </ul>
+
+    <p class="intro-text">
+      Whether you're looking for postcard-worthy photography spots or pure scenic relaxation, you can easily <a href="https://www.klook.com/activity/173043-oshino-hakkai-hikawa-clock-shop-hakone-en-day-tour/?spm=SearchResult.SearchResult_LIST&clickId=7c49d93eaa" target="_blank" rel="nofollow sponsored" class="anchor-link">reserve your seat on the Mt. Fuji 6-Attractions Tour here</a>.
+    </p>
+
+    <!-- Main CTA Button -->
+    <div class="cta-container">
+      <a href="https://www.klook.com/activity/173043-oshino-hakkai-hikawa-clock-shop-hakone-en-day-tour/?spm=SearchResult.SearchResult_LIST&clickId=7c49d93eaa" target="_blank" rel="nofollow sponsored" class="btn-cta">
+        Check Prices & Book Day Tour →
+      </a>
+      <div class="cta-subtext"> Instant Confirmation • Free Cancellation Options</div>
+    </div>
+  </article>
+
+</body>
+</html>
