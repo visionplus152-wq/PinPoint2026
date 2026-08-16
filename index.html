@@ -23,13 +23,14 @@
     --sand-deep:#E8FBFC;
     --teal:#127980;
     --coral:#11505C;
-    --gold:#127980;
+    --gold:#F5A623;
     --charcoal:#042024;
     --white:#FFFFFF;
+    --accent-red:#E80E0E;
     --font-display:'Fraunces', serif;
     --font-body:'Inter', sans-serif;
     --font-mono:'JetBrains Mono', monospace;
-    --radius:18px;
+    --radius:20px;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -39,102 +40,127 @@
     color:var(--charcoal);
     line-height:1.5;
     -webkit-font-smoothing:antialiased;
-    max-width:1080px;
+    max-width:1200px;
     margin:0 auto;
+    overflow-x:hidden;
   }
   a{color:inherit;text-decoration:none;}
   img,svg{display:block;max-width:100%;}
+
+  /* Header */
   header{
     display:flex;align-items:center;justify-content:center;
-    padding:22px 20px;
-    background:var(--sand-deep);
+    padding:24px 20px;
+    background:transparent;
   }
   .brand{
-    display:flex;align-items:center;gap:10px;
+    display:flex;align-items:center;gap:12px;
     font-family:var(--font-display);
-    font-weight:600;
-    font-size:1.35rem;
+    font-weight:700;
+    font-size:1.5rem;
     color:var(--ink);
     letter-spacing:0.01em;
   }
   .brand .logo-mark{
-    width:34px;height:34px;
+    width:40px;height:40px;
     background:var(--ink);
     border-radius:50%;
     display:flex;align-items:center;justify-content:center;
     flex-shrink:0;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
   }
-  .brand .logo-mark svg{width:18px;height:18px;stroke:var(--sand);}
+
+  /* Keyframe Animations for Travel Vibe */
+  @keyframes floatAnimation {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(1deg); }
+  }
+  @keyframes planeFly {
+    0% { transform: translateX(-20px) translateY(5px); opacity: 0; }
+    50% { opacity: 0.8; }
+    100% { transform: translateX(20px) translateY(-5px); opacity: 0; }
+  }
+  @keyframes pulseGlow {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+  }
+
+  /* Hero Section */
   .hero{
     position:relative;
-    max-width:1080px;
+    max-width:1140px;
     margin:0 auto;
     padding:0 20px;
   }
   .hero-image{
     position:relative;
-    border-radius:24px;
+    border-radius:var(--radius);
     overflow:hidden;
-    min-height:400px;
+    min-height:420px;
     display:flex;
     align-items:flex-end;
     background:#030C14;
+    box-shadow: 0 20px 40px -15px rgba(2, 43, 58, 0.3);
   }
   .hero-image img.scene{
     position:absolute;inset:0;width:100%;height:100%;
     object-fit:cover;
+    animation: floatAnimation 14s ease-in-out infinite;
   }
   .hero-scrim{
     position:relative;
     z-index:2;
     width:100%;
-    padding:38px 30px 32px;
-    background:linear-gradient(180deg, rgba(2, 43, 58, 0) 0%, rgba(2, 43, 58, 0.72) 100%);
+    padding:48px 36px 36px;
+    background:linear-gradient(180deg, rgba(2, 43, 58, 0) 0%, rgba(2, 43, 58, 0.85) 100%);
   }
   .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
     font-family:var(--font-mono);
-    font-size:0.72rem;
+    font-size:0.75rem;
     letter-spacing:0.18em;
     text-transform:uppercase;
-    color:#000;
-    opacity:0.85;
-    margin-bottom:10px;
+    color:var(--sand);
+    background:rgba(18, 121, 128, 0.6);
+    padding:4px 12px;
+    border-radius:20px;
+    backdrop-filter:blur(4px);
+    margin-bottom:12px;
+  }
+  .eyebrow-plane {
+    display:inline-block;
+    animation: planeFly 4s ease-in-out infinite;
   }
   h1{
     font-family:var(--font-display);
-    font-weight:600;
-    font-size:clamp(1.9rem, 5vw, 3rem);
-    line-height:1.08;
+    font-weight:700;
+    font-size:clamp(2rem, 5vw, 3.2rem);
+    line-height:1.1;
     color:var(--sand);
     letter-spacing:-0.01em;
-    max-width:560px;
-    text-shadow:1px 10px 20px rgba(2, 43, 58, 0.98);
-    -webkit-text-stroke:2px #030C14;
-    paint-order:stroke fill;
+    max-width:600px;
+    text-shadow:0 4px 12px rgba(2, 43, 58, 0.8);
   }
   h1 em{
     font-style:normal;
-    color:var(--sand);
-    -webkit-text-stroke:2px #030C14;
-    paint-order:stroke fill;
-    text-shadow:1px 10px 20px rgba(2, 43, 58, 0.91);
+    color:#73E2EC;
   }
   .hero-image .sub{
-    margin-top:12px;
-    max-width:440px;
-    color:var(--sand-deep);
-    font-weight:700;
-    font-size:0.92rem;
-    text-shadow:
-      -1px -1px 0 #030C14,
-      1px -1px 0 #030C14,
-      -1px 1px 0 #030C14,
-      1px 1px 0 #030C14,
-      0 2px 6px rgba(2,43,58,0.6);
+    margin-top:14px;
+    max-width:480px;
+    color:var(--sand);
+    font-weight:500;
+    font-size:1rem;
+    opacity:0.95;
+    text-shadow:0 2px 4px rgba(0,0,0,0.5);
   }
+
+  /* Section Header */
   .section-head{
-    max-width:1080px;
-    margin:56px auto 22px;
+    max-width:1140px;
+    margin:56px auto 24px;
     padding:0 24px;
     display:flex;
     align-items:baseline;
@@ -144,165 +170,279 @@
   }
   .section-head h3{
     font-family:var(--font-display);
-    font-weight:600;
-    font-size:clamp(1.4rem, 3vw, 1.8rem);
+    font-weight:700;
+    font-size:clamp(1.5rem, 3vw, 2rem);
     color:var(--ink);
   }
   .section-head .hint{
     font-family:var(--font-mono);
-    font-size:0.72rem;
+    font-size:0.75rem;
     letter-spacing:0.08em;
     text-transform:uppercase;
-    color:var(--coral);
+    color:var(--teal);
+    font-weight:600;
   }
-  /* ---- Carousel: shows exactly 3 cards, scrolls one card at a time ---- */
+
+  /* Carousel */
   .carousel-wrap{
     position:relative;
-    max-width:1080px;
+    max-width:1140px;
     margin:0 auto;
     padding:0 24px 10px;
   }
   .carousel{
-    --gap: 22px;
+    --gap: 24px;
     display:flex;
     gap:var(--gap);
     overflow-x:auto;
     scroll-snap-type:x mandatory;
-    padding:6px 4px 20px;
+    padding:12px 4px 24px;
     scrollbar-width:thin;
     scrollbar-color:var(--teal) transparent;
   }
   .carousel::-webkit-scrollbar{height:6px;}
-  .carousel::-webkit-scrollbar-thumb{background:var(--sand-deep);border-radius:10px;}
+  .carousel::-webkit-scrollbar-thumb{background:var(--teal);border-radius:10px;}
   .carousel::-webkit-scrollbar-track{background:transparent;}
+
+  /* Product Cards - Modern Styling */
   .p-card{
     scroll-snap-align:start;
     flex:0 0 calc((100% - (2 * var(--gap))) / 3);
-    background:#C5E7ED;
-    border-radius:16px;
-    padding:20px 20px 22px;
-    box-shadow:0 12px 24px -14px rgba(22,50,79,0.22), 0 30px 44px -30px rgba(0,0,0,0.28);
+    background:var(--white);
+    border-radius:20px;
+    padding:16px;
+    border:1px solid rgba(18, 121, 128, 0.12);
+    box-shadow:0 10px 30px -10px rgba(4, 32, 36, 0.08);
     display:flex;
     flex-direction:column;
-    transition:transform 0.32s cubic-bezier(.22,1,.36,1), box-shadow 0.32s cubic-bezier(.22,1,.36,1);
-    will-change:transform;
+    transition:all 0.35s cubic-bezier(.22,1,.36,1);
+    position:relative;
   }
   .p-card:hover,
   .p-card:focus-within{
     transform:translateY(-8px);
-    box-shadow:0 20px 30px -12px rgba(22,50,79,0.28), 0 44px 60px -28px rgba(0,0,0,0.35);
+    box-shadow:0 20px 40px -15px rgba(18, 121, 128, 0.22);
+    border-color:var(--teal);
+  }
+  .p-badge{
+    position:absolute;
+    top:26px;
+    left:26px;
+    z-index:2;
+    background:var(--teal);
+    color:var(--white);
+    font-family:var(--font-mono);
+    font-size:0.65rem;
+    font-weight:700;
+    padding:4px 10px;
+    border-radius:30px;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
   }
   .p-photo{
     width:100%;
-    aspect-ratio:4 / 5;
-    border-radius:12px;
-    background:var(--sand-deep);
+    aspect-ratio:1 / 1;
+    border-radius:14px;
+    background:var(--sand);
     display:flex;
     align-items:center;
     justify-content:center;
     margin-bottom:16px;
     overflow:hidden;
+    position:relative;
   }
   .p-photo img{
     width:100%;
     height:100%;
     object-fit:cover;
-    transition:transform 0.45s cubic-bezier(.22,1,.36,1);
+    transition:transform 0.5s cubic-bezier(.22,1,.36,1);
   }
   .p-card:hover .p-photo img,
   .p-card:focus-within .p-photo img{
-    transform:scale(1.06);
+    transform:scale(1.08);
   }
-  .p-photo svg{width:40px;height:44px;stroke:var(--ink);opacity:0.6;}
+  .p-photo svg{width:40px;height:44px;stroke:var(--ink);opacity:0.4;}
+  .p-details{
+    display:flex;
+    flex-direction:column;
+    flex-grow:1;
+  }
   .p-name{
     font-family:var(--font-display);
-    font-size:1.08rem;
+    font-size:1.15rem;
     font-weight:600;
-    color:#02303d;
+    color:var(--charcoal);
     margin-bottom:8px;
-    min-height:44px;
-    transition:color 0.25s ease;
+    line-height:1.3;
+    min-height:46px;
   }
   .p-name a{
-    color:#02303d;
+    color:var(--charcoal);
     text-decoration:none;
     transition:color 0.25s ease;
   }
-  .p-card:hover .p-name,
-  .p-card:focus-within .p-name,
   .p-card:hover .p-name a,
   .p-card:focus-within .p-name a{
-    color:#20bae6;
+    color:var(--teal);
   }
-  .p-stars{display:flex;gap:2px;margin-bottom:12px;}
-  .p-stars svg{width:13px;height:13px;fill:var(--gold);}
+  .p-stars{display:flex;gap:3px;margin-bottom:14px;}
+  .p-stars svg{width:14px;height:14px;fill:var(--gold);}
   .p-row{
     display:flex;
     align-items:center;
     justify-content:space-between;
     gap:10px;
     margin-top:auto;
+    padding-top:12px;
+    border-top:1px dashed rgba(0,0,0,0.08);
   }
   .p-price{
     font-family:var(--font-mono);
-    font-weight:500;
-    font-size:1.08rem;
+    font-weight:700;
+    font-size:1.15rem;
     color:var(--ink);
   }
   .p-price .was{
-    font-size:0.76rem;
-    color:var(--teal);
+    font-size:0.8rem;
+    color:#888;
     text-decoration:line-through;
-    margin-right:4px;
+    margin-right:6px;
+    font-weight:500;
   }
   .p-btn{
     display:inline-flex;
     align-items:center;
-    gap:5px;
-    padding:10px 16px;
-    background:var(--coral);
+    justify-content:center;
+    gap:6px;
+    padding:10px 18px;
+    background:var(--teal);
     color:var(--white);
-    border-radius:999px;
+    border-radius:30px;
     font-weight:600;
-    font-size:0.82rem;
+    font-size:0.85rem;
     white-space:nowrap;
     text-decoration:none;
-    transition:background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
-    box-shadow:0 8px 16px -8px rgba(17,80,92,0.55);
+    transition:all 0.25s ease;
+    box-shadow:0 4px 12px rgba(18, 121, 128, 0.25);
   }
   .p-btn:hover{
-    background:#e80e0e;
+    background:var(--accent-red);
     color:var(--white);
-    text-decoration:none;
     transform:translateY(-2px);
-    box-shadow:0 12px 20px -8px rgba(232, 14, 14, 0.65);
+    box-shadow:0 8px 18px rgba(232, 14, 14, 0.35);
   }
+
   .carousel-arrows{
     display:flex;
-    gap:8px;
+    gap:12px;
     justify-content:center;
-    margin-top:2px;
+    margin-top:12px;
   }
   .arrow-btn{
-    width:38px;height:38px;
+    width:42px;height:42px;
     border-radius:50%;
-    background:#055E61;
-    box-shadow:0 6px 16px -8px rgba(22,50,79,0.4);
+    background:var(--white);
+    border:1px solid rgba(18, 121, 128, 0.2);
+    box-shadow:0 4px 12px rgba(0,0,0,0.05);
     display:flex;align-items:center;justify-content:center;
     cursor:pointer;
-    border:none;
-    color:var(--white);
-    transition:background 0.2s ease, color 0.2s ease;
+    color:var(--teal);
+    transition:all 0.25s ease;
   }
-  .arrow-btn:hover{background:#37B6CC;color:var(--white);}
-  .arrow-btn svg{width:16px;height:16px;}
+  .arrow-btn:hover{
+    background:var(--teal);
+    color:var(--white);
+    border-color:var(--teal);
+    transform:scale(1.05);
+  }
+  .arrow-btn svg{width:18px;height:18px;}
+
+  /* Featured Article Banner - Japan Tour Link */
+  .blog-promo-section{
+    max-width:1140px;
+    margin:60px auto 20px;
+    padding:0 24px;
+  }
+  .blog-promo-card{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    background:var(--white);
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:0 15px 35px -10px rgba(4, 32, 36, 0.1);
+    border:1px solid rgba(18, 121, 128, 0.15);
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .blog-promo-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 22px 45px -12px rgba(18, 121, 128, 0.2);
+  }
+  .blog-promo-img{
+    position:relative;
+    min-height:300px;
+    overflow:hidden;
+  }
+  .blog-promo-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform 0.6s ease;
+  }
+  .blog-promo-card:hover .blog-promo-img img{
+    transform:scale(1.05);
+  }
+  .blog-promo-content{
+    padding:40px 36px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .blog-tag{
+    display:inline-block;
+    font-family:var(--font-mono);
+    font-size:0.7rem;
+    font-weight:700;
+    text-transform:uppercase;
+    color:var(--teal);
+    letter-spacing:0.12em;
+    margin-bottom:10px;
+  }
+  .blog-title{
+    font-family:var(--font-display);
+    font-size:clamp(1.4rem, 2.5vw, 1.8rem);
+    font-weight:700;
+    color:var(--ink);
+    line-height:1.25;
+    margin-bottom:12px;
+  }
+  .blog-excerpt{
+    color:#4A5568;
+    font-size:0.95rem;
+    margin-bottom:24px;
+    line-height:1.6;
+  }
+  .blog-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-weight:700;
+    color:var(--teal);
+    font-size:0.95rem;
+    text-decoration:none;
+    transition:gap 0.25s ease, color 0.25s ease;
+  }
+  .blog-link:hover{
+    color:var(--accent-red);
+    gap:12px;
+  }
+
   .disclosure{
-    max-width:640px;
+    max-width:680px;
     margin:56px auto 0;
     padding:16px 24px;
     text-align:center;
     font-size:0.8rem;
-    color:#080000;
+    color:#555;
     font-style:italic;
   }
   footer{
@@ -315,207 +455,219 @@
     letter-spacing:0.06em;
     color:var(--teal);
   }
-  @media (max-width:900px){
+
+  /* Responsive Design Tweaks */
+  @media (max-width:960px){
     .p-card{ flex:0 0 calc((100% - var(--gap)) / 2); }
+    .blog-promo-card{ grid-template-columns:1fr; }
+    .blog-promo-img{ min-height:240px; }
+    .blog-promo-content{ padding:28px 24px; }
   }
-  @media (max-width:520px){
-    .hero-image{min-height:320px;border-radius:18px;}
-    .p-card{ flex:0 0 82%; }
+  @media (max-width:580px){
+    .hero-image{min-height:340px;}
+    .hero-scrim{padding:28px 20px 24px;}
+    .p-card{ flex:0 0 85%; }
+    .section-head{margin:40px auto 16px;}
+    .blog-promo-section{margin:40px auto 10px;}
   }
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
-    *{transition:none !important;}
+    *{transition:none !important; animation:none !important;}
   }
 </style>
 </head>
 <body>
+
 <header>
   <div class="brand">
     <span class="logo-mark">
-      <img src="logo.png.png" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+      <img src="logo.png.png" alt="Pinpoint Travel Logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" onerror="this.style.display='none';">
     </span>
     Pinpoint Travel
   </div>
 </header>
+
 <section class="hero">
   <div class="hero-image">
-    <img class="scene" src="hero.jpg" alt="Travel banner">
+    <img class="scene" src="hero.jpg" alt="Travel banner" onerror="this.src='https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80'">
     <div class="hero-scrim">
-      <div class="eyebrow"></div>
+      <div class="eyebrow">
+        <span class="eyebrow-plane">✈</span> Explore The World Smart
+      </div>
       <h1>Travel <em>Without</em> Limits</h1>
       <p class="sub">Find the best travel essentials, exclusive deals, and expert recommendations for your next adventure.</p>
     </div>
   </div>
 </section>
+
 <div class="section-head">
-  <h3>Today's top picks</h3>
+  <h3>Today's Top Picks</h3>
   <span class="hint">Swipe to browse →</span>
 </div>
+
 <div class="carousel-wrap">
   <div class="carousel" id="carousel">
+    
     <!-- Card 1 -->
     <div class="p-card">
+      <span class="p-badge">Best Seller</span>
       <div class="p-photo">
         <a href="product.html" target="_blank" rel="nofollow sponsored noopener">
-          <img
-            src=""
-            alt="Compression Packing Cubes (6-Set)"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
-          >
+          <img src="images/packing-cubes.jpg" alt="Compression Packing Cubes (6-Set)" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
           <svg style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="13" rx="2"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg>
         </a>
       </div>
-      <div class="p-name">
-        <a href="product.html" target="_blank" rel="nofollow sponsored noopener">Compression Packing Cubes (6-Set)</a>
-      </div>
-      <div class="p-stars">
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-      </div>
-      <div class="p-row">
-        <div class="p-price"><span class="was">$40</span>$24.99</div>
-        <a href="product.html" class="p-btn" target="_blank" rel="nofollow sponsored noopener">Buy →</a>
+      <div class="p-details">
+        <div class="p-name">
+          <a href="product.html" target="_blank" rel="nofollow sponsored noopener">Compression Packing Cubes (6-Set)</a>
+        </div>
+        <div class="p-stars">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+        </div>
+        <div class="p-row">
+          <div class="p-price"><span class="was">$40</span>$24.99</div>
+          <a href="product.html" class="p-btn" target="_blank" rel="nofollow sponsored noopener">Buy →</a>
+        </div>
       </div>
     </div>
+
     <!-- Card 2 -->
     <div class="p-card">
+      <span class="p-badge">Essential</span>
       <div class="p-photo">
         <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-2" target="_blank" rel="nofollow sponsored noopener">
-          <img
-            src="c:\Users\Nalin\Downloads\71pxdt02HTL._AC_SX679_.jpg"
-            alt="Universal Travel Adapter"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
-          >
+          <img src="c:\Users\Nalin\Downloads\71pxdt02HTL._AC_SX679_.jpg" alt="Universal Travel Adapter" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
           <svg style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="10" rx="2"/><path d="M7 8V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/><circle cx="12" cy="13" r="2"/></svg>
         </a>
       </div>
-      <div class="p-name">
-        <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-2" target="_blank" rel="nofollow sponsored noopener">Universal Travel Adapter</a>
-      </div>
-      <div class="p-stars">
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-      </div>
-      <div class="p-row">
-        <div class="p-price">$18.50</div>
-        <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-2" class="p-btn" target="_blank" rel="nofollow sponsored noopener">Buy →</a>
+      <div class="p-details">
+        <div class="p-name">
+          <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-2" target="_blank" rel="nofollow sponsored noopener">Universal Travel Adapter</a>
+        </div>
+        <div class="p-stars">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+        </div>
+        <div class="p-row">
+          <div class="p-price">$18.50</div>
+          <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-2" class="p-btn" target="_blank" rel="nofollow sponsored noopener">Buy →</a>
+        </div>
       </div>
     </div>
+
     <!-- Card 3 -->
     <div class="p-card">
       <div class="p-photo">
         <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-3" target="_blank" rel="nofollow sponsored noopener">
-          <img
-            src="c:\Users\Nalin\Downloads\71fYV55XVXL._AC_SX466_.jpg"
-            alt="Neck Pillow + Eye Mask Set"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
-          >
+          <img src="c:\Users\Nalin\Downloads\71fYV55XVXL._AC_SX466_.jpg" alt="Neck Pillow + Eye Mask Set" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
           <svg style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
         </a>
       </div>
-      <div class="p-name">
-        <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-3" target="_blank" rel="nofollow sponsored noopener">Neck Pillow + Eye Mask Set</a>
-      </div>
-      <div class="p-stars">
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-      </div>
-      <div class="p-row">
-        <div class="p-price"><span class="was">$29</span>$21.99</div>
-        <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-3" class="p-btn" target="_blank" rel="nofollow sponsored noopener">Buy →</a>
+      <div class="p-details">
+        <div class="p-name">
+          <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-3" target="_blank" rel="nofollow sponsored noopener">Neck Pillow + Eye Mask Set</a>
+        </div>
+        <div class="p-stars">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+        </div>
+        <div class="p-row">
+          <div class="p-price"><span class="was">$29</span>$21.99</div>
+          <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-3" class="p-btn" target="_blank" rel="nofollow sponsored noopener">Buy →</a>
+        </div>
       </div>
     </div>
+
     <!-- Card 4 -->
     <div class="p-card">
       <div class="p-photo">
         <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-4" target="_blank" rel="nofollow sponsored noopener">
-          <img
-            src="images/luggage-scale.jpg"
-            alt="Digital Luggage Scale"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
-          >
+          <img src="images/luggage-scale.jpg" alt="Digital Luggage Scale" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
           <svg style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 8l5-5 5 5"/><rect x="5" y="14" width="14" height="6" rx="1"/></svg>
         </a>
       </div>
-      <div class="p-name">
-        <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-4" target="_blank" rel="nofollow sponsored noopener">Digital Luggage Scale</a>
-      </div>
-      <div class="p-stars">
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-      </div>
-      <div class="p-row">
-        <div class="p-price">$12.99</div>
-        <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-4" class="p-btn" target="_blank" rel="nofollow sponsored noopener">Buy →</a>
+      <div class="p-details">
+        <div class="p-name">
+          <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-4" target="_blank" rel="nofollow sponsored noopener">Digital Luggage Scale</a>
+        </div>
+        <div class="p-stars">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+        </div>
+        <div class="p-row">
+          <div class="p-price">$12.99</div>
+          <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-4" class="p-btn" target="_blank" rel="nofollow sponsored noopener">Buy →</a>
+        </div>
       </div>
     </div>
+
     <!-- Card 5 -->
     <div class="p-card">
       <div class="p-photo">
         <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-5" target="_blank" rel="nofollow sponsored noopener">
-          <img
-            src="images/travel-towel.jpg"
-            alt="Quick-Dry Travel Towel"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
-          >
+          <img src="images/travel-towel.jpg" alt="Quick-Dry Travel Towel" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
           <svg style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4c4 0 6 2 8 2s4-2 8-2M4 12c4 0 6 2 8 2s4-2 8-2M4 20c4 0 6 2 8 2s4-2 8-2"/></svg>
         </a>
       </div>
-      <div class="p-name">
-        <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-5" target="_blank" rel="nofollow sponsored noopener">Quick-Dry Travel Towel</a>
-      </div>
-      <div class="p-stars">
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-      </div>
-      <div class="p-row">
-        <div class="p-price">$9.99</div>
-        <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-5" class="p-btn" target="_blank" rel="nofollow sponsored noopener">Buy →</a>
+      <div class="p-details">
+        <div class="p-name">
+          <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-5" target="_blank" rel="nofollow sponsored noopener">Quick-Dry Travel Towel</a>
+        </div>
+        <div class="p-stars">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+        </div>
+        <div class="p-row">
+          <div class="p-price">$9.99</div>
+          <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-5" class="p-btn" target="_blank" rel="nofollow sponsored noopener">Buy →</a>
+        </div>
       </div>
     </div>
+
     <!-- Card 6 -->
     <div class="p-card">
       <div class="p-photo">
         <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-6" target="_blank" rel="nofollow sponsored noopener">
-          <img
-            src="images/crossbody-bag.jpg"
-            alt="Anti-Theft Crossbody Bag"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
-          >
+          <img src="images/crossbody-bag.jpg" alt="Anti-Theft Crossbody Bag" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
           <svg style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L14 9 L21 9.5 L15.5 14 L17 21 L12 17 L7 21 L8.5 14 L3 9.5 L10 9 Z"/></svg>
         </a>
       </div>
-      <div class="p-name">
-        <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-6" target="_blank" rel="nofollow sponsored noopener">Anti-Theft Crossbody Bag</a>
-      </div>
-      <div class="p-stars">
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
-      </div>
-      <div class="p-row">
-        <div class="p-price"><span class="was">$45</span>$34.99</div>
-        <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-6" class="p-btn" target="_blank" rel="nofollow sponsored noopener">Buy →</a>
+      <div class="p-details">
+        <div class="p-name">
+          <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-6" target="_blank" rel="nofollow sponsored noopener">Anti-Theft Crossbody Bag</a>
+        </div>
+        <div class="p-stars">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.3 6.1L10 14.8 4.5 17.5l1.3-6.1L1.2 7.2l6.2-.6z"/></svg>
+        </div>
+        <div class="p-row">
+          <div class="p-price"><span class="was">$45</span>$34.99</div>
+          <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK-6" class="p-btn" target="_blank" rel="nofollow sponsored noopener">Buy →</a>
+        </div>
       </div>
     </div>
+
   </div>
+
   <div class="carousel-arrows">
     <button class="arrow-btn" id="arrow-left" aria-label="Scroll left">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
@@ -525,8 +677,28 @@
     </button>
   </div>
 </div>
+
+<!-- Blog Promotion Section (Japan Tour Link) -->
+<section class="blog-promo-section">
+  <div class="blog-promo-card">
+    <div class="blog-promo-img">
+      <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80" alt="Japan Tour Travel Guide">
+    </div>
+    <div class="blog-promo-content">
+      <span class="blog-tag">Featured Travel Guide</span>
+      <h2 class="blog-title">Planning Your Next Ultimate Adventure to Japan?</h2>
+      <p class="blog-excerpt">Explore essential travel tips, top destinations, packing recommendations, and hidden gems for an unforgettable journey through Japan.</p>
+      <a href="https://pinpointtravel.store/blog/japan-tour/" class="blog-link" target="_blank">
+        Explore Complete Japan Tour Guide <span>→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <p class="disclosure">As an Amazon Associate, Pinpoint Travel earns from qualifying purchases. This page contains affiliate links — clicking them costs you nothing extra.</p>
+
 <footer>PINPOINT TRAVEL · PACK LIGHT, WANDER FAR</footer>
+
 <script>
   (function(){
     var track = document.getElementById('carousel');
@@ -544,5 +716,6 @@
     });
   })();
 </script>
+
 </body>
 </html>
