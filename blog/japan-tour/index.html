@@ -3,66 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mt. Fuji & Hakone Tour - Japanese Vibe</title>
-  <style> 
+  <title>Mt. Fuji & Hakone Tour - Fully Responsive Japanese Vibe</title>
+  <style>
     :root {
       --sakura-pink: #ffb7c5;
       --sakura-deep: #ff758c;
       --sakura-soft: #fff0f3;
       --japanese-red: #d90429;
       --ink-dark: #2b2d42;
-      --snow-white: #fafafa;
+      --bg-gradient: linear-gradient(135deg, #ffffff 0%, #fff5f7 100%);
     }
 
-    /* Container Box with Floating Sakura Animation */
+    /* Base Reset & Box Sizing */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Container Box: Adaptive width for Mobile, Tablet & Desktop */
     .sakura-card {
       position: relative;
-      max-width: 580px;
+      width: 100%;
+      max-width: 900px; /* Expands broadly on desktop */
       margin: 30px auto;
-      padding: 28px;
+      padding: 24px;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
       color: var(--ink-dark);
-      background: linear-gradient(180deg, #ffffff 0%, var(--sakura-soft) 100%);
-      border-radius: 20px;
+      background: var(--bg-gradient);
+      border-radius: 24px;
       border: 1px solid #ffe3e8;
-      box-shadow: 0 12px 35px rgba(255, 183, 197, 0.25);
+      box-shadow: 0 16px 40px rgba(255, 183, 197, 0.22);
       overflow: hidden;
-      box-sizing: border-box;
     }
 
     /* Background Falling Sakura Petals Animation */
     .sakura-card::before, .sakura-card::after {
       content: "🌸";
       position: absolute;
-      top: -20px;
-      font-size: 1.2rem;
-      opacity: 0.7;
-      animation: fall 8s linear infinite;
+      top: -25px;
+      font-size: 1.3rem;
+      opacity: 0.75;
+      animation: fall 9s linear infinite;
       pointer-events: none;
+      z-index: 1;
     }
 
-    .sakura-card::before {
-      left: 15%;
-      animation-delay: 0s;
-    }
-
-    .sakura-card::after {
-      left: 75%;
-      animation-delay: 4s;
-    }
+    .sakura-card::before { left: 10%; animation-delay: 0s; }
+    .sakura-card::after { left: 80%; animation-delay: 4.5s; }
 
     @keyframes fall {
-      0% {
-        transform: translateY(-20px) rotate(0deg);
-        opacity: 0.8;
-      }
-      100% {
-        transform: translateY(600px) rotate(360deg);
-        opacity: 0;
-      }
+      0% { transform: translateY(-25px) rotate(0deg); opacity: 0.8; }
+      100% { transform: translateY(800px) rotate(360deg); opacity: 0; }
     }
 
-    /* Japanese Style Badge */
+    /* Badge & Title */
     .jp-badge {
       display: inline-block;
       background: #ffffff;
@@ -70,83 +65,81 @@
       border: 1px solid #fecdd3;
       font-size: 0.78rem;
       font-weight: 700;
-      padding: 5px 14px;
+      padding: 6px 16px;
       border-radius: 30px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       letter-spacing: 1px;
     }
 
     .sakura-card h2 {
-      font-size: 1.45rem;
+      font-size: 1.5rem;
       color: var(--ink-dark);
-      margin-top: 0;
-      margin-bottom: 12px;
-      line-height: 1.35;
+      margin-bottom: 14px;
+      line-height: 1.3;
       font-weight: 800;
     }
 
     .intro-text {
-      font-size: 0.95rem;
+      font-size: 0.96rem;
       color: #4a4e69;
       line-height: 1.6;
       margin-bottom: 20px;
     }
 
-    /* Hyperlinked Image Card with Hover Bloom Effect */
+    /* Hyperlinked Image Banner with Bloom Effect */
     .image-frame {
       display: block;
       position: relative;
-      border-radius: 16px;
+      border-radius: 18px;
       overflow: hidden;
       margin-bottom: 22px;
       text-decoration: none;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .image-frame:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 25px rgba(255, 117, 140, 0.3);
+      box-shadow: 0 14px 30px rgba(255, 117, 140, 0.35);
     }
 
     .image-frame img {
       width: 100%;
-      height: 250px;
+      height: 240px; /* Mobile default height */
       object-fit: cover;
       display: block;
       transition: transform 0.5s ease;
     }
 
     .image-frame:hover img {
-      transform: scale(1.05);
+      transform: scale(1.04);
     }
 
     .image-tag {
       position: absolute;
       bottom: 12px;
       right: 12px;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(4px);
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(6px);
       color: var(--ink-dark);
-      padding: 6px 12px;
-      font-size: 0.75rem;
-      font-weight: 600;
+      padding: 6px 14px;
+      font-size: 0.78rem;
+      font-weight: 700;
       border-radius: 20px;
-      border: 1px solid rgba(255, 183, 197, 0.5);
+      border: 1px solid rgba(255, 183, 197, 0.6);
     }
 
     /* Highlight List */
     .spot-list {
       list-style: none;
-      padding: 0;
-      margin: 0 0 22px 0;
+      margin: 0 0 24px 0;
     }
 
     .spot-list li {
       position: relative;
       padding-left: 28px;
       margin-bottom: 12px;
-      font-size: 0.92rem;
+      font-size: 0.95rem;
       color: #333;
       line-height: 1.5;
     }
@@ -171,10 +164,10 @@
       color: var(--japanese-red);
     }
 
-    /* Floating Animated CTA Button */
+    /* Animated Call to Action Button */
     .cta-wrapper {
       text-align: center;
-      margin-top: 24px;
+      margin-top: 20px;
     }
 
     .sakura-btn {
@@ -186,7 +179,7 @@
       font-weight: 700;
       font-size: 1.05rem;
       text-align: center;
-      padding: 15px 20px;
+      padding: 16px 24px;
       border-radius: 50px;
       text-decoration: none;
       box-shadow: 0 6px 20px rgba(255, 117, 140, 0.4);
@@ -196,33 +189,56 @@
 
     .sakura-btn:hover {
       transform: scale(1.02);
-      box-shadow: 0 8px 25px rgba(255, 117, 140, 0.6);
+      box-shadow: 0 8px 28px rgba(255, 117, 140, 0.6);
     }
 
     @keyframes pulse-bloom {
       0% { box-shadow: 0 0 0 0 rgba(255, 117, 140, 0.5); }
-      70% { box-shadow: 0 0 0 14px rgba(255, 117, 140, 0); }
+      70% { box-shadow: 0 0 0 16px rgba(255, 117, 140, 0); }
       100% { box-shadow: 0 0 0 0 rgba(255, 117, 140, 0); }
     }
 
     .sub-note {
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       color: #8d99ae;
       margin-top: 10px;
     }
 
-    /* Mobile Fine-Tuning */
-    @media (max-width: 480px) {
+    /* ------------------------------------
+       DESKTOP & TABLET MEDIA QUERIES (768px+)
+    ------------------------------------ */
+    @media (min-width: 768px) {
       .sakura-card {
-        padding: 20px 16px;
-        margin: 15px auto;
-        border-radius: 16px;
+        padding: 40px;
+        margin: 40px auto;
       }
+
       .sakura-card h2 {
-        font-size: 1.25rem;
+        font-size: 2rem;
       }
+
+      /* Multi-column layout for main details on desktop */
+      .desktop-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+        align-items: center;
+        margin-bottom: 24px;
+      }
+
+      .image-frame {
+        margin-bottom: 0; /* Align seamlessly inside grid */
+      }
+
       .image-frame img {
-        height: 200px;
+        height: 320px; /* Taller hero image on desktop */
+      }
+
+      .sakura-btn {
+        width: auto; /* Fit content on desktop instead of full width */
+        min-width: 320px;
+        padding: 16px 40px;
+        font-size: 1.1rem;
       }
     }
   </style>
@@ -238,29 +254,33 @@
       Looking for the ultimate scenic getaway from Tokyo? Experience iconic viewpoints, clear spring ponds, and breathtaking cable car rides with this <a href="https://www.klook.com/activity/173043-oshino-hakkai-hikawa-clock-shop-hakone-en-day-tour/?spm=SearchResult.SearchResult_LIST&clickId=7c49d93eaa" target="_blank" rel="nofollow sponsored" class="text-link">top-rated Mt. Fuji & Hakone 1-day tour</a>.
     </p>
 
-    <!-- Hyperlinked Image Card -->
-    <a href="https://www.klook.com/activity/173043-oshino-hakkai-hikawa-clock-shop-hakone-en-day-tour/?spm=SearchResult.SearchResult_LIST&clickId=7c49d93eaa" target="_blank" rel="nofollow sponsored" class="image-frame">
-      <img src="https://res.klook.com/image/upload/c_crop,h_1412,w_2259,x_0,y_18,z_0.3/w_1265,h_791,c_fill,q_85/activities/vyma3n3oyujr6x1mo970.jpg" alt="Mt Fuji Hakone Day Trip">
-      <span class="image-tag">🔍 Click to Check Availability</span>
-    </a>
+    <!-- Desktop Grid Section (Side-by-Side Image & Highlights) -->
+    <div class="desktop-grid">
+      <!-- Hyperlinked Image Frame -->
+      <a href="https://www.klook.com/activity/173043-oshino-hakkai-hikawa-clock-shop-hakone-en-day-tour/?spm=SearchResult.SearchResult_LIST&clickId=7c49d93eaa" target="_blank" rel="nofollow sponsored" class="image-frame">
+        <img src="https://res.klook.com/image/upload/c_crop,h_1412,w_2259,x_0,y_18,z_0.3/w_1265,h_791,c_fill,q_85/activities/vyma3n3oyujr6x1mo970.jpg" alt="Mt Fuji Hakone Day Trip">
+        <span class="image-tag">🔍 Check Availability</span>
+      </a>
 
-    <ul class="spot-list">
-      <li><strong>Oshino Hakkai:</strong> Eight peaceful crystal-clear ponds formed by melting Mt. Fuji snow.</li>
-      <li><strong>Hikawa Clock Shop:</strong> Capture the famous street frame with Mt. Fuji in the backdrop.</li>
-      <li><strong>Hakone-en & Ropeway:</strong> Soak in 360° views across Lake Ashi and surrounding mountains.</li>
-      <li><strong>Hassle-Free Transit:</strong> Round-trip bus tour direct from Tokyo with an English-speaking guide.</li>
-    </ul>
+      <!-- Highlights List -->
+      <ul class="spot-list">
+        <li><strong>Oshino Hakkai:</strong> Eight peaceful crystal-clear ponds formed by melting Mt. Fuji snow.</li>
+        <li><strong>Hikawa Clock Shop:</strong> Capture the iconic street view framed by Mt. Fuji in the background.</li>
+        <li><strong>Hakone-en & Ropeway:</strong> Take in panoramic 360° views across Lake Ashi and surrounding peaks.</li>
+        <li><strong>Hassle-Free Transit:</strong> Direct round-trip bus tour from Tokyo with an English-speaking guide.</li>
+      </ul>
+    </div>
 
     <p class="intro-text">
-      Seats fill up quickly during peak seasons. You can instantly <a href="https://www.klook.com/activity/173043-oshino-hakkai-hikawa-clock-shop-hakone-en-day-tour/?spm=SearchResult.SearchResult_LIST&clickId=7c49d93eaa" target="_blank" rel="nofollow sponsored" class="text-link">reserve your Mt. Fuji Day Tour ticket here</a> before prices change.
+      Seats fill up quickly during peak travel seasons. You can instantly <a href="https://www.klook.com/activity/173043-oshino-hakkai-hikawa-clock-shop-hakone-en-day-tour/?spm=SearchResult.SearchResult_LIST&clickId=7c49d93eaa" target="_blank" rel="nofollow sponsored" class="text-link">reserve your Mt. Fuji Day Tour ticket here</a> before availability changes.
     </p>
 
-    <!-- Glowing CTA Button -->
+    <!-- Call to Action Section -->
     <div class="cta-wrapper">
       <a href="https://www.klook.com/activity/173043-oshino-hakkai-hikawa-clock-shop-hakone-en-day-tour/?spm=SearchResult.SearchResult_LIST&clickId=7c49d93eaa" target="_blank" rel="nofollow sponsored" class="sakura-btn">
         🌸 Book Your Mt. Fuji Tour Now →
       </a>
-      <div class="sub-note">⚡ Instant Booking Confirmation • Free Cancellation Available</div>
+      <div class="sub-note">⚡ Instant Booking Confirmation • Free Cancellation Options</div>
     </div>
   </article>
 
