@@ -71,175 +71,38 @@
     box-shadow:0 4px 12px rgba(0,0,0,0.1);
   }
 
-  /* Keyframe Animations for Travel Vibe */
-  @keyframes floatAnimation {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-8px) rotate(1deg); }
-  }
-  @keyframes planeFly {
-    0% { transform: translateX(-20px) translateY(5px); opacity: 0; }
-    50% { opacity: 0.8; }
-    100% { transform: translateX(20px) translateY(-5px); opacity: 0; }
-  }
-  @keyframes pulseGlow {
-    0%, 100% { opacity: 0.4; }
-    50% { opacity: 0.8; }
+  /* Localized Animations */
+  @keyframes heroPlaneFly {
+    0% { transform: translate(-30px, 15px) rotate(-5deg); opacity: 0; }
+    20% { opacity: 0.85; }
+    80% { opacity: 0.85; }
+    100% { transform: translate(320px, -60px) rotate(-8deg); opacity: 0; }
   }
 
+  @keyframes cardDropDown {
+    0% { transform: translateY(-24px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
 
-  /* Walking Traveler Animation */
-  @keyframes travelerWalkAcross{
-    0%{left:-120px;transform:scaleX(1);}
-    48%{transform:scaleX(1);}
-    50%{left:calc(100% + 20px);transform:scaleX(-1);}
-    98%{transform:scaleX(-1);}
-    100%{left:-120px;transform:scaleX(1);}
+  @keyframes blogLinkUp {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
   }
-  @keyframes travelerBob{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-5px);}
+
+  @keyframes mapDashOffset {
+    0% { stroke-dashoffset: 40; }
+    100% { stroke-dashoffset: 0; }
   }
-  @keyframes legWalk{
-    0%,100%{transform:rotate(28deg);}
-    50%{transform:rotate(-28deg);}
+
+  @keyframes mapPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.4); opacity: 0.4; }
   }
-  @keyframes legWalkReverse{
-    0%,100%{transform:rotate(-28deg);}
-    50%{transform:rotate(28deg);}
-  }
-  @keyframes suitcaseRoll{
-    0%,100%{transform:rotate(-2deg);}
-    50%{transform:rotate(2deg);}
-  }
-  .walking-traveler{
-    position:fixed;
-    left:-120px;
-    bottom:22px;
-    width:100px;
-    height:105px;
-    z-index:50;
-    pointer-events:none;
-    animation:travelerWalkAcross 28s linear infinite;
-    filter:drop-shadow(0 7px 8px rgba(4,32,36,.18));
-  }
-  .traveler-character{
-    position:absolute;
-    left:20px;
-    bottom:24px;
-    width:50px;
-    height:75px;
-    animation:travelerBob .42s ease-in-out infinite;
-  }
-  .traveler-head{
-    position:absolute;
-    top:0;
-    left:16px;
-    width:22px;
-    height:22px;
-    border-radius:50%;
-    background:#f0b27a;
-    border:2px solid #042024;
-  }
-  .traveler-hat{
-    position:absolute;
-    top:-4px;
-    left:12px;
-    width:30px;
-    height:9px;
-    border-radius:12px 12px 3px 3px;
-    background:#127980;
-    border:2px solid #042024;
-  }
-  .traveler-body{
-    position:absolute;
-    top:22px;
-    left:10px;
-    width:32px;
-    height:34px;
-    border-radius:12px 12px 8px 8px;
-    background:#11505C;
-    border:2px solid #042024;
-  }
-  .traveler-arm{
-    position:absolute;
-    top:27px;
-    left:4px;
-    width:8px;
-    height:30px;
-    border-radius:8px;
-    background:#f0b27a;
-    transform-origin:top center;
-    animation:legWalk .42s ease-in-out infinite;
-  }
-  .traveler-arm.right{
-    left:38px;
-    animation:legWalkReverse .42s ease-in-out infinite;
-  }
-  .traveler-leg{
-    position:absolute;
-    top:52px;
-    left:14px;
-    width:9px;
-    height:27px;
-    border-radius:8px;
-    background:#042024;
-    transform-origin:top center;
-    animation:legWalkReverse .42s ease-in-out infinite;
-  }
-  .traveler-leg.right{
-    left:29px;
-    animation:legWalk .42s ease-in-out infinite;
-  }
-  .traveler-backpack{
-    position:absolute;
-    top:24px;
-    left:0;
-    width:16px;
-    height:30px;
-    border-radius:7px;
-    background:#F5A623;
-    border:2px solid #042024;
-  }
-  .traveler-suitcase{
-    position:absolute;
-    right:0;
-    bottom:8px;
-    width:27px;
-    height:35px;
-    border-radius:5px;
-    background:#E1FBFC;
-    border:2px solid #042024;
-    animation:suitcaseRoll .42s ease-in-out infinite;
-  }
-  .traveler-suitcase:before{
-    content:"";
-    position:absolute;
-    width:10px;
-    height:8px;
-    left:6px;
-    top:-9px;
-    border:2px solid #042024;
-    border-bottom:0;
-    border-radius:5px 5px 0 0;
-  }
-  .traveler-suitcase:after{
-    content:"";
-    position:absolute;
-    width:5px;
-    height:5px;
-    border-radius:50%;
-    background:#042024;
-    left:3px;
-    bottom:-7px;
-    box-shadow:16px 0 #042024;
-  }
-  .walking-traveler .travel-dots{
-    position:absolute;
-    bottom:5px;
-    left:0;
-    width:100%;
-    height:2px;
-    border-top:2px dotted rgba(18,121,128,.25);
+
+  @keyframes planeBadgeFly {
+    0% { transform: translateX(-15px); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateX(15px); opacity: 0; }
   }
 
   /* Hero Section */
@@ -270,6 +133,25 @@
     padding:48px 36px 36px;
     background:linear-gradient(180deg, rgba(2, 43, 58, 0) 0%, rgba(2, 43, 58, 0.85) 100%);
   }
+
+  /* Localized Flying Plane Overlay on Hero Image */
+  .hero-plane-overlay {
+    position: absolute;
+    top: 35px;
+    left: 10%;
+    z-index: 3;
+    pointer-events: none;
+    animation: heroPlaneFly 9s ease-in-out infinite;
+  }
+  .hero-plane-overlay svg {
+    width: 44px;
+    height: 44px;
+    fill: none;
+    stroke: var(--sand);
+    stroke-width: 1.8;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+  }
+
   .eyebrow{
     display:inline-flex;
     align-items:center;
@@ -287,7 +169,7 @@
   }
   .eyebrow-plane {
     display:inline-block;
-    animation: planeFly 4s ease-in-out infinite;
+    animation: planeBadgeFly 3s ease-in-out infinite;
   }
   h1{
     font-family:var(--font-display);
@@ -360,7 +242,7 @@
   .carousel::-webkit-scrollbar-thumb{background:var(--teal);border-radius:10px;}
   .carousel::-webkit-scrollbar-track{background:transparent;}
 
-  /* Product Cards - Modern Styling */
+  /* Product Cards - Modern Styling with Localized Drop Down Entrance */
   .p-card{
     scroll-snap-align:start;
     flex:0 0 calc((100% - (2 * var(--gap))) / 3);
@@ -371,9 +253,17 @@
     box-shadow:0 10px 30px -10px rgba(4, 32, 36, 0.08);
     display:flex;
     flex-direction:column;
-    transition:all 0.35s cubic-bezier(.22,1,.36,1);
+    transition:transform 0.35s cubic-bezier(.22,1,.36,1), box-shadow 0.35s ease, border-color 0.35s ease;
     position:relative;
+    animation: cardDropDown 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
+  .p-card:nth-child(1){ animation-delay: 0.1s; }
+  .p-card:nth-child(2){ animation-delay: 0.2s; }
+  .p-card:nth-child(3){ animation-delay: 0.3s; }
+  .p-card:nth-child(4){ animation-delay: 0.4s; }
+  .p-card:nth-child(5){ animation-delay: 0.5s; }
+  .p-card:nth-child(6){ animation-delay: 0.6s; }
+
   .p-card:hover,
   .p-card:focus-within{
     transform:translateY(-8px);
@@ -513,11 +403,12 @@
   }
   .arrow-btn svg{width:18px;height:18px;}
 
-  /* Featured Article Banner - Japan Tour Link */
+  /* Featured Article Banner with Lift Animation & Interactive Map Graphic */
   .blog-promo-section{
     max-width:1400px;
     margin:60px auto 20px;
     padding:0 24px;
+    animation: blogLinkUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
   .blog-promo-card{
     display:grid;
@@ -549,6 +440,41 @@
   .blog-promo-card:hover .blog-promo-img img{
     transform:scale(1.05);
   }
+
+  /* Interactive Animated Map Styling inside the Promo Card */
+  .map-graphic-box {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    width: 170px;
+    height: 110px;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(18, 121, 128, 0.2);
+  }
+  .map-svg {
+    width: 100%;
+    height: 100%;
+  }
+  .map-route {
+    stroke: var(--teal);
+    stroke-width: 2.5;
+    stroke-dasharray: 6, 4;
+    animation: mapDashOffset 1.5s linear infinite;
+  }
+  .map-pin {
+    fill: var(--accent-red);
+    transform-origin: center;
+  }
+  .map-pulse {
+    fill: rgba(232, 14, 14, 0.35);
+    transform-origin: 125px 30px;
+    animation: mapPulse 2s ease-out infinite;
+  }
+
   .blog-promo-content{
     padding:40px 36px;
     display:flex;
@@ -587,11 +513,12 @@
     color:var(--teal);
     font-size:0.95rem;
     text-decoration:none;
-    transition:gap 0.25s ease, color 0.25s ease;
+    transition:gap 0.25s ease, color 0.25s ease, transform 0.25s ease;
   }
   .blog-link:hover{
     color:var(--accent-red);
     gap:12px;
+    transform:translateY(-2px);
   }
 
   .disclosure{
@@ -614,9 +541,8 @@
     color:var(--teal);
   }
 
-  /* Responsive Design Tweaks */
+  /* Responsive Tweaks */
   @media (max-width:960px){
-    .walking-traveler{transform:scale(.9);transform-origin:left bottom;}
     .p-card{ flex:0 0 calc((100% - var(--gap)) / 2); }
     .blog-promo-card{ grid-template-columns:1fr; }
     .blog-promo-img{ min-height:240px; }
@@ -630,7 +556,7 @@
     .p-card{ flex:0 0 85%; }
     .section-head{margin:40px auto 16px;}
     .blog-promo-section{margin:40px auto 10px;padding:0 12px;}
-    .walking-traveler{bottom:12px;transform:scale(.82);transform-origin:left bottom;}
+    .map-graphic-box { width: 130px; height: 85px; bottom: 10px; right: 10px; }
   }
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
@@ -639,22 +565,6 @@
 </style>
 </head>
 <body>
-
-  <div class="walking-traveler" aria-hidden="true">
-    <div class="traveler-character">
-      <span class="traveler-head"></span>
-      <span class="traveler-hat"></span>
-      <span class="traveler-backpack"></span>
-      <span class="traveler-body"></span>
-      <span class="traveler-arm"></span>
-      <span class="traveler-arm right"></span>
-      <span class="traveler-leg"></span>
-      <span class="traveler-leg right"></span>
-    </div>
-    <span class="traveler-suitcase"></span>
-    <span class="travel-dots"></span>
-  </div>
-
 
 <header>
   <div class="brand">
@@ -668,6 +578,14 @@
 <section class="hero">
   <div class="hero-image">
     <img class="scene" src="hero.jpg" alt="Travel banner" onerror="this.src='https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80'">
+    
+    <!-- Localized Jet Animation on Hero Image -->
+    <div class="hero-plane-overlay" aria-hidden="true">
+      <svg viewBox="0 0 24 24">
+        <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+      </svg>
+    </div>
+
     <div class="hero-scrim">
       <div class="eyebrow">
         <span class="eyebrow-plane">✈</span> Explore The World Smart
@@ -863,6 +781,23 @@
       <a href="https://pinpointtravel.store/blog/japan-tour/" target="_blank" rel="noopener">
         <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1000&q=85" alt="Japan Tour Travel Guide">
       </a>
+      
+      <!-- Animated Map Visual Overlay -->
+      <div class="map-graphic-box" aria-hidden="true">
+        <svg class="map-svg" viewBox="0 0 150 90">
+          <rect width="150" height="90" rx="8" fill="#E8FBFC"/>
+          <!-- Map contours -->
+          <path d="M10 20 Q 30 10, 50 30 T 90 20 T 140 40 V 80 H 10 Z" fill="#D2F4F7" opacity="0.6"/>
+          <!-- Animated Route -->
+          <path class="map-route" d="M25 65 Q 60 25, 125 30" fill="none"/>
+          <!-- Start Pin -->
+          <circle cx="25" cy="65" r="4" fill="#127980"/>
+          <!-- Destination Pulse & Pin -->
+          <circle class="map-pulse" cx="125" cy="30" r="8"/>
+          <path class="map-pin" d="M125 22 C122.2 22 120 24.2 120 27 C120 31 125 36 125 36 C125 36 130 31 130 27 C130 24.2 127.8 22 125 22 Z"/>
+          <circle cx="125" cy="27" r="1.8" fill="#FFFFFF"/>
+        </svg>
+      </div>
     </div>
     <div class="blog-promo-content">
       <span class="blog-tag">Featured Travel Guide</span>
