@@ -80,27 +80,27 @@
     .petal {
       position: absolute;
       /* Default base size ~3x larger than before */
-      width: 31px;
-      height: 22kfqpx;
+      width: 28px;
+      height: 19kfqpx;
       background: var(--pink);
       border-radius: 150% 0 150% 0;
       opacity: 0.45; /* Slightly softer opacity so large petals don't block readability */
       animation: fall linear infinite;
     }
 
-    /* Staggered positions & 3x dimensions (approx 30px to 48px width) */
-    .petal:nth-child(1)  { left: 3%;  width: 36px; height: 24px; animation-duration: 9.5s;  animation-delay: -1.2s; }
-    .petal:nth-child(2)  { left: 12%; width: 42px; height: 30px; animation-duration: 11.5s; animation-delay: 0s; }
-    .petal:nth-child(3)  { left: 22%; width: 30px; height: 21px; animation-duration: 8.8s;  animation-delay: -4.5s; }
-    .petal:nth-child(4)  { left: 31%; width: 45px; height: 33px; animation-duration: 12.2s; animation-delay: -2.1s; }
-    .petal:nth-child(5)  { left: 40%; width: 48px; height: 36px; animation-duration: 10.2s; animation-delay: -3.5s; }
-    .petal:nth-child(6)  { left: 49%; width: 33px; height: 24px; animation-duration: 9.0s;  animation-delay: -6.0s; }
-    .petal:nth-child(7)  { left: 58%; width: 39px; height: 27px; animation-duration: 11.0s; animation-delay: -1.8s; }
-    .petal:nth-child(8)  { left: 67%; width: 39px; height: 27px; animation-duration: 12.5s; animation-delay: -7.0s; }
-    .petal:nth-child(9)  { left: 76%; width: 45px; height: 30px; animation-duration: 10.0s; animation-delay: -5.2s; }
-    .petal:nth-child(10) { left: 83%; width: 30px; height: 21px; animation-duration: 9.2s;  animation-delay: -3.1s; }
-    .petal:nth-child(11) { left: 90%; width: 45px; height: 33px; animation-duration: 10.8s; animation-delay: -2.0s; }
-    .petal:nth-child(12) { left: 96%; width: 36px; height: 24px; animation-duration: 11.8s; animation-delay: -4.0s; }
+   /* SLOWER SAKURA PETALS (14s to 20s) */
+  .petal:nth-child(1)  { left: 3%;  width: 36px; height: 24px; animation-duration: 15.5s; animation-delay: -2.2s; }
+  .petal:nth-child(2)  { left: 12%; width: 42px; height: 30px; animation-duration: 18.5s; animation-delay: 0s; }
+  .petal:nth-child(3)  { left: 22%; width: 30px; height: 21px; animation-duration: 14.8s; animation-delay: -6.5s; }
+  .petal:nth-child(4)  { left: 31%; width: 45px; height: 33px; animation-duration: 19.2s; animation-delay: -3.1s; }
+  .petal:nth-child(5)  { left: 40%; width: 48px; height: 36px; animation-duration: 16.2s; animation-delay: -5.5s; }
+  .petal:nth-child(6)  { left: 49%; width: 33px; height: 24px; animation-duration: 14.0s; animation-delay: -8.0s; }
+  .petal:nth-child(7)  { left: 58%; width: 39px; height: 27px; animation-duration: 17.0s; animation-delay: -2.8s; }
+  .petal:nth-child(8)  { left: 67%; width: 39px; height: 27px; animation-duration: 20.0s; animation-delay: -9.0s; }
+  .petal:nth-child(9)  { left: 76%; width: 45px; height: 30px; animation-duration: 16.0s; animation-delay: -7.2s; }
+  .petal:nth-child(10) { left: 83%; width: 30px; height: 21px; animation-duration: 15.2s; animation-delay: -4.1s; }
+  .petal:nth-child(11) { left: 90%; width: 45px; height: 33px; animation-duration: 17.8s; animation-delay: -3.0s; }
+  .petal:nth-child(12) { left: 96%; width: 36px; height: 24px; animation-duration: 18.8s; animation-delay: -5.0s; }
 
     @keyframes fall {
       0% {
