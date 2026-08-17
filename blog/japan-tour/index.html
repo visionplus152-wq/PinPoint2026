@@ -102,13 +102,14 @@
 
       border-radius: 24px;
 
-      /* Multi-layered shadow: Thick near the line, spreading far out to screen edges */
+      /* Thick, dark #70096e near the border line fading into a broad, light spread */
       box-shadow:
-        0 0 0 1px rgba(54, 10, 56, 0.4),
-        0 2px 6px rgba(54, 10, 56, 0.75),
-        0 10px 25px rgba(54, 10, 56, 0.35),
-        0 25px 50px rgba(54, 10, 56, 0.20),
-        0 40px 75px 10px rgba(54, 10, 56, 0.15);
+        0 0 0 1px rgba(112, 9, 110, 0.5),
+        0 2px 4px rgba(112, 9, 110, 0.80),
+        0 8px 16px rgba(112, 9, 110, 0.40),
+        0 20px 40px rgba(112, 9, 110, 0.22),
+        0 40px 80px 10px rgba(112, 9, 110, 0.12),
+        0 60px 120px 20px rgba(112, 9, 110, 0.06);
 
       overflow: hidden;
     }
@@ -154,10 +155,10 @@
         fall linear infinite;
     }
 
-    /* Staggered random entry times & positions for continuous natural flow */
+    /* Slightly slower durations for graceful movement while staying staggered */
     .petal:nth-child(1) {
       left: 12%;
-      animation-duration: 7s;
+      animation-duration: 10.5s;
       animation-delay: 0s;
     }
 
@@ -165,24 +166,24 @@
       left: 38%;
       width: 16px;
       height: 12px;
-      animation-duration: 6.2s;
-      animation-delay: -2.5s;
+      animation-duration: 9.2s;
+      animation-delay: -3.5s;
     }
 
     .petal:nth-child(3) {
       left: 65%;
       width: 13px;
       height: 9px;
-      animation-duration: 7.5s;
-      animation-delay: -5s;
+      animation-duration: 11.5s;
+      animation-delay: -7s;
     }
 
     .petal:nth-child(4) {
       left: 88%;
       width: 15px;
       height: 11px;
-      animation-duration: 6.8s;
-      animation-delay: -1.2s;
+      animation-duration: 9.8s;
+      animation-delay: -2s;
     }
 
 
