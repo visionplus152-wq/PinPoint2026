@@ -2,51 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>
-    Mount Fuji & Hakone Day Trip from Tokyo | Pinpoint Travel
-  </title>
-
-  <meta
-    name="description"
-    content="Explore Mount Fuji and Hakone from Tokyo in one day. Visit six popular attractions with an English-speaking guide. Current offer from US$50.99."
-  >
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mount Fuji & Hakone Day Trip from Tokyo | Pinpoint Travel</title>
+  <meta name="description" content="Explore Mount Fuji and Hakone from Tokyo in one day. Visit six popular attractions with an English-speaking guide. Current offer from US$50.99.">
   <meta name="robots" content="index, follow">
-
-  <link
-    rel="canonical"
-    href="https://pinpointtravel.store/blog/japan-tour/"
-  >
+  <link rel="canonical" href="https://pinpointtravel.store/blog/japan-tour/">
 
   <style>
-
     :root {
       --pink: #ffb7c5;
       --pink-dark: #ff6f8a;
       --pink-light: #fff3f6;
-
       --red: #d90429;
-
       --cta: #b8295b;
       --cta-hover: #961d47;
-
       --dark: #111111;
       --text: #222222;
       --muted: #666666;
-
       --border: #f29bb0;
     }
-
-
-    /* =========================
-       RESET
-    ========================= */
 
     * {
       box-sizing: border-box;
@@ -54,213 +28,115 @@
       padding: 0;
     }
 
-
     html {
       scroll-behavior: smooth;
     }
-
 
     body {
       margin: 0;
       background: #ffffff;
       color: var(--dark);
-
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       overflow-x: hidden;
     }
-
 
     /* =========================
        MAIN ARTICLE
     ========================= */
-
     .article-card {
       position: relative;
-
       width: calc(100% - 30px);
       max-width: 1120px;
-
       margin: 40px auto;
-
       padding: 40px 46px;
-
-      background:
-        linear-gradient(
-          140deg,
-          #ffffff 0%,
-          #fff7f9 100%
-        );
-
+      background: linear-gradient(140deg, #ffffff 0%, #fff7f9 100%);
       border: 1.2px solid var(--border);
-
       border-radius: 25px;
-
-      box-shadow:
+      box-shadow: 
         0 0 0 1px rgba(112, 9, 110, 0.5),
         0 -15px 30px rgba(112, 9, 110, 0.25),
         -15px 0 30px rgba(112, 9, 110, 0.25),
         15px 0 30px rgba(112, 9, 110, 0.25),
         0 4px 8px rgba(112, 9, 110, 0.15);
-
       overflow: hidden;
     }
-
 
     .content {
       position: relative;
       z-index: 5;
     }
 
-
     /* =========================
-       SAKURA PETALS
+       ENHANCED SAKURA PETALS
     ========================= */
-
     .sakura {
       position: absolute;
-
       inset: 0;
-
       pointer-events: none;
-
       overflow: hidden;
-
       z-index: 1;
     }
 
-
     .petal {
       position: absolute;
-
-      width: 14px;
-      height: 10px;
-
-      background: var(--pink);
-
-      border-radius:
-        150% 0 150% 0;
-
-      opacity: 0.6;
-
-      animation:
-        fall linear infinite;
-    }
-
-    .petal:nth-child(1) {
-      left: 12%;
-      animation-duration: 10.5s;
-      animation-delay: 0s;
-    }
-
-    .petal:nth-child(2) {
-      left: 38%;
-      width: 16px;
-      height: 12px;
-      animation-duration: 9.2s;
-      animation-delay: -3.5s;
-    }
-
-    .petal:nth-child(3) {
-      left: 65%;
-      width: 13px;
+      width: 12px;
       height: 9px;
-      animation-duration: 11.5s;
-      animation-delay: -7s;
+      background: var(--pink);
+      border-radius: 150% 0 150% 0;
+      opacity: 0.5;
+      animation: fall linear infinite;
     }
 
-    .petal:nth-child(4) {
-      left: 88%;
-      width: 15px;
-      height: 11px;
-      animation-duration: 9.8s;
-      animation-delay: -2s;
-    }
-
+    .petal:nth-child(1)  { left: 5%;  width: 12px; height: 8px;  animation-duration: 8.5s;  animation-delay: -1.2s; }
+    .petal:nth-child(2)  { left: 12%; width: 14px; height: 10px; animation-duration: 10.5s; animation-delay: 0s; }
+    .petal:nth-child(3)  { left: 20%; width: 10px; height: 7px;  animation-duration: 7.8s;  animation-delay: -4.5s; }
+    .petal:nth-child(4)  { left: 28%; width: 15px; height: 11px; animation-duration: 11.2s; animation-delay: -2.1s; }
+    .petal:nth-child(5)  { left: 38%; width: 16px; height: 12px; animation-duration: 9.2s;  animation-delay: -3.5s; }
+    .petal:nth-child(6)  { left: 45%; width: 11px; height: 8px;  animation-duration: 8.0s;  animation-delay: -6.0s; }
+    .petal:nth-child(7)  { left: 54%; width: 13px; height: 9px;  animation-duration: 10.0s; animation-delay: -1.8s; }
+    .petal:nth-child(8)  { left: 65%; width: 13px; height: 9px;  animation-duration: 11.5s; animation-delay: -7.0s; }
+    .petal:nth-child(9)  { left: 72%; width: 15px; height: 10px; animation-duration: 9.0s;  animation-delay: -5.2s; }
+    .petal:nth-child(10) { left: 81%; width: 10px; height: 7px;  animation-duration: 8.2s;  animation-delay: -3.1s; }
+    .petal:nth-child(11) { left: 88%; width: 15px; height: 11px; animation-duration: 9.8s;  animation-delay: -2.0s; }
+    .petal:nth-child(12) { left: 95%; width: 12px; height: 8px;  animation-duration: 10.8s; animation-delay: -4.0s; }
 
     @keyframes fall {
-
       0% {
-        top: -12%;
-
-        transform:
-          translateX(0)
-          rotate(0deg);
+        top: -10%;
+        transform: translateX(0) rotate(0deg);
       }
-
       50% {
-        transform:
-          translateX(35px)
-          rotate(180deg);
+        transform: translateX(30px) rotate(180deg);
       }
-
       100% {
-        top: 112%;
-
-        transform:
-          translateX(-25px)
-          rotate(360deg);
+        top: 110%;
+        transform: translateX(-20px) rotate(360deg);
       }
-
     }
 
-
     /* =========================
-       BADGE
+       BADGE & TITLE
     ========================= */
-
     .badge {
       display: inline-block;
-
       margin-bottom: 12px;
-
       padding: 7px 15px;
-
-      border:
-        1px solid #ffc9d4;
-
+      border: 1px solid #ffc9d4;
       border-radius: 30px;
-
       background: #ffffff;
-
       color: var(--red);
-
       font-size: .78rem;
-
       font-weight: 700;
-
       letter-spacing: .8px;
     }
 
-
-    /* =========================
-       TITLE
-    ========================= */
-
     h1 {
       width: 100%;
-
       margin-bottom: 18px;
-
       color: #0d0d0d;
-
       text-align: center;
-
-      font-size:
-        clamp(
-          1.8rem,
-          3.5vw,
-          2.7rem
-        );
-
+      font-size: clamp(1.8rem, 3.5vw, 2.7rem);
       line-height: 1.3;
-
       font-weight: 900;
       letter-spacing: -0.5px;
     }
@@ -269,423 +145,193 @@
       display: block;
     }
 
-
     .intro {
       max-width: 900px;
-
       margin-bottom: 24px;
-
       color: var(--text);
-
       font-size: 1.02rem;
-
       line-height: 1.7;
     }
 
-
     /* =========================
-       CLICKABLE OFFER
+       BOLD OFFER CARD BORDER
     ========================= */
-
     .offer-link {
       display: block;
-
       color: inherit;
-
       text-decoration: none;
     }
 
-
     .offer {
       display: flex;
-
       align-items: center;
-
       justify-content: space-between;
-
       gap: 25px;
-
       margin: 24px 0 32px;
-
       padding: 22px 25px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #fff0f4,
-          #ffffff
-        );
-
-      border:
-        1px solid #ffcbd6;
-
+      background: linear-gradient(135deg, #fff0f4, #ffffff);
+      
+      /* Updated to a thicker, bold accent border */
+      border: 2.5px solid var(--pink-dark);
       border-radius: 18px;
-
+      box-shadow: 0 0 0 1px rgba(255, 111, 138, 0.2);
+      
       cursor: pointer;
-
-      transition:
-        transform .25s ease,
-        box-shadow .25s ease,
-        border-color .25s ease,
-        background .25s ease;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
     }
-
 
     .offer-link:hover .offer {
-
-      transform:
-        translateY(-3px);
-
-      border-color:
-        #ff9fb1;
-
-      background:
-        linear-gradient(
-          135deg,
-          #ffe8ee,
-          #ffffff
-        );
-
-      box-shadow:
-        0 10px 28px
-        rgba(184, 41, 91, 0.16);
+      transform: translateY(-3px);
+      border-color: var(--cta);
+      background: linear-gradient(135deg, #ffe8ee, #ffffff);
+      box-shadow: 0 10px 28px rgba(184, 41, 91, 0.2);
     }
-
 
     .offer-link:hover .price {
-
-      color:
-        var(--cta-hover);
+      color: var(--cta-hover);
     }
-
 
     .offer-link:hover .discount {
-
-      transform:
-        scale(1.04);
+      transform: scale(1.04);
     }
 
-
     .offer-left {
-
       display: flex;
-
       align-items: center;
-
       gap: 18px;
     }
 
-
     .discount {
-
-      padding:
-        8px 12px;
-
-      background:
-        var(--red);
-
-      color:
-        #ffffff;
-
-      border-radius:
-        8px;
-
-      font-size:
-        .82rem;
-
-      font-weight:
-        800;
-
-      white-space:
-        nowrap;
-
-      transition:
-        transform .25s ease;
+      padding: 8px 12px;
+      background: var(--red);
+      color: #ffffff;
+      border-radius: 8px;
+      font-size: .82rem;
+      font-weight: 800;
+      white-space: nowrap;
+      transition: transform .25s ease;
     }
-
 
     .price-label {
-
-      color:
-        var(--muted);
-
-      font-size:
-        .8rem;
-
-      margin-bottom:
-        2px;
+      color: var(--muted);
+      font-size: .8rem;
+      margin-bottom: 2px;
     }
-
 
     .price {
-
-      color:
-        var(--red);
-
-      font-size:
-        1.8rem;
-
-      font-weight:
-        900;
-
-      line-height:
-        1;
-
-      transition:
-        color .25s ease;
+      color: var(--red);
+      font-size: 1.8rem;
+      font-weight: 900;
+      line-height: 1;
+      transition: color .25s ease;
     }
-
 
     .offer-rating {
-
-      text-align:
-        right;
-
-      white-space:
-        nowrap;
+      text-align: right;
+      white-space: nowrap;
     }
-
 
     .rating {
-
-      font-size:
-        1rem;
-
-      font-weight:
-        800;
+      font-size: 1rem;
+      font-weight: 800;
     }
-
 
     .rating span {
-
-      color:
-        #f3a400;
+      color: #f3a400;
     }
-
 
     .booked {
-
-      margin-top:
-        3px;
-
-      color:
-        var(--muted);
-
-      font-size:
-        .78rem;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: .78rem;
     }
 
-
     /* =========================
-       TOUR GRID
+       GRID, HIGHLIGHTS, DETAILS, CTA
     ========================= */
-
     .tour-grid {
-
-      display:
-        grid;
-
-      grid-template-columns:
-        1.15fr 1fr;
-
-      gap:
-        38px;
-
-      align-items:
-        center;
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 38px;
+      align-items: center;
     }
-
-
-    /* =========================
-       IMAGE
-    ========================= */
 
     .image-link {
-
-      position:
-        relative;
-
-      display:
-        block;
-
-      overflow:
-        hidden;
-
-      border-radius:
-        20px;
-
-      box-shadow:
-        0 10px 30px
-        rgba(0,0,0,.10);
+      position: relative;
+      display: block;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.10);
     }
-
 
     .image-link img {
-
-      display:
-        block;
-
-      width:
-        100%;
-
-      height:
-        360px;
-
-      object-fit:
-        cover;
-
-      transition:
-        transform .45s ease;
+      display: block;
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      transition: transform .45s ease;
     }
-
 
     .image-label {
-
-      position:
-        absolute;
-
-      right:
-        14px;
-
-      bottom:
-        14px;
-
-      padding:
-        7px 12px;
-
-      border-radius:
-        20px;
-
-      background:
-        rgba(255,255,255,.95);
-
-      color:
-        var(--dark);
-
-      font-size:
-        .78rem;
-
-      font-weight:
-        700;
+      position: absolute;
+      right: 14px;
+      bottom: 14px;
+      padding: 7px 12px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.95);
+      color: var(--dark);
+      font-size: .78rem;
+      font-weight: 700;
     }
-
-
-    /* =========================
-       HIGHLIGHTS
-    ========================= */
 
     .highlights h2 {
-
-      margin-bottom:
-        18px;
-
+      margin-bottom: 18px;
       color: #0b0b0b;
-
-      font-size:
-        1.55rem;
-
-      font-weight:
-        900;
+      font-size: 1.55rem;
+      font-weight: 900;
     }
-
 
     .spots {
-
-      list-style:
-        none;
+      list-style: none;
     }
-
 
     .spots li {
-
-      position:
-        relative;
-
-      padding-left:
-        29px;
-
-      margin-bottom:
-        14px;
-
-      color:
-        #222222;
-
-      font-size:
-        .96rem;
-
-      line-height:
-        1.55;
+      position: relative;
+      padding-left: 29px;
+      margin-bottom: 14px;
+      color: #222222;
+      font-size: .96rem;
+      line-height: 1.55;
     }
-
 
     .spots li::before {
-
-      content:
-        "🌸";
-
-      position:
-        absolute;
-
-      left:
-        0;
-
-      top:
-        0;
-
-      font-size:
-        .9rem;
+      content: "🌸";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: .9rem;
     }
-
 
     .spots li strong {
       color: #0a0a0a;
       font-weight: 850;
     }
 
-
-    /* =========================
-       TOUR DETAILS
-    ========================= */
-
     .details {
-
-      display:
-        grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap:
-        16px;
-
-      margin-top:
-        30px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 30px;
     }
 
-
     .detail {
-
-      padding:
-        18px 16px;
-
-      background:
-        #ffffff;
-
-      border:
-        2px solid var(--border);
-
-      border-radius:
-        16px;
-
-      text-align:
-        center;
-
-      box-shadow:
-        0 4px 12px rgba(184, 41, 91, 0.08);
-
-      transition: 
-        transform 0.2s ease, 
-        border-color 0.2s ease;
+      padding: 18px 16px;
+      background: #ffffff;
+      border: 2px solid var(--border);
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(184, 41, 91, 0.08);
+      transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
     .detail:hover {
@@ -693,674 +339,201 @@
       border-color: var(--pink-dark);
     }
 
-
     .detail strong {
-
-      display:
-        block;
-
-      margin-bottom:
-        6px;
-
+      display: block;
+      margin-bottom: 6px;
       color: #080808;
-
-      font-size:
-        .95rem;
-
-      font-weight:
-        850;
+      font-size: .95rem;
+      font-weight: 850;
     }
-
 
     .detail span {
-
-      color:
-        #444444;
-
-      font-size:
-        .82rem;
-
-      font-weight:
-        600;
+      color: #444444;
+      font-size: .82rem;
+      font-weight: 600;
     }
-
-
-    /* =========================
-       CTA
-    ========================= */
 
     .cta {
-
-      margin-top:
-        28px;
-
-      padding:
-        25px;
-
-      text-align:
-        center;
-
-      background:
-        #ffffff;
-
-      border:
-        2px solid var(--border);
-
-      border-radius:
-        18px;
+      margin-top: 28px;
+      padding: 25px;
+      text-align: center;
+      background: #ffffff;
+      border: 2px solid var(--border);
+      border-radius: 18px;
     }
-
 
     .cta h2 {
-
-      margin-bottom:
-        7px;
-
+      margin-bottom: 7px;
       color: #0d0d0d;
-
-      font-size:
-        1.4rem;
-
-      font-weight:
-        900;
+      font-size: 1.4rem;
+      font-weight: 900;
     }
-
 
     .cta p {
-
-      margin-bottom:
-        17px;
-
-      color:
-        var(--muted);
-
-      font-size:
-        .9rem;
+      margin-bottom: 17px;
+      color: var(--muted);
+      font-size: .9rem;
     }
-
 
     .button {
-
-      display:
-        inline-block;
-
-      padding:
-        14px 30px;
-
-      background:
-        var(--cta);
-
-      color:
-        #ffffff !important;
-
-      border-radius:
-        40px;
-
-      text-decoration:
-        none;
-
-      font-size:
-        .98rem;
-
-      font-weight:
-        800;
-
-      box-shadow:
-        0 5px 18px
-        rgba(184,41,91,.25);
-
-      transition:
-        .2s ease;
+      display: inline-block;
+      padding: 14px 30px;
+      background: var(--cta);
+      color: #ffffff !important;
+      border-radius: 40px;
+      text-decoration: none;
+      font-size: .98rem;
+      font-weight: 800;
+      box-shadow: 0 5px 18px rgba(184,41,91,.25);
+      transition: .2s ease;
     }
-
 
     .button:hover {
-
-      background:
-        var(--cta-hover);
-
-      transform:
-        translateY(-2px);
+      background: var(--cta-hover);
+      transform: translateY(-2px);
     }
-
 
     .fine-print {
-
-      margin-top:
-        10px;
-
-      color:
-        #777;
-
-      font-size:
-        .72rem;
-
-      line-height:
-        1.5;
+      margin-top: 10px;
+      color: #777;
+      font-size: .72rem;
+      line-height: 1.5;
     }
 
-
     /* =========================
-       TABLET
+       MEDIA QUERIES
     ========================= */
-
     @media (max-width: 850px) {
-
-      .article-card {
-
-        padding:
-          32px 28px;
-      }
-
-
-      .tour-grid {
-
-        grid-template-columns:
-          1fr;
-
-        gap:
-          25px;
-      }
-
-
-      .image-link img {
-
-        height:
-          330px;
-      }
-
-
-      .offer {
-
-        align-items:
-          flex-start;
-      }
-
+      .article-card { padding: 32px 28px; }
+      .tour-grid { grid-template-columns: 1fr; gap: 25px; }
+      .image-link img { height: 330px; }
+      .offer { align-items: flex-start; }
     }
-
-
-    /* =========================
-       MOBILE
-    ========================= */
 
     @media (max-width: 600px) {
-
-      .article-card {
-
-        width:
-          calc(100% - 18px);
-
-        margin:
-          15px auto;
-
-        padding:
-          24px 17px;
-
-        border-radius:
-          19px;
-      }
-
-
-      h1 {
-
-        font-size:
-          1.65rem;
-      }
-
-
-      .intro {
-
-        font-size:
-          .91rem;
-
-        line-height:
-          1.65;
-      }
-
-
-      .offer {
-
-        display:
-          block;
-
-        padding:
-          18px;
-      }
-
-
-      .offer-left {
-
-        gap:
-          12px;
-      }
-
-
-      .discount {
-
-        font-size:
-          .72rem;
-      }
-
-
-      .price {
-
-        font-size:
-          1.55rem;
-      }
-
-
-      .offer-rating {
-
-        margin-top:
-          14px;
-
-        text-align:
-          left;
-      }
-
-
-      .image-link img {
-
-        height:
-          245px;
-      }
-
-
-      .details {
-
-        grid-template-columns:
-          1fr;
-      }
-
-
-      .cta {
-
-        padding:
-          21px 15px;
-      }
-
-
-      .button {
-
-        width:
-          100%;
-
-        padding:
-          14px 15px;
-      }
-
+      .article-card { width: calc(100% - 18px); margin: 15px auto; padding: 24px 17px; border-radius: 19px; }
+      h1 { font-size: 1.65rem; }
+      .intro { font-size: .91rem; line-height: 1.65; }
+      .offer { display: block; padding: 18px; }
+      .offer-left { gap: 12px; }
+      .discount { font-size: .72rem; }
+      .price { font-size: 1.55rem; }
+      .offer-rating { margin-top: 14px; text-align: left; }
+      .image-link img { height: 245px; }
+      .details { grid-template-columns: 1fr; }
+      .cta { padding: 21px 15px; }
+      .button { width: 100%; padding: 14px 15px; }
     }
-
-
-    /* =========================
-       SMALL PHONES
-    ========================= */
 
     @media (max-width: 380px) {
-
-      .article-card {
-
-        width:
-          calc(100% - 12px);
-
-        padding:
-          21px 14px;
-      }
-
-
-      h1 {
-
-        font-size:
-          1.5rem;
-      }
-
-
-      .price {
-
-        font-size:
-          1.4rem;
-      }
-
+      .article-card { width: calc(100% - 12px); padding: 21px 14px; }
+      h1 { font-size: 1.5rem; }
+      .price { font-size: 1.4rem; }
     }
-
   </style>
-
 </head>
-
 
 <body>
 
-
   <article class="article-card">
 
-
-    <!-- =====================
-         SAKURA ANIMATION
-    ====================== -->
-
+    <!-- SAKURA ANIMATION CONTAINER (12 PETALS) -->
     <div class="sakura">
-
       <div class="petal"></div>
-
       <div class="petal"></div>
-
       <div class="petal"></div>
-
       <div class="petal"></div>
-
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
     </div>
-
 
     <div class="content">
 
-
-      <!-- =====================
-            BADGE
-      ====================== -->
-
-      <span class="badge">
-        🇯🇵 JAPAN TRAVEL
-      </span>
-
-
-      <!-- =====================
-            TITLE
-      ====================== -->
+      <span class="badge">🇯🇵 JAPAN TRAVEL</span>
 
       <h1>
         <span>A One-Day Journey Through Tokyo, Hakone</span>
         <span>& Mount Fuji</span>
       </h1>
 
-
-      <!-- =====================
-            INTRO
-      ====================== -->
-
       <p class="intro">
-
-        Want to see Mount Fuji and Hakone without spending days
-        planning transportation? This full-day tour from Tokyo
-        combines six popular attractions into one convenient trip,
-        with an English-speaking guide.
-
+        Want to see Mount Fuji and Hakone without spending days planning transportation? This full-day tour from Tokyo combines six popular attractions into one convenient trip, with an English-speaking guide.
       </p>
 
-
-      <!-- =====================
-            CLICKABLE OFFER
-      ====================== -->
-
-      <a
-        href="YOUR_TRAVELPAYOUTS_KLOOK_LINK_HERE"
-        target="_blank"
-        rel="nofollow sponsored noopener"
-        class="offer-link"
-        aria-label="Check Mount Fuji and Hakone tour availability"
-      >
-
+      <!-- CLICKABLE OFFER CARD -->
+      <a href="YOUR_TRAVELPAYOUTS_KLOOK_LINK_HERE" target="_blank" rel="nofollow sponsored noopener" class="offer-link" aria-label="Check Mount Fuji and Hakone tour availability">
         <div class="offer">
-
-
           <div class="offer-left">
-
-
-            <div class="discount">
-              30% OFF
-            </div>
-
-
+            <div class="discount">30% OFF</div>
             <div>
-
-              <div class="price-label">
-                Current price from
-              </div>
-
-
-              <div class="price">
-                US$50.99
-              </div>
-
+              <div class="price-label">Current price from</div>
+              <div class="price">US$50.99</div>
             </div>
-
-
           </div>
-
 
           <div class="offer-rating">
-
-
             <div class="rating">
-
-              <span>★</span>
-              4.8/5
-
+              <span>★</span> 4.8/5
             </div>
-
-
-            <div class="booked">
-              201 reviews · 1K+ booked
-            </div>
-
-
+            <div class="booked">201 reviews · 1K+ booked</div>
           </div>
-
-
         </div>
-
       </a>
 
-
-      <!-- =====================
-            TOUR GRID
-      ====================== -->
-
+      <!-- TOUR GRID -->
       <div class="tour-grid">
-
-
-        <!-- IMAGE -->
-
-        <a
-          href="YOUR_TRAVELPAYOUTS_KLOOK_LINK_HERE"
-          target="_blank"
-          rel="nofollow sponsored noopener"
-          class="image-link"
-        >
-
+        <a href="YOUR_TRAVELPAYOUTS_KLOOK_LINK_HERE" target="_blank" rel="nofollow sponsored noopener" class="image-link">
           <img src="/images/japan.jpg" alt="Mount Fuji and Hakone day tour from Tokyo" loading="lazy">
-
-          <span class="image-label"> 
-            🔎 Check Tour
-          </span>
-
+          <span class="image-label">🔎 Check Tour</span>
         </a>
-
-
-        <!-- HIGHLIGHTS -->
 
         <div class="highlights">
-
-
-          <h2>
-            What You'll See
-          </h2>
-
-
+          <h2>What You'll See</h2>
           <ul class="spots">
-
-
-            <li>
-
-              <strong>
-                Heiwa no Torii
-              </strong>
-
-              — A scenic Hakone lakeside torii gate.
-
-            </li>
-
-
-            <li>
-
-              <strong>
-                Hakone Pirate Ship
-              </strong>
-
-              — Enjoy a cruise from Togendai Port.
-
-            </li>
-
-
-            <li>
-
-              <strong>
-                Hakone Ropeway
-              </strong>
-
-              — Take in views across Hakone's volcanic landscape.
-
-            </li>
-
-
-            <li>
-
-              <strong>
-                Owakudani
-              </strong>
-
-              — Explore the famous volcanic valley.
-
-            </li>
-
-
-            <li>
-
-              <strong>
-                Lake Yamanaka
-              </strong>
-
-              — Enjoy scenery around one of the Fuji Five Lakes.
-
-            </li>
-
-
-            <li>
-
-              <strong>
-                Oshino Hakkai
-              </strong>
-
-              — Visit the famous spring ponds near Mount Fuji.
-
-            </li>
-
-
+            <li><strong>Heiwa no Torii</strong> — A scenic Hakone lakeside torii gate.</li>
+            <li><strong>Hakone Pirate Ship</strong> — Enjoy a cruise from Togendai Port.</li>
+            <li><strong>Hakone Ropeway</strong> — Take in views across Hakone's volcanic landscape.</li>
+            <li><strong>Owakudani</strong> — Explore the famous volcanic valley.</li>
+            <li><strong>Lake Yamanaka</strong> — Enjoy scenery around one of the Fuji Five Lakes.</li>
+            <li><strong>Oshino Hakkai</strong> — Visit the famous spring ponds near Mount Fuji.</li>
           </ul>
-
-
         </div>
-
-
       </div>
 
-
-      <!-- =====================
-            TOUR DETAILS
-      ====================== -->
-
+      <!-- TOUR DETAILS -->
       <div class="details">
-
-
         <div class="detail">
-
-          <strong>
-            🕗 Duration
-          </strong>
-
-          <span>
-            Approx. 08:00–18:00
-          </span>
-
+          <strong>🕗 Duration</strong>
+          <span>Approx. 08:00–18:00</span>
         </div>
-
-
         <div class="detail">
-
-          <strong>
-            🗣️ Guide
-          </strong>
-
-          <span>
-            English + other languages
-          </span>
-
+          <strong>🗣️ Guide</strong>
+          <span>English + other languages</span>
         </div>
-
-
         <div class="detail">
-
-          <strong>
-            📍 Departure
-          </strong>
-
-          <span>
-            Tokyo
-          </span>
-
+          <strong>📍 Departure</strong>
+          <span>Tokyo</span>
         </div>
-
-
       </div>
 
-
-      <!-- =====================
-            MAIN CTA
-      ====================== -->
-
+      <!-- MAIN CTA -->
       <div class="cta">
-
-
-        <h2>
-          🌸 Want to Visit Mount Fuji?
-        </h2>
-
-
-        <p>
-
-          Check the latest price, available dates and
-          tour details before booking.
-
-        </p>
-
-
-        <a
-          href="YOUR_TRAVELPAYOUTS_KLOOK_LINK_HERE"
-          target="_blank"
-          rel="nofollow sponsored noopener"
-          class="button"
-        >
-
-          Check US$50.99 Tour →
-
-        </a>
-
-
+        <h2>🌸 Want to Visit Mount Fuji?</h2>
+        <p>Check the latest price, available dates and tour details before booking.</p>
+        <a href="YOUR_TRAVELPAYOUTS_KLOOK_LINK_HERE" target="_blank" rel="nofollow sponsored noopener" class="button">Check US$50.99 Tour →</a>
         <div class="fine-print">
-
-          Price and availability may change depending on
-          the selected date. Free cancellation is available
-          with at least 24 hours' notice according to the listing.
-
+          Price and availability may change depending on the selected date. Free cancellation is available with at least 24 hours' notice according to the listing.
         </div>
-
-
       </div>
-
 
     </div>
-
   </article>
-
 
 </body>
 </html>
