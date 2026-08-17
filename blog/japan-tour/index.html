@@ -143,50 +143,53 @@
       border-radius:
         150% 0 150% 0;
 
-      opacity: 0.45;
+      opacity: 0.55;
 
       animation:
         fall linear infinite;
     }
 
-
+    /* 3 flowers start falling immediately together on page load */
     .petal:nth-child(1) {
-      left: 12%;
+      left: 15%;
 
-      animation-duration: 18s;
+      animation-duration: 9s;
 
       animation-delay: 0s;
     }
 
 
     .petal:nth-child(2) {
-      left: 35%;
+      left: 50%;
 
       width: 16px;
       height: 12px;
 
-      animation-duration: 22s;
+      animation-duration: 10s;
 
-      animation-delay: -7s;
+      animation-delay: 0s;
     }
 
 
     .petal:nth-child(3) {
-      left: 62%;
-
-      animation-duration: 20s;
-
-      animation-delay: -13s;
-    }
-
-
-    .petal:nth-child(4) {
-      left: 85%;
+      left: 82%;
 
       width: 15px;
       height: 11px;
 
-      animation-duration: 24s;
+      animation-duration: 9.5s;
+
+      animation-delay: 0s;
+    }
+
+    /* 4th flower staggered for continuous flow */
+    .petal:nth-child(4) {
+      left: 32%;
+
+      width: 14px;
+      height: 10px;
+
+      animation-duration: 11s;
 
       animation-delay: -4s;
     }
@@ -204,7 +207,7 @@
 
       50% {
         transform:
-          translateX(35px)
+          translateX(40px)
           rotate(180deg);
       }
 
@@ -212,7 +215,7 @@
         top: 112%;
 
         transform:
-          translateX(-20px)
+          translateX(-25px)
           rotate(360deg);
       }
 
