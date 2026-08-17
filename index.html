@@ -39,6 +39,40 @@
   a { color: inherit; text-decoration: none; }
   img, svg { display: block; max-width: 100%; }
 
+  /* Fixed Floating Traveler Widget (Bottom Left Screen) */
+  .fixed-traveler-widget {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    pointer-events: none; /* Prevents blocking clicks on elements underneath */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(18, 121, 128, 0.2);
+    border-radius: 50%;
+    padding: 8px;
+    box-shadow: 0 8px 24px rgba(4, 32, 36, 0.15);
+  }
+
+  .fixed-traveler-widget img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    animation: gentleBounce 2.5s ease-in-out infinite;
+  }
+
+  @keyframes gentleBounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+
   /* Header */
   header {
     display: flex; align-items: center; justify-content: center;
@@ -443,10 +477,17 @@
     .hero-scrim { padding: 32px 20px 28px; }
     .p-card { flex: 0 0 85%; }
     .blog-promo-section { margin: 28px auto 10px; padding: 0 12px; }
+    .fixed-traveler-widget { bottom: 14px; left: 14px; padding: 6px; }
+    .fixed-traveler-widget img { width: 36px; height: 36px; }
   }
 </style>
 </head>
 <body>
+
+<!-- Fixed Bottom Left Animated Traveler -->
+<div class="fixed-traveler-widget">
+  <img src="https://lh3.googleusercontent.com/pw/AP1GczP9mpxWp9EsnmXIn_x2mKmsE8rN9e7Gf5cOToR6sF0A_Jg9cTjO5f0eZJ6U4I-1aE_pE-YmQ0_C4V_D=s512" alt="Animated Traveler">
+</div>
 
 <header>
   <div class="brand">
@@ -468,9 +509,6 @@
     </div>
   </div>
 </section>
-
-<!-- Featured Blog Promotion Section -->
-<section class="blog-promo-section">
 
 <!-- Featured Blog Promotion Section -->
 <section class="blog-promo-section">
