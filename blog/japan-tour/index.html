@@ -116,12 +116,13 @@
 
 
     /* =========================================================
-       SAKURA ANIMATIONS (3 PETALS)
+       SAKURA ANIMATIONS (SPREAD ACROSS DIFFERENT AREAS)
     ========================================================= */
 
     .sakura-card::before,
     .sakura-card::after,
-    .sakura-petal-3 {
+    .sakura-petal-3,
+    .sakura-petal-4 {
 
       content: "🌸";
 
@@ -141,22 +142,30 @@
         sakuraFall 10s linear infinite;
     }
 
-
+    /* Left area */
     .sakura-card::before {
-      left: 10%;
+      left: 8%;
       animation-delay: 0s;
     }
 
-    /* Additional middle petal */
+    /* Mid-left area */
     .sakura-petal-3 {
-      left: 50%;
-      animation-delay: 2.5s;
-      animation-duration: 8.5s;
+      left: 35%;
+      animation-delay: 3s;
+      animation-duration: 9s;
     }
 
+    /* Mid-right area */
+    .sakura-petal-4 {
+      left: 62%;
+      animation-delay: 6s;
+      animation-duration: 11s;
+    }
+
+    /* Right area */
     .sakura-card::after {
-      left: 85%;
-      animation-delay: 5s;
+      left: 88%;
+      animation-delay: 4.5s;
     }
 
 
@@ -881,8 +890,9 @@
 
   <article class="sakura-card">
 
-    <!-- Third Falling Sakura Petal -->
+    <!-- Extra Sakura Petals for Different Areas -->
     <span class="sakura-petal-3"></span>
+    <span class="sakura-petal-4"></span>
 
     <div class="content-layer">
 
@@ -894,7 +904,7 @@
       <div class="logo-container">
         <a href="/" class="logo-link" title="Pinpoint Travel - Home">
           <img 
-            src="images/1 (1).png" 
+            src="logo.png.png" 
             alt="Pinpoint Travel Logo" 
             class="site-logo"
           >
