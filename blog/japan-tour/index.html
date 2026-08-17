@@ -116,11 +116,12 @@
 
 
     /* =========================================================
-       SAKURA ANIMATION
+       SAKURA ANIMATIONS (3 PETALS)
     ========================================================= */
 
     .sakura-card::before,
-    .sakura-card::after {
+    .sakura-card::after,
+    .sakura-petal-3 {
 
       content: "🌸";
 
@@ -146,6 +147,12 @@
       animation-delay: 0s;
     }
 
+    /* Additional middle petal */
+    .sakura-petal-3 {
+      left: 50%;
+      animation-delay: 2.5s;
+      animation-duration: 8.5s;
+    }
 
     .sakura-card::after {
       left: 85%;
@@ -319,11 +326,6 @@
 
       display: grid;
 
-      /*
-        Image gets slightly more space
-        than the text column.
-      */
-
       grid-template-columns:
         minmax(0, 1.15fr)
         minmax(0, 1fr);
@@ -385,10 +387,6 @@
       display: block;
 
       width: 100%;
-
-      /*
-        Desktop image height
-      */
 
       height: 390px;
 
@@ -882,6 +880,9 @@
   ========================================================= -->
 
   <article class="sakura-card">
+
+    <!-- Third Falling Sakura Petal -->
+    <span class="sakura-petal-3"></span>
 
     <div class="content-layer">
 
