@@ -29,6 +29,8 @@
       --sakura-light: #fff0f3;
 
       --japanese-red: #d90429;
+      --cta-rose: #b8295b;
+      --cta-rose-hover: #961d47;
 
       --ink-dark: #2b2d42;
       --text-dark: #333333;
@@ -65,11 +67,8 @@
     body {
       width: 100%;
       min-height: 100vh;
-
       margin: 0;
-
       background: #ffffff;
-
       font-family:
         -apple-system,
         BlinkMacSystemFont,
@@ -80,6 +79,68 @@
         sans-serif;
 
       color: var(--ink-dark);
+      overflow-x: hidden;
+    }
+
+
+    /* =========================================================
+       SAKURA ANIMATION CONTAINER & PETALS
+    ========================================================= */
+
+    .sakura-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 10;
+      overflow: hidden;
+    }
+
+    .petal {
+      position: absolute;
+      background-color: var(--sakura-pink);
+      border-radius: 150% 0 150% 0;
+      opacity: 0.7;
+      pointer-events: none;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        top: -10%;
+        transform: translateX(0) rotate(0deg);
+      }
+      100% {
+        top: 105%;
+        transform: translateX(100px) rotate(360deg);
+      }
+    }
+
+    /* Dedicated Mid-page Falling Animation */
+    .petal-center {
+      left: 50% !important;
+      animation: fall-center 6s ease-in-out infinite !important;
+    }
+
+    @keyframes fall-center {
+      0% {
+        top: -10%;
+        transform: translateX(-50%) rotate(0deg) scale(0.8);
+        opacity: 0;
+      }
+      20% {
+        opacity: 0.8;
+      }
+      50% {
+        transform: translateX(calc(-50% + 40px)) rotate(180deg) scale(1.1);
+      }
+      100% {
+        top: 105%;
+        transform: translateX(calc(-50% - 30px)) rotate(360deg) scale(0.9);
+        opacity: 0.2;
+      }
     }
 
 
@@ -88,113 +149,18 @@
     ========================================================= */
 
     .sakura-card {
-
       position: relative;
-
-      /* Uses almost the entire desktop width */
       width: calc(100% - 40px);
-
-      /* Maximum comfortable reading width */
       max-width: 1200px;
-
       margin: 40px auto;
-
       padding: 44px 50px;
-
       background: var(--background);
-
       border: 1px solid var(--border-pink);
-
       border-radius: 28px;
-
       box-shadow:
         0 18px 50px
         rgba(255, 183, 197, 0.20);
-
       overflow: hidden;
-    }
-
-
-    /* =========================================================
-       SAKURA ANIMATIONS (SPREAD ACROSS DIFFERENT AREAS)
-    ========================================================= */
-
-    .sakura-card::before,
-    .sakura-card::after,
-    .sakura-petal-3,
-    .sakura-petal-4,
-    .sakura-petal-center {
-
-      content: "🌸";
-
-      position: absolute;
-
-      top: -30px;
-
-      font-size: 1.4rem;
-
-      opacity: 0.7;
-
-      pointer-events: none;
-
-      z-index: 1;
-
-      animation:
-        sakuraFall 10s linear infinite;
-    }
-
-    /* Left area */
-    .sakura-card::before {
-      left: 8%;
-      animation-delay: 0s;
-    }
-
-    /* Mid-left area */
-    .sakura-petal-3 {
-      left: 35%;
-      animation-delay: 3s;
-      animation-duration: 9s;
-    }
-
-    /* Center area */
-    .sakura-petal-center {
-      left: 50%;
-      animation-delay: 1.5s;
-      animation-duration: 7.5s;
-    }
-
-    /* Mid-right area */
-    .sakura-petal-4 {
-      left: 62%;
-      animation-delay: 6s;
-      animation-duration: 11s;
-    }
-
-    /* Right area */
-    .sakura-card::after {
-      left: 88%;
-      animation-delay: 4.5s;
-    }
-
-
-    @keyframes sakuraFall {
-
-      0% {
-        transform:
-          translateY(-30px)
-          rotate(0deg);
-
-        opacity: 0.8;
-      }
-
-      100% {
-        transform:
-          translateY(900px)
-          rotate(360deg);
-
-        opacity: 0;
-      }
-
     }
 
 
@@ -204,7 +170,6 @@
 
     .content-layer {
       position: relative;
-
       z-index: 2;
     }
 
@@ -214,26 +179,15 @@
     ========================================================= */
 
     .jp-badge {
-
       display: inline-block;
-
       margin-bottom: 17px;
-
       padding: 7px 17px;
-
       background: #ffffff;
-
       color: var(--japanese-red);
-
-      border:
-        1px solid #fecdd3;
-
+      border: 1px solid #fecdd3;
       border-radius: 30px;
-
       font-size: 0.82rem;
-
       font-weight: 700;
-
       letter-spacing: 1px;
     }
 
@@ -243,22 +197,16 @@
     ========================================================= */
 
     .sakura-card h1 {
-
       margin-bottom: 18px;
-
       max-width: 1000px;
-
       color: var(--ink-dark);
-
       font-size:
         clamp(
           1.8rem,
           3vw,
           2.7rem
         );
-
       line-height: 1.2;
-
       font-weight: 800;
     }
 
@@ -268,15 +216,10 @@
     ========================================================= */
 
     .intro-text {
-
       max-width: 1080px;
-
       margin-bottom: 28px;
-
       color: var(--text-gray);
-
       font-size: 1.05rem;
-
       line-height: 1.75;
     }
 
@@ -286,26 +229,15 @@
     ========================================================= */
 
     .text-link {
-
       color: var(--sakura-deep);
-
       font-weight: 700;
-
       text-decoration: none;
-
-      border-bottom:
-        1px dashed
-        var(--sakura-deep);
-
-      transition:
-        color 0.2s ease;
+      border-bottom: 1px dashed var(--sakura-deep);
+      transition: color 0.2s ease;
     }
 
-
     .text-link:hover {
-
-      color:
-        var(--japanese-red);
+      color: var(--japanese-red);
     }
 
 
@@ -314,19 +246,13 @@
     ========================================================= */
 
     .desktop-grid {
-
       display: grid;
-
       grid-template-columns:
         minmax(0, 1.15fr)
         minmax(0, 1fr);
-
       gap: 44px;
-
       align-items: center;
-
-      margin:
-        32px 0;
+      margin: 32px 0;
     }
 
 
@@ -335,63 +261,31 @@
     ========================================================= */
 
     .image-frame {
-
       position: relative;
-
       display: block;
-
       width: 100%;
-
       overflow: hidden;
-
       border-radius: 22px;
-
       text-decoration: none;
-
-      box-shadow:
-        0 10px 30px
-        rgba(0, 0, 0, 0.10);
-
-      transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
 
     .image-frame:hover {
-
-      transform:
-        translateY(-5px);
-
-      box-shadow:
-        0 16px 38px
-        rgba(255, 117, 140, 0.35);
+      transform: translateY(-5px);
+      box-shadow: 0 16px 38px rgba(255, 117, 140, 0.35);
     }
-
-
-    /* =========================================================
-       IMAGE
-    ========================================================= */
 
     .image-frame img {
-
       display: block;
-
       width: 100%;
-
       height: 390px;
-
       object-fit: cover;
-
-      transition:
-        transform 0.5s ease;
+      transition: transform 0.5s ease;
     }
 
-
     .image-frame:hover img {
-
-      transform:
-        scale(1.04);
+      transform: scale(1.04);
     }
 
 
@@ -400,41 +294,16 @@
     ========================================================= */
 
     .image-tag {
-
       position: absolute;
-
       right: 15px;
       bottom: 15px;
-
-      padding:
-        8px 15px;
-
-      background:
-        rgba(
-          255,
-          255,
-          255,
-          0.95
-        );
-
-      backdrop-filter:
-        blur(8px);
-
+      padding: 8px 15px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
       color: var(--ink-dark);
-
-      border:
-        1px solid
-        rgba(
-          255,
-          183,
-          197,
-          0.7
-        );
-
+      border: 1px solid rgba(255, 183, 197, 0.7);
       border-radius: 25px;
-
       font-size: 0.82rem;
-
       font-weight: 700;
     }
 
@@ -444,171 +313,73 @@
     ========================================================= */
 
     .spot-list {
-
       list-style: none;
-
       margin: 0;
-
       padding: 0;
     }
 
-
     .spot-list li {
-
       position: relative;
-
       padding-left: 34px;
-
       margin-bottom: 20px;
-
       color: var(--text-dark);
-
       font-size: 1rem;
-
       line-height: 1.65;
     }
 
-
     .spot-list li:last-child {
-
       margin-bottom: 0;
     }
 
-
     .spot-list li::before {
-
       content: "🌸";
-
       position: absolute;
-
       left: 0;
-
       top: 2px;
-
       font-size: 1rem;
     }
 
 
     /* =========================================================
-       CTA AREA
+       CTA AREA & UPDATED BUTTON
     ========================================================= */
 
     .cta-wrapper {
-
       margin-top: 34px;
-
       padding-top: 5px;
-
       text-align: center;
     }
-
-
-    /* =========================================================
-       CTA BUTTON
-    ========================================================= */
 
     .sakura-btn {
-
       display: inline-block;
-
       min-width: 350px;
-
-      padding:
-        17px 40px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #d90429 0%,
-          #e63946 100%
-        );
-
+      padding: 17px 40px;
+      background-color: var(--cta-rose);
       color: #ffffff !important;
-
       border-radius: 50px;
-
       text-align: center;
-
       text-decoration: none;
-
       font-size: 1.1rem;
-
       font-weight: 700;
-
-      box-shadow:
-        0 7px 22px
-        rgba(
-          217,
-          4,
-          41,
-          0.40
-        );
-
-      transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-
-      animation:
-        pulseBloom 1.5s infinite;
+      box-shadow: 0 4px 15px rgba(184, 41, 91, 0.3);
+      transition: background-color 0.2s ease, transform 0.2s ease;
+      animation: cta-pulse 1.2s infinite ease-in-out;
     }
-
 
     .sakura-btn:hover {
-
-      transform:
-        translateY(-2px);
-
-      box-shadow:
-        0 10px 30px
-        rgba(
-          217,
-          4,
-          41,
-          0.55
-        );
+      background-color: var(--cta-rose-hover);
+      transform: translateY(-2px);
     }
 
-
-    /* =========================================================
-       BUTTON ANIMATION
-    ========================================================= */
-
-    @keyframes pulseBloom {
-
+    @keyframes cta-pulse {
       0% {
-
-        box-shadow:
-          0 0 0 0
-          rgba(
-            217,
-            4,
-            41,
-            0.45
-          );
+        box-shadow: 0 0 0 0 rgba(184, 41, 91, 0.6);
       }
-
       70% {
-
-        box-shadow:
-          0 0 0 15px
-          rgba(
-            217,
-            4,
-            41,
-            0
-          );
+        box-shadow: 0 0 0 16px rgba(184, 41, 91, 0);
       }
-
       100% {
-
-        box-shadow:
-          0 0 0 0
-          rgba(
-            217,
-            4,
-            41,
-            0
-          );
+        box-shadow: 0 0 0 0 rgba(184, 41, 91, 0);
       }
     }
 
@@ -618,239 +389,121 @@
     ========================================================= */
 
     .sub-note {
-
       margin-top: 12px;
-
       color: var(--text-light);
-
       font-size: 0.82rem;
-
       line-height: 1.5;
     }
 
 
     /* =========================================================
-       TABLET
-       601px - 950px
+       MEDIA QUERIES
     ========================================================= */
 
     @media (max-width: 950px) {
-
       .sakura-card {
-
-        width:
-          calc(100% - 30px);
-
-        padding:
-          36px 32px;
+        width: calc(100% - 30px);
+        padding: 36px 32px;
       }
 
-
       .desktop-grid {
-
         grid-template-columns: 1fr;
-
         gap: 30px;
       }
 
-
       .image-frame img {
-
         height: 360px;
       }
 
-
       .spot-list {
-
-        padding:
-          0 5px;
+        padding: 0 5px;
       }
     }
 
-
-    /* =========================================================
-       MOBILE
-       Under 600px
-    ========================================================= */
-
     @media (max-width: 600px) {
-
       .sakura-card {
-
-        width:
-          calc(100% - 20px);
-
-        margin:
-          15px auto;
-
-        padding:
-          24px 18px;
-
-        border-radius:
-          20px;
+        width: calc(100% - 20px);
+        margin: 15px auto;
+        padding: 24px 18px;
+        border-radius: 20px;
       }
-
 
       .jp-badge {
-
         margin-bottom: 13px;
-
-        padding:
-          6px 12px;
-
-        font-size:
-          0.72rem;
+        padding: 6px 12px;
+        font-size: 0.72rem;
       }
-
 
       .sakura-card h1 {
-
         margin-bottom: 15px;
-
-        font-size:
-          1.65rem;
-
-        line-height:
-          1.25;
+        font-size: 1.65rem;
+        line-height: 1.25;
       }
-
 
       .intro-text {
-
-        margin-bottom:
-          22px;
-
-        font-size:
-          0.94rem;
-
-        line-height:
-          1.65;
+        margin-bottom: 22px;
+        font-size: 0.94rem;
+        line-height: 1.65;
       }
-
-
-      /* Stack image and text */
 
       .desktop-grid {
-
         display: block;
-
-        margin:
-          22px 0;
+        margin: 22px 0;
       }
-
-
-      /* Mobile image */
 
       .image-frame {
-
-        margin-bottom:
-          24px;
-
-        border-radius:
-          17px;
+        margin-bottom: 24px;
+        border-radius: 17px;
       }
 
-
       .image-frame img {
-
         width: 100%;
-
         height: 250px;
-
         object-fit: cover;
       }
 
-
       .image-tag {
-
         right: 10px;
-
         bottom: 10px;
-
-        padding:
-          6px 11px;
-
-        font-size:
-          0.72rem;
+        padding: 6px 11px;
+        font-size: 0.72rem;
       }
-
-
-      /* Mobile list */
 
       .spot-list li {
-
-        padding-left:
-          29px;
-
-        margin-bottom:
-          15px;
-
-        font-size:
-          0.91rem;
-
-        line-height:
-          1.55;
+        padding-left: 29px;
+        margin-bottom: 15px;
+        font-size: 0.91rem;
+        line-height: 1.55;
       }
-
-
-      /* Mobile CTA */
 
       .cta-wrapper {
-
-        margin-top:
-          28px;
+        margin-top: 28px;
       }
-
 
       .sakura-btn {
-
         width: 100%;
-
         min-width: 0;
-
-        padding:
-          15px 20px;
-
-        font-size:
-          0.98rem;
+        padding: 15px 20px;
+        font-size: 0.98rem;
       }
 
-
       .sub-note {
-
-        font-size:
-          0.74rem;
+        font-size: 0.74rem;
       }
     }
 
-
-    /* =========================================================
-       VERY SMALL PHONES
-    ========================================================= */
-
     @media (max-width: 380px) {
-
       .sakura-card {
-
-        width:
-          calc(100% - 12px);
-
-        padding:
-          20px 15px;
+        width: calc(100% - 12px);
+        padding: 20px 15px;
       }
-
 
       .sakura-card h1 {
-
-        font-size:
-          1.45rem;
+        font-size: 1.45rem;
       }
 
-
       .image-frame img {
-
-        height:
-          220px;
+        height: 220px;
       }
     }
 
@@ -860,51 +513,39 @@
 
 <body>
 
-
-  <!-- =========================================================
-       MAIN ARTICLE CARD
-  ========================================================= -->
-
+  <!-- MAIN ARTICLE CARD -->
   <article class="sakura-card">
 
-    <!-- Extra Sakura Petals for Different Areas -->
-    <span class="sakura-petal-3"></span>
-    <span class="sakura-petal-center"></span>
-    <span class="sakura-petal-4"></span>
+    <!-- Sakura Petals Layer -->
+    <div class="sakura-container">
+      <div class="petal" style="left: 10%; width: 15px; height: 12px; animation-duration: 8s;"></div>
+      <div class="petal" style="left: 25%; width: 20px; height: 16px; animation-duration: 10s; animation-delay: 2s;"></div>
+      <div class="petal" style="left: 75%; width: 14px; height: 10px; animation-duration: 7s; animation-delay: 1s;"></div>
+      <div class="petal" style="left: 85%; width: 18px; height: 14px; animation-duration: 9s; animation-delay: 3s;"></div>
+      
+      <!-- Dedicated Middle Page Sakura Stream -->
+      <div class="petal petal-center" style="width: 22px; height: 16px; animation-delay: 0s;"></div>
+      <div class="petal petal-center" style="width: 16px; height: 12px; animation-delay: 3s;"></div>
+    </div>
 
     <div class="content-layer">
 
-
-      <!-- =====================================================
-           BADGE
-      ====================================================== -->
-
+      <!-- BADGE -->
       <span class="jp-badge">
         ⛩️ JAPAN DESTINATIONS
       </span>
 
-
-      <!-- =====================================================
-           TITLE
-      ====================================================== -->
-
+      <!-- TITLE -->
       <h1>
         Mount Fuji & Hakone Day Trip:
         6 Iconic Spots in 1 Day
       </h1>
 
-
-      <!-- =====================================================
-           INTRODUCTION
-      ====================================================== -->
-
+      <!-- INTRODUCTION -->
       <p class="intro-text">
-
         Looking for the ultimate scenic getaway from Tokyo?
-
         Experience iconic viewpoints, clear spring ponds,
         and breathtaking cable car rides with this
-
         <a
           href="YOUR_TRAVELPAYOUTS_KLOOK_LINK_HERE"
           target="_blank"
@@ -913,110 +554,53 @@
         >
           top-rated Mt. Fuji & Hakone 1-day tour
         </a>.
-
       </p>
 
-
-      <!-- =====================================================
-           IMAGE + HIGHLIGHTS
-      ====================================================== -->
-
+      <!-- IMAGE + HIGHLIGHTS GRID -->
       <div class="desktop-grid">
 
-
-        <!-- ===================================================
-             TOUR IMAGE
-        ==================================================== -->
-
+        <!-- TOUR IMAGE -->
         <a
           href="YOUR_TRAVELPAYOUTS_KLOOK_LINK_HERE"
           target="_blank"
           rel="nofollow sponsored noopener"
           class="image-frame"
         >
-
           <img
             src="https://res.klook.com/image/upload/c_crop,h_1412,w_2259,x_0,y_18,z_0.3/w_1265,h_791,c_fill,q_85/activities/vyma3n3oyujr6x1mo970.jpg"
             alt="Mount Fuji and Hakone day tour from Tokyo"
             loading="lazy"
           >
-
           <span class="image-tag">
             🔍 Check Availability
           </span>
-
         </a>
 
-
-        <!-- ===================================================
-             TOUR HIGHLIGHTS
-        ==================================================== -->
-
+        <!-- TOUR HIGHLIGHTS -->
         <ul class="spot-list">
-
-
           <li>
-
-            <strong>
-              Oshino Hakkai:
-            </strong>
-
-            Eight peaceful crystal-clear ponds
-            formed by melting Mt. Fuji snow.
-
+            <strong>Oshino Hakkai:</strong>
+            Eight peaceful crystal-clear ponds formed by melting Mt. Fuji snow.
           </li>
-
-
           <li>
-
-            <strong>
-              Hikawa Clock Shop:
-            </strong>
-
-            Capture the iconic street view
-            framed by Mt. Fuji in the background.
-
+            <strong>Hikawa Clock Shop:</strong>
+            Capture the iconic street view framed by Mt. Fuji in the background.
           </li>
-
-
           <li>
-
-            <strong>
-              Hakone-en & Ropeway:
-            </strong>
-
-            Take in panoramic 360° views
-            across Lake Ashi and surrounding peaks.
-
+            <strong>Hakone-en & Ropeway:</strong>
+            Take in panoramic 360° views across Lake Ashi and surrounding peaks.
           </li>
-
-
           <li>
-
-            <strong>
-              Hassle-Free Transit:
-            </strong>
-
-            Direct round-trip bus tour from Tokyo
-            with an English-speaking guide.
-
+            <strong>Hassle-Free Transit:</strong>
+            Direct round-trip bus tour from Tokyo with an English-speaking guide.
           </li>
-
-
         </ul>
 
       </div>
 
-
-      <!-- =====================================================
-           SECONDARY DESCRIPTION
-      ====================================================== -->
-
+      <!-- SECONDARY DESCRIPTION -->
       <p class="intro-text">
-
-        Seats can fill up quickly during peak travel
-        seasons. You can instantly
-
+        Seats can fill up quickly during peak travel seasons. You can instantly
         <a
           href="YOUR_TRAVELPAYOUTS_KLOOK_LINK_HERE"
           target="_blank"
@@ -1025,18 +609,11 @@
         >
           check the Mt. Fuji Day Tour availability here
         </a>
-
         before availability changes.
-
       </p>
 
-
-      <!-- =====================================================
-           CTA
-      ====================================================== -->
-
+      <!-- CTA BUTTON SECTION -->
       <div class="cta-wrapper">
-
         <a
           href="YOUR_TRAVELPAYOUTS_KLOOK_LINK_HERE"
           target="_blank"
@@ -1046,21 +623,15 @@
           🌸 Book Your Mt. Fuji Tour Now →
         </a>
 
-
         <div class="sub-note">
-
           ⚡ Instant Booking Confirmation
           • Free Cancellation Options
-
         </div>
-
       </div>
-
 
     </div>
 
   </article>
-
 
 </body>
 </html>
