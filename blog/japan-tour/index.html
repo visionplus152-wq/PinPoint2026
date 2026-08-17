@@ -186,6 +186,32 @@
 
 
     /* =========================================================
+       HOMEPAGE LOGO LINK
+    ========================================================= */
+
+    .logo-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo-link {
+      display: inline-block;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-link:hover {
+      transform: scale(1.05);
+    }
+
+    .site-logo {
+      height: 90px;
+      width: auto;
+      object-fit: contain;
+    }
+
+
+    /* =========================================================
        JAPAN BADGE
     ========================================================= */
 
@@ -660,6 +686,11 @@
 
     @media (max-width: 600px) {
 
+      .site-logo {
+
+        height: 70px;
+      }
+
       .sakura-card {
 
         width:
@@ -853,6 +884,21 @@
   <article class="sakura-card">
 
     <div class="content-layer">
+
+
+      <!-- =====================================================
+           HOMEPAGE LOGO LINK
+      ====================================================== -->
+
+      <div class="logo-container">
+        <a href="/" class="logo-link" title="Pinpoint Travel - Home">
+          <img 
+            src="path/to/your/logo.png" 
+            alt="Pinpoint Travel Logo" 
+            class="site-logo"
+          >
+        </a>
+      </div>
 
 
       <!-- =====================================================
