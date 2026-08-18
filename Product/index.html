@@ -2,105 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0"
->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- =====================================================
-       SEO / BROWSER TAB
+        SEO / BROWSER TAB
   ====================================================== -->
-
-  <title>
-    18-Pack Travel Bottles for Toiletries | Pinpoint Travel
-  </title>
-
-<meta
-name="description"
-content="Discover an 18-piece refillable travel bottle kit for shampoo, conditioner, lotion and other toiletries. A practical travel essential for organized packing."
->
-
-<meta
-name="robots"
-content="index, follow"
->
-
-  <link
-    rel="canonical"
-    href="https://pinpointtravel.store/Product/"
-  >
+  <title>18-Pack Travel Bottles for Toiletries | Pinpoint Travel</title>
+  <meta name="description" content="Discover an 18-piece refillable travel bottle kit for shampoo, conditioner, lotion and other toiletries. A practical travel essential for organized packing.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pinpointtravel.store/Product/">
 
   <!-- =====================================================
-       FAVICON
-       Browser tab + Google/search favicon
+        FAVICON
   ====================================================== -->
-
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="48x48"
-    href="/favicon.png"
-  >
-
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="/favicon.png"
-  >
-
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="16x16"
-    href="/favicon.png"
-  >
-
-  <link
-    rel="shortcut icon"
-    type="image/png"
-    href="/favicon.png"
-  >
-
-  <link
-    rel="apple-touch-icon"
-    href="/favicon.png"
-  >
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+  <link rel="shortcut icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
 
   <!-- =====================================================
-       OPEN GRAPH
+        OPEN GRAPH
   ====================================================== -->
-
-<meta
-property="og"
-content="18-Pack Travel Bottles for Toiletries | Pinpoint Travel"
->
-
-<meta
-property="og"
-content="A practical 18-piece refillable travel bottle kit for keeping toiletries organized while traveling."
->
-
-<meta
-property="og"
-content="https://pinpointtravel.store/Product/"
->
-
-<meta
-property="og"
-content="website"
->
+  <meta property="og:title" content="18-Pack Travel Bottles for Toiletries | Pinpoint Travel">
+  <meta property="og:description" content="A practical 18-piece refillable travel bottle kit for keeping toiletries organized while traveling.">
+  <meta property="og:url" content="https://pinpointtravel.store/Product/">
+  <meta property="og:type" content="website">
 
   <!-- =====================================================
-       STYLES
+        STYLES
   ====================================================== -->
-
   <style>
-
-    /* =====================================================
-       RESET
-    ====================================================== */
-
+    /* RESET */
     * {
       margin: 0;
       padding: 0;
@@ -112,21 +45,10 @@ content="website"
     }
 
     body {
-      font-family:
-        Inter,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       background: #fefcfb;
-
       color: #0a1128;
-
       line-height: 1.6;
-
       overflow-x: hidden;
     }
 
@@ -140,11 +62,7 @@ content="website"
       color: inherit;
     }
 
-
-    /* =====================================================
-       PINPOINT TRAVEL COLORS
-    ====================================================== */
-
+    /* COLOR VARIABLES */
     :root {
       --main-blue: #1282a2;
       --accent-blue: #034078;
@@ -159,3338 +77,1108 @@ content="website"
       --border: #dce5e9;
       --dark-blue: #001f54;
       --bright-blue: #1282a2;
-      --shadow:
-        0 22px 60px rgba(0,31,84,.10);
-      --shadow-small:
-        0 10px 30px rgba(0,31,84,.08);
+      --shadow: 0 22px 60px rgba(0,31,84,.10);
+      --shadow-small: 0 10px 30px rgba(0,31,84,.08);
       --max-width: 1450px;
     }
 
-
-    /* =====================================================
-       CONTAINER
-    ====================================================== */
-
+    /* CONTAINER */
     .container {
-
-      width:
-        min(
-          calc(100% - 50px),
-          var(--max-width)
-        );
-
-      margin:
-        0 auto;
+      width: min(calc(100% - 50px), var(--max-width));
+      margin: 0 auto;
     }
 
-
-    /* =====================================================
-       TOP BAR
-    ====================================================== */
-
+    /* TOP BAR */
     .top-bar {
-
-      background:
-        var(--deep-blue);
-
-      color:
-        white;
-
-      text-align:
-        center;
-
-      padding:
-        9px 15px;
-
-      font-size:
-        13px;
-
-      letter-spacing:
-        .2px;
+      background: var(--deep-blue);
+      color: white;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 13px;
+      letter-spacing: .2px;
     }
 
     .top-bar strong {
-
-      color:
-        #7fd4ec;
+      color: #7fd4ec;
     }
 
-
-    /* =====================================================
-       HEADER
-    ====================================================== */
-
+    /* HEADER */
     header {
-
-      position:
-        sticky;
-
-      top:
-        0;
-
-      z-index:
-        1000;
-
-      background:
-        rgba(255,255,255,.95);
-
-      backdrop-filter:
-        blur(15px);
-
-      border-bottom:
-        1px solid var(--border);
-
-      transition:
-        box-shadow .3s ease;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.95);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow .3s ease;
     }
-
 
     .navbar {
-
-      min-height:
-        82px;
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        space-between;
-
-      gap:
-        25px;
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
     }
-
-
-    /* =====================================================
-       LOGO
-    ====================================================== */
 
     .brand {
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      gap:
-        11px;
-
-      flex-shrink:
-        0;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      flex-shrink: 0;
     }
-
 
     .brand-logo {
-
-      width:
-        61px;
-
-      height:
-        61px;
-
-      object-fit:
-        contain;
-
-      transition:
-        transform .25s ease;
+      width: 61px;
+      height: 61px;
+      object-fit: contain;
+      transition: transform .25s ease;
     }
-
 
     .brand:hover .brand-logo {
-
-      transform:
-        scale(1.035);
+      transform: scale(1.035);
     }
-
-
-    /*
-       Pinpoint Travel text
-       Slightly refined serif font
-       without being too decorative.
-    */
 
     .brand-name {
-
-      color:
-        var(--dark-blue);
-
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-      font-size:
-        21px;
-
-      font-weight:
-        700;
-
-      letter-spacing:
-        .3px;
-
-      line-height:
-        1;
-
-      white-space:
-        nowrap;
+      color: var(--dark-blue);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 21px;
+      font-weight: 700;
+      letter-spacing: .3px;
+      line-height: 1;
+      white-space: nowrap;
     }
-
-
-    /* =====================================================
-       NAV
-    ====================================================== */
 
     .nav-links {
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      gap:
-        31px;
-
-      color:
-        #445563;
-
-      font-size:
-        14px;
-
-      font-weight:
-        700;
+      display: flex;
+      align-items: center;
+      gap: 31px;
+      color: #445563;
+      font-size: 14px;
+      font-weight: 700;
     }
-
 
     .nav-links a {
-
-      position:
-        relative;
-
-      transition:
-        color .25s ease;
+      position: relative;
+      transition: color .25s ease;
     }
-
 
     .nav-links a::after {
-
-      content:
-        "";
-
-      position:
-        absolute;
-
-      left:
-        0;
-
-      bottom:
-        -7px;
-
-      width:
-        0;
-
-      height:
-        2px;
-
-      border-radius:
-        10px;
-
-      background:
-        var(--bright-blue);
-
-      transition:
-        width .25s ease;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 2px;
+      border-radius: 10px;
+      background: var(--bright-blue);
+      transition: width .25s ease;
     }
-
 
     .nav-links a:hover {
-
-      color:
-        var(--main-blue);
+      color: var(--main-blue);
     }
-
 
     .nav-links a:hover::after {
-
-      width:
-        100%;
+      width: 100%;
     }
-
 
     /* =====================================================
-       NAV AMAZON BUTTON
+       ENHANCED CTA BUTTON ANIMATIONS & STYLES
     ====================================================== */
 
-    .nav-button {
-
-      display:
-        inline-flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        center;
-
-      padding:
-        12px 20px;
-
-      border-radius:
-        50px;
-
-      background:
-        linear-gradient(135deg, #001f54, #1282a2);
-
-      color:
-        white;
-
-      font-size:
-        14px;
-
-      font-weight:
-        850;
-
-      box-shadow:
-        0 9px 23px rgba(18,130,162,.20);
-
-      transition:
-        all .25s ease;
-    }
-
-
-    .nav-button:hover {
-
-      background:
-        #fc8403;
-
-      box-shadow:
-        0 9px 23px rgba(252,132,3,.30);
-
-      transform:
-        translateY(-2px);
-    }
-
-
-    /* =====================================================
-       HERO
-    ====================================================== */
-
-    .hero {
-
-      position:
-        relative;
-
-      overflow:
-        hidden;
-
-      padding:
-        85px 0 105px;
-
-      background:
-
-        radial-gradient(
-          circle at 7% 20%,
-          rgba(18,130,162,.16),
-          transparent 32%
-        ),
-
-        radial-gradient(
-          circle at 91% 22%,
-          rgba(0,31,84,.13),
-          transparent 38%
-        ),
-
-        linear-gradient(
-          180deg,
-          #ffffff 0%,
-          #eef6f9 100%
-        );
-    }
-
-
-    .hero::before {
-
-      content:
-        "";
-
-      position:
-        absolute;
-
-      width:
-        480px;
-
-      height:
-        480px;
-
-      left:
-        -300px;
-
-      bottom:
-        -330px;
-
-      border-radius:
-        50%;
-
-      border:
-        1px solid rgba(18,130,162,.12);
-
-      animation:
-        slowCircle 13s ease-in-out infinite;
-    }
-
-
-    @keyframes slowCircle {
-
-      0%,
-      100% {
-        transform:
-          translate(0,0);
+    /* Pulse animation to draw eyes to CTAs */
+    @keyframes ctaPulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 15px 30px rgba(18,130,162,.23);
       }
-
       50% {
-        transform:
-          translate(25px,-20px);
+        transform: scale(1.025);
+        box-shadow: 0 20px 35px rgba(18,130,162,.38);
       }
     }
 
-
-    .hero-grid {
-
-      display:
-        grid;
-
-      grid-template-columns:
-        minmax(0,1fr)
-        minmax(470px,.9fr);
-
-      align-items:
-        center;
-
-      gap:
-        70px;
+    /* Arrow icon sliding animation */
+    @keyframes arrowSlide {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(5px); }
     }
 
-
-    /* =====================================================
-       HERO TEXT
-    ====================================================== */
-
-    .eyebrow {
-
-      display:
-        inline-flex;
-
-      align-items:
-        center;
-
-      gap:
-        9px;
-
-      padding:
-        8px 14px;
-
-      background:
-        white;
-
-      border:
-        1.5px solid var(--main-blue);
-
-      border-radius:
-        50px;
-
-      color:
-        var(--main-blue);
-
-      font-size:
-        12px;
-
-      font-weight:
-        900;
-
-      text-transform:
-        uppercase;
-
-      letter-spacing:
-        1px;
-
-      box-shadow:
-        0 8px 25px rgba(18,130,162,.18);
-    }
-
-
-    .eyebrow-dot {
-
-      width:
-        8px;
-
-      height:
-        8px;
-
-      border-radius:
-        50%;
-
-      background:
-        var(--bright-blue);
-
-      box-shadow:
-        0 0 0 5px rgba(18,130,162,.10);
-    }
-
-
-    h1 {
-
-      margin-top:
-        24px;
-
-      max-width:
-        850px;
-
-      font-size:
-        clamp(44px,5.3vw,76px);
-
-      line-height:
-        1.02;
-
-      letter-spacing:
-        -3.5px;
-
-      color:
-        var(--dark-blue);
-    }
-
-
-    .highlight {
-
-      color:
-        var(--main-blue);
-
-      position:
-        relative;
-
-      display:
-        inline-block;
-    }
-
-
-    .highlight::after {
-
-      content:
-        "";
-
-      position:
-        absolute;
-
-      left:
-        0;
-
-      right:
-        0;
-
-      bottom:
-        -6px;
-
-      height:
-        8px;
-
-      border-radius:
-        50%;
-
-      background:
-        rgba(18,130,162,.22);
-
-      z-index:
-        -1;
-    }
-
-
-    .hero-description {
-
-      margin-top:
-        25px;
-
-      max-width:
-        760px;
-
-      color:
-        var(--gray);
-
-      font-size:
-        18px;
-
-      line-height:
-        1.75;
-    }
-
-
-    /* =====================================================
-       BADGES
-    ====================================================== */
-
-    .trust-badges {
-
-      display:
-        flex;
-
-      flex-wrap:
-        wrap;
-
-      gap:
-        10px;
-
-      margin:
-        25px 0 30px;
-    }
-
-
-    .trust-badge {
-
-      padding:
-        9px 13px;
-
-      background:
-        white;
-
-      border:
-        1px solid var(--border);
-
-      border-radius:
-        12px;
-
-      color:
-        #445563;
-
-      font-size:
-        13px;
-
-      font-weight:
-        750;
-    }
-
-
-    /* =====================================================
-       BUTTONS
-    ====================================================== */
-
-    .hero-buttons {
-
-      display:
-        flex;
-
-      flex-wrap:
-        wrap;
-
-      gap:
-        13px;
-    }
-
-
-    .primary-button {
-
-      position:
-        relative;
-
-      overflow:
-        hidden;
-
-      min-height:
-        56px;
-
-      padding:
-        0 26px;
-
-      display:
-        inline-flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        center;
-
-      gap:
-        10px;
-
-      background:
-        linear-gradient(135deg, #001f54, #1282a2);
-
-      color:
-        white;
-
-      border-radius:
-        14px;
-
-      font-weight:
-        900;
-
-      box-shadow:
-        0 15px 30px rgba(18,130,162,.23);
-
-      transition:
-        transform .25s ease,
-        box-shadow .25s ease,
-        background .25s ease;
-    }
-
-
-    /*
-       Bright blue moving shine
-       behind the Amazon button.
-    */
-
-    .primary-button::before {
-
-      content:
-        "";
-
-      position:
-        absolute;
-
-      top:
-        0;
-
-      left:
-        -120%;
-
-      width:
-        80%;
-
-      height:
-        100%;
-
-      background:
-        linear-gradient(
-          110deg,
-          transparent,
-          rgba(255,255,255,.22),
-          transparent
-        );
-
-      transform:
-        skewX(-20deg);
-
-      animation:
-        buttonShine 3.6s ease-in-out infinite;
-    }
-
-
+    /* Moving shine overlay */
     @keyframes buttonShine {
-
-      0% {
-        left:
-          -120%;
-      }
-
-      55% {
-        left:
-          130%;
-      }
-
-      100% {
-        left:
-          130%;
-      }
+      0% { left: -120%; }
+      55% { left: 130%; }
+      100% { left: 130%; }
     }
 
+    /* Base CTA Setup */
+    .primary-button, 
+    .nav-button, 
+    .mobile-cta a {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      will-change: transform, box-shadow;
+      animation: ctaPulse 3.5s ease-in-out infinite;
+      transition: transform .3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                  box-shadow .3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                  background .3s ease,
+                  color .3s ease;
+    }
+
+    /* Shine effect element */
+    .primary-button::before,
+    .nav-button::before,
+    .mobile-cta a::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 80%;
+      height: 100%;
+      background: linear-gradient(110deg, transparent, rgba(255,255,255,.35), transparent);
+      transform: skewX(-20deg);
+      animation: buttonShine 3.6s ease-in-out infinite;
+      z-index: 1;
+    }
 
     .primary-button span,
+    .nav-button span,
+    .mobile-cta a span {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* NAV BUTTON */
+    .nav-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #001f54, #1282a2);
+      color: white;
+      font-size: 14px;
+      font-weight: 850;
+    }
+
+    /* PRIMARY BUTTON */
     .primary-button {
-
-      isolation:
-        isolate;
+      min-height: 56px;
+      padding: 0 26px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #001f54, #1282a2);
+      color: white;
+      border-radius: 14px;
+      font-weight: 900;
     }
 
-
-    .primary-button:hover {
-
-      background:
-        #fc8403;
-
-      transform:
-        translateY(-3px);
-
-      box-shadow:
-        0 20px 42px rgba(252,132,3,.35);
+    /* HOVER STATES (Smooth Shift to Amazon Brand Orange) */
+    .primary-button:hover, 
+    .nav-button:hover, 
+    .mobile-cta a:hover {
+      animation: none; /* Pause pulse on hover */
+      background: linear-gradient(135deg, #ff9900, #e67a00) !important;
+      color: #0f1111 !important;
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 22px 40px rgba(255, 153, 0, 0.45) !important;
     }
 
+    /* ACTIVE / PRESS STATES */
+    .primary-button:active, 
+    .nav-button:active, 
+    .mobile-cta a:active {
+      transform: translateY(-1px) scale(0.98) !important;
+      box-shadow: 0 10px 20px rgba(255, 153, 0, 0.3) !important;
+    }
 
+    /* Arrow icon animation on hover */
+    .primary-button:hover .btn-icon,
+    .nav-button:hover .btn-icon,
+    .mobile-cta a:hover .btn-icon {
+      animation: arrowSlide 0.8s ease-in-out infinite;
+    }
+
+    /* SECONDARY BUTTON */
     .secondary-button {
-
-      min-height:
-        56px;
-
-      padding:
-        0 26px;
-
-      display:
-        inline-flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        center;
-
-      background:
-        white;
-
-      border:
-        1px solid var(--border);
-
-      color:
-        var(--dark-blue);
-
-      border-radius:
-        14px;
-
-      font-weight:
-        800;
-
-      transition:
-        .25s ease;
+      min-height: 56px;
+      padding: 0 26px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      border: 1px solid var(--border);
+      color: var(--dark-blue);
+      border-radius: 14px;
+      font-weight: 800;
+      transition: .25s ease;
     }
-
 
     .secondary-button:hover {
-
-      transform:
-        translateY(-3px);
-
-      border-color:
-        rgba(18,130,162,.35);
-
-      color:
-        var(--main-blue);
-
-      box-shadow:
-        var(--shadow-small);
+      transform: translateY(-3px);
+      border-color: rgba(18,130,162,.35);
+      color: var(--main-blue);
+      box-shadow: var(--shadow-small);
     }
 
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 85px 0 105px;
+      background:
+        radial-gradient(circle at 7% 20%, rgba(18,130,162,.16), transparent 32%),
+        radial-gradient(circle at 91% 22%, rgba(0,31,84,.13), transparent 38%),
+        linear-gradient(180deg, #ffffff 0%, #eef6f9 100%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 480px;
+      height: 480px;
+      left: -300px;
+      bottom: -330px;
+      border-radius: 50%;
+      border: 1px solid rgba(18,130,162,.12);
+      animation: slowCircle 13s ease-in-out infinite;
+    }
+
+    @keyframes slowCircle {
+      0%, 100% { transform: translate(0,0); }
+      50% { transform: translate(25px,-20px); }
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0,1fr) minmax(470px,.9fr);
+      align-items: center;
+      gap: 70px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 14px;
+      background: white;
+      border: 1.5px solid var(--main-blue);
+      border-radius: 50px;
+      color: var(--main-blue);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 8px 25px rgba(18,130,162,.18);
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--bright-blue);
+      box-shadow: 0 0 0 5px rgba(18,130,162,.10);
+    }
+
+    h1 {
+      margin-top: 24px;
+      max-width: 850px;
+      font-size: clamp(44px,5.3vw,76px);
+      line-height: 1.02;
+      letter-spacing: -3.5px;
+      color: var(--dark-blue);
+    }
+
+    .highlight {
+      color: var(--main-blue);
+      position: relative;
+      display: inline-block;
+    }
+
+    .highlight::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -6px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(18,130,162,.22);
+      z-index: -1;
+    }
+
+    .hero-description {
+      margin-top: 25px;
+      max-width: 760px;
+      color: var(--gray);
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    .trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 25px 0 30px;
+    }
+
+    .trust-badge {
+      padding: 9px 13px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: #445563;
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
 
     .price-note {
-
-      margin-top:
-        13px;
-
-      color:
-        #71808c;
-
-      font-size:
-        12px;
+      margin-top: 13px;
+      color: #71808c;
+      font-size: 12px;
     }
 
-
-    /* =====================================================
-       PRODUCT AREA
-       PRODUCT IMAGE IS STATIC
-    ====================================================== */
-
+    /* PRODUCT AREA */
     .product-area {
-
-      position:
-        relative;
-
-      min-height:
-        610px;
-
-      display:
-        grid;
-
-      place-items:
-        center;
+      position: relative;
+      min-height: 610px;
+      display: grid;
+      place-items: center;
     }
-
 
     .product-glow {
-
-      position:
-        absolute;
-
-      width:
-        520px;
-
-      height:
-        520px;
-
-      border-radius:
-        50%;
-
-      background:
-        radial-gradient(
-          circle,
-          rgba(18,130,162,.12),
-          rgba(11,121,143,.04) 42%,
-          transparent 70%
-        );
-
-      animation:
-        glowPulse 5s ease-in-out infinite;
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(18,130,162,.12), rgba(11,121,143,.04) 42%, transparent 70%);
+      animation: glowPulse 5s ease-in-out infinite;
     }
-
 
     @keyframes glowPulse {
-
-      0%,
-      100% {
-        transform:
-          scale(1);
-
-        opacity:
-          .8;
-      }
-
-      50% {
-        transform:
-          scale(1.06);
-
-        opacity:
-          1;
-      }
+      0%, 100% { transform: scale(1); opacity: .8; }
+      50% { transform: scale(1.06); opacity: 1; }
     }
-
 
     .product-card {
-
-      position:
-        relative;
-
-      width:
-        min(100%,650px);
-
-      padding:
-        20px;
-
-      background:
-        linear-gradient(160deg, rgba(0,31,84,.14) 0%, rgba(18,130,162,.12) 35%, #ffffff 68%);
-
-      border:
-        1px solid var(--border);
-
-      border-radius:
-        30px;
-
-      box-shadow:
-        var(--shadow);
-
-      z-index:
-        3;
+      position: relative;
+      width: min(100%,650px);
+      padding: 20px;
+      background: linear-gradient(160deg, rgba(0,31,84,.14) 0%, rgba(18,130,162,.12) 35%, #ffffff 68%);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      z-index: 3;
     }
-
 
     .product-image-container {
-
-      position:
-        relative;
-
-      overflow:
-        hidden;
-
-      border-radius:
-        22px;
-
-      background:
-        #f5f7f8;
-
-      aspect-ratio:
-        1.17 / 1;
+      position: relative;
+      overflow: hidden;
+      border-radius: 22px;
+      background: #f5f7f8;
+      aspect-ratio: 1.17 / 1;
     }
-
-
-    /*
-       STATIC PRODUCT IMAGE
-       No zoom.
-       No transform.
-       No image animation.
-    */
 
     .product-image-container img {
-
-      width:
-        100%;
-
-      height:
-        100%;
-
-      object-fit:
-        cover;
-
-      transform:
-        none;
-
-      animation:
-        none;
-
-      transition:
-        none;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: none;
+      animation: none;
+      transition: none;
     }
-
 
     .product-badge {
-
-      position:
-        absolute;
-
-      top:
-        18px;
-
-      left:
-        18px;
-
-      padding:
-        9px 14px;
-
-      background:
-        var(--main-blue);
-
-      color:
-        white;
-
-      border-radius:
-        50px;
-
-      font-size:
-        12px;
-
-      font-weight:
-        900;
-
-      z-index:
-        5;
-
-      box-shadow:
-        0 10px 22px rgba(18,130,162,.25);
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      padding: 9px 14px;
+      background: var(--main-blue);
+      color: white;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 900;
+      z-index: 5;
+      box-shadow: 0 10px 22px rgba(18,130,162,.25);
     }
 
-
-    /* =====================================================
-       FLOATING CARDS
-       TRAVEL READY / PACK SMART ANIMATION
-    ====================================================== */
-
+    /* FLOATING CARDS */
     .floating-card {
-
-      position:
-        absolute;
-
-      z-index:
-        10;
-
-      background:
-        white;
-
-      border:
-        1px solid var(--border);
-
-      border-radius:
-        16px;
-
-      padding:
-        13px 17px;
-
-      box-shadow:
-        0 14px 35px rgba(18,130,162,.14);
-
-      font-size:
-        12px;
-
-      font-weight:
-        850;
-
-      color:
-        var(--dark-blue);
+      position: absolute;
+      z-index: 10;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 13px 17px;
+      box-shadow: 0 14px 35px rgba(18,130,162,.14);
+      font-size: 12px;
+      font-weight: 850;
+      color: var(--dark-blue);
     }
-
 
     .floating-card span {
-
-      display:
-        block;
-
-      color:
-        var(--main-blue);
-
-      font-size:
-        10px;
-
-      letter-spacing:
-        .6px;
-
-      margin-bottom:
-        2px;
+      display: block;
+      color: var(--main-blue);
+      font-size: 10px;
+      letter-spacing: .6px;
+      margin-bottom: 2px;
     }
-
-
-    /*
-       TRAVEL READY
-       Gentle floating / waving movement
-    */
 
     .floating-one {
-
-      top:
-        10%;
-
-      right:
-        -8px;
-
-      animation:
-        travelReadyFloat 4.2s ease-in-out infinite;
+      top: 10%;
+      right: -8px;
+      animation: travelReadyFloat 4.2s ease-in-out infinite;
     }
-
 
     @keyframes travelReadyFloat {
-
-      0%,
-      100% {
-
-        transform:
-          translateY(0)
-          rotate(0deg);
-      }
-
-      25% {
-
-        transform:
-          translateY(-7px)
-          rotate(1.2deg);
-      }
-
-      50% {
-
-        transform:
-          translateY(-11px)
-          rotate(0deg);
-      }
-
-      75% {
-
-        transform:
-          translateY(-5px)
-          rotate(-1.2deg);
-      }
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      25% { transform: translateY(-7px) rotate(1.2deg); }
+      50% { transform: translateY(-11px) rotate(0deg); }
+      75% { transform: translateY(-5px) rotate(-1.2deg); }
     }
-
-
-    /*
-       PACK SMART
-       Different gentle floating motion
-    */
 
     .floating-two {
-
-      left:
-        -25px;
-
-      bottom:
-        16%;
-
-      animation:
-        packSmartFloat 4.8s ease-in-out infinite;
+      left: -25px;
+      bottom: 16%;
+      animation: packSmartFloat 4.8s ease-in-out infinite;
     }
-
 
     @keyframes packSmartFloat {
-
-      0%,
-      100% {
-
-        transform:
-          translateY(0)
-          rotate(0deg);
-      }
-
-      30% {
-
-        transform:
-          translateY(7px)
-          rotate(-1.4deg);
-      }
-
-      60% {
-
-        transform:
-          translateY(-5px)
-          rotate(1deg);
-      }
-
-      80% {
-
-        transform:
-          translateY(4px)
-          rotate(0deg);
-      }
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      30% { transform: translateY(7px) rotate(-1.4deg); }
+      60% { transform: translateY(-5px) rotate(1deg); }
+      80% { transform: translateY(4px) rotate(0deg); }
     }
-
-
-    /*
-       Small bright blue accent line
-       on the floating cards.
-    */
 
     .floating-card::after {
-
-      content:
-        "";
-
-      position:
-        absolute;
-
-      left:
-        15px;
-
-      right:
-        15px;
-
-      bottom:
-        5px;
-
-      height:
-        2px;
-
-      border-radius:
-        10px;
-
-      background:
-        linear-gradient(
-          90deg,
-          transparent,
-          var(--bright-blue),
-          transparent
-        );
-
-      opacity:
-        .45;
-
-      animation:
-        accentWave 2.7s ease-in-out infinite;
+      content: "";
+      position: absolute;
+      left: 15px;
+      right: 15px;
+      bottom: 5px;
+      height: 2px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, transparent, var(--bright-blue), transparent);
+      opacity: .45;
+      animation: accentWave 2.7s ease-in-out infinite;
     }
-
 
     @keyframes accentWave {
-
-      0%,
-      100% {
-        transform:
-          scaleX(.55);
-
-        opacity:
-          .25;
-      }
-
-      50% {
-        transform:
-          scaleX(1);
-
-        opacity:
-          .8;
-      }
+      0%, 100% { transform: scaleX(.55); opacity: .25; }
+      50% { transform: scaleX(1); opacity: .8; }
     }
-
-
-    /* =====================================================
-       PRODUCT INFORMATION
-    ====================================================== */
 
     .product-rating {
-
-      margin-top:
-        17px;
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      gap:
-        9px;
-
-      color:
-        #5f6f7d;
-
-      font-size:
-        13px;
+      margin-top: 17px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: #5f6f7d;
+      font-size: 13px;
     }
-
 
     .stars {
-
-      color:
-        #e5a728;
-
-      letter-spacing:
-        1px;
+      color: #e5a728;
+      letter-spacing: 1px;
     }
-
 
     .product-info {
-
-      display:
-        flex;
-
-      align-items:
-        flex-end;
-
-      justify-content:
-        space-between;
-
-      gap:
-        20px;
-
-      margin-top:
-        10px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 10px;
     }
-
 
     .product-info h2 {
-
-      color:
-        var(--dark-blue);
-
-      font-size:
-        21px;
-
-      line-height:
-        1.3;
+      color: var(--dark-blue);
+      font-size: 21px;
+      line-height: 1.3;
     }
-
 
     .product-price {
-
-      color:
-        var(--main-blue);
-
-      font-size:
-        23px;
-
-      font-weight:
-        950;
-
-      white-space:
-        nowrap;
+      color: var(--main-blue);
+      font-size: 23px;
+      font-weight: 950;
+      white-space: nowrap;
     }
-
 
     .product-price small {
-
-      display:
-        block;
-
-      color:
-        #71808c;
-
-      font-size:
-        10px;
-
-      text-align:
-        right;
+      display: block;
+      color: #71808c;
+      font-size: 10px;
+      text-align: right;
     }
 
-
-    /* =====================================================
-       FEATURES
-    ====================================================== */
-
+    /* FEATURES */
     .features {
-
-      background:
-        linear-gradient(150deg, #001f54 0%, #063a7d 55%, #0b4f96 100%);
-
-      border-top:
-        1px solid var(--border);
-
-      border-bottom:
-        1px solid var(--border);
-
-      padding:
-        100px 0;
+      background: linear-gradient(150deg, #001f54 0%, #063a7d 55%, #0b4f96 100%);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 100px 0;
     }
-
 
     .section-header {
-
-      max-width:
-        780px;
-
-      margin:
-        0 auto 50px;
-
-      text-align:
-        center;
+      max-width: 780px;
+      margin: 0 auto 50px;
+      text-align: center;
     }
-
 
     .section-kicker {
-
-      color:
-        var(--main-blue);
-
-      text-transform:
-        uppercase;
-
-      font-size:
-        12px;
-
-      font-weight:
-        900;
-
-      letter-spacing:
-        1.5px;
+      color: var(--main-blue);
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
     }
-
 
     .section-header h2 {
-
-      margin-top:
-        9px;
-
-      color:
-        var(--dark-blue);
-
-      font-size:
-        clamp(31px,4vw,50px);
-
-      line-height:
-        1.08;
-
-      letter-spacing:
-        -2px;
+      margin-top: 9px;
+      color: var(--dark-blue);
+      font-size: clamp(31px,4vw,50px);
+      line-height: 1.08;
+      letter-spacing: -2px;
     }
-
 
     .section-header p {
-
-      margin-top:
-        15px;
-
-      color:
-        var(--gray);
-
-      font-size:
-        17px;
+      margin-top: 15px;
+      color: var(--gray);
+      font-size: 17px;
     }
 
-
-    /* Designed for travelers intro text (section bg now dark) */
-
-    #features .section-kicker {
-
-      color:
-        #7fd4ec;
-    }
-
-
-    #features .section-header h2 {
-
-      color:
-        #ffffff;
-    }
-
-
-    #features .section-header p {
-
-      color:
-        rgba(255,255,255,.8);
-    }
-
+    #features .section-kicker { color: #7fd4ec; }
+    #features .section-header h2 { color: #ffffff; }
+    #features .section-header p { color: rgba(255,255,255,.8); }
 
     .feature-grid {
-
-      display:
-        grid;
-
-      grid-template-columns:
-        repeat(4,1fr);
-
-      gap:
-        19px;
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 19px;
     }
-
 
     .feature-card {
-
-      padding:
-        29px 24px;
-
-      background:
-        white;
-
-      border:
-        1px solid var(--border);
-
-      border-radius:
-        22px;
-
-      box-shadow:
-        var(--shadow-small);
-
-      transition:
-        .3s ease;
+      padding: 29px 24px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      box-shadow: var(--shadow-small);
+      transition: .3s ease;
     }
-
 
     .feature-card:hover {
-
-      transform:
-        translateY(-7px);
-
-      border-color:
-        rgba(18,130,162,.25);
-
-      box-shadow:
-        var(--shadow);
+      transform: translateY(-7px);
+      border-color: rgba(18,130,162,.25);
+      box-shadow: var(--shadow);
     }
-
 
     .feature-icon {
-
-      width:
-        50px;
-
-      height:
-        50px;
-
-      display:
-        grid;
-
-      place-items:
-        center;
-
-      background:
-        var(--light-blue);
-
-      color:
-        var(--main-blue);
-
-      border-radius:
-        15px;
-
-      font-size:
-        23px;
-
-      margin-bottom:
-        18px;
+      width: 50px;
+      height: 50px;
+      display: grid;
+      place-items: center;
+      background: var(--light-blue);
+      color: var(--main-blue);
+      border-radius: 15px;
+      font-size: 23px;
+      margin-bottom: 18px;
     }
-
 
     .feature-card h3 {
-
-      color:
-        var(--dark-blue);
-
-      font-size:
-        17px;
-
-      margin-bottom:
-        7px;
+      color: var(--dark-blue);
+      font-size: 17px;
+      margin-bottom: 7px;
     }
-
 
     .feature-card p {
-
-      color:
-        var(--gray);
-
-      font-size:
-        14px;
+      color: var(--gray);
+      font-size: 14px;
     }
 
-
-    /* =====================================================
-       WHY SECTION
-    ====================================================== */
-
+    /* WHY SECTION */
     .why-section {
-
-      padding:
-        100px 0;
-
-      background:
-        var(--soft-gray);
+      padding: 100px 0;
+      background: var(--soft-gray);
     }
-
 
     .why-grid {
-
-      display:
-        grid;
-
-      grid-template-columns:
-        1fr 1fr;
-
-      gap:
-        30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
     }
-
 
     .why-card {
-
-      background:
-        linear-gradient(160deg, #001f54, #062f6e);
-
-      border:
-        1px solid rgba(255,255,255,.08);
-
-      border-radius:
-        28px;
-
-      padding:
-        35px;
-
-      box-shadow:
-        0 15px 40px rgba(0,31,84,.20);
+      background: linear-gradient(160deg, #001f54, #062f6e);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 28px;
+      padding: 35px;
+      box-shadow: 0 15px 40px rgba(0,31,84,.20);
     }
-
 
     .why-card h3 {
-
-      color:
-        #ffffff;
-
-      font-size:
-        26px;
-
-      margin-bottom:
-        20px;
+      color: #ffffff;
+      font-size: 26px;
+      margin-bottom: 20px;
     }
-
 
     .check-list {
-
-      display:
-        grid;
-
-      gap:
-        17px;
+      display: grid;
+      gap: 17px;
     }
-
 
     .check-item {
-
-      display:
-        flex;
-
-      align-items:
-        flex-start;
-
-      gap:
-        13px;
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
     }
-
 
     .check-circle {
-
-      flex:
-        0 0 28px;
-
-      width:
-        28px;
-
-      height:
-        28px;
-
-      display:
-        grid;
-
-      place-items:
-        center;
-
-      background:
-        var(--light-blue);
-
-      color:
-        var(--main-blue);
-
-      border-radius:
-        50%;
-
-      font-size:
-        12px;
-
-      font-weight:
-        900;
+      flex: 0 0 28px;
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      background: var(--light-blue);
+      color: var(--main-blue);
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: 900;
     }
-
 
     .check-item strong {
-
-      display:
-        block;
-
-      color:
-        #ffffff;
-
-      font-size:
-        15px;
+      display: block;
+      color: #ffffff;
+      font-size: 15px;
     }
-
 
     .check-item span {
-
-      display:
-        block;
-
-      color:
-        #b9c9d6;
-
-      font-size:
-        13px;
-
-      margin-top:
-        2px;
+      display: block;
+      color: #b9c9d6;
+      font-size: 13px;
+      margin-top: 2px;
     }
 
-
-    /* =====================================================
-       FINAL CTA
-    ====================================================== */
-
+    /* FINAL CTA SECTION */
     .cta-section {
-
-      position:
-        relative;
-
-      overflow:
-        hidden;
-
-      padding:
-        90px 0;
-
-      background:
-        var(--dark-blue);
-
-      color:
-        white;
+      position: relative;
+      overflow: hidden;
+      padding: 90px 0;
+      background: var(--dark-blue);
+      color: white;
     }
-
 
     .cta-section::before {
-
-      content:
-        "";
-
-      position:
-        absolute;
-
-      width:
-        450px;
-
-      height:
-        450px;
-
-      right:
-        -190px;
-
-      top:
-        -220px;
-
-      border:
-        1px solid rgba(18,130,162,.12);
-
-      border-radius:
-        50%;
-
-      animation:
-        ctaCircle 9s ease-in-out infinite;
+      content: "";
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      right: -190px;
+      top: -220px;
+      border: 1px solid rgba(18,130,162,.12);
+      border-radius: 50%;
+      animation: ctaCircle 9s ease-in-out infinite;
     }
-
 
     @keyframes ctaCircle {
-
-      0%,
-      100% {
-        transform:
-          scale(1);
-      }
-
-      50% {
-        transform:
-          scale(1.1);
-      }
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
     }
-
 
     .cta-section::after {
-
-      content:
-        "";
-
-      position:
-        absolute;
-
-      width:
-        330px;
-
-      height:
-        330px;
-
-      left:
-        -180px;
-
-      bottom:
-        -180px;
-
-      border:
-        1px solid rgba(18,130,162,.10);
-
-      border-radius:
-        50%;
+      content: "";
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      left: -180px;
+      bottom: -180px;
+      border: 1px solid rgba(18,130,162,.10);
+      border-radius: 50%;
     }
-
 
     .cta-content {
-
-      position:
-        relative;
-
-      z-index:
-        2;
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        space-between;
-
-      gap:
-        40px;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
     }
-
 
     .cta-text h2 {
-
-      margin-top:
-        8px;
-
-      font-size:
-        clamp(31px,4vw,52px);
-
-      line-height:
-        1.05;
-
-      letter-spacing:
-        -2px;
+      margin-top: 8px;
+      font-size: clamp(31px,4vw,52px);
+      line-height: 1.05;
+      letter-spacing: -2px;
     }
-
 
     .cta-text p {
-
-      max-width:
-        750px;
-
-      margin-top:
-        13px;
-
-      color:
-        #c8d5de;
-
-      font-size:
-        15px;
+      max-width: 750px;
+      margin-top: 13px;
+      color: #c8d5de;
+      font-size: 15px;
     }
 
-
-    /* =====================================================
-       DISCLOSURE
-    ====================================================== */
-
+    /* DISCLOSURE & FOOTER */
     .disclosure {
-
-      padding:
-        25px 0 85px;
-
-      background:
-        white;
-
-      color:
-        #71808c;
-
-      text-align:
-        center;
-
-      font-size:
-        11px;
-
-      line-height:
-        1.7;
+      padding: 25px 0 85px;
+      background: white;
+      color: #71808c;
+      text-align: center;
+      font-size: 11px;
+      line-height: 1.7;
     }
-
-
-    /* =====================================================
-       FOOTER
-    ====================================================== */
 
     footer {
-
-      padding:
-        28px 0;
-
-      background:
-        #001f54;
-
-      color:
-        #c4d0d8;
-
-      font-size:
-        12px;
+      padding: 28px 0;
+      background: #001f54;
+      color: #c4d0d8;
+      font-size: 12px;
     }
-
 
     .footer-content {
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        space-between;
-
-      gap:
-        20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
-
 
     .footer-logo {
-
-      color:
-        white;
-
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-      font-size:
-        17px;
-
-      font-weight:
-        700;
+      color: white;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 17px;
+      font-weight: 700;
     }
 
-
-    /* =====================================================
-       SCROLL REVEAL
-    ====================================================== */
-
+    /* SCROLL REVEAL */
     .reveal {
-
-      opacity:
-        0;
-
-      transform:
-        translateY(28px);
-
-      transition:
-        opacity .7s ease,
-        transform .7s ease;
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s ease, transform .7s ease;
     }
-
 
     .reveal.visible {
-
-      opacity:
-        1;
-
-      transform:
-        translateY(0);
+      opacity: 1;
+      transform: translateY(0);
     }
 
-
-    /* =====================================================
-       MOBILE CTA
-    ====================================================== */
-
+    /* MOBILE CTA BAR */
     .mobile-cta {
-
-      display:
-        none;
-
-      position:
-        fixed;
-
-      left:
-        12px;
-
-      right:
-        12px;
-
-      bottom:
-        12px;
-
-      z-index:
-        2000;
-
-      padding:
-        9px;
-
-      background:
-        rgba(255,255,255,.96);
-
-      backdrop-filter:
-        blur(12px);
-
-      border:
-        1px solid var(--border);
-
-      border-radius:
-        18px;
-
-      box-shadow:
-        0 20px 45px rgba(11,121,143,.18);
+      display: none;
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      z-index: 2000;
+      padding: 9px;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 20px 45px rgba(11,121,143,.18);
     }
-
 
     .mobile-cta a {
-
-      min-height:
-        50px;
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        center;
-
-      background:
-        linear-gradient(135deg, #001f54, #1282a2);
-
-      color:
-        white;
-
-      border-radius:
-        13px;
-
-      font-weight:
-        900;
-
-      position:
-        relative;
-
-      overflow:
-        hidden;
-
-      transition:
-        background .25s ease;
+      min-height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #001f54, #1282a2);
+      color: white;
+      border-radius: 13px;
+      font-weight: 900;
     }
 
-
-    .mobile-cta a:hover {
-
-      background:
-        #fc8403;
-    }
-
-
-    /* =====================================================
-       TABLET
-    ====================================================== */
-
+    /* MEDIA QUERIES */
     @media (max-width:1100px) {
-
-      .hero-grid {
-
-        grid-template-columns:
-          1fr;
-
-        gap:
-          45px;
-      }
-
-
-      .product-area {
-
-        min-height:
-          600px;
-      }
-
-
-      .product-card {
-
-        max-width:
-          700px;
-      }
-
-
-      .feature-grid {
-
-        grid-template-columns:
-          repeat(2,1fr);
-      }
-
-
-      .nav-links {
-
-        display:
-          none;
-      }
-
+      .hero-grid { grid-template-columns: 1fr; gap: 45px; }
+      .product-area { min-height: 600px; }
+      .product-card { max-width: 700px; }
+      .feature-grid { grid-template-columns: repeat(2,1fr); }
+      .nav-links { display: none; }
     }
-
-
-    /* =====================================================
-       MOBILE
-    ====================================================== */
 
     @media (max-width:700px) {
-
-      .container {
-
-        width:
-          calc(100% - 28px);
-      }
-
-
-      .top-bar {
-
-        font-size:
-          11px;
-
-        padding:
-          8px 10px;
-      }
-
-
-      .navbar {
-
-        min-height:
-          68px;
-      }
-
-
-      .brand-logo {
-
-        width:
-          51px;
-
-        height:
-          51px;
-      }
-
-
-      .brand-name {
-
-        font-size:
-          17px;
-      }
-
-
-      .nav-button {
-
-        padding:
-          10px 13px;
-
-        font-size:
-          12px;
-      }
-
-
-      .hero {
-
-        padding:
-          52px 0 65px;
-      }
-
-
-      h1 {
-
-        font-size:
-          43px;
-
-        letter-spacing:
-          -2.4px;
-      }
-
-
-      .hero-description {
-
-        font-size:
-          16px;
-
-        line-height:
-          1.65;
-      }
-
-
-      .hero-buttons {
-
-        display:
-          grid;
-
-        grid-template-columns:
-          1fr;
-      }
-
-
-      .primary-button,
-      .secondary-button {
-
-        width:
-          100%;
-      }
-
-
-      .product-area {
-
-        min-height:
-          470px;
-
-        padding:
-          10px 0 30px;
-      }
-
-
-      .product-card {
-
-        padding:
-          12px;
-
-        border-radius:
-          22px;
-      }
-
-
-      .product-image-container {
-
-        border-radius:
-          16px;
-      }
-
-
-      .floating-one {
-
-        right:
-          -4px;
-
-        top:
-          7%;
-      }
-
-
-      .floating-two {
-
-        left:
-          -4px;
-
-        bottom:
-          12%;
-      }
-
-
-      .floating-card {
-
-        font-size:
-          11px;
-
-        padding:
-          11px 13px;
-      }
-
-
-      .product-info {
-
-        display:
-          block;
-      }
-
-
-      .product-price {
-
-        margin-top:
-          8px;
-      }
-
-
-      .product-price small {
-
-        text-align:
-          left;
-      }
-
-
-      .features,
-      .why-section {
-
-        padding:
-          65px 0;
-      }
-
-
-      .section-header {
-
-        margin-bottom:
-          32px;
-      }
-
-
-      .section-header h2 {
-
-        font-size:
-          33px;
-
-        letter-spacing:
-          -1.2px;
-      }
-
-
-      .section-header p {
-
-        font-size:
-          15px;
-      }
-
-
-      .feature-grid {
-
-        grid-template-columns:
-          1fr;
-      }
-
-
-      .feature-card {
-
-        padding:
-          24px;
-      }
-
-
-      .why-grid {
-
-        grid-template-columns:
-          1fr;
-      }
-
-
-      .why-card {
-
-        padding:
-          25px;
-      }
-
-
-      .why-card h3 {
-
-        font-size:
-          23px;
-      }
-
-
-      .cta-section {
-
-        padding:
-          65px 0 95px;
-      }
-
-
-      .cta-content {
-
-        display:
-          grid;
-
-        gap:
-          28px;
-      }
-
-
-      .cta-button,
-      .cta-button .primary-button {
-
-        width:
-          100%;
-      }
-
-
-      .disclosure {
-
-        padding-bottom:
-          105px;
-      }
-
-
-      .footer-content {
-
-        flex-direction:
-          column;
-
-        text-align:
-          center;
-      }
-
-
-      .mobile-cta {
-
-        display:
-          block;
-      }
-
+      .container { width: calc(100% - 28px); }
+      .top-bar { font-size: 11px; padding: 8px 10px; }
+      .navbar { min-height: 68px; }
+      .brand-logo { width: 51px; height: 51px; }
+      .brand-name { font-size: 17px; }
+      .nav-button { padding: 10px 13px; font-size: 12px; }
+      .hero { padding: 52px 0 65px; }
+      h1 { font-size: 43px; letter-spacing: -2.4px; }
+      .hero-description { font-size: 16px; line-height: 1.65; }
+      .hero-buttons { display: grid; grid-template-columns: 1fr; }
+      .primary-button, .secondary-button { width: 100%; }
+      .product-area { min-height: 470px; padding: 10px 0 30px; }
+      .product-card { padding: 12px; border-radius: 22px; }
+      .product-image-container { border-radius: 16px; }
+      .floating-one { right: -4px; top: 7%; }
+      .floating-two { left: -4px; bottom: 12%; }
+      .floating-card { font-size: 11px; padding: 11px 13px; }
+      .product-info { display: block; }
+      .product-price { margin-top: 8px; }
+      .product-price small { text-align: left; }
+      .features, .why-section { padding: 65px 0; }
+      .section-header { margin-bottom: 32px; }
+      .section-header h2 { font-size: 33px; letter-spacing: -1.2px; }
+      .section-header p { font-size: 15px; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .feature-card { padding: 24px; }
+      .why-grid { grid-template-columns: 1fr; }
+      .why-card { padding: 25px; }
+      .why-card h3 { font-size: 23px; }
+      .cta-section { padding: 65px 0 95px; }
+      .cta-content { display: grid; gap: 28px; }
+      .mobile-cta { display: block; }
     }
-
-
-    /* =====================================================
-       REDUCED MOTION
-    ====================================================== */
-
-    @media (prefers-reduced-motion: reduce) {
-
-      html {
-        scroll-behavior:
-          auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-
-        animation:
-          none !important;
-
-        transition:
-          none !important;
-      }
-
-      .reveal {
-
-        opacity:
-          1;
-
-        transform:
-          none;
-      }
-
-    }
-
   </style>
-
 </head>
-
 <body>
 
-  <!-- =====================================================
-       TOP BAR
-  ====================================================== -->
-
+  <!-- TOP BAR -->
   <div class="top-bar">
-
-Travel smarter with
-<strong>
-  Pinpoint Travel
-</strong>
-
+    Travel Essential: <strong>TSA Approved 18-Piece Set</strong> with Leak-Proof Protection
   </div>
 
-
-
-  <!-- =====================================================
-       HEADER
-  ====================================================== -->
-
+  <!-- HEADER -->
   <header>
-
-<div class="container navbar">
-
-
-  <!-- PINPOINT TRAVEL LOGO -->
-
-  <a
-    href="https://pinpointtravel.store"
-    class="brand"
-    aria-label="Pinpoint Travel home"
-  >
-
-    <img
-      src="/favicon.png"
-      href="https://pinpointtravel.store"
-      alt="Pinpoint Travel logo"
-      class="brand-logo"
-    >
-
-    <span class="brand-name">
-      Pinpoint Travel
-    </span>
-
-  </a>
-
-
-  <nav class="nav-links">
-
-    <a href="#features">
-      Features
-    </a>
-
-    <a href="#why">
-      Why travelers like it
-    </a>
-
-    <a href="#buy">
-      See product
-    </a>
-
-  </nav>
-
-
-  <!-- AMAZON AFFILIATE BUTTON -->
-
-  <a
-    href="https://amzn.to/4qnWO24"
-    target="_blank"
-    rel="nofollow sponsored noopener"
-    class="nav-button"
-  >
-
-    Check on Amazon →
-
-  </a>
-
-
-</div>
-
+    <div class="container navbar">
+      <a href="#" class="brand">
+        <img src="/favicon.png" alt="Pinpoint Travel Logo" class="brand-logo">
+        <span class="brand-name">Pinpoint Travel</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#why-us">Why Choose Us</a>
+        <a href="#cta">Buy Now</a>
+      </nav>
+      <a href="#cta" class="nav-button">
+        <span>Check on Amazon</span>
+        <span class="btn-icon" style="margin-left:6px; display:inline-block;">&rarr;</span>
+      </a>
+    </div>
   </header>
 
-  <main id="top">
-    <!-- ===================================================
-         HERO
-    ==================================================== -->
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span>Carry-On Friendly</span>
+        </div>
+        <h1>Pack Smart. Travel <span class="highlight">Light & Organized.</span></h1>
+        <p class="hero-description">
+          An 18-piece leak-proof travel bottle kit designed to keep your shampoo, lotions, and creams neat, accessible, and TSA-approved everywhere you fly.
+        </p>
 
-<section class="hero">
+        <div class="trust-badges">
+          <div class="trust-badge">✓ 100% BPA Free</div>
+          <div class="trust-badge">✓ TSA Approved</div>
+          <div class="trust-badge">✓ Leak-Proof Triple Seal</div>
+        </div>
 
-  <div class="container hero-grid">
-
-    <!-- HERO TEXT -->
-
-    <div class="hero-content reveal">
-
-      <div class="eyebrow">
-
-        <span class="eyebrow-dot"></span>
-
-        Travel organization pick
-
-      </div>
-      <h1>
-
-        Pack your toiletries
-
-        <span class="highlight">
-          without the mess.
-        </span>
-
-      </h1>
-
-
-      <p class="hero-description">
-
-        Keep shampoo, conditioner, lotion and
-        other liquids organized with this compact
-        18-piece refillable travel bottle kit.
-
-        A practical travel essential for carry-ons,
-        weekend trips and longer vacations.
-
-      </p>
-
-
-      <div class="trust-badges">
-
-        <span class="trust-badge">
-          18-piece set
-        </span>
-
-        <span class="trust-badge">
-          Refillable bottles
-        </span>
-
-        <span class="trust-badge">
-          Leak-resistant design
-        </span>
-
-        <span class="trust-badge">
-          Travel-friendly
-        </span>
-
+        <div class="hero-buttons">
+          <a href="#cta" class="primary-button">
+            <span>View 18-Pack on Amazon</span>
+            <span class="btn-icon" style="display:inline-block; transition:transform 0.25s ease;">&rarr;</span>
+          </a>
+          <a href="#features" class="secondary-button">Explore Features</a>
+        </div>
+        <p class="price-note">Available for fast Prime shipping on Amazon</p>
       </div>
 
+      <!-- PRODUCT SHOWCASE AREA -->
+      <div class="product-area">
+        <div class="product-glow"></div>
 
-      <div class="hero-buttons">
+        <div class="floating-card floating-one">
+          <span>AIRLINE APPROVED</span>
+          3.4 oz / 100ml Max
+        </div>
 
+        <div class="floating-card floating-two">
+          <span>LEAK-PROOF</span>
+          3-Layer Anti-Spill Cap
+        </div>
 
-        <!-- MAIN AMAZON BUTTON -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <span class="product-badge">18-PIECE KIT</span>
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="18-Pack Travel Bottle Kit">
+          </div>
+          <div class="product-rating">
+            <span class="stars">★★★★★</span>
+            <span>4.8 / 5 Rating on Amazon</span>
+          </div>
+          <div class="product-info">
+            <h2>Refillable Toiletries Kit</h2>
+            <div class="product-price">
+              $14.99
+              <small>Prime Delivery</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <a
-          href="https://amzn.to/4qnWO24"
-          target="_blank"
-          rel="nofollow sponsored noopener"
-          class="primary-button"
-        >
+  <!-- FEATURES SECTION -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">Designed For Travelers</span>
+        <h2>Everything You Need in One Kit</h2>
+        <p>Thoughtful design details that eliminate spill disasters and make security checks effortless.</p>
+      </div>
 
-          🛒 View on Amazon →
+      <div class="feature-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">🛡️</div>
+          <h3>Triple Leak-Proof</h3>
+          <p>3-layer sealing cap prevents liquids from leaking or spilling into your luggage during flight pressure shifts.</p>
+        </div>
 
+        <div class="feature-card reveal">
+          <div class="feature-icon">✈️</div>
+          <h3>TSA Carry-On Ready</h3>
+          <p>Complies strictly with the 3-1-1 airline rule for fast, stress-free TSA security screening.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">🧴</div>
+          <h3>Food-Grade Silicone</h3>
+          <p>Soft, squeezable BPA-free silicone makes dispensing shampoo and conditioners effortless to the last drop.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">🧳</div>
+          <h3>Clear Organizer Bag</h3>
+          <p>Includes a clear, durable zipper case to keep all 18 components compact and easy to find.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-section" id="why-us">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <h3>Why Travel With Us?</h3>
+          <div class="check-list">
+            <div class="check-item">
+              <div class="check-circle">✓</div>
+              <div>
+                <strong>Complete Variety</strong>
+                <span>Bottles, sprayers, cream jars, labels, mini spatulas, and funnel included.</span>
+              </div>
+            </div>
+            <div class="check-item">
+              <div class="check-circle">✓</div>
+              <div>
+                <strong>Easy Refilling & Cleaning</strong>
+                <span>Wide-mouth bottle design allows easy filling and hassle-free hand washing.</span>
+              </div>
+            </div>
+            <div class="check-item">
+              <div class="check-circle">✓</div>
+              <div>
+                <strong>Durable & Reusable</strong>
+                <span>Eco-friendly materials built to withstand dozens of trips around the world.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-card reveal">
+          <h3>What's Inside the Box?</h3>
+          <div class="check-list">
+            <div class="check-item">
+              <div class="check-circle">4x</div>
+              <div>
+                <strong>Silicone Bottles (3oz)</strong>
+                <span>Perfect for shampoo, conditioner, body wash, and lotion.</span>
+              </div>
+            </div>
+            <div class="check-item">
+              <div class="check-circle">4x</div>
+              <div>
+                <strong>Cream Jars & Spray Bottles</strong>
+                <span>Ideal for face creams, perfumes, hair sprays, and toner.</span>
+              </div>
+            </div>
+            <div class="check-item">
+              <div class="check-circle">10x</div>
+              <div>
+                <strong>Accessories & Case</strong>
+                <span>Pre-printed labels, filling tools, spatulas, and clear travel pouch.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA SECTION -->
+  <section class="cta-section" id="cta">
+    <div class="container cta-content">
+      <div class="cta-text">
+        <span class="section-kicker" style="color:#7fd4ec;">Special Offer</span>
+        <h2>Ready for Your Next Trip?</h2>
+        <p>Order your 18-pack travel bottle kit on Amazon today and enjoy hassle-free packing for all your upcoming adventures.</p>
+      </div>
+      <div>
+        <a href="#" class="primary-button" style="font-size:16px; padding:0 32px; min-height:62px;">
+          <span>Buy on Amazon Now</span>
+          <span class="btn-icon" style="display:inline-block; transition:transform 0.25s ease;">&rarr;</span>
         </a>
-
-
-        <a
-          href="#features"
-          class="secondary-button"
-        >
-
-          Explore features
-
-        </a>
-
-
       </div>
-
-
-      <p class="price-note">
-
-        Price and availability can change on Amazon.
-        Check the current listing for the latest offer.
-
-      </p>
-
-
     </div>
+  </section>
 
-
-
-    <!-- =================================================
-         PRODUCT
-    ================================================== -->
-
-    <div class="product-area reveal">
-
-
-      <div class="product-glow"></div>
-
-
-      <!-- TRAVEL READY -->
-
-      <div class="floating-card floating-one">
-
-        <span>
-          TRAVEL READY
-        </span>
-
-        18-piece organization
-
-      </div>
-
-
-      <!-- PACK SMART -->
-
-      <div class="floating-card floating-two">
-
-        <span>
-          PACK SMART
-        </span>
-
-        Keep toiletries organized
-
-      </div>
-
-
-      <article class="product-card">
-
-
-        <div class="product-image-container">
-
-
-          <div class="product-badge">
-
-            Travel Essential
-
-          </div>
-
-
-          <img
-            src="/images/61Y+Leafr0L._SL1138_.webp"
-            alt="18 pack refillable travel bottles for toiletries"
-            loading="eager"
-          >
-
-
-        </div>
-
-
-        <div class="product-rating">
-
-          <span class="stars">
-            ★★★★★
-          </span>
-
-          <strong>
-            Popular travel accessory
-          </strong>
-
-        </div>
-
-
-        <div class="product-info">
-
-
-          <h2>
-
-            18-Pack Refillable Travel
-            Bottles for Toiletries
-
-          </h2>
-
-
-          <div class="product-price">
-
-            Check price
-
-            <small>
-              on Amazon
-            </small>
-
-          </div>
-
-
-        </div>
-
-
-      </article>
-
-
-    </div>
-
-
+  <!-- DISCLOSURE -->
+  <div class="disclosure container">
+    Pinpoint Travel is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.
   </div>
 
-</section>
-
-
-
-<!-- ===================================================
-     FEATURES
-==================================================== -->
-
-<section
-  class="features"
-  id="features"
->
-
-  <div class="container">
-
-
-    <div class="section-header reveal">
-
-      <div class="section-kicker">
-        Designed for travelers
-      </div>
-
-      <h2>
-        Small details that make
-        packing easier
-      </h2>
-
-      <p>
-
-        Instead of carrying full-size bottles,
-        organize your everyday liquids into
-        a compact travel kit.
-
-      </p>
-
-    </div>
-
-
-
-    <div class="feature-grid">
-
-
-      <article class="feature-card reveal">
-
-        <div class="feature-icon">
-          🧴
-        </div>
-
-        <h3>
-          Refillable bottles
-        </h3>
-
-        <p>
-
-          Fill the containers with shampoo,
-          conditioner, lotion or other toiletries
-          you already use.
-
-        </p>
-
-      </article>
-
-
-      <article class="feature-card reveal">
-
-        <div class="feature-icon">
-          🧳
-        </div>
-
-        <h3>
-          Travel organization
-        </h3>
-
-        <p>
-
-          Keep multiple toiletry containers
-          together instead of letting loose
-          bottles move around your luggage.
-
-        </p>
-
-      </article>
-
-
-      <article class="feature-card reveal">
-
-        <div class="feature-icon">
-          💧
-        </div>
-
-        <h3>
-          Leak-resistant design
-        </h3>
-
-        <p>
-
-          Designed to help reduce messy leaks
-          when your toiletry kit is packed inside
-          a suitcase or carry-on.
-
-        </p>
-
-      </article>
-
-
-      <article class="feature-card reveal">
-
-        <div class="feature-icon">
-          ✈
-        </div>
-
-        <h3>
-          Travel-friendly
-        </h3>
-
-        <p>
-
-          A compact format makes it useful for
-          flights, weekend getaways, business
-          trips and holidays.
-
-        </p>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- ===================================================
-     WHY
-==================================================== -->
-
-<section
-  class="why-section"
-  id="why"
->
-
-  <div class="container">
-
-
-    <div class="section-header reveal">
-
-      <div class="section-kicker">
-        Why consider it?
-      </div>
-
-      <h2>
-        Make your luggage
-        feel more organized
-      </h2>
-
-      <p>
-
-        Great travel gear does not have to be
-        complicated. This kit focuses on one
-        practical job: keeping your liquids
-        together and easy to pack.
-
-      </p>
-
-    </div>
-
-
-
-    <div class="why-grid">
-
-
-      <article class="why-card reveal">
-
-        <h3>
-          Useful for everyday trips
-        </h3>
-
-
-        <div class="check-list">
-
-
-          <div class="check-item">
-
-            <div class="check-circle">
-              ✓
-            </div>
-
-            <div>
-
-              <strong>
-                Weekend getaways
-              </strong>
-
-              <span>
-                Pack your basic toiletries
-                without taking large bottles.
-              </span>
-
-            </div>
-
-          </div>
-
-
-          <div class="check-item">
-
-            <div class="check-circle">
-              ✓
-            </div>
-
-            <div>
-
-              <strong>
-                International travel
-              </strong>
-
-              <span>
-                Keep your liquid toiletries
-                organized inside your travel bag.
-              </span>
-
-            </div>
-
-          </div>
-
-
-          <div class="check-item">
-
-            <div class="check-circle">
-              ✓
-            </div>
-
-            <div>
-
-              <strong>
-                Business trips
-              </strong>
-
-              <span>
-                A compact toiletry kit can make
-                quick packing much easier.
-              </span>
-
-            </div>
-
-          </div>
-
-
-          <div class="check-item">
-
-            <div class="check-circle">
-              ✓
-            </div>
-
-            <div>
-
-              <strong>
-                Family vacations
-              </strong>
-
-              <span>
-                Use different containers for
-                different personal-care products.
-              </span>
-
-            </div>
-
-          </div>
-
-
-        </div>
-
-      </article>
-
-
-
-      <article class="why-card reveal">
-
-        <h3>
-          What you get
-        </h3>
-
-
-        <div class="check-list">
-
-
-          <div class="check-item">
-
-            <div class="check-circle">
-              18
-            </div>
-
-            <div>
-
-              <strong>
-                18-piece travel set
-              </strong>
-
-              <span>
-                Multiple containers and accessories
-                in one kit.
-              </span>
-
-            </div>
-
-          </div>
-
-
-          <div class="check-item">
-
-            <div class="check-circle">
-              ✓
-            </div>
-
-            <div>
-
-              <strong>
-                Reusable format
-              </strong>
-
-              <span>
-                Refill the bottles for future trips
-                instead of buying travel-size
-                toiletries repeatedly.
-              </span>
-
-            </div>
-
-          </div>
-
-
-          <div class="check-item">
-
-            <div class="check-circle">
-              ✓
-            </div>
-
-            <div>
-
-              <strong>
-                Compact storage case
-              </strong>
-
-              <span>
-                Keep the set together when it
-                is not being used.
-              </span>
-
-            </div>
-
-          </div>
-
-
-          <div class="check-item">
-
-            <div class="check-circle">
-              →
-            </div>
-
-            <div>
-
-              <strong>
-                See the live listing
-              </strong>
-
-              <span>
-                Check the current price, colors,
-                reviews and availability directly
-                on Amazon.
-              </span>
-
-            </div>
-
-          </div>
-
-
-        </div>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- ===================================================
-     FINAL CTA
-==================================================== -->
-
-<section
-  class="cta-section"
-  id="buy"
->
-
-  <div class="container cta-content">
-
-
-    <div class="cta-text reveal">
-
-      <div
-        class="section-kicker"
-        style="color:#1282a2;"
-      >
-
-        Ready to pack smarter?
-
-      </div>
-
-
-      <h2>
-
-        See the current
-        Amazon listing.
-
-      </h2>
-
-
-      <p>
-
-        Product price, stock, delivery and
-        available colors may change.
-
-        Use the button to view the current
-        listing before purchasing.
-
-      </p>
-
-    </div>
-
-
-
-    <div class="cta-button reveal">
-
-      <a
-        href="https://amzn.to/4qnWO24"
-        target="_blank"
-        rel="nofollow sponsored noopener"
-        class="primary-button"
-      >
-
-        View product on Amazon →
-
-      </a>
-
-    </div>
-
-
-  </div>
-
-</section>
-
-  </main>
-
-
-
-  <!-- =====================================================
-       AMAZON DISCLOSURE
-  ====================================================== -->
-
-  <div class="disclosure">
-
-<div class="container">
-
-  <strong>
-    Affiliate disclosure:
-  </strong>
-
-  As an Amazon Associate, we may earn from
-  qualifying purchases made through links
-  on this page.
-
-  This page is an independent product guide
-  and is not an Amazon-owned page.
-
-  Product information, pricing, shipping
-  and availability are controlled by Amazon
-  and can change.
-
-</div>
-
-  </div>
-
-
-
-  <!-- =====================================================
-       FOOTER
-  ====================================================== -->
-
+  <!-- FOOTER -->
   <footer>
-
-<div class="container footer-content">
-
-
-  <div class="footer-logo">
-
-    Pinpoint Travel
-
-  </div>
-
-
-  <div>
-
-    Travel guides • Travel gear • Smart trip planning
-
-  </div>
-
-
-  <div>
-
-    © 2026 Pinpoint Travel
-
-  </div>
-
-
-</div>
-
+    <div class="container footer-content">
+      <div class="footer-logo">Pinpoint Travel</div>
+      <div>© 2026 Pinpoint Travel. All Rights Reserved.</div>
+    </div>
   </footer>
 
-
-
-  <!-- =====================================================
-       MOBILE AMAZON CTA
-  ====================================================== -->
-
+  <!-- MOBILE FIXED CTA BAR -->
   <div class="mobile-cta">
-
-<a
-  href="https://amzn.to/4qnWO24"
-  target="_blank"
-  rel="nofollow sponsored noopener"
->
-
-  🛒 Check current Amazon price →
-
-</a>
-
+    <a href="#cta">
+      <span>Get 18-Pack Kit on Amazon</span>
+      <span class="btn-icon" style="margin-left:8px; display:inline-block;">&rarr;</span>
+    </a>
   </div>
 
-
-
-  <!-- =====================================================
-       JAVASCRIPT
-  ====================================================== -->
-
+  <!-- SCROLL REVEAL SCRIPT -->
   <script>
-
-    /* =====================================================
-       SCROLL REVEAL
-    ====================================================== */
-
-    const revealElements =
-      document.querySelectorAll(".reveal");
-
-
-    const revealObserver =
-      new IntersectionObserver(
-
-        (entries, observer) => {
-
-          entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-              entry.target.classList.add("visible");
-
-              observer.unobserve(
-                entry.target
-              );
-
-            }
-
-          });
-
-        },
-
-        {
-          threshold: 0.12
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
         }
+      });
+    }, { threshold: 0.1 });
 
-      );
-
-
-    revealElements.forEach(element => {
-
-      revealObserver.observe(element);
-
-    });
-
-
-
-    /* =====================================================
-       HEADER SHADOW
-    ====================================================== */
-
-    const header =
-      document.querySelector("header");
-
-
-    window.addEventListener(
-      "scroll",
-      () => {
-
-        if (window.scrollY > 20) {
-
-          header.style.boxShadow =
-            "0 8px 30px rgba(0,31,84,.10)";
-
-        } else {
-
-          header.style.boxShadow =
-            "none";
-
-        }
-
-      }
-    );
-
-
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
-
 </body>
-
 </html>
