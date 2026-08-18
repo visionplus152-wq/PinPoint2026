@@ -127,7 +127,10 @@
         Arial,
         sans-serif;
 
-      background: #fefcfb;
+      background:
+        radial-gradient(circle at 8% 8%, rgba(3,64,120,.055), transparent 24%),
+        radial-gradient(circle at 92% 38%, rgba(18,130,162,.045), transparent 28%),
+        linear-gradient(180deg, #fbfdfe 0%, #f5f9fb 52%, #ffffff 100%);
 
       color: #0a1128;
 
@@ -153,6 +156,8 @@
 
     :root {
       --main-blue: #1282a2;
+      --bright-blue: #0ec7e3;
+      --amazon-orange: #db7023;
       --accent-blue: #034078;
       --deep-blue: #001f54;
       --darkest-blue: #0a1128;
@@ -467,12 +472,10 @@
 
 
     .nav-button:hover {
-
-      background:
-        var(--dark-blue);
-
-      transform:
-        translateY(-2px);
+      background: var(--amazon-orange);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(219,112,35,.28);
     }
 
 
@@ -489,27 +492,12 @@
         hidden;
 
       padding:
-        85px 0 105px;
+        68px 0 78px;
 
       background:
-
-        radial-gradient(
-          circle at 7% 20%,
-          rgba(18,130,162,.12),
-          transparent 28%
-        ),
-
-        radial-gradient(
-          circle at 91% 22%,
-          rgba(18,130,162,.12),
-          transparent 31%
-        ),
-
-        linear-gradient(
-          180deg,
-          #ffffff 0%,
-          #f3fafb 100%
-        );
+        radial-gradient(circle at 6% 24%, rgba(0,31,84,.14), transparent 28%),
+        radial-gradient(circle at 92% 20%, rgba(14,199,227,.10), transparent 30%),
+        linear-gradient(135deg, #fafdff 0%, #edf5f8 54%, #f8fbfc 100%);
     }
 
 
@@ -581,6 +569,7 @@
     ====================================================== */
 
     .eyebrow {
+      position: relative;
 
       display:
         inline-flex;
@@ -623,6 +612,23 @@
     }
 
 
+    .eyebrow::after {
+      content: "🧳";
+      position: absolute;
+      left: -38px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 19px;
+      animation: suitcaseFloat 3.2s ease-in-out infinite;
+      filter: drop-shadow(0 5px 8px rgba(0,31,84,.14));
+      pointer-events: none;
+    }
+
+    @keyframes suitcaseFloat {
+      0%, 100% { transform: translateY(-50%) rotate(-4deg); }
+      50% { transform: translateY(calc(-50% - 5px)) rotate(4deg); }
+    }
+
     .eyebrow-dot {
 
       width:
@@ -645,7 +651,7 @@
     h1 {
 
       margin-top:
-        24px;
+        20px;
 
       max-width:
         850px;
@@ -711,7 +717,7 @@
     .hero-description {
 
       margin-top:
-        25px;
+        20px;
 
       max-width:
         760px;
@@ -743,7 +749,7 @@
         10px;
 
       margin:
-        25px 0 30px;
+        20px 0 24px;
     }
 
 
@@ -842,9 +848,27 @@
        behind the Amazon button.
     */
 
+    .primary-button::after {
+      content: "";
+      position: absolute;
+      inset: -6px;
+      border: 1px solid rgba(14,199,227,.55);
+      border-radius: 20px;
+      opacity: 0;
+      transform: scale(.92);
+      animation: buttonWave 3.4s ease-out infinite;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    @keyframes buttonWave {
+      0% { opacity: .65; transform: scale(.92); }
+      65%, 100% { opacity: 0; transform: scale(1.12); }
+    }
+
     .primary-button::before {
 
-      content:
+      content:""
         "";
 
       position:
@@ -906,15 +930,10 @@
 
 
     .primary-button:hover {
-
-      background:
-        var(--dark-blue);
-
-      transform:
-        translateY(-3px);
-
-      box-shadow:
-        0 20px 42px rgba(18,130,162,.30);
+      background: var(--amazon-orange);
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 20px 42px rgba(219,112,35,.30);
     }
 
 
@@ -990,7 +1009,7 @@
     ====================================================== */
 
     .product-area {
-
+      isolation: isolate;
       position:
         relative;
 
@@ -1006,7 +1025,7 @@
 
 
     .product-glow {
-
+      z-index: 0;
       position:
         absolute;
 
@@ -1020,15 +1039,12 @@
         50%;
 
       background:
-        radial-gradient(
-          circle,
-          rgba(18,130,162,.12),
-          rgba(11,121,143,.04) 42%,
-          transparent 70%
-        );
-
-      animation:
-        glowPulse 5s ease-in-out infinite;
+        radial-gradient(circle at 35% 35%, rgba(14,199,227,.28), transparent 30%),
+        radial-gradient(circle at 70% 65%, rgba(0,31,84,.52), transparent 42%),
+        linear-gradient(135deg, rgba(0,31,84,.78), rgba(18,130,162,.18), rgba(10,17,40,.72));
+      filter: blur(8px);
+      opacity: .82;
+      animation: glowPulse 5s ease-in-out infinite, gradientDrift 9s ease-in-out infinite;
     }
 
 
@@ -1036,20 +1052,19 @@
 
       0%,
       100% {
-        transform:
-          scale(1);
-
-        opacity:
-          .8;
+        transform: scale(1);
+        opacity: .72;
       }
 
       50% {
-        transform:
-          scale(1.06);
-
-        opacity:
-          1;
+        transform: scale(1.055);
+        opacity: .95;
       }
+    }
+
+    @keyframes gradientDrift {
+      0%, 100% { filter: blur(8px) hue-rotate(0deg); }
+      50% { filter: blur(12px) hue-rotate(8deg); }
     }
 
 
@@ -1062,19 +1077,20 @@
         min(100%,650px);
 
       padding:
-        20px;
+        16px;
 
       background:
-        white;
+        linear-gradient(145deg, rgba(255,255,255,.98), rgba(242,248,251,.97));
 
       border:
-        1px solid var(--border);
+        1px solid rgba(0,31,84,.14);
 
       border-radius:
         30px;
 
       box-shadow:
-        var(--shadow);
+        0 28px 70px rgba(0,31,84,.18),
+        0 0 0 8px rgba(0,31,84,.035);
 
       z-index:
         3;
@@ -1398,7 +1414,7 @@
     .product-rating {
 
       margin-top:
-        17px;
+        11px;
 
       display:
         flex;
@@ -1442,7 +1458,7 @@
         20px;
 
       margin-top:
-        10px;
+        7px;
     }
 
 
@@ -1496,9 +1512,8 @@
     ====================================================== */
 
     .features {
-
       background:
-        white;
+        linear-gradient(180deg, #ffffff 0%, #f3f8fa 100%);
 
       border-top:
         1px solid var(--border);
@@ -1507,7 +1522,7 @@
         1px solid var(--border);
 
       padding:
-        100px 0;
+        78px 0;
     }
 
 
@@ -1517,7 +1532,7 @@
         780px;
 
       margin:
-        0 auto 50px;
+        0 auto 38px;
 
       text-align:
         center;
@@ -1679,12 +1694,11 @@
     ====================================================== */
 
     .why-section {
-
       padding:
-        100px 0;
+        82px 0;
 
       background:
-        var(--soft-gray);
+        linear-gradient(135deg, #eef5f8 0%, #f9fbfc 55%, #edf4f7 100%);
     }
 
 
@@ -2208,6 +2222,12 @@
 
     @media (max-width:700px) {
 
+      .eyebrow::after {
+        left: -2px;
+        top: -25px;
+        font-size: 17px;
+      }
+
       .container {
 
         width:
@@ -2262,7 +2282,7 @@
       .hero {
 
         padding:
-          52px 0 65px;
+          42px 0 52px;
       }
 
 
@@ -2317,7 +2337,7 @@
       .product-card {
 
         padding:
-          12px;
+          10px;
 
         border-radius:
           22px;
@@ -2520,6 +2540,14 @@
 
         transition:
           none !important;
+      }
+
+      .eyebrow::after {
+        animation: none !important;
+      }
+
+      .primary-button::after {
+        animation: none !important;
       }
 
       .reveal {
