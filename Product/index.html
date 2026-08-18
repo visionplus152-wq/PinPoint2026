@@ -494,21 +494,20 @@ content="website"
 
         radial-gradient(
           circle at 7% 20%,
-          rgba(255,255,255,.12),
-          transparent 30%
+          rgba(18,130,162,.16),
+          transparent 32%
         ),
 
         radial-gradient(
           circle at 91% 22%,
-          rgba(255,255,255,.16),
-          transparent 34%
+          rgba(0,31,84,.13),
+          transparent 38%
         ),
 
         linear-gradient(
-          135deg,
-          #001f54 0%,
-          #1282a2 55%,
-          #ffffff 100%
+          180deg,
+          #ffffff 0%,
+          #eef6f9 100%
         );
     }
 
@@ -660,14 +659,14 @@ content="website"
         -3.5px;
 
       color:
-        #ffffff;
+        var(--dark-blue);
     }
 
 
     .highlight {
 
       color:
-        #7fd4ec;
+        var(--main-blue);
 
       position:
         relative;
@@ -701,7 +700,7 @@ content="website"
         50%;
 
       background:
-        rgba(255,255,255,.25);
+        rgba(18,130,162,.22);
 
       z-index:
         -1;
@@ -717,7 +716,7 @@ content="website"
         760px;
 
       color:
-        rgba(255,255,255,.85);
+        var(--gray);
 
       font-size:
         18px;
@@ -977,7 +976,7 @@ content="website"
         13px;
 
       color:
-        rgba(255,255,255,.68);
+        #71808c;
 
       font-size:
         12px;
@@ -1065,7 +1064,7 @@ content="website"
         20px;
 
       background:
-        linear-gradient(165deg, #001f54 0%, #1282a2 45%, #ffffff 82%);
+        linear-gradient(160deg, rgba(0,31,84,.14) 0%, rgba(18,130,162,.12) 35%, #ffffff 68%);
 
       border:
         1px solid var(--border);
@@ -1498,7 +1497,7 @@ content="website"
     .features {
 
       background:
-        white;
+        linear-gradient(150deg, #001f54 0%, #063a7d 55%, #0b4f96 100%);
 
       border-top:
         1px solid var(--border);
@@ -1572,6 +1571,29 @@ content="website"
 
       font-size:
         17px;
+    }
+
+
+    /* Designed for travelers intro text (section bg now dark) */
+
+    #features .section-kicker {
+
+      color:
+        #7fd4ec;
+    }
+
+
+    #features .section-header h2 {
+
+      color:
+        #ffffff;
+    }
+
+
+    #features .section-header p {
+
+      color:
+        rgba(255,255,255,.8);
     }
 
 
@@ -2009,7 +2031,7 @@ content="website"
         28px 0;
 
       background:
-        #0a1128;
+        #001f54;
 
       color:
         #c4d0d8;
