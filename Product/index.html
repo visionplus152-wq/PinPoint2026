@@ -10,13 +10,17 @@
     content="width=device-width, initial-scale=1.0"
   >
 
+  <!-- =====================================================
+       SEO / BROWSER TAB
+  ====================================================== -->
+
   <title>
     18-Pack Travel Bottles for Toiletries | Pinpoint Travel
   </title>
 
   <meta
     name="description"
-    content="Discover a compact 18-piece refillable travel bottle kit for shampoo, conditioner, lotion and other toiletries. A practical travel essential for organized packing."
+    content="Discover an 18-piece refillable travel bottle kit for shampoo, conditioner, lotion and other toiletries. A practical travel essential for organized packing."
   >
 
   <meta
@@ -25,16 +29,83 @@
   >
 
   <link
+    rel="canonical"
+    href="https://pinpointtravel.store/Product/"
+  >
+
+
+  <!-- =====================================================
+       FAVICON
+       Browser tab + Google/search favicon
+  ====================================================== -->
+
+  <link
     rel="icon"
     type="image/png"
-    href="assets/favicon.png"
+    sizes="48x48"
+    href="https://pinpointtravel.store/images/favicon.png"
   >
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="https://pinpointtravel.store/images/favicon.png"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="https://pinpointtravel.store/images/favicon.png"
+  >
+
+  <link
+    rel="shortcut icon"
+    type="image/png"
+    href="https://pinpointtravel.store/images/favicon.png"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="https://pinpointtravel.store/images/favicon.png"
+  >
+
+
+  <!-- =====================================================
+       OPEN GRAPH
+  ====================================================== -->
+
+  <meta
+    property="og:title"
+    content="18-Pack Travel Bottles for Toiletries | Pinpoint Travel"
+  >
+
+  <meta
+    property="og:description"
+    content="A practical 18-piece refillable travel bottle kit for keeping toiletries organized while traveling."
+  >
+
+  <meta
+    property="og:url"
+    content="https://pinpointtravel.store/Product/"
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+
+  <!-- =====================================================
+       STYLES
+  ====================================================== -->
 
   <style>
 
     /* =====================================================
        RESET
-    ===================================================== */
+    ====================================================== */
 
     * {
       margin: 0;
@@ -56,9 +127,9 @@
         Arial,
         sans-serif;
 
-      background: #f6f9fa;
+      background: #f6fafb;
 
-      color: #124f70;
+      color: #164f60;
 
       line-height: 1.6;
 
@@ -77,36 +148,36 @@
 
 
     /* =====================================================
-       PINPOINT TRAVEL COLOR SYSTEM
-    ===================================================== */
+       PINPOINT TRAVEL COLORS
+    ====================================================== */
 
     :root {
 
-      --blue-dark: #0c4e70;
+      --main-blue: #0b798f;
 
-      --blue: #126487;
+      --bright-blue: #0ec7e3;
 
-      --blue-light: #2b7896;
+      --dark-blue: #07576b;
 
-      --aqua: #b9e8e9;
+      --deep-blue: #06485a;
 
-      --aqua-light: #e8f7f7;
+      --light-blue: #dff8fb;
 
-      --cream: #f7faf9;
+      --very-light-blue: #effbfd;
 
       --white: #ffffff;
 
-      --gray-bg: #f4f8f9;
+      --soft-gray: #f5f9fa;
 
-      --gray: #687e8b;
+      --gray: #6d858e;
 
-      --border: #dce9ec;
+      --border: #d9ebef;
 
       --shadow:
-        0 20px 55px rgba(18, 78, 106, 0.10);
+        0 22px 60px rgba(11,121,143,.12);
 
       --shadow-small:
-        0 10px 30px rgba(18, 78, 106, 0.08);
+        0 10px 30px rgba(11,121,143,.09);
 
       --max-width: 1450px;
     }
@@ -114,7 +185,7 @@
 
     /* =====================================================
        CONTAINER
-    ===================================================== */
+    ====================================================== */
 
     .container {
 
@@ -125,18 +196,18 @@
         );
 
       margin:
-        auto;
+        0 auto;
     }
 
 
     /* =====================================================
        TOP BAR
-    ===================================================== */
+    ====================================================== */
 
     .top-bar {
 
       background:
-        var(--blue-dark);
+        var(--dark-blue);
 
       color:
         white;
@@ -145,7 +216,7 @@
         center;
 
       padding:
-        10px 15px;
+        9px 15px;
 
       font-size:
         13px;
@@ -157,13 +228,13 @@
     .top-bar strong {
 
       color:
-        var(--aqua);
+        var(--bright-blue);
     }
 
 
     /* =====================================================
        HEADER
-    ===================================================== */
+    ====================================================== */
 
     header {
 
@@ -177,13 +248,16 @@
         1000;
 
       background:
-        rgba(255,255,255,.94);
+        rgba(255,255,255,.95);
 
       backdrop-filter:
         blur(15px);
 
       border-bottom:
         1px solid var(--border);
+
+      transition:
+        box-shadow .3s ease;
     }
 
 
@@ -207,8 +281,8 @@
 
 
     /* =====================================================
-       PINPOINT TRAVEL LOGO
-    ===================================================== */
+       LOGO
+    ====================================================== */
 
     .brand {
 
@@ -219,27 +293,46 @@
         center;
 
       gap:
-        12px;
+        11px;
+
+      flex-shrink:
+        0;
     }
 
 
     .brand-logo {
 
       width:
-        66px;
+        61px;
 
       height:
-        66px;
+        61px;
 
       object-fit:
         contain;
+
+      transition:
+        transform .25s ease;
     }
 
+
+    .brand:hover .brand-logo {
+
+      transform:
+        scale(1.035);
+    }
+
+
+    /*
+       Pinpoint Travel text
+       Slightly refined serif font
+       without being too decorative.
+    */
 
     .brand-name {
 
       color:
-        var(--blue-dark);
+        var(--dark-blue);
 
       font-family:
         Georgia,
@@ -247,19 +340,25 @@
         serif;
 
       font-size:
-        20px;
+        21px;
 
       font-weight:
-        800;
+        700;
 
       letter-spacing:
-        .5px;
+        .3px;
+
+      line-height:
+        1;
+
+      white-space:
+        nowrap;
     }
 
 
     /* =====================================================
-       NAVIGATION
-    ===================================================== */
+       NAV
+    ====================================================== */
 
     .nav-links {
 
@@ -270,10 +369,10 @@
         center;
 
       gap:
-        32px;
+        31px;
 
       color:
-        #557384;
+        #557783;
 
       font-size:
         14px;
@@ -285,21 +384,62 @@
 
     .nav-links a {
 
+      position:
+        relative;
+
       transition:
         color .25s ease;
+    }
+
+
+    .nav-links a::after {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      left:
+        0;
+
+      bottom:
+        -7px;
+
+      width:
+        0;
+
+      height:
+        2px;
+
+      border-radius:
+        10px;
+
+      background:
+        var(--bright-blue);
+
+      transition:
+        width .25s ease;
     }
 
 
     .nav-links a:hover {
 
       color:
-        var(--blue);
+        var(--main-blue);
+    }
+
+
+    .nav-links a:hover::after {
+
+      width:
+        100%;
     }
 
 
     /* =====================================================
-       HEADER CTA
-    ===================================================== */
+       NAV AMAZON BUTTON
+    ====================================================== */
 
     .nav-button {
 
@@ -319,7 +459,7 @@
         50px;
 
       background:
-        var(--blue);
+        var(--main-blue);
 
       color:
         white;
@@ -331,17 +471,17 @@
         850;
 
       box-shadow:
-        0 10px 25px rgba(18,100,135,.20);
+        0 9px 23px rgba(11,121,143,.20);
 
       transition:
-        .25s ease;
+        all .25s ease;
     }
 
 
     .nav-button:hover {
 
       background:
-        var(--blue-dark);
+        var(--dark-blue);
 
       transform:
         translateY(-2px);
@@ -350,7 +490,7 @@
 
     /* =====================================================
        HERO
-    ===================================================== */
+    ====================================================== */
 
     .hero {
 
@@ -361,27 +501,73 @@
         hidden;
 
       padding:
-        85px 0 100px;
+        85px 0 105px;
 
       background:
 
         radial-gradient(
-          circle at 10% 18%,
-          rgba(185,232,233,.55),
+          circle at 7% 20%,
+          rgba(14,199,227,.18),
           transparent 28%
         ),
 
         radial-gradient(
-          circle at 90% 20%,
-          rgba(18,100,135,.08),
-          transparent 30%
+          circle at 91% 22%,
+          rgba(11,121,143,.12),
+          transparent 31%
         ),
 
         linear-gradient(
           180deg,
           #ffffff 0%,
-          #f5f9fa 100%
+          #f3fafb 100%
         );
+    }
+
+
+    .hero::before {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      width:
+        480px;
+
+      height:
+        480px;
+
+      left:
+        -300px;
+
+      bottom:
+        -330px;
+
+      border-radius:
+        50%;
+
+      border:
+        1px solid rgba(14,199,227,.14);
+
+      animation:
+        slowCircle 13s ease-in-out infinite;
+    }
+
+
+    @keyframes slowCircle {
+
+      0%,
+      100% {
+        transform:
+          translate(0,0);
+      }
+
+      50% {
+        transform:
+          translate(25px,-20px);
+      }
     }
 
 
@@ -404,7 +590,7 @@
 
     /* =====================================================
        HERO TEXT
-    ===================================================== */
+    ====================================================== */
 
     .eyebrow {
 
@@ -430,7 +616,7 @@
         50px;
 
       color:
-        var(--blue);
+        var(--main-blue);
 
       font-size:
         12px;
@@ -445,7 +631,7 @@
         1px;
 
       box-shadow:
-        0 8px 25px rgba(18,78,106,.05);
+        0 8px 25px rgba(11,121,143,.05);
     }
 
 
@@ -461,10 +647,10 @@
         50%;
 
       background:
-        var(--blue);
+        var(--bright-blue);
 
       box-shadow:
-        0 0 0 5px rgba(18,100,135,.12);
+        0 0 0 5px rgba(14,199,227,.12);
     }
 
 
@@ -486,14 +672,14 @@
         -3.5px;
 
       color:
-        var(--blue-dark);
+        var(--dark-blue);
     }
 
 
     .highlight {
 
       color:
-        var(--blue);
+        var(--main-blue);
 
       position:
         relative;
@@ -527,7 +713,7 @@
         50%;
 
       background:
-        var(--aqua);
+        rgba(14,199,227,.35);
 
       z-index:
         -1;
@@ -554,8 +740,8 @@
 
 
     /* =====================================================
-       TRUST BADGES
-    ===================================================== */
+       BADGES
+    ====================================================== */
 
     .trust-badges {
 
@@ -588,7 +774,7 @@
         12px;
 
       color:
-        #557384;
+        #557783;
 
       font-size:
         13px;
@@ -600,7 +786,7 @@
 
     /* =====================================================
        BUTTONS
-    ===================================================== */
+    ====================================================== */
 
     .hero-buttons {
 
@@ -616,6 +802,12 @@
 
 
     .primary-button {
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
 
       min-height:
         56px;
@@ -636,7 +828,7 @@
         10px;
 
       background:
-        var(--blue);
+        var(--main-blue);
 
       color:
         white;
@@ -648,23 +840,93 @@
         900;
 
       box-shadow:
-        0 15px 30px rgba(18,100,135,.22);
+        0 15px 30px rgba(11,121,143,.23);
 
       transition:
-        .25s ease;
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+    }
+
+
+    /*
+       Bright blue moving shine
+       behind the Amazon button.
+    */
+
+    .primary-button::before {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      top:
+        0;
+
+      left:
+        -120%;
+
+      width:
+        80%;
+
+      height:
+        100%;
+
+      background:
+        linear-gradient(
+          110deg,
+          transparent,
+          rgba(14,199,227,.65),
+          transparent
+        );
+
+      transform:
+        skewX(-20deg);
+
+      animation:
+        buttonShine 3.6s ease-in-out infinite;
+    }
+
+
+    @keyframes buttonShine {
+
+      0% {
+        left:
+          -120%;
+      }
+
+      55% {
+        left:
+          130%;
+      }
+
+      100% {
+        left:
+          130%;
+      }
+    }
+
+
+    .primary-button span,
+    .primary-button {
+
+      isolation:
+        isolate;
     }
 
 
     .primary-button:hover {
 
       background:
-        var(--blue-dark);
+        var(--dark-blue);
 
       transform:
         translateY(-3px);
 
       box-shadow:
-        0 20px 40px rgba(18,100,135,.28);
+        0 20px 42px rgba(11,121,143,.30);
     }
 
 
@@ -692,7 +954,7 @@
         1px solid var(--border);
 
       color:
-        var(--blue-dark);
+        var(--dark-blue);
 
       border-radius:
         14px;
@@ -711,7 +973,13 @@
         translateY(-3px);
 
       border-color:
-        #bdd5dc;
+        rgba(11,121,143,.35);
+
+      color:
+        var(--main-blue);
+
+      box-shadow:
+        var(--shadow-small);
     }
 
 
@@ -721,7 +989,7 @@
         13px;
 
       color:
-        #80919c;
+        #82949c;
 
       font-size:
         12px;
@@ -730,12 +998,8 @@
 
     /* =====================================================
        PRODUCT AREA
-       
-       IMPORTANT:
-       NO PRODUCT PHOTO ANIMATION
-       NO FLOATING CARD ANIMATION
-       NO IMAGE ZOOM
-    ===================================================== */
+       PRODUCT IMAGE IS STATIC
+    ====================================================== */
 
     .product-area {
 
@@ -770,11 +1034,34 @@
       background:
         radial-gradient(
           circle,
-          rgba(185,232,233,.48),
-          transparent 68%
+          rgba(14,199,227,.20),
+          rgba(11,121,143,.04) 42%,
+          transparent 70%
         );
 
-      /* STATIC */
+      animation:
+        glowPulse 5s ease-in-out infinite;
+    }
+
+
+    @keyframes glowPulse {
+
+      0%,
+      100% {
+        transform:
+          scale(1);
+
+        opacity:
+          .8;
+      }
+
+      50% {
+        transform:
+          scale(1.06);
+
+        opacity:
+          1;
+      }
     }
 
 
@@ -801,7 +1088,8 @@
       box-shadow:
         var(--shadow);
 
-      /* STATIC - NO ANIMATION */
+      z-index:
+        3;
     }
 
 
@@ -817,12 +1105,19 @@
         22px;
 
       background:
-        #f2f6f7;
+        #f2f7f8;
 
       aspect-ratio:
         1.17 / 1;
     }
 
+
+    /*
+       STATIC PRODUCT IMAGE
+       No zoom.
+       No transform.
+       No image animation.
+    */
 
     .product-image-container img {
 
@@ -835,9 +1130,14 @@
       object-fit:
         cover;
 
-      /* NO TRANSFORM */
-      /* NO ANIMATION */
-      /* NO HOVER ZOOM */
+      transform:
+        none;
+
+      animation:
+        none;
+
+      transition:
+        none;
     }
 
 
@@ -856,7 +1156,7 @@
         9px 14px;
 
       background:
-        var(--blue);
+        var(--main-blue);
 
       color:
         white;
@@ -871,16 +1171,241 @@
         900;
 
       z-index:
-        2;
+        5;
 
       box-shadow:
-        0 10px 22px rgba(18,100,135,.22);
+        0 10px 22px rgba(11,121,143,.25);
     }
 
 
     /* =====================================================
-       PRODUCT INFO
-    ===================================================== */
+       FLOATING CARDS
+       TRAVEL READY / PACK SMART ANIMATION
+    ====================================================== */
+
+    .floating-card {
+
+      position:
+        absolute;
+
+      z-index:
+        10;
+
+      background:
+        white;
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        16px;
+
+      padding:
+        13px 17px;
+
+      box-shadow:
+        0 14px 35px rgba(11,121,143,.14);
+
+      font-size:
+        12px;
+
+      font-weight:
+        850;
+
+      color:
+        var(--dark-blue);
+    }
+
+
+    .floating-card span {
+
+      display:
+        block;
+
+      color:
+        var(--main-blue);
+
+      font-size:
+        10px;
+
+      letter-spacing:
+        .6px;
+
+      margin-bottom:
+        2px;
+    }
+
+
+    /*
+       TRAVEL READY
+       Gentle floating / waving movement
+    */
+
+    .floating-one {
+
+      top:
+        10%;
+
+      right:
+        -8px;
+
+      animation:
+        travelReadyFloat 4.2s ease-in-out infinite;
+    }
+
+
+    @keyframes travelReadyFloat {
+
+      0%,
+      100% {
+
+        transform:
+          translateY(0)
+          rotate(0deg);
+      }
+
+      25% {
+
+        transform:
+          translateY(-7px)
+          rotate(1.2deg);
+      }
+
+      50% {
+
+        transform:
+          translateY(-11px)
+          rotate(0deg);
+      }
+
+      75% {
+
+        transform:
+          translateY(-5px)
+          rotate(-1.2deg);
+      }
+    }
+
+
+    /*
+       PACK SMART
+       Different gentle floating motion
+    */
+
+    .floating-two {
+
+      left:
+        -25px;
+
+      bottom:
+        16%;
+
+      animation:
+        packSmartFloat 4.8s ease-in-out infinite;
+    }
+
+
+    @keyframes packSmartFloat {
+
+      0%,
+      100% {
+
+        transform:
+          translateY(0)
+          rotate(0deg);
+      }
+
+      30% {
+
+        transform:
+          translateY(7px)
+          rotate(-1.4deg);
+      }
+
+      60% {
+
+        transform:
+          translateY(-5px)
+          rotate(1deg);
+      }
+
+      80% {
+
+        transform:
+          translateY(4px)
+          rotate(0deg);
+      }
+    }
+
+
+    /*
+       Small bright blue accent line
+       on the floating cards.
+    */
+
+    .floating-card::after {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      left:
+        15px;
+
+      right:
+        15px;
+
+      bottom:
+        5px;
+
+      height:
+        2px;
+
+      border-radius:
+        10px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          var(--bright-blue),
+          transparent
+        );
+
+      opacity:
+        .45;
+
+      animation:
+        accentWave 2.7s ease-in-out infinite;
+    }
+
+
+    @keyframes accentWave {
+
+      0%,
+      100% {
+        transform:
+          scaleX(.55);
+
+        opacity:
+          .25;
+      }
+
+      50% {
+        transform:
+          scaleX(1);
+
+        opacity:
+          .8;
+      }
+    }
+
+
+    /* =====================================================
+       PRODUCT INFORMATION
+    ====================================================== */
 
     .product-rating {
 
@@ -897,7 +1422,7 @@
         9px;
 
       color:
-        #6b808c;
+        #6b808a;
 
       font-size:
         13px;
@@ -907,7 +1432,7 @@
     .stars {
 
       color:
-        #e6a928;
+        #e5a728;
 
       letter-spacing:
         1px;
@@ -936,7 +1461,7 @@
     .product-info h2 {
 
       color:
-        var(--blue-dark);
+        var(--dark-blue);
 
       font-size:
         21px;
@@ -949,7 +1474,7 @@
     .product-price {
 
       color:
-        var(--blue);
+        var(--main-blue);
 
       font-size:
         23px;
@@ -979,84 +1504,8 @@
 
 
     /* =====================================================
-       FLOATING INFORMATION CARDS
-       
-       STATIC - NO ANIMATION
-    ===================================================== */
-
-    .floating-card {
-
-      position:
-        absolute;
-
-      z-index:
-        5;
-
-      background:
-        white;
-
-      border:
-        1px solid var(--border);
-
-      border-radius:
-        16px;
-
-      padding:
-        12px 15px;
-
-      box-shadow:
-        var(--shadow-small);
-
-      font-size:
-        12px;
-
-      font-weight:
-        850;
-    }
-
-
-    .floating-card span {
-
-      display:
-        block;
-
-      color:
-        var(--blue);
-
-      font-size:
-        10px;
-
-      letter-spacing:
-        .5px;
-
-      margin-bottom:
-        2px;
-    }
-
-
-    .floating-one {
-
-      top:
-        10%;
-
-      right:
-        -8px;
-    }
-
-
-    .floating-two {
-
-      left:
-        -25px;
-
-      bottom:
-        16%;
-    }
-
-
-    /* =====================================================
        FEATURES
-    ===================================================== */
+    ====================================================== */
 
     .features {
 
@@ -1090,7 +1539,7 @@
     .section-kicker {
 
       color:
-        var(--blue);
+        var(--main-blue);
 
       text-transform:
         uppercase;
@@ -1112,7 +1561,7 @@
         9px;
 
       color:
-        var(--blue-dark);
+        var(--dark-blue);
 
       font-size:
         clamp(31px,4vw,50px);
@@ -1175,6 +1624,9 @@
       transform:
         translateY(-7px);
 
+      border-color:
+        rgba(11,121,143,.25);
+
       box-shadow:
         var(--shadow-small);
     }
@@ -1195,10 +1647,10 @@
         center;
 
       background:
-        var(--aqua-light);
+        var(--light-blue);
 
       color:
-        var(--blue);
+        var(--main-blue);
 
       border-radius:
         15px;
@@ -1214,7 +1666,7 @@
     .feature-card h3 {
 
       color:
-        var(--blue-dark);
+        var(--dark-blue);
 
       font-size:
         17px;
@@ -1236,7 +1688,7 @@
 
     /* =====================================================
        WHY SECTION
-    ===================================================== */
+    ====================================================== */
 
     .why-section {
 
@@ -1244,7 +1696,7 @@
         100px 0;
 
       background:
-        var(--gray-bg);
+        var(--soft-gray);
     }
 
 
@@ -1276,14 +1728,14 @@
         35px;
 
       box-shadow:
-        0 15px 40px rgba(18,78,106,.05);
+        0 15px 40px rgba(11,121,143,.05);
     }
 
 
     .why-card h3 {
 
       color:
-        var(--blue-dark);
+        var(--dark-blue);
 
       font-size:
         26px;
@@ -1334,10 +1786,10 @@
         center;
 
       background:
-        var(--aqua-light);
+        var(--light-blue);
 
       color:
-        var(--blue);
+        var(--main-blue);
 
       border-radius:
         50%;
@@ -1356,7 +1808,7 @@
         block;
 
       color:
-        var(--blue-dark);
+        var(--dark-blue);
 
       font-size:
         15px;
@@ -1381,7 +1833,7 @@
 
     /* =====================================================
        FINAL CTA
-    ===================================================== */
+    ====================================================== */
 
     .cta-section {
 
@@ -1395,7 +1847,7 @@
         90px 0;
 
       background:
-        var(--blue-dark);
+        var(--dark-blue);
 
       color:
         white;
@@ -1423,10 +1875,28 @@
         -220px;
 
       border:
-        1px solid rgba(185,232,233,.13);
+        1px solid rgba(14,199,227,.18);
 
       border-radius:
         50%;
+
+      animation:
+        ctaCircle 9s ease-in-out infinite;
+    }
+
+
+    @keyframes ctaCircle {
+
+      0%,
+      100% {
+        transform:
+          scale(1);
+      }
+
+      50% {
+        transform:
+          scale(1.1);
+      }
     }
 
 
@@ -1451,7 +1921,7 @@
         -180px;
 
       border:
-        1px solid rgba(185,232,233,.10);
+        1px solid rgba(14,199,227,.13);
 
       border-radius:
         50%;
@@ -1505,7 +1975,7 @@
         13px;
 
       color:
-        #c1d3db;
+        #bfd3da;
 
       font-size:
         15px;
@@ -1514,7 +1984,7 @@
 
     /* =====================================================
        DISCLOSURE
-    ===================================================== */
+    ====================================================== */
 
     .disclosure {
 
@@ -1540,7 +2010,7 @@
 
     /* =====================================================
        FOOTER
-    ===================================================== */
+    ====================================================== */
 
     footer {
 
@@ -1548,10 +2018,10 @@
         28px 0;
 
       background:
-        #08344d;
+        #043c4c;
 
       color:
-        #a9c1cc;
+        #a9c1c9;
 
       font-size:
         12px;
@@ -1579,17 +2049,22 @@
       color:
         white;
 
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:
+        17px;
+
       font-weight:
-        900;
+        700;
     }
 
 
     /* =====================================================
        SCROLL REVEAL
-       
-       ONLY TEXT/CARDS ANIMATE.
-       PRODUCT IMAGE DOES NOT.
-    ===================================================== */
+    ====================================================== */
 
     .reveal {
 
@@ -1616,8 +2091,8 @@
 
 
     /* =====================================================
-       MOBILE STICKY CTA
-    ===================================================== */
+       MOBILE CTA
+    ====================================================== */
 
     .mobile-cta {
 
@@ -1655,7 +2130,7 @@
         18px;
 
       box-shadow:
-        0 20px 45px rgba(18,78,106,.18);
+        0 20px 45px rgba(11,121,143,.18);
     }
 
 
@@ -1674,7 +2149,7 @@
         center;
 
       background:
-        var(--blue);
+        var(--main-blue);
 
       color:
         white;
@@ -1684,12 +2159,18 @@
 
       font-weight:
         900;
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
     }
 
 
     /* =====================================================
        TABLET
-    ===================================================== */
+    ====================================================== */
 
     @media (max-width:1100px) {
 
@@ -1735,7 +2216,7 @@
 
     /* =====================================================
        MOBILE
-    ===================================================== */
+    ====================================================== */
 
     @media (max-width:700px) {
 
@@ -1766,17 +2247,17 @@
       .brand-logo {
 
         width:
-          52px;
+          51px;
 
         height:
-          52px;
+          51px;
       }
 
 
       .brand-name {
 
-        display:
-          none;
+        font-size:
+          17px;
       }
 
 
@@ -1879,6 +2360,16 @@
 
         bottom:
           12%;
+      }
+
+
+      .floating-card {
+
+        font-size:
+          11px;
+
+        padding:
+          11px 13px;
       }
 
 
@@ -1987,13 +2478,7 @@
       }
 
 
-      .cta-button {
-
-        width:
-          100%;
-      }
-
-
+      .cta-button,
       .cta-button .primary-button {
 
         width:
@@ -2028,17 +2513,20 @@
 
 
     /* =====================================================
-       ACCESSIBILITY
-    ===================================================== */
+       REDUCED MOTION
+    ====================================================== */
 
-    @media (prefers-reduced-motion:reduce) {
+    @media (prefers-reduced-motion: reduce) {
 
       html {
         scroll-behavior:
           auto;
       }
 
-      * {
+      *,
+      *::before,
+      *::after {
+
         animation:
           none !important;
 
@@ -2067,7 +2555,7 @@
 
   <!-- =====================================================
        TOP BAR
-  ===================================================== -->
+  ====================================================== -->
 
   <div class="top-bar">
 
@@ -2082,23 +2570,24 @@
 
   <!-- =====================================================
        HEADER
-  ===================================================== -->
+  ====================================================== -->
 
   <header>
 
     <div class="container navbar">
 
 
+      <!-- PINPOINT TRAVEL LOGO -->
+
       <a
-        href="#top"
+        href="https://pinpointtravel.store/Product/#top"
         class="brand"
+        aria-label="Pinpoint Travel home"
       >
 
-        <!-- YOUR PINPOINT TRAVEL LOGO -->
-
         <img
-          src="assets/favicon.png"
-          alt="Pinpoint Travel"
+          src="https://pinpointtravel.store/images/favicon.png"
+          alt="Pinpoint Travel logo"
           class="brand-logo"
         >
 
@@ -2126,10 +2615,10 @@
       </nav>
 
 
-      <!-- AMAZON AFFILIATE LINK -->
+      <!-- AMAZON AFFILIATE BUTTON -->
 
       <a
-        href="YOUR_AMAZON_AFFILIATE_LINK_HERE"
+        href="https://pinpointtravel.store/Product/YOUR_AMAZON_AFFILIATE_LINK_HERE"
         target="_blank"
         rel="nofollow sponsored noopener"
         class="nav-button"
@@ -2151,7 +2640,7 @@
 
     <!-- ===================================================
          HERO
-    =================================================== -->
+    ==================================================== -->
 
     <section class="hero">
 
@@ -2219,8 +2708,10 @@
           <div class="hero-buttons">
 
 
+            <!-- MAIN AMAZON BUTTON -->
+
             <a
-              href="YOUR_AMAZON_AFFILIATE_LINK_HERE"
+              href="https://pinpointtravel.store/Product/YOUR_AMAZON_AFFILIATE_LINK_HERE"
               target="_blank"
               rel="nofollow sponsored noopener"
               class="primary-button"
@@ -2258,13 +2749,15 @@
 
         <!-- =================================================
              PRODUCT
-        ================================================= -->
+        ================================================== -->
 
         <div class="product-area reveal">
 
 
           <div class="product-glow"></div>
 
+
+          <!-- TRAVEL READY -->
 
           <div class="floating-card floating-one">
 
@@ -2276,6 +2769,8 @@
 
           </div>
 
+
+          <!-- PACK SMART -->
 
           <div class="floating-card floating-two">
 
@@ -2301,10 +2796,8 @@
               </div>
 
 
-              <!-- PRODUCT IMAGE -->
-
               <img
-                src="assets/travel-bottles.jpg"
+                src="https://pinpointtravel.store/images/travel-bottles.jpg"
                 alt="18 pack refillable travel bottles for toiletries"
                 loading="eager"
               >
@@ -2365,7 +2858,7 @@
 
     <!-- ===================================================
          FEATURES
-    =================================================== -->
+    ==================================================== -->
 
     <section
       class="features"
@@ -2495,7 +2988,7 @@
 
     <!-- ===================================================
          WHY
-    =================================================== -->
+    ==================================================== -->
 
     <section
       class="why-section"
@@ -2751,7 +3244,7 @@
 
     <!-- ===================================================
          FINAL CTA
-    =================================================== -->
+    ==================================================== -->
 
     <section
       class="cta-section"
@@ -2765,15 +3258,19 @@
 
           <div
             class="section-kicker"
-            style="color:#b9e8e9;"
+            style="color:#0ec7e3;"
           >
+
             Ready to pack smarter?
+
           </div>
 
 
           <h2>
+
             See the current
             Amazon listing.
+
           </h2>
 
 
@@ -2794,7 +3291,7 @@
         <div class="cta-button reveal">
 
           <a
-            href="YOUR_AMAZON_AFFILIATE_LINK_HERE"
+            href="https://pinpointtravel.store/Product/YOUR_AMAZON_AFFILIATE_LINK_HERE"
             target="_blank"
             rel="nofollow sponsored noopener"
             class="primary-button"
@@ -2818,7 +3315,7 @@
 
   <!-- =====================================================
        AMAZON DISCLOSURE
-  ===================================================== -->
+  ====================================================== -->
 
   <div class="disclosure">
 
@@ -2847,7 +3344,7 @@
 
   <!-- =====================================================
        FOOTER
-  ===================================================== -->
+  ====================================================== -->
 
   <footer>
 
@@ -2855,17 +3352,23 @@
 
 
       <div class="footer-logo">
+
         Pinpoint Travel
+
       </div>
 
 
       <div>
+
         Travel guides • Travel gear • Smart trip planning
+
       </div>
 
 
       <div>
+
         © 2026 Pinpoint Travel
+
       </div>
 
 
@@ -2877,12 +3380,12 @@
 
   <!-- =====================================================
        MOBILE AMAZON CTA
-  ===================================================== -->
+  ====================================================== -->
 
   <div class="mobile-cta">
 
     <a
-      href="YOUR_AMAZON_AFFILIATE_LINK_HERE"
+      href="https://pinpointtravel.store/Product/YOUR_AMAZON_AFFILIATE_LINK_HERE"
       target="_blank"
       rel="nofollow sponsored noopener"
     >
@@ -2897,12 +3400,13 @@
 
   <!-- =====================================================
        JAVASCRIPT
-       
-       Only scroll-reveal animations.
-       NO PRODUCT PHOTO ANIMATION.
-    ===================================================== -->
+  ====================================================== -->
 
   <script>
+
+    /* =====================================================
+       SCROLL REVEAL
+    ====================================================== */
 
     const revealElements =
       document.querySelectorAll(".reveal");
@@ -2943,7 +3447,10 @@
     });
 
 
-    /* Header shadow */
+
+    /* =====================================================
+       HEADER SHADOW
+    ====================================================== */
 
     const header =
       document.querySelector("header");
@@ -2956,7 +3463,7 @@
         if (window.scrollY > 20) {
 
           header.style.boxShadow =
-            "0 8px 30px rgba(18,78,106,.08)";
+            "0 8px 30px rgba(11,121,143,.09)";
 
         } else {
 
