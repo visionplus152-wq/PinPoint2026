@@ -1,11 +1,14 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0"
->
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <!-- =====================================================
        SEO / BROWSER TAB
@@ -15,15 +18,15 @@ content="width=device-width, initial-scale=1.0"
     18-Pack Travel Bottles for Toiletries | Pinpoint Travel
   </title>
 
-<meta
-name="description"
-content="Discover an 18-piece refillable travel bottle kit for shampoo, conditioner, lotion and other toiletries. A practical travel essential for organized packing."
->
+  <meta
+    name="description"
+    content="Discover an 18-piece refillable travel bottle kit for shampoo, conditioner, lotion and other toiletries. A practical travel essential for organized packing."
+  >
 
-<meta
-name="robots"
-content="index, follow"
->
+  <meta
+    name="robots"
+    content="index, follow"
+  >
 
   <link
     rel="canonical"
@@ -32,7 +35,6 @@ content="index, follow"
 
   <!-- =====================================================
        FAVICON
-       Browser tab + Google/search favicon
   ====================================================== -->
 
   <link
@@ -71,25 +73,25 @@ content="index, follow"
        OPEN GRAPH
   ====================================================== -->
 
-<meta
-property="og"
-content="18-Pack Travel Bottles for Toiletries | Pinpoint Travel"
->
+  <meta
+    property="og:title"
+    content="18-Pack Travel Bottles for Toiletries | Pinpoint Travel"
+  >
 
-<meta
-property="og"
-content="A practical 18-piece refillable travel bottle kit for keeping toiletries organized while traveling."
->
+  <meta
+    property="og:description"
+    content="A practical 18-piece refillable travel bottle kit for keeping toiletries organized while traveling."
+  >
 
-<meta
-property="og"
-content="https://pinpointtravel.store/Product/"
->
+  <meta
+    property="og:url"
+    content="https://pinpointtravel.store/Product/"
+  >
 
-<meta
-property="og"
-content="website"
->
+  <meta
+    property="og:type"
+    content="website"
+  >
 
   <!-- =====================================================
        STYLES
@@ -122,11 +124,8 @@ content="website"
         sans-serif;
 
       background: #fefcfb;
-
       color: #0a1128;
-
       line-height: 1.6;
-
       overflow-x: hidden;
     }
 
@@ -146,23 +145,39 @@ content="website"
     ====================================================== */
 
     :root {
+
       --main-blue: #1282a2;
+
       --accent-blue: #034078;
+
       --deep-blue: #001f54;
+
       --darkest-blue: #0a1128;
+
       --light-blue: #e8f3f7;
+
       --very-light-blue: #f3f8fa;
+
       --white: #ffffff;
+
       --warm-white: #fefcfb;
+
       --soft-gray: #f5f7f8;
+
       --gray: #5f6f7d;
+
       --border: #dce5e9;
+
       --dark-blue: #001f54;
+
       --bright-blue: #1282a2;
+
       --shadow:
         0 22px 60px rgba(0,31,84,.10);
+
       --shadow-small:
         0 10px 30px rgba(0,31,84,.08);
+
       --max-width: 1450px;
     }
 
@@ -179,8 +194,7 @@ content="website"
           var(--max-width)
         );
 
-      margin:
-        0 auto;
+      margin: 0 auto;
     }
 
 
@@ -210,7 +224,6 @@ content="website"
     }
 
     .top-bar strong {
-
       color:
         #7fd4ec;
     }
@@ -301,17 +314,10 @@ content="website"
 
 
     .brand:hover .brand-logo {
-
       transform:
         scale(1.035);
     }
 
-
-    /*
-       Pinpoint Travel text
-       Slightly refined serif font
-       without being too decorative.
-    */
 
     .brand-name {
 
@@ -408,14 +414,12 @@ content="website"
 
 
     .nav-links a:hover {
-
       color:
         var(--main-blue);
     }
 
 
     .nav-links a:hover::after {
-
       width:
         100%;
     }
@@ -423,6 +427,7 @@ content="website"
 
     /* =====================================================
        NAV AMAZON BUTTON
+       Hidden ONLY on mobile
     ====================================================== */
 
     .nav-button {
@@ -443,7 +448,11 @@ content="website"
         50px;
 
       background:
-        linear-gradient(135deg, #001f54, #1282a2);
+        linear-gradient(
+          135deg,
+          #001f54,
+          #1282a2
+        );
 
       color:
         white;
@@ -815,7 +824,11 @@ content="website"
         10px;
 
       background:
-        linear-gradient(135deg, #001f54, #1282a2);
+        linear-gradient(
+          135deg,
+          #001f54,
+          #1282a2
+        );
 
       color:
         white;
@@ -835,11 +848,6 @@ content="website"
         background .25s ease;
     }
 
-
-    /*
-       Bright blue moving shine
-       behind the Amazon button.
-    */
 
     .primary-button::before {
 
@@ -898,7 +906,6 @@ content="website"
 
     .primary-button span,
     .primary-button {
-
       isolation:
         isolate;
     }
@@ -985,7 +992,6 @@ content="website"
 
     /* =====================================================
        PRODUCT AREA
-       PRODUCT IMAGE IS STATIC
     ====================================================== */
 
     .product-area {
@@ -1064,7 +1070,12 @@ content="website"
         20px;
 
       background:
-        linear-gradient(160deg, rgba(0,31,84,.22) 0%, rgba(18,130,162,.19) 35%, #ffffff 65%);
+        linear-gradient(
+          160deg,
+          rgba(0,31,84,.22) 0%,
+          rgba(18,130,162,.19) 35%,
+          #ffffff 65%
+        );
 
       border:
         1px solid var(--border);
@@ -1098,13 +1109,6 @@ content="website"
         1.17 / 1;
     }
 
-
-    /*
-       STATIC PRODUCT IMAGE
-       No zoom.
-       No transform.
-       No image animation.
-    */
 
     .product-image-container img {
 
@@ -1167,7 +1171,6 @@ content="website"
 
     /* =====================================================
        FLOATING CARDS
-       TRAVEL READY / PACK SMART ANIMATION
     ====================================================== */
 
     .floating-card {
@@ -1223,11 +1226,6 @@ content="website"
     }
 
 
-    /*
-       TRAVEL READY
-       Gentle floating / waving movement
-    */
-
     .floating-one {
 
       top:
@@ -1245,39 +1243,30 @@ content="website"
 
       0%,
       100% {
-
         transform:
           translateY(0)
           rotate(0deg);
       }
 
       25% {
-
         transform:
           translateY(-7px)
           rotate(1.2deg);
       }
 
       50% {
-
         transform:
           translateY(-11px)
           rotate(0deg);
       }
 
       75% {
-
         transform:
           translateY(-5px)
           rotate(-1.2deg);
       }
     }
 
-
-    /*
-       PACK SMART
-       Different gentle floating motion
-    */
 
     .floating-two {
 
@@ -1296,39 +1285,30 @@ content="website"
 
       0%,
       100% {
-
         transform:
           translateY(0)
           rotate(0deg);
       }
 
       30% {
-
         transform:
           translateY(7px)
           rotate(-1.4deg);
       }
 
       60% {
-
         transform:
           translateY(-5px)
           rotate(1deg);
       }
 
       80% {
-
         transform:
           translateY(4px)
           rotate(0deg);
       }
     }
 
-
-    /*
-       Small bright blue accent line
-       on the floating cards.
-    */
 
     .floating-card::after {
 
@@ -1497,7 +1477,12 @@ content="website"
     .features {
 
       background:
-        linear-gradient(150deg, #001f54 0%, #063a7d 55%, #0b4f96 100%);
+        linear-gradient(
+          150deg,
+          #001f54 0%,
+          #063a7d 55%,
+          #0b4f96 100%
+        );
 
       border-top:
         1px solid var(--border);
@@ -1574,24 +1559,19 @@ content="website"
     }
 
 
-    /* Designed for travelers intro text (section bg now dark) */
-
     #features .section-kicker {
-
       color:
         #7fd4ec;
     }
 
 
     #features .section-header h2 {
-
       color:
         #ffffff;
     }
 
 
     #features .section-header p {
-
       color:
         rgba(255,255,255,.8);
     }
@@ -1729,7 +1709,11 @@ content="website"
     .why-card {
 
       background:
-        linear-gradient(160deg, #001f54, #062f6e);
+        linear-gradient(
+          160deg,
+          #001f54,
+          #062f6e
+        );
 
       border:
         1px solid rgba(255,255,255,.08);
@@ -2162,7 +2146,11 @@ content="website"
         center;
 
       background:
-        linear-gradient(135deg, #001f54, #1282a2);
+        linear-gradient(
+          135deg,
+          #001f54,
+          #1282a2
+        );
 
       color:
         white;
@@ -2185,7 +2173,6 @@ content="website"
 
 
     .mobile-cta a:hover {
-
       background:
         #fc8403;
     }
@@ -2193,6 +2180,7 @@ content="website"
 
     /* =====================================================
        TABLET
+       ORIGINAL POSITIONING
     ====================================================== */
 
     @media (max-width:1100px) {
@@ -2238,8 +2226,8 @@ content="website"
 
 
     /* =====================================================
-       MOBILE
-    ====================================================== */
+       MOBILE ONLY
+       ====================================================== */
 
     @media (max-width:700px) {
 
@@ -2250,6 +2238,8 @@ content="website"
       }
 
 
+      /* TOP BAR */
+
       .top-bar {
 
         font-size:
@@ -2259,6 +2249,8 @@ content="website"
           8px 10px;
       }
 
+
+      /* HEADER */
 
       .navbar {
 
@@ -2284,42 +2276,363 @@ content="website"
       }
 
 
+      /*
+         REMOVE ONLY THE UPPER
+         AMAZON BUTTON ON MOBILE
+      */
+
       .nav-button {
 
-        padding:
-          10px 13px;
-
-        font-size:
-          12px;
+        display:
+          none;
       }
 
+
+      /* =================================================
+         HERO MOBILE ORDER
+
+         1. IMAGE
+         2. PRODUCT INFO
+         3. HERO TEXT
+         4. DESCRIPTION
+         5. BADGES
+         6. CTA
+      ================================================= */
 
       .hero {
 
         padding:
-          52px 0 65px;
+          32px 0 65px;
+      }
+
+
+      .hero-grid {
+
+        display:
+          flex;
+
+        flex-direction:
+          column;
+
+        gap:
+          28px;
+      }
+
+
+      /* PRODUCT AREA FIRST */
+
+      .product-area {
+
+        order:
+          1;
+
+        width:
+          100%;
+
+        min-height:
+          auto;
+
+        padding:
+          5px 0;
+
+        display:
+          flex;
+
+        flex-direction:
+          column;
+
+        align-items:
+          center;
+
+        justify-content:
+          center;
+      }
+
+
+      .product-glow {
+
+        width:
+          340px;
+
+        height:
+          340px;
+      }
+
+
+      .product-card {
+
+        width:
+          100%;
+
+        max-width:
+          100%;
+
+        padding:
+          10px;
+
+        border-radius:
+          20px;
+      }
+
+
+      .product-image-container {
+
+        width:
+          100%;
+
+        border-radius:
+          15px;
+
+        aspect-ratio:
+          1.08 / 1;
+      }
+
+
+      .product-image-container img {
+
+        width:
+          100%;
+
+        height:
+          100%;
+
+        object-fit:
+          cover;
+
+        transform:
+          none;
+
+        animation:
+          none;
+
+        transition:
+          none;
+      }
+
+
+      .product-badge {
+
+        top:
+          12px;
+
+        left:
+          12px;
+
+        padding:
+          7px 11px;
+
+        font-size:
+          10px;
+      }
+
+
+      /* FLOATING CARDS */
+
+      .floating-card {
+
+        font-size:
+          10px;
+
+        padding:
+          9px 11px;
+
+        border-radius:
+          12px;
+      }
+
+
+      .floating-card span {
+
+        font-size:
+          8px;
+      }
+
+
+      .floating-one {
+
+        top:
+          6%;
+
+        right:
+          -3px;
+      }
+
+
+      .floating-two {
+
+        left:
+          -3px;
+
+        bottom:
+          9%;
+      }
+
+
+      /* PRODUCT INFO */
+
+      .product-rating {
+
+        margin-top:
+          12px;
+
+        gap:
+          7px;
+
+        font-size:
+          11px;
+      }
+
+
+      .product-info {
+
+        display:
+          block;
+
+        margin-top:
+          7px;
+      }
+
+
+      .product-info h2 {
+
+        font-size:
+          17px;
+
+        line-height:
+          1.3;
+      }
+
+
+      .product-price {
+
+        margin-top:
+          7px;
+
+        font-size:
+          19px;
+      }
+
+
+      .product-price small {
+
+        text-align:
+          left;
+
+        font-size:
+          9px;
+      }
+
+
+      /* =================================================
+         HERO CONTENT BELOW IMAGE
+      ================================================= */
+
+      .hero-content {
+
+        order:
+          2;
+
+        width:
+          100%;
+      }
+
+
+      .eyebrow {
+
+        padding:
+          7px 12px;
+
+        font-size:
+          10px;
+      }
+
+
+      .eyebrow-dot {
+
+        width:
+          7px;
+
+        height:
+          7px;
       }
 
 
       h1 {
 
+        margin-top:
+          19px;
+
         font-size:
-          43px;
+          40px;
+
+        line-height:
+          1.05;
 
         letter-spacing:
-          -2.4px;
+          -2.2px;
       }
 
 
+      .highlight::after {
+
+        bottom:
+          -4px;
+
+        height:
+          6px;
+      }
+
+
+      /*
+         DESCRIPTION NOW APPEARS
+         UNDER THE IMAGE
+      */
+
       .hero-description {
 
+        margin-top:
+          18px;
+
         font-size:
-          16px;
+          15px;
 
         line-height:
           1.65;
       }
 
+
+      /* BADGES */
+
+      .trust-badges {
+
+        display:
+          flex;
+
+        flex-wrap:
+          wrap;
+
+        gap:
+          7px;
+
+        margin:
+          18px 0 22px;
+      }
+
+
+      .trust-badge {
+
+        padding:
+          7px 10px;
+
+        border-radius:
+          10px;
+
+        font-size:
+          11px;
+      }
+
+
+      /* CTA BUTTONS */
 
       .hero-buttons {
 
@@ -2328,6 +2641,12 @@ content="website"
 
         grid-template-columns:
           1fr;
+
+        gap:
+          10px;
+
+        width:
+          100%;
       }
 
 
@@ -2336,86 +2655,35 @@ content="website"
 
         width:
           100%;
-      }
-
-
-      .product-area {
 
         min-height:
-          470px;
+          52px;
 
         padding:
-          10px 0 30px;
-      }
-
-
-      .product-card {
-
-        padding:
-          12px;
+          0 20px;
 
         border-radius:
-          22px;
+          13px;
+
+        font-size:
+          14px;
       }
 
 
-      .product-image-container {
+      .price-note {
 
-        border-radius:
-          16px;
-      }
-
-
-      .floating-one {
-
-        right:
-          -4px;
-
-        top:
-          7%;
-      }
-
-
-      .floating-two {
-
-        left:
-          -4px;
-
-        bottom:
-          12%;
-      }
-
-
-      .floating-card {
+        margin-top:
+          10px;
 
         font-size:
           11px;
 
-        padding:
-          11px 13px;
+        line-height:
+          1.5;
       }
 
 
-      .product-info {
-
-        display:
-          block;
-      }
-
-
-      .product-price {
-
-        margin-top:
-          8px;
-      }
-
-
-      .product-price small {
-
-        text-align:
-          left;
-      }
-
+      /* FEATURES */
 
       .features,
       .why-section {
@@ -2463,6 +2731,8 @@ content="website"
       }
 
 
+      /* WHY */
+
       .why-grid {
 
         grid-template-columns:
@@ -2483,6 +2753,8 @@ content="website"
           23px;
       }
 
+
+      /* FINAL CTA */
 
       .cta-section {
 
@@ -2509,12 +2781,16 @@ content="website"
       }
 
 
+      /* DISCLOSURE */
+
       .disclosure {
 
         padding-bottom:
           105px;
       }
 
+
+      /* FOOTER */
 
       .footer-content {
 
@@ -2525,6 +2801,8 @@ content="website"
           center;
       }
 
+
+      /* FIXED MOBILE AMAZON CTA */
 
       .mobile-cta {
 
@@ -2572,7 +2850,9 @@ content="website"
 
 </head>
 
+
 <body>
+
 
   <!-- =====================================================
        TOP BAR
@@ -2580,13 +2860,13 @@ content="website"
 
   <div class="top-bar">
 
-Travel smarter with
-<strong>
-  Pinpoint Travel
-</strong>
+    Travel smarter with
+
+    <strong>
+      Pinpoint Travel
+    </strong>
 
   </div>
-
 
 
   <!-- =====================================================
@@ -2595,732 +2875,743 @@ Travel smarter with
 
   <header>
 
-<div class="container navbar">
+    <div class="container navbar">
 
 
-  <!-- PINPOINT TRAVEL LOGO -->
+      <!-- LOGO -->
 
-  <a
-    href="https://pinpointtravel.store"
-    class="brand"
-    aria-label="Pinpoint Travel home"
-  >
-
-    <img
-      src="/favicon.png"
-      href="https://pinpointtravel.store"
-      alt="Pinpoint Travel logo"
-      class="brand-logo"
-    >
-
-    <span class="brand-name">
-      Pinpoint Travel
-    </span>
-
-  </a>
-
-
-  <nav class="nav-links">
-
-    <a href="#features">
-      Features
-    </a>
-
-    <a href="#why">
-      Why travelers like it
-    </a>
-
-    <a href="#buy">
-      See product
-    </a>
-
-  </nav>
-
-
-  <!-- AMAZON AFFILIATE BUTTON -->
-
-  <a
-    href="https://amzn.to/4qnWO24"
-    target="_blank"
-    rel="nofollow sponsored noopener"
-    class="nav-button"
-  >
-
-    Check on Amazon →
-
-  </a>
-
-
-</div>
-
-  </header>
-
-  <main id="top">
-    <!-- ===================================================
-         HERO
-    ==================================================== -->
-
-<section class="hero">
-
-  <div class="container hero-grid">
-
-    <!-- HERO TEXT -->
-
-    <div class="hero-content reveal">
-
-      <div class="eyebrow">
-
-        <span class="eyebrow-dot"></span>
-
-        Travel organization pick
-
-      </div>
-      <h1>
-
-        Pack your toiletries
-
-        <span class="highlight">
-          without the mess.
-        </span>
-
-      </h1>
-
-
-      <p class="hero-description">
-
-        Keep shampoo, conditioner, lotion and
-        other liquids organized with this compact
-        18-piece refillable travel bottle kit.
-
-        A practical travel essential for carry-ons,
-        weekend trips and longer vacations.
-
-      </p>
-
-
-      <div class="trust-badges">
-
-        <span class="trust-badge">
-          18-piece set
-        </span>
-
-        <span class="trust-badge">
-          Refillable bottles
-        </span>
-
-        <span class="trust-badge">
-          Leak-resistant design
-        </span>
-
-        <span class="trust-badge">
-          Travel-friendly
-        </span>
-
-      </div>
-
-
-      <div class="hero-buttons">
-
-
-        <!-- MAIN AMAZON BUTTON -->
-
-        <a
-          href="https://amzn.to/4qnWO24"
-          target="_blank"
-          rel="nofollow sponsored noopener"
-          class="primary-button"
-        >
-
-          🛒 View on Amazon →
-
-        </a>
-
-
-        <a
-          href="#features"
-          class="secondary-button"
-        >
-
-          Explore features
-
-        </a>
-
-
-      </div>
-
-
-      <p class="price-note">
-
-        Price and availability can change on Amazon.
-        Check the current listing for the latest offer.
-
-      </p>
-
-
-    </div>
-
-
-
-    <!-- =================================================
-         PRODUCT
-    ================================================== -->
-
-    <div class="product-area reveal">
-
-
-      <div class="product-glow"></div>
-
-
-      <!-- TRAVEL READY -->
-
-      <div class="floating-card floating-one">
-
-        <span>
-          TRAVEL READY
-        </span>
-
-        18-piece organization
-
-      </div>
-
-
-      <!-- PACK SMART -->
-
-      <div class="floating-card floating-two">
-
-        <span>
-          PACK SMART
-        </span>
-
-        Keep toiletries organized
-
-      </div>
-
-
-      <article class="product-card">
-
-
-        <div class="product-image-container">
-
-
-          <div class="product-badge">
-
-            Travel Essential
-
-          </div>
-
-
-          <img
-            src="/images/61Y+Leafr0L._SL1138_.webp"
-            alt="18 pack refillable travel bottles for toiletries"
-            loading="eager"
-          >
-
-
-        </div>
-
-
-        <div class="product-rating">
-
-          <span class="stars">
-            ★★★★★
-          </span>
-
-          <strong>
-            Popular travel accessory
-          </strong>
-
-        </div>
-
-
-        <div class="product-info">
-
-
-          <h2>
-
-            18-Pack Refillable Travel
-            Bottles for Toiletries
-
-          </h2>
-
-
-          <div class="product-price">
-
-            Check price
-
-            <small>
-              on Amazon
-            </small>
-
-          </div>
-
-
-        </div>
-
-
-      </article>
-
-
-    </div>
-
-
-  </div>
-
-</section>
-
-
-
-<!-- ===================================================
-     FEATURES
-==================================================== -->
-
-<section
-  class="features"
-  id="features"
->
-
-  <div class="container">
-
-
-    <div class="section-header reveal">
-
-      <div class="section-kicker">
-        Designed for travelers
-      </div>
-
-      <h2>
-        Small details that make
-        packing easier
-      </h2>
-
-      <p>
-
-        Instead of carrying full-size bottles,
-        organize your everyday liquids into
-        a compact travel kit.
-
-      </p>
-
-    </div>
-
-
-
-    <div class="feature-grid">
-
-
-      <article class="feature-card reveal">
-
-        <div class="feature-icon">
-          🧴
-        </div>
-
-        <h3>
-          Refillable bottles
-        </h3>
-
-        <p>
-
-          Fill the containers with shampoo,
-          conditioner, lotion or other toiletries
-          you already use.
-
-        </p>
-
-      </article>
-
-
-      <article class="feature-card reveal">
-
-        <div class="feature-icon">
-          🧳
-        </div>
-
-        <h3>
-          Travel organization
-        </h3>
-
-        <p>
-
-          Keep multiple toiletry containers
-          together instead of letting loose
-          bottles move around your luggage.
-
-        </p>
-
-      </article>
-
-
-      <article class="feature-card reveal">
-
-        <div class="feature-icon">
-          💧
-        </div>
-
-        <h3>
-          Leak-resistant design
-        </h3>
-
-        <p>
-
-          Designed to help reduce messy leaks
-          when your toiletry kit is packed inside
-          a suitcase or carry-on.
-
-        </p>
-
-      </article>
-
-
-      <article class="feature-card reveal">
-
-        <div class="feature-icon">
-          ✈
-        </div>
-
-        <h3>
-          Travel-friendly
-        </h3>
-
-        <p>
-
-          A compact format makes it useful for
-          flights, weekend getaways, business
-          trips and holidays.
-
-        </p>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- ===================================================
-     WHY
-==================================================== -->
-
-<section
-  class="why-section"
-  id="why"
->
-
-  <div class="container">
-
-
-    <div class="section-header reveal">
-
-      <div class="section-kicker">
-        Why consider it?
-      </div>
-
-      <h2>
-        Make your luggage
-        feel more organized
-      </h2>
-
-      <p>
-
-        Great travel gear does not have to be
-        complicated. This kit focuses on one
-        practical job: keeping your liquids
-        together and easy to pack.
-
-      </p>
-
-    </div>
-
-
-
-    <div class="why-grid">
-
-
-      <article class="why-card reveal">
-
-        <h3>
-          Useful for everyday trips
-        </h3>
-
-
-        <div class="check-list">
-
-
-          <div class="check-item">
-
-            <div class="check-circle">
-              ✓
-            </div>
-
-            <div>
-
-              <strong>
-                Weekend getaways
-              </strong>
-
-              <span>
-                Pack your basic toiletries
-                without taking large bottles.
-              </span>
-
-            </div>
-
-          </div>
-
-
-          <div class="check-item">
-
-            <div class="check-circle">
-              ✓
-            </div>
-
-            <div>
-
-              <strong>
-                International travel
-              </strong>
-
-              <span>
-                Keep your liquid toiletries
-                organized inside your travel bag.
-              </span>
-
-            </div>
-
-          </div>
-
-
-          <div class="check-item">
-
-            <div class="check-circle">
-              ✓
-            </div>
-
-            <div>
-
-              <strong>
-                Business trips
-              </strong>
-
-              <span>
-                A compact toiletry kit can make
-                quick packing much easier.
-              </span>
-
-            </div>
-
-          </div>
-
-
-          <div class="check-item">
-
-            <div class="check-circle">
-              ✓
-            </div>
-
-            <div>
-
-              <strong>
-                Family vacations
-              </strong>
-
-              <span>
-                Use different containers for
-                different personal-care products.
-              </span>
-
-            </div>
-
-          </div>
-
-
-        </div>
-
-      </article>
-
-
-
-      <article class="why-card reveal">
-
-        <h3>
-          What you get
-        </h3>
-
-
-        <div class="check-list">
-
-
-          <div class="check-item">
-
-            <div class="check-circle">
-              18
-            </div>
-
-            <div>
-
-              <strong>
-                18-piece travel set
-              </strong>
-
-              <span>
-                Multiple containers and accessories
-                in one kit.
-              </span>
-
-            </div>
-
-          </div>
-
-
-          <div class="check-item">
-
-            <div class="check-circle">
-              ✓
-            </div>
-
-            <div>
-
-              <strong>
-                Reusable format
-              </strong>
-
-              <span>
-                Refill the bottles for future trips
-                instead of buying travel-size
-                toiletries repeatedly.
-              </span>
-
-            </div>
-
-          </div>
-
-
-          <div class="check-item">
-
-            <div class="check-circle">
-              ✓
-            </div>
-
-            <div>
-
-              <strong>
-                Compact storage case
-              </strong>
-
-              <span>
-                Keep the set together when it
-                is not being used.
-              </span>
-
-            </div>
-
-          </div>
-
-
-          <div class="check-item">
-
-            <div class="check-circle">
-              →
-            </div>
-
-            <div>
-
-              <strong>
-                See the live listing
-              </strong>
-
-              <span>
-                Check the current price, colors,
-                reviews and availability directly
-                on Amazon.
-              </span>
-
-            </div>
-
-          </div>
-
-
-        </div>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- ===================================================
-     FINAL CTA
-==================================================== -->
-
-<section
-  class="cta-section"
-  id="buy"
->
-
-  <div class="container cta-content">
-
-
-    <div class="cta-text reveal">
-
-      <div
-        class="section-kicker"
-        style="color:#1282a2;"
+      <a
+        href="https://pinpointtravel.store"
+        class="brand"
+        aria-label="Pinpoint Travel home"
       >
 
-        Ready to pack smarter?
+        <img
+          src="/favicon.png"
+          alt="Pinpoint Travel logo"
+          class="brand-logo"
+        >
 
-      </div>
+        <span class="brand-name">
+          Pinpoint Travel
+        </span>
 
-
-      <h2>
-
-        See the current
-        Amazon listing.
-
-      </h2>
-
-
-      <p>
-
-        Product price, stock, delivery and
-        available colors may change.
-
-        Use the button to view the current
-        listing before purchasing.
-
-      </p>
-
-    </div>
+      </a>
 
 
+      <!-- NAVIGATION -->
 
-    <div class="cta-button reveal">
+      <nav class="nav-links">
+
+        <a href="#features">
+          Features
+        </a>
+
+        <a href="#why">
+          Why travelers like it
+        </a>
+
+        <a href="#buy">
+          See product
+        </a>
+
+      </nav>
+
+
+      <!-- AMAZON BUTTON
+           Hidden on mobile -->
 
       <a
         href="https://amzn.to/4qnWO24"
         target="_blank"
         rel="nofollow sponsored noopener"
-        class="primary-button"
+        class="nav-button"
       >
 
-        View product on Amazon →
+        Check on Amazon →
 
       </a>
 
+
     </div>
 
+  </header>
 
-  </div>
 
-</section>
+  <main id="top">
+
+
+    <!-- ===================================================
+         HERO
+    ==================================================== -->
+
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+
+        <!-- =================================================
+             HERO TEXT
+        ================================================== -->
+
+        <div class="hero-content reveal">
+
+
+          <div class="eyebrow">
+
+            <span class="eyebrow-dot"></span>
+
+            Travel organization pick
+
+          </div>
+
+
+          <h1>
+
+            Pack your toiletries
+
+            <span class="highlight">
+              without the mess.
+            </span>
+
+          </h1>
+
+
+          <p class="hero-description">
+
+            Keep shampoo, conditioner, lotion and
+            other liquids organized with this compact
+            18-piece refillable travel bottle kit.
+
+            A practical travel essential for carry-ons,
+            weekend trips and longer vacations.
+
+          </p>
+
+
+          <div class="trust-badges">
+
+            <span class="trust-badge">
+              18-piece set
+            </span>
+
+            <span class="trust-badge">
+              Refillable bottles
+            </span>
+
+            <span class="trust-badge">
+              Leak-resistant design
+            </span>
+
+            <span class="trust-badge">
+              Travel-friendly
+            </span>
+
+          </div>
+
+
+          <div class="hero-buttons">
+
+
+            <!-- AMAZON -->
+
+            <a
+              href="https://amzn.to/4qnWO24"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+              class="primary-button"
+            >
+
+              🛒 View on Amazon →
+
+            </a>
+
+
+            <!-- FEATURES -->
+
+            <a
+              href="#features"
+              class="secondary-button"
+            >
+
+              Explore features
+
+            </a>
+
+
+          </div>
+
+
+          <p class="price-note">
+
+            Price and availability can change on Amazon.
+            Check the current listing for the latest offer.
+
+          </p>
+
+
+        </div>
+
+
+        <!-- =================================================
+             PRODUCT
+             On desktop this stays on the right.
+             On mobile CSS moves it ABOVE hero-content.
+        ================================================== -->
+
+        <div class="product-area reveal">
+
+
+          <div class="product-glow"></div>
+
+
+          <!-- TRAVEL READY -->
+
+          <div class="floating-card floating-one">
+
+            <span>
+              TRAVEL READY
+            </span>
+
+            18-piece organization
+
+          </div>
+
+
+          <!-- PACK SMART -->
+
+          <div class="floating-card floating-two">
+
+            <span>
+              PACK SMART
+            </span>
+
+            Keep toiletries organized
+
+          </div>
+
+
+          <article class="product-card">
+
+
+            <div class="product-image-container">
+
+
+              <div class="product-badge">
+
+                Travel Essential
+
+              </div>
+
+
+              <img
+                src="/images/61Y+Leafr0L._SL1138_.webp"
+                alt="18 pack refillable travel bottles for toiletries"
+                loading="eager"
+              >
+
+
+            </div>
+
+
+            <div class="product-rating">
+
+              <span class="stars">
+                ★★★★★
+              </span>
+
+              <strong>
+                Popular travel accessory
+              </strong>
+
+            </div>
+
+
+            <div class="product-info">
+
+
+              <h2>
+
+                18-Pack Refillable Travel
+                Bottles for Toiletries
+
+              </h2>
+
+
+              <div class="product-price">
+
+                Check price
+
+                <small>
+                  on Amazon
+                </small>
+
+              </div>
+
+
+            </div>
+
+
+          </article>
+
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         FEATURES
+    ==================================================== -->
+
+    <section
+      class="features"
+      id="features"
+    >
+
+      <div class="container">
+
+
+        <div class="section-header reveal">
+
+          <div class="section-kicker">
+            Designed for travelers
+          </div>
+
+          <h2>
+            Small details that make
+            packing easier
+          </h2>
+
+          <p>
+
+            Instead of carrying full-size bottles,
+            organize your everyday liquids into
+            a compact travel kit.
+
+          </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+
+          <article class="feature-card reveal">
+
+            <div class="feature-icon">
+              🧴
+            </div>
+
+            <h3>
+              Refillable bottles
+            </h3>
+
+            <p>
+
+              Fill the containers with shampoo,
+              conditioner, lotion or other toiletries
+              you already use.
+
+            </p>
+
+          </article>
+
+
+          <article class="feature-card reveal">
+
+            <div class="feature-icon">
+              🧳
+            </div>
+
+            <h3>
+              Travel organization
+            </h3>
+
+            <p>
+
+              Keep multiple toiletry containers
+              together instead of letting loose
+              bottles move around your luggage.
+
+            </p>
+
+          </article>
+
+
+          <article class="feature-card reveal">
+
+            <div class="feature-icon">
+              💧
+            </div>
+
+            <h3>
+              Leak-resistant design
+            </h3>
+
+            <p>
+
+              Designed to help reduce messy leaks
+              when your toiletry kit is packed inside
+              a suitcase or carry-on.
+
+            </p>
+
+          </article>
+
+
+          <article class="feature-card reveal">
+
+            <div class="feature-icon">
+              ✈
+            </div>
+
+            <h3>
+              Travel-friendly
+            </h3>
+
+            <p>
+
+              A compact format makes it useful for
+              flights, weekend getaways, business
+              trips and holidays.
+
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         WHY
+    ==================================================== -->
+
+    <section
+      class="why-section"
+      id="why"
+    >
+
+      <div class="container">
+
+
+        <div class="section-header reveal">
+
+          <div class="section-kicker">
+            Why consider it?
+          </div>
+
+          <h2>
+            Make your luggage
+            feel more organized
+          </h2>
+
+          <p>
+
+            Great travel gear does not have to be
+            complicated. This kit focuses on one
+            practical job: keeping your liquids
+            together and easy to pack.
+
+          </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+
+          <article class="why-card reveal">
+
+            <h3>
+              Useful for everyday trips
+            </h3>
+
+
+            <div class="check-list">
+
+
+              <div class="check-item">
+
+                <div class="check-circle">
+                  ✓
+                </div>
+
+                <div>
+
+                  <strong>
+                    Weekend getaways
+                  </strong>
+
+                  <span>
+                    Pack your basic toiletries
+                    without taking large bottles.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <div class="check-item">
+
+                <div class="check-circle">
+                  ✓
+                </div>
+
+                <div>
+
+                  <strong>
+                    International travel
+                  </strong>
+
+                  <span>
+                    Keep your liquid toiletries
+                    organized inside your travel bag.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <div class="check-item">
+
+                <div class="check-circle">
+                  ✓
+                </div>
+
+                <div>
+
+                  <strong>
+                    Business trips
+                  </strong>
+
+                  <span>
+                    A compact toiletry kit can make
+                    quick packing much easier.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <div class="check-item">
+
+                <div class="check-circle">
+                  ✓
+                </div>
+
+                <div>
+
+                  <strong>
+                    Family vacations
+                  </strong>
+
+                  <span>
+                    Use different containers for
+                    different personal-care products.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+            </div>
+
+          </article>
+
+
+
+          <article class="why-card reveal">
+
+            <h3>
+              What you get
+            </h3>
+
+
+            <div class="check-list">
+
+
+              <div class="check-item">
+
+                <div class="check-circle">
+                  18
+                </div>
+
+                <div>
+
+                  <strong>
+                    18-piece travel set
+                  </strong>
+
+                  <span>
+                    Multiple containers and accessories
+                    in one kit.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <div class="check-item">
+
+                <div class="check-circle">
+                  ✓
+                </div>
+
+                <div>
+
+                  <strong>
+                    Reusable format
+                  </strong>
+
+                  <span>
+                    Refill the bottles for future trips
+                    instead of buying travel-size
+                    toiletries repeatedly.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <div class="check-item">
+
+                <div class="check-circle">
+                  ✓
+                </div>
+
+                <div>
+
+                  <strong>
+                    Compact storage case
+                  </strong>
+
+                  <span>
+                    Keep the set together when it
+                    is not being used.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <div class="check-item">
+
+                <div class="check-circle">
+                  →
+                </div>
+
+                <div>
+
+                  <strong>
+                    See the live listing
+                  </strong>
+
+                  <span>
+                    Check the current price, colors,
+                    reviews and availability directly
+                    on Amazon.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         FINAL CTA
+    ==================================================== -->
+
+    <section
+      class="cta-section"
+      id="buy"
+    >
+
+      <div class="container cta-content">
+
+
+        <div class="cta-text reveal">
+
+          <div
+            class="section-kicker"
+            style="color:#1282a2;"
+          >
+
+            Ready to pack smarter?
+
+          </div>
+
+
+          <h2>
+
+            See the current
+            Amazon listing.
+
+          </h2>
+
+
+          <p>
+
+            Product price, stock, delivery and
+            available colors may change.
+
+            Use the button to view the current
+            listing before purchasing.
+
+          </p>
+
+        </div>
+
+
+        <div class="cta-button reveal">
+
+          <a
+            href="https://amzn.to/4qnWO24"
+            target="_blank"
+            rel="nofollow sponsored noopener"
+            class="primary-button"
+          >
+
+            View product on Amazon →
+
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </section>
 
   </main>
 
@@ -3332,24 +3623,24 @@ Travel smarter with
 
   <div class="disclosure">
 
-<div class="container">
+    <div class="container">
 
-  <strong>
-    Affiliate disclosure:
-  </strong>
+      <strong>
+        Affiliate disclosure:
+      </strong>
 
-  As an Amazon Associate, we may earn from
-  qualifying purchases made through links
-  on this page.
+      As an Amazon Associate, we may earn from
+      qualifying purchases made through links
+      on this page.
 
-  This page is an independent product guide
-  and is not an Amazon-owned page.
+      This page is an independent product guide
+      and is not an Amazon-owned page.
 
-  Product information, pricing, shipping
-  and availability are controlled by Amazon
-  and can change.
+      Product information, pricing, shipping
+      and availability are controlled by Amazon
+      and can change.
 
-</div>
+    </div>
 
   </div>
 
@@ -3361,31 +3652,31 @@ Travel smarter with
 
   <footer>
 
-<div class="container footer-content">
+    <div class="container footer-content">
 
 
-  <div class="footer-logo">
+      <div class="footer-logo">
 
-    Pinpoint Travel
+        Pinpoint Travel
 
-  </div>
-
-
-  <div>
-
-    Travel guides • Travel gear • Smart trip planning
-
-  </div>
+      </div>
 
 
-  <div>
+      <div>
 
-    © 2026 Pinpoint Travel
+        Travel guides • Travel gear • Smart trip planning
 
-  </div>
+      </div>
 
 
-</div>
+      <div>
+
+        © 2026 Pinpoint Travel
+
+      </div>
+
+
+    </div>
 
   </footer>
 
@@ -3397,15 +3688,15 @@ Travel smarter with
 
   <div class="mobile-cta">
 
-<a
-  href="https://amzn.to/4qnWO24"
-  target="_blank"
-  rel="nofollow sponsored noopener"
->
+    <a
+      href="https://amzn.to/4qnWO24"
+      target="_blank"
+      rel="nofollow sponsored noopener"
+    >
 
-  🛒 Check current Amazon price →
+      🛒 Check current Amazon price →
 
-</a>
+    </a>
 
   </div>
 
@@ -3488,9 +3779,8 @@ Travel smarter with
       }
     );
 
-
   </script>
 
 </body>
-
 </html>
+```
