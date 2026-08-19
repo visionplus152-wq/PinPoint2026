@@ -2,41 +2,34 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+        content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Pinpoint Travel — discover inspiring destinations, practical travel guides and carefully selected travel essentials.">
+        content="Pinpoint Travel — discover inspiring destinations, practical travel guides and carefully selected travel essentials.">
 
     <meta name="keywords"
-          content="travel, travel guides, destinations, travel essentials, travel tips, vacation, tourism">
+        content="travel, travel guides, destinations, travel essentials, travel tips, vacation, tourism">
 
     <meta name="author"
-          content="Pinpoint Travel">
+        content="Pinpoint Travel">
 
     <title>Pinpoint Travel | Travel Smarter. Go Further.</title>
 
-
-    <!-- GOOGLE FONTS -->
-
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap"
-          rel="stylesheet">
+        rel="stylesheet">
 
 
     <style>
 
         /* =========================================================
-           ROOT
+           PINPOINT TRAVEL
+           WIDE / MINIMAL / IMAGE-BASED HOMEPAGE
         ========================================================= */
 
         :root {
@@ -56,24 +49,20 @@
             --muted: #687771;
 
             --lime: #dce9b6;
-
             --gold: #d6bd7b;
 
-            --line: rgba(16, 43, 37, 0.12);
+            --line: rgba(16,43,37,.12);
 
             --shadow:
-                0 25px 70px rgba(16, 43, 37, 0.12);
+                0 25px 70px rgba(16,43,37,.12);
 
-            --radius: 28px;
+            --radius: 25px;
 
-            --content-width: 1500px;
+            --page-width: 96%;
+            --content-width: 94%;
 
         }
 
-
-        /* =========================================================
-           RESET
-        ========================================================= */
 
         * {
             margin: 0;
@@ -113,8 +102,6 @@
 
             display: block;
 
-            object-fit: cover;
-
         }
 
 
@@ -141,9 +128,10 @@
 
         .announcement {
 
-            min-height: 38px;
+            min-height: 36px;
 
-            padding: 8px 4%;
+            padding:
+                7px 2%;
 
             background: var(--dark);
 
@@ -155,9 +143,9 @@
 
             align-items: center;
 
-            gap: 25px;
+            gap: 22px;
 
-            font-size: 11px;
+            font-size: 10px;
 
             letter-spacing: .03em;
 
@@ -179,9 +167,9 @@
 
         .header {
 
-            width: min(var(--content-width), 94%);
+            width: var(--page-width);
 
-            min-height: 82px;
+            min-height: 78px;
 
             margin: auto;
 
@@ -189,7 +177,7 @@
 
             align-items: center;
 
-            gap: 35px;
+            gap: 30px;
 
             position: relative;
 
@@ -198,15 +186,13 @@
         }
 
 
-        /* LOGO */
-
         .logo {
 
             display: flex;
 
             align-items: center;
 
-            gap: 10px;
+            gap: 9px;
 
             flex-shrink: 0;
 
@@ -215,11 +201,13 @@
 
         .logo-symbol {
 
-            width: 40px;
+            width: 38px;
 
-            height: 40px;
+            height: 38px;
 
-            border: 1px solid var(--dark);
+            border:
+                1px solid
+                var(--dark);
 
             border-radius: 50%;
 
@@ -227,7 +215,7 @@
 
             place-items: center;
 
-            font-size: 18px;
+            font-size: 17px;
 
         }
 
@@ -236,7 +224,7 @@
 
             display: block;
 
-            font-size: 15px;
+            font-size: 14px;
 
             letter-spacing: .16em;
 
@@ -253,14 +241,12 @@
 
             color: var(--muted);
 
-            font-size: 8px;
+            font-size: 7px;
 
             letter-spacing: .2em;
 
         }
 
-
-        /* NAV */
 
         .navigation {
 
@@ -270,14 +256,14 @@
 
             align-items: center;
 
-            gap: 30px;
+            gap: 27px;
 
         }
 
 
         .navigation a {
 
-            font-size: 12px;
+            font-size: 11px;
 
             font-weight: 600;
 
@@ -316,14 +302,12 @@
 
             right: 0;
 
-            bottom: -9px;
+            bottom: -8px;
 
             background: var(--dark);
 
         }
 
-
-        /* HEADER BUTTON */
 
         .header-button {
 
@@ -331,17 +315,16 @@
 
             color: white;
 
-            padding: 13px 20px;
+            padding:
+                12px 18px;
 
             border-radius: 100px;
 
-            font-size: 11px;
+            font-size: 10px;
 
             font-weight: 700;
 
             transition: .25s;
-
-            white-space: nowrap;
 
         }
 
@@ -355,8 +338,6 @@
         }
 
 
-        /* MOBILE */
-
         .menu-button {
 
             display: none;
@@ -365,13 +346,11 @@
 
             background: transparent;
 
-            font-size: 25px;
+            font-size: 24px;
 
             cursor: pointer;
 
             margin-left: auto;
-
-            color: var(--dark);
 
         }
 
@@ -382,13 +361,14 @@
 
         .hero {
 
-            width: min(var(--content-width), 94%);
+            width: var(--page-width);
 
-            min-height: 700px;
+            min-height: 650px;
 
-            margin: 10px auto 0;
+            margin:
+                8px auto 0;
 
-            border-radius: 38px;
+            border-radius: 30px;
 
             overflow: hidden;
 
@@ -396,28 +376,23 @@
 
             /*
                 MORE WIDTH TO IMAGE
-                CONTENT = 42%
-                IMAGE   = 58%
             */
 
-            grid-template-columns: 42% 58%;
+            grid-template-columns:
+                43% 57%;
 
             position: relative;
 
-            background: #d9e2dc;
+            background:
+                #d9e5df;
 
         }
 
 
-        /* HERO CONTENT */
-
         .hero-content {
 
             padding:
-
-                95px
-                8%
-                75px;
+                80px 5.5vw 65px;
 
             position: relative;
 
@@ -434,7 +409,7 @@
 
         .eyebrow {
 
-            font-size: 10px;
+            font-size: 9px;
 
             letter-spacing: .22em;
 
@@ -442,18 +417,19 @@
 
             color: #68766f;
 
-            margin-bottom: 17px;
+            margin-bottom: 15px;
 
         }
 
 
         .hero h1 {
 
-            font-size: clamp(
-                55px,
-                5.2vw,
-                88px
-            );
+            font-size:
+                clamp(
+                    52px,
+                    6vw,
+                    86px
+                );
 
             line-height: .96;
 
@@ -479,22 +455,19 @@
 
         .hero-description {
 
-            max-width: 570px;
+            max-width: 510px;
 
-            margin-top: 27px;
+            margin:
+                24px 0 28px;
 
-            margin-bottom: 31px;
+            font-size: 14px;
 
-            font-size: 15px;
-
-            line-height: 1.75;
+            line-height: 1.7;
 
             color: #53665f;
 
         }
 
-
-        /* HERO BUTTONS */
 
         .hero-buttons {
 
@@ -502,16 +475,17 @@
 
             flex-wrap: wrap;
 
-            gap: 12px;
+            gap: 10px;
 
         }
 
 
         .button {
 
-            min-height: 50px;
+            min-height: 48px;
 
-            padding: 0 23px;
+            padding:
+                0 20px;
 
             border-radius: 100px;
 
@@ -521,7 +495,7 @@
 
             align-items: center;
 
-            font-size: 11px;
+            font-size: 10px;
 
             font-weight: 800;
 
@@ -541,7 +515,8 @@
 
         .button-primary:hover {
 
-            transform: translateY(-3px);
+            transform:
+                translateY(-3px);
 
             box-shadow:
                 0 12px 25px
@@ -554,12 +529,13 @@
 
             border:
                 1px solid
-                rgba(16,43,37,.25);
+                rgba(16,43,37,.22);
 
             background:
-                rgba(255,255,255,.35);
+                rgba(255,255,255,.25);
 
-            backdrop-filter: blur(10px);
+            backdrop-filter:
+                blur(10px);
 
         }
 
@@ -577,13 +553,13 @@
 
             flex-wrap: wrap;
 
-            gap: 18px;
+            gap: 16px;
 
-            margin-top: 43px;
+            margin-top: 35px;
 
             color: #53645e;
 
-            font-size: 10px;
+            font-size: 9px;
 
             font-weight: 700;
 
@@ -596,22 +572,18 @@
 
         .hero-visual {
 
-            min-height: 700px;
+            min-height: 650px;
 
             position: relative;
 
             overflow: hidden;
 
-            background: #78988d;
+            background: #78998f;
 
         }
 
 
         .hero-visual img {
-
-            position: absolute;
-
-            inset: 0;
 
             width: 100%;
 
@@ -621,29 +593,30 @@
 
             object-position: center;
 
+            transition:
+                transform .8s ease;
+
         }
 
 
-        .hero-visual::after {
+        .hero:hover .hero-visual img {
 
-            content: "";
+            transform: scale(1.025);
+
+        }
+
+
+        .hero-overlay {
 
             position: absolute;
 
             inset: 0;
 
             background:
-
                 linear-gradient(
                     90deg,
-                    rgba(16,43,37,.10),
-                    transparent 35%
-                ),
-
-                linear-gradient(
-                    180deg,
-                    rgba(16,43,37,.02),
-                    rgba(16,43,37,.35)
+                    rgba(16,43,37,.08),
+                    rgba(16,43,37,.05)
                 );
 
             pointer-events: none;
@@ -651,59 +624,7 @@
         }
 
 
-        /* HERO IMAGE LABEL */
-
         .hero-location {
-
-            position: absolute;
-
-            left: 30px;
-
-            bottom: 30px;
-
-            z-index: 10;
-
-            color: white;
-
-            padding: 15px 18px;
-
-            background:
-                rgba(16,43,37,.72);
-
-            backdrop-filter: blur(15px);
-
-            border-radius: 16px;
-
-        }
-
-
-        .hero-location span {
-
-            display: block;
-
-            font-size: 8px;
-
-            letter-spacing: .16em;
-
-            opacity: .7;
-
-        }
-
-
-        .hero-location strong {
-
-            display: block;
-
-            font-size: 14px;
-
-            margin-top: 2px;
-
-        }
-
-
-        /* HERO IMAGE NUMBER */
-
-        .hero-number {
 
             position: absolute;
 
@@ -711,31 +632,74 @@
 
             right: 30px;
 
-            z-index: 10;
+            z-index: 5;
 
-            width: 58px;
+            background:
+                rgba(255,255,255,.9);
 
-            height: 58px;
+            backdrop-filter:
+                blur(15px);
 
-            border: 1px solid
-                rgba(255,255,255,.55);
+            padding:
+                11px 15px;
 
-            border-radius: 50%;
+            border-radius: 100px;
 
-            display: grid;
+            font-size: 9px;
 
-            place-items: center;
-
-            color: white;
-
-            font-size: 10px;
+            font-weight: 800;
 
             letter-spacing: .08em;
 
-            background:
-                rgba(16,43,37,.12);
+        }
 
-            backdrop-filter: blur(10px);
+
+        .hero-caption {
+
+            position: absolute;
+
+            left: 30px;
+
+            bottom: 30px;
+
+            z-index: 5;
+
+            background:
+                rgba(255,255,255,.92);
+
+            backdrop-filter:
+                blur(15px);
+
+            border-radius: 17px;
+
+            padding:
+                14px 18px;
+
+            box-shadow:
+                0 15px 35px
+                rgba(16,43,37,.14);
+
+        }
+
+
+        .hero-caption small {
+
+            display: block;
+
+            color: #78857f;
+
+            font-size: 8px;
+
+            letter-spacing: .12em;
+
+            margin-bottom: 2px;
+
+        }
+
+
+        .hero-caption strong {
+
+            font-size: 12px;
 
         }
 
@@ -746,9 +710,11 @@
 
         .quick-links {
 
-            width: min(1400px, 91%);
+            width:
+                var(--content-width);
 
-            margin: -42px auto 0;
+            margin:
+                -35px auto 0;
 
             position: relative;
 
@@ -756,7 +722,7 @@
 
             background: white;
 
-            border-radius: 23px;
+            border-radius: 20px;
 
             box-shadow: var(--shadow);
 
@@ -772,7 +738,8 @@
 
         .quick-link {
 
-            padding: 27px 31px;
+            padding:
+                22px 25px;
 
             border-right:
                 1px solid var(--line);
@@ -780,9 +747,9 @@
             display: grid;
 
             grid-template-columns:
-                40px 1fr;
+                35px 1fr;
 
-            column-gap: 10px;
+            column-gap: 8px;
 
             transition: .2s;
 
@@ -805,18 +772,19 @@
 
         .quick-number {
 
-            grid-row: 1 / 3;
+            grid-row:
+                1 / 3;
 
             color: #98a29d;
 
-            font-size: 10px;
+            font-size: 9px;
 
         }
 
 
         .quick-link strong {
 
-            font-size: 13px;
+            font-size: 12px;
 
         }
 
@@ -825,20 +793,22 @@
 
             color: var(--muted);
 
-            font-size: 10px;
+            font-size: 9px;
 
         }
 
 
         /* =========================================================
-           GENERAL SECTION
+           GENERAL SECTIONS
         ========================================================= */
 
         .section {
 
-            width: min(1400px, 91%);
+            width:
+                var(--content-width);
 
-            margin: 120px auto;
+            margin:
+                105px auto;
 
         }
 
@@ -854,7 +824,7 @@
 
             gap: 30px;
 
-            margin-bottom: 35px;
+            margin-bottom: 30px;
 
         }
 
@@ -862,11 +832,15 @@
         .section-header h2 {
 
             font-size:
-                clamp(38px,4vw,58px);
+                clamp(
+                    35px,
+                    4vw,
+                    54px
+                );
 
             line-height: 1;
 
-            letter-spacing: -.045em;
+            letter-spacing: -.05em;
 
         }
 
@@ -884,27 +858,30 @@
 
         .section-description {
 
-            max-width: 590px;
+            max-width: 550px;
 
             color: var(--muted);
 
-            font-size: 13px;
+            font-size: 12px;
 
-            margin-top: 15px;
+            margin-top: 13px;
+
+            line-height: 1.7;
 
         }
 
 
         .view-all {
 
-            font-size: 11px;
+            font-size: 10px;
 
             font-weight: 800;
 
             border-bottom:
-                1px solid var(--dark);
+                1px solid
+                var(--dark);
 
-            padding-bottom: 5px;
+            padding-bottom: 4px;
 
             white-space: nowrap;
 
@@ -922,7 +899,7 @@
             grid-template-columns:
                 1.35fr 1fr 1fr;
 
-            gap: 20px;
+            gap: 15px;
 
         }
 
@@ -931,7 +908,8 @@
 
             background: white;
 
-            border-radius: var(--radius);
+            border-radius:
+                var(--radius);
 
             overflow: hidden;
 
@@ -949,16 +927,17 @@
         .destination-card:hover {
 
             transform:
-                translateY(-7px);
+                translateY(-6px);
 
-            box-shadow: var(--shadow);
+            box-shadow:
+                var(--shadow);
 
         }
 
 
         .destination-image {
 
-            height: 315px;
+            height: 295px;
 
             position: relative;
 
@@ -970,7 +949,7 @@
         .destination-card:first-child
         .destination-image {
 
-            height: 410px;
+            height: 385px;
 
         }
 
@@ -983,7 +962,8 @@
 
             object-fit: cover;
 
-            transition: transform .6s ease;
+            transition:
+                transform .6s ease;
 
         }
 
@@ -991,7 +971,7 @@
         .destination-card:hover
         .destination-image img {
 
-            transform: scale(1.05);
+            transform: scale(1.06);
 
         }
 
@@ -1006,10 +986,12 @@
 
             background:
                 linear-gradient(
-                    180deg,
-                    transparent 45%,
-                    rgba(16,43,37,.35)
+                    to top,
+                    rgba(16,43,37,.22),
+                    transparent 45%
                 );
+
+            pointer-events: none;
 
         }
 
@@ -1018,30 +1000,26 @@
 
             position: absolute;
 
-            left: 18px;
-
-            bottom: 17px;
-
             z-index: 3;
 
-            color: white;
+            left: 18px;
 
-            font-size: 9px;
+            bottom: 18px;
 
-            font-weight: 800;
+            background:
+                rgba(255,255,255,.9);
 
-            letter-spacing: .14em;
+            backdrop-filter:
+                blur(10px);
 
             padding:
                 7px 11px;
 
             border-radius: 100px;
 
-            background:
-                rgba(16,43,37,.65);
+            font-size: 8px;
 
-            backdrop-filter:
-                blur(8px);
+            font-weight: 800;
 
         }
 
@@ -1049,14 +1027,14 @@
         .destination-content {
 
             padding:
-                22px 24px 27px;
+                19px 21px 22px;
 
         }
 
 
         .category {
 
-            font-size: 9px;
+            font-size: 8px;
 
             letter-spacing: .17em;
 
@@ -1069,7 +1047,7 @@
 
         .destination-content h3 {
 
-            font-size: 25px;
+            font-size: 24px;
 
             margin:
                 4px 0;
@@ -1081,16 +1059,16 @@
 
             color: var(--muted);
 
-            font-size: 11px;
+            font-size: 10px;
 
-            margin-bottom: 15px;
+            margin-bottom: 14px;
 
         }
 
 
         .card-link {
 
-            font-size: 11px;
+            font-size: 10px;
 
             font-weight: 800;
 
@@ -1103,17 +1081,19 @@
 
         .products-section {
 
-            background: #edf0e8;
+            background:
+                #edf0e8;
 
             padding:
-                115px 0;
+                95px 0;
 
         }
 
 
         .products-container {
 
-            width: min(1400px, 91%);
+            width:
+                var(--content-width);
 
             margin: auto;
 
@@ -1125,9 +1105,9 @@
             display: grid;
 
             grid-template-columns:
-                1.35fr 1fr 1fr;
+                1.2fr 1fr 1fr;
 
-            gap: 20px;
+            gap: 15px;
 
         }
 
@@ -1136,7 +1116,8 @@
 
             background: white;
 
-            border-radius: var(--radius);
+            border-radius:
+                var(--radius);
 
             overflow: hidden;
 
@@ -1150,28 +1131,21 @@
         .product-card:hover {
 
             transform:
-                translateY(-7px);
+                translateY(-6px);
 
-            box-shadow: var(--shadow);
+            box-shadow:
+                var(--shadow);
 
         }
 
 
         .product-image {
 
-            height: 285px;
+            height: 265px;
 
             position: relative;
 
             overflow: hidden;
-
-        }
-
-
-        .product-card:first-child
-        .product-image {
-
-            height: 350px;
 
         }
 
@@ -1208,9 +1182,9 @@
 
             background:
                 linear-gradient(
-                    180deg,
-                    transparent 50%,
-                    rgba(16,43,37,.30)
+                    to top,
+                    rgba(16,43,37,.18),
+                    transparent 50%
                 );
 
         }
@@ -1220,9 +1194,9 @@
 
             position: absolute;
 
-            top: 15px;
+            top: 14px;
 
-            left: 15px;
+            left: 14px;
 
             z-index: 5;
 
@@ -1231,11 +1205,11 @@
             color: white;
 
             padding:
-                7px 10px;
+                6px 9px;
 
             border-radius: 100px;
 
-            font-size: 8px;
+            font-size: 7px;
 
             font-weight: 800;
 
@@ -1247,14 +1221,14 @@
         .product-content {
 
             padding:
-                21px 22px 25px;
+                19px 20px 22px;
 
         }
 
 
         .product-content h3 {
 
-            font-size: 21px;
+            font-size: 20px;
 
             margin:
                 5px 0;
@@ -1266,20 +1240,20 @@
 
             color: var(--muted);
 
-            font-size: 11px;
+            font-size: 10px;
 
-            margin-bottom: 16px;
+            margin-bottom: 15px;
 
         }
 
 
         .affiliate-note {
 
-            margin-top: 18px;
+            margin-top: 16px;
 
             color: #858e89;
 
-            font-size: 9px;
+            font-size: 8px;
 
         }
 
@@ -1290,16 +1264,19 @@
 
         .method {
 
-            background: var(--dark);
+            width: 100%;
+
+            background:
+                var(--dark);
 
             color: white;
 
             display: grid;
 
             grid-template-columns:
-                1fr 1fr;
+                52% 48%;
 
-            min-height: 650px;
+            min-height: 570px;
 
         }
 
@@ -1308,7 +1285,7 @@
 
             position: relative;
 
-            min-height: 650px;
+            min-height: 570px;
 
             overflow: hidden;
 
@@ -1317,15 +1294,13 @@
 
         .method-visual img {
 
-            position: absolute;
-
-            inset: 0;
-
             width: 100%;
 
             height: 100%;
 
             object-fit: cover;
+
+            object-position: center;
 
         }
 
@@ -1340,44 +1315,61 @@
 
             background:
                 linear-gradient(
-                    180deg,
-                    rgba(16,43,37,.05),
-                    rgba(16,43,37,.62)
+                    90deg,
+                    rgba(16,43,37,.1),
+                    rgba(16,43,37,.35)
                 );
 
         }
 
 
-        .method-label {
+        .method-stamp {
 
             position: absolute;
+
+            z-index: 3;
 
             bottom: 35px;
 
             left: 35px;
 
-            z-index: 5;
+            width: 125px;
 
-            color: white;
-
-            font-size: 10px;
-
-            letter-spacing: .18em;
-
-            padding:
-                10px 15px;
+            height: 125px;
 
             border:
                 1px solid
-                rgba(255,255,255,.35);
+                rgba(255,255,255,.55);
 
-            border-radius: 100px;
+            border-radius: 50%;
 
-            background:
-                rgba(16,43,37,.4);
+            display: grid;
 
-            backdrop-filter:
-                blur(10px);
+            place-items: center;
+
+            text-align: center;
+
+            font-size: 8px;
+
+            letter-spacing: .12em;
+
+            line-height: 1.3;
+
+            transform:
+                rotate(-10deg);
+
+            color: white;
+
+        }
+
+
+        .method-stamp strong {
+
+            display: block;
+
+            font-size: 15px;
+
+            color: var(--lime);
 
         }
 
@@ -1385,7 +1377,7 @@
         .method-content {
 
             padding:
-                90px 9%;
+                70px 6vw;
 
             align-self: center;
 
@@ -1402,11 +1394,15 @@
         .method-content h2 {
 
             font-size:
-                clamp(40px,4vw,60px);
+                clamp(
+                    38px,
+                    4vw,
+                    57px
+                );
 
             line-height: 1.02;
 
-            letter-spacing: -.045em;
+            letter-spacing: -.05em;
 
         }
 
@@ -1422,14 +1418,14 @@
 
         .method-content > p {
 
-            max-width: 560px;
+            max-width: 530px;
 
             color: #bdcac4;
 
-            font-size: 13px;
+            font-size: 12px;
 
             margin:
-                22px 0 32px;
+                20px 0 28px;
 
         }
 
@@ -1441,9 +1437,9 @@
             grid-template-columns:
                 repeat(3,1fr);
 
-            gap: 18px;
+            gap: 14px;
 
-            margin-bottom: 35px;
+            margin-bottom: 30px;
 
         }
 
@@ -1454,14 +1450,14 @@
                 1px solid
                 rgba(255,255,255,.18);
 
-            padding-top: 13px;
+            padding-top: 11px;
 
         }
 
 
         .method-point span {
 
-            font-size: 9px;
+            font-size: 8px;
 
             color: var(--lime);
 
@@ -1472,10 +1468,10 @@
 
             display: block;
 
-            font-size: 12px;
+            font-size: 11px;
 
             margin:
-                5px 0;
+                4px 0;
 
         }
 
@@ -1486,14 +1482,15 @@
 
             color: #9fafaa;
 
-            font-size: 9px;
+            font-size: 8px;
 
         }
 
 
         .method-button {
 
-            background: var(--lime);
+            background:
+                var(--lime);
 
             color: var(--dark);
 
@@ -1509,9 +1506,9 @@
             display: grid;
 
             grid-template-columns:
-                1.35fr 1fr 1fr;
+                1.25fr 1fr 1fr;
 
-            gap: 20px;
+            gap: 15px;
 
         }
 
@@ -1520,7 +1517,8 @@
 
             background: white;
 
-            border-radius: var(--radius);
+            border-radius:
+                var(--radius);
 
             overflow: hidden;
 
@@ -1536,27 +1534,21 @@
         .blog-card:hover {
 
             transform:
-                translateY(-7px);
+                translateY(-6px);
 
-            box-shadow: var(--shadow);
+            box-shadow:
+                var(--shadow);
 
         }
 
 
         .blog-image {
 
-            height: 240px;
+            height: 225px;
 
             position: relative;
 
             overflow: hidden;
-
-        }
-
-
-        .main-blog .blog-image {
-
-            height: 330px;
 
         }
 
@@ -1578,7 +1570,7 @@
         .blog-card:hover
         .blog-image img {
 
-            transform: scale(1.05);
+            transform: scale(1.06);
 
         }
 
@@ -1593,31 +1585,42 @@
 
             background:
                 linear-gradient(
-                    180deg,
-                    transparent 45%,
-                    rgba(16,43,37,.38)
+                    to top,
+                    rgba(16,43,37,.25),
+                    transparent 50%
                 );
 
         }
 
 
-        .blog-image-label {
+        .blog-tag {
 
             position: absolute;
 
-            left: 18px;
-
-            bottom: 17px;
-
             z-index: 3;
+
+            bottom: 15px;
+
+            left: 15px;
 
             color: white;
 
-            font-size: 9px;
+            background:
+                rgba(16,43,37,.78);
+
+            backdrop-filter:
+                blur(8px);
+
+            border-radius: 100px;
+
+            padding:
+                6px 10px;
+
+            font-size: 7px;
 
             font-weight: 800;
 
-            letter-spacing: .14em;
+            letter-spacing: .1em;
 
         }
 
@@ -1625,7 +1628,7 @@
         .blog-content {
 
             padding:
-                21px 22px 25px;
+                19px 20px 22px;
 
         }
 
@@ -1644,7 +1647,7 @@
 
         .blog-meta span {
 
-            font-size: 9px;
+            font-size: 8px;
 
             letter-spacing: .14em;
 
@@ -1659,37 +1662,37 @@
 
             color: #929b97;
 
-            font-size: 9px;
+            font-size: 8px;
 
         }
 
 
         .blog-content h3 {
 
-            font-size: 21px;
+            font-size: 20px;
 
             line-height: 1.2;
 
             margin:
-                10px 0 17px;
+                9px 0 15px;
 
         }
 
 
         .main-blog .blog-content h3 {
 
-            font-size: 27px;
+            font-size: 25px;
 
         }
 
 
         .blog-content p {
 
-            font-size: 11px;
+            font-size: 10px;
 
             color: var(--muted);
 
-            margin-bottom: 16px;
+            margin-bottom: 15px;
 
         }
 
@@ -1700,24 +1703,26 @@
 
         .newsletter {
 
-            width: min(1400px, 91%);
+            width:
+                var(--content-width);
 
             margin:
-                120px auto;
+                105px auto;
 
-            background: #e2e9df;
+            background:
+                #e2e9df;
 
-            border-radius: 31px;
+            border-radius: 27px;
 
             padding:
-                70px 7%;
+                55px 5%;
 
             display: grid;
 
             grid-template-columns:
                 1fr 1fr;
 
-            gap: 80px;
+            gap: 50px;
 
             align-items: center;
 
@@ -1727,11 +1732,15 @@
         .newsletter h2 {
 
             font-size:
-                clamp(40px,4vw,58px);
+                clamp(
+                    36px,
+                    4vw,
+                    54px
+                );
 
             line-height: 1.02;
 
-            letter-spacing: -.045em;
+            letter-spacing: -.05em;
 
         }
 
@@ -1747,13 +1756,13 @@
 
         .newsletter-description {
 
-            max-width: 550px;
+            max-width: 500px;
 
             color: var(--muted);
 
-            font-size: 12px;
+            font-size: 11px;
 
-            margin-top: 15px;
+            margin-top: 14px;
 
         }
 
@@ -1762,13 +1771,13 @@
 
             display: block;
 
-            font-size: 9px;
+            font-size: 8px;
 
             font-weight: 800;
 
             letter-spacing: .13em;
 
-            margin-bottom: 8px;
+            margin-bottom: 7px;
 
         }
 
@@ -1783,7 +1792,7 @@
                 1px solid
                 var(--line);
 
-            padding: 5px;
+            padding: 4px;
 
             border-radius: 100px;
 
@@ -1803,9 +1812,9 @@
             background: transparent;
 
             padding:
-                0 15px;
+                0 14px;
 
-            font-size: 12px;
+            font-size: 11px;
 
         }
 
@@ -1814,12 +1823,13 @@
 
             border: none;
 
-            background: var(--dark);
+            background:
+                var(--dark);
 
             color: white;
 
             padding:
-                12px 22px;
+                11px 19px;
 
             border-radius: 100px;
 
@@ -1834,10 +1844,10 @@
 
             color: #858f89;
 
-            font-size: 9px;
+            font-size: 8px;
 
             margin:
-                9px 12px;
+                8px 10px;
 
         }
 
@@ -1848,19 +1858,21 @@
 
         footer {
 
-            background: #102b25;
+            background:
+                #102b25;
 
             color: #dce4df;
 
             padding:
-                75px 4% 22px;
+                65px 3% 20px;
 
         }
 
 
         .footer-grid {
 
-            width: min(1380px, 92%);
+            width:
+                var(--content-width);
 
             margin: auto;
 
@@ -1869,20 +1881,20 @@
             grid-template-columns:
                 2fr 1fr 1fr 1fr;
 
-            gap: 60px;
+            gap: 40px;
 
         }
 
 
         .footer-description {
 
-            max-width: 340px;
+            max-width: 330px;
 
             color: #9eafa8;
 
-            font-size: 11px;
+            font-size: 10px;
 
-            margin-top: 18px;
+            margin-top: 16px;
 
         }
 
@@ -1891,13 +1903,13 @@
 
             color: white;
 
-            font-size: 10px;
+            font-size: 9px;
 
             letter-spacing: .13em;
 
             text-transform: uppercase;
 
-            margin-bottom: 16px;
+            margin-bottom: 14px;
 
         }
 
@@ -1908,9 +1920,10 @@
 
             color: #9eafa8;
 
-            font-size: 11px;
+            font-size: 10px;
 
-            margin: 9px 0;
+            margin:
+                8px 0;
 
             transition: .2s;
 
@@ -1926,12 +1939,13 @@
 
         .footer-bottom {
 
-            width: min(1380px, 92%);
+            width:
+                var(--content-width);
 
             margin:
-                55px auto 0;
+                50px auto 0;
 
-            padding-top: 18px;
+            padding-top: 17px;
 
             border-top:
                 1px solid
@@ -1946,7 +1960,7 @@
 
             color: #74877f;
 
-            font-size: 8px;
+            font-size: 7px;
 
             letter-spacing: .08em;
 
@@ -1954,61 +1968,42 @@
 
 
         /* =========================================================
-           LARGE DESKTOP
+           LARGE SCREENS
         ========================================================= */
 
-        @media (min-width: 1400px) {
+        @media(min-width: 1500px) {
 
-            .header {
+            :root {
 
-                width: min(1500px, 94%);
+                --page-width: 97%;
+
+                --content-width: 95%;
 
             }
 
 
             .hero {
 
-                width: min(1500px, 94%);
+                min-height: 700px;
 
-                min-height: 720px;
+                grid-template-columns:
+                    41% 59%;
 
             }
 
 
             .hero-visual {
 
-                min-height: 720px;
+                min-height: 700px;
 
             }
 
 
             .hero-content {
 
-                padding-left: 8%;
+                padding-left: 5vw;
 
-                padding-right: 6%;
-
-            }
-
-
-            .section,
-            .products-container {
-
-                width: min(1420px, 92%);
-
-            }
-
-
-            .quick-links {
-
-                width: min(1420px, 91%);
-
-            }
-
-
-            .newsletter {
-
-                width: min(1420px, 92%);
+                padding-right: 4vw;
 
             }
 
@@ -2019,11 +2014,27 @@
            TABLET
         ========================================================= */
 
-        @media (max-width: 1100px) {
+        @media(max-width: 1050px) {
+
+            :root {
+
+                --page-width: 94%;
+
+                --content-width: 92%;
+
+            }
+
 
             .navigation {
 
-                gap: 18px;
+                gap: 17px;
+
+            }
+
+
+            .header-button {
+
+                display: none;
 
             }
 
@@ -2031,9 +2042,7 @@
             .hero {
 
                 grid-template-columns:
-                    1fr 1fr;
-
-                min-height: 620px;
+                    44% 56%;
 
             }
 
@@ -2041,14 +2050,7 @@
             .hero-content {
 
                 padding:
-                    70px 8%;
-
-            }
-
-
-            .hero-visual {
-
-                min-height: 620px;
+                    65px 5vw;
 
             }
 
@@ -2056,7 +2058,11 @@
             .hero h1 {
 
                 font-size:
-                    clamp(48px,6vw,70px);
+                    clamp(
+                        48px,
+                        6vw,
+                        70px
+                    );
 
             }
 
@@ -2073,6 +2079,14 @@
 
                 grid-column:
                     span 2;
+
+            }
+
+
+            .destination-card:first-child
+            .destination-image {
+
+                height: 340px;
 
             }
 
@@ -2112,15 +2126,14 @@
             .method {
 
                 grid-template-columns:
-                    1fr 1fr;
+                    1fr;
 
             }
 
 
-            .method-content {
+            .method-visual {
 
-                padding:
-                    65px 8%;
+                min-height: 420px;
 
             }
 
@@ -2129,8 +2142,6 @@
 
                 grid-template-columns:
                     1fr;
-
-                gap: 40px;
 
             }
 
@@ -2149,13 +2160,24 @@
            MOBILE
         ========================================================= */
 
-        @media (max-width: 720px) {
+        @media(max-width: 720px) {
+
+            :root {
+
+                --page-width: 94%;
+
+                --content-width: 92%;
+
+            }
+
 
             .announcement {
 
-                font-size: 9px;
+                min-height: 34px;
 
-                gap: 10px;
+                font-size: 8px;
+
+                gap: 8px;
 
             }
 
@@ -2169,9 +2191,7 @@
 
             .header {
 
-                width: 92%;
-
-                min-height: 72px;
+                min-height: 70px;
 
             }
 
@@ -2186,22 +2206,23 @@
 
                 right: 0;
 
-                top: 68px;
+                top: 65px;
 
-                padding: 20px;
+                padding: 18px;
 
                 background: white;
 
-                border-radius: 18px;
+                border-radius: 17px;
 
-                box-shadow: var(--shadow);
+                box-shadow:
+                    var(--shadow);
 
                 flex-direction: column;
 
                 align-items:
                     flex-start;
 
-                gap: 17px;
+                gap: 15px;
 
             }
 
@@ -2214,13 +2235,6 @@
 
 
             .navigation a.active::after {
-
-                display: none;
-
-            }
-
-
-            .header-button {
 
                 display: none;
 
@@ -2240,13 +2254,12 @@
 
                 width: 94%;
 
-                border-radius: 27px;
+                grid-template-columns:
+                    1fr;
 
-                display: grid;
+                border-radius: 24px;
 
-                grid-template-columns: 1fr;
-
-                min-height: auto;
+                margin-top: 5px;
 
             }
 
@@ -2254,34 +2267,28 @@
             .hero-content {
 
                 padding:
-                    58px 7% 48px;
+                    50px 7% 40px;
 
             }
 
 
             .hero h1 {
 
-                font-size: 52px;
-
-                max-width: 100%;
+                font-size:
+                    clamp(
+                        45px,
+                        14vw,
+                        62px
+                    );
 
             }
 
 
             .hero-description {
 
-                font-size: 13px;
+                font-size: 12px;
 
-                max-width: 100%;
-
-            }
-
-
-            .hero-trust {
-
-                margin-top: 35px;
-
-                gap: 9px 15px;
+                margin-top: 20px;
 
             }
 
@@ -2290,315 +2297,35 @@
 
                 min-height: 390px;
 
-                height: 390px;
-
             }
 
 
             .hero-location {
 
-                left: 20px;
+                top: 18px;
 
-                bottom: 20px;
-
-            }
-
-
-            .hero-number {
-
-                top: 20px;
-
-                right: 20px;
+                right: 18px;
 
             }
 
 
-            /* QUICK LINKS */
+            .hero-caption {
 
-            .quick-links {
+                left: 18px;
 
-                width: 90%;
-
-                grid-template-columns: 1fr;
-
-                margin-top: -20px;
+                bottom: 18px;
 
             }
 
 
-            .quick-link {
+            .hero-trust {
 
-                border-right: none;
-
-                border-bottom:
-                    1px solid var(--line);
-
-                padding:
-                    19px 20px;
-
-            }
-
-
-            /* SECTIONS */
-
-            .section {
-
-                width: 90%;
-
-                margin:
-                    80px auto;
-
-            }
-
-
-            .section-header {
-
-                display: block;
-
-            }
-
-
-            .section-header h2 {
-
-                font-size: 40px;
-
-            }
-
-
-            .section-description {
-
-                font-size: 12px;
-
-            }
-
-
-            .view-all {
-
-                display: inline-block;
-
-                margin-top: 18px;
-
-            }
-
-
-            /* GRIDS */
-
-            .destination-grid,
-            .product-grid,
-            .blog-grid {
-
-                grid-template-columns:
-                    1fr;
-
-                gap: 16px;
-
-            }
-
-
-            .destination-card:first-child,
-            .product-card:first-child,
-            .main-blog {
-
-                grid-column: auto;
-
-            }
-
-
-            .destination-card:first-child
-            .destination-image {
-
-                height: 300px;
-
-            }
-
-
-            .destination-image,
-            .product-image,
-            .main-blog .blog-image {
-
-                height: 280px;
-
-            }
-
-
-            /* PRODUCTS */
-
-            .products-section {
-
-                padding:
-                    80px 0;
-
-            }
-
-
-            .products-container {
-
-                width: 90%;
-
-            }
-
-
-            /* METHOD */
-
-            .method {
-
-                grid-template-columns:
-                    1fr;
-
-            }
-
-
-            .method-visual {
-
-                min-height: 360px;
-
-                height: 360px;
-
-            }
-
-
-            .method-content {
-
-                padding:
-                    60px 8%;
-
-            }
-
-
-            .method-content h2 {
-
-                font-size: 43px;
-
-            }
-
-
-            .method-points {
-
-                grid-template-columns:
-                    1fr;
-
-                gap: 18px;
-
-            }
-
-
-            /* NEWSLETTER */
-
-            .newsletter {
-
-                width: 90%;
-
-                padding:
-                    48px 8%;
-
-                gap: 35px;
-
-            }
-
-
-            .newsletter h2 {
-
-                font-size: 42px;
-
-            }
-
-
-            .email-form {
+                margin-top: 28px;
 
                 flex-direction:
                     column;
 
-                background:
-                    transparent;
-
-                border: none;
-
-                gap: 8px;
-
-                padding: 0;
-
-            }
-
-
-            .email-form input {
-
-                min-height: 48px;
-
-                background: white;
-
-                border:
-                    1px solid var(--line);
-
-                border-radius: 100px;
-
-            }
-
-
-            .email-form button {
-
-                min-height: 48px;
-
-            }
-
-
-            /* FOOTER */
-
-            footer {
-
-                padding-left: 5%;
-
-                padding-right: 5%;
-
-            }
-
-
-            .footer-grid {
-
-                width: 90%;
-
-                grid-template-columns:
-                    1fr 1fr;
-
-                gap: 35px;
-
-            }
-
-
-            .footer-brand {
-
-                grid-column:
-                    span 2;
-
-            }
-
-
-            .footer-bottom {
-
-                width: 90%;
-
-                display: block;
-
-            }
-
-
-            .footer-bottom div {
-
-                margin-top: 8px;
-
-            }
-
-        }
-
-
-        /* =========================================================
-           SMALL MOBILE
-        ========================================================= */
-
-        @media (max-width: 420px) {
-
-            .hero h1 {
-
-                font-size: 45px;
+                gap: 6px;
 
             }
 
@@ -2618,28 +2345,328 @@
             }
 
 
-            .hero-trust {
+            /* QUICK LINKS */
+
+            .quick-links {
+
+                width: 90%;
+
+                grid-template-columns:
+                    1fr;
+
+                margin-top:
+                    -18px;
+
+            }
+
+
+            .quick-link {
+
+                border-right: none;
+
+                border-bottom:
+                    1px solid var(--line);
+
+                padding:
+                    17px 18px;
+
+            }
+
+
+            /* SECTIONS */
+
+            .section {
+
+                width: 92%;
+
+                margin:
+                    75px auto;
+
+            }
+
+
+            .section-header {
+
+                display: block;
+
+                margin-bottom: 25px;
+
+            }
+
+
+            .view-all {
+
+                display:
+                    inline-block;
+
+                margin-top: 15px;
+
+            }
+
+
+            /* DESTINATIONS */
+
+            .destination-grid,
+            .product-grid,
+            .blog-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .destination-card:first-child,
+            .product-card:first-child,
+            .main-blog {
+
+                grid-column:
+                    auto;
+
+            }
+
+
+            .destination-card:first-child
+            .destination-image {
+
+                height: 300px;
+
+            }
+
+
+            .destination-image {
+
+                height: 270px;
+
+            }
+
+
+            /* PRODUCTS */
+
+            .products-section {
+
+                padding:
+                    70px 0;
+
+            }
+
+
+            .products-container {
+
+                width: 92%;
+
+            }
+
+
+            .product-image {
+
+                height: 260px;
+
+            }
+
+
+            /* METHOD */
+
+            .method {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .method-visual {
+
+                min-height:
+                    350px;
+
+            }
+
+
+            .method-content {
+
+                padding:
+                    55px 7%;
+
+            }
+
+
+            .method-points {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            /* BLOG */
+
+            .blog-image {
+
+                height: 235px;
+
+            }
+
+
+            /* NEWSLETTER */
+
+            .newsletter {
+
+                width: 92%;
+
+                padding:
+                    42px 7%;
+
+                gap: 30px;
+
+                margin:
+                    75px auto;
+
+            }
+
+
+            .email-form {
 
                 flex-direction:
                     column;
 
+                background:
+                    transparent;
+
+                border: none;
+
                 gap: 7px;
+
+                padding: 0;
+
+            }
+
+
+            .email-form input {
+
+                min-height: 45px;
+
+                background: white;
+
+                border:
+                    1px solid
+                    var(--line);
+
+                border-radius: 100px;
+
+            }
+
+
+            .email-form button {
+
+                min-height: 44px;
+
+            }
+
+
+            /* FOOTER */
+
+            footer {
+
+                padding:
+                    55px 4% 18px;
+
+            }
+
+
+            .footer-grid {
+
+                width: 92%;
+
+                grid-template-columns:
+                    1fr 1fr;
+
+                gap: 30px;
+
+            }
+
+
+            .footer-brand {
+
+                grid-column:
+                    span 2;
+
+            }
+
+
+            .footer-bottom {
+
+                width: 92%;
+
+                display: block;
+
+            }
+
+
+            .footer-bottom div {
+
+                margin-top: 7px;
+
+            }
+
+        }
+
+
+        /* =========================================================
+           SMALL MOBILE
+        ========================================================= */
+
+        @media(max-width: 420px) {
+
+            .hero h1 {
+
+                font-size: 44px;
+
+            }
+
+
+            .hero-content {
+
+                padding:
+                    45px 6% 35px;
 
             }
 
 
             .hero-visual {
 
-                height: 330px;
-
                 min-height: 330px;
+
+            }
+
+
+            .hero-location {
+
+                font-size: 7px;
+
+            }
+
+
+            .hero-caption {
+
+                transform: scale(.9);
+
+                transform-origin:
+                    bottom left;
 
             }
 
 
             .section-header h2 {
 
-                font-size: 36px;
+                font-size: 35px;
+
+            }
+
+
+            .button {
+
+                min-height: 46px;
 
             }
 
@@ -2677,8 +2704,7 @@
 
     <header class="header">
 
-        <a href="index.html"
-           class="logo">
+        <a href="index.html" class="logo">
 
             <span class="logo-symbol">
                 ✦
@@ -2716,9 +2742,7 @@
             <a
                 href="index.html"
                 class="active">
-
                 Home
-
             </a>
 
             <a href="destinations.html">
@@ -2800,7 +2824,7 @@
 
                         Explore Destinations
 
-                        <span style="margin-left:12px;">
+                        <span style="margin-left:10px;">
                             →
                         </span>
 
@@ -2838,28 +2862,30 @@
 
 
 
-            <!-- =================================================
-                 HERO IMAGE
-            ================================================== -->
+            <!-- HERO IMAGE -->
 
             <div class="hero-visual">
 
                 <img
                     src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85"
-                    alt="Beautiful mountain travel destination">
+                    alt="Scenic mountain landscape travel destination">
 
-                <div class="hero-number">
-                    01 / 04
-                </div>
+                <div class="hero-overlay"></div>
+
 
                 <div class="hero-location">
+                    ✦ FIND YOUR NEXT PLACE
+                </div>
 
-                    <span>
-                        DESTINATION INSPIRATION
-                    </span>
+
+                <div class="hero-caption">
+
+                    <small>
+                        TRAVEL INSPIRATION
+                    </small>
 
                     <strong>
-                        Find your next escape
+                        Your next adventure starts here.
                     </strong>
 
                 </div>
@@ -2953,13 +2979,10 @@
                     </p>
 
                     <h2>
-
                         Places worth
-
                         <em>
                             pinpointing.
                         </em>
-
                     </h2>
 
                     <p class="section-description">
@@ -2998,12 +3021,11 @@
                     <div class="destination-image">
 
                         <img
-                            src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=85"
-                            alt="Traditional Japan travel destination"
-                            loading="lazy">
+                            src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1400&q=85"
+                            alt="Japan travel destination">
 
                         <span class="image-label">
-                            JAPAN · ASIA
+                            JAPAN
                         </span>
 
                     </div>
@@ -3043,9 +3065,8 @@
                     <div class="destination-image">
 
                         <img
-                            src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1000&q=85"
-                            alt="Paris Europe travel destination"
-                            loading="lazy">
+                            src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=85"
+                            alt="European city travel destination">
 
                         <span class="image-label">
                             EUROPE
@@ -3088,12 +3109,11 @@
                     <div class="destination-image">
 
                         <img
-                            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85"
-                            alt="Tropical beach travel destination"
-                            loading="lazy">
+                            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85"
+                            alt="Tropical beach travel destination">
 
                         <span class="image-label">
-                            TROPICAL ESCAPE
+                            TROPICAL
                         </span>
 
                     </div>
@@ -3147,13 +3167,10 @@
                         </p>
 
                         <h2>
-
                             Pack less.
-
                             <em>
                                 Choose better.
                             </em>
-
                         </h2>
 
                         <p class="section-description">
@@ -3196,9 +3213,8 @@
                         <div class="product-image">
 
                             <img
-                                src="https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&w=1200&q=85"
-                                alt="Travel luggage and packing essentials"
-                                loading="lazy">
+                                src="https://images.unsplash.com/photo-1553531384-397c80973a0b?auto=format&fit=crop&w=1400&q=85"
+                                alt="Travel packing essentials">
 
                         </div>
 
@@ -3237,9 +3253,8 @@
                         <div class="product-image">
 
                             <img
-                                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1000&q=85"
-                                alt="Comfortable airplane travel"
-                                loading="lazy">
+                                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=85"
+                                alt="Comfortable airplane travel">
 
                         </div>
 
@@ -3278,9 +3293,8 @@
                         <div class="product-image">
 
                             <img
-                                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=85"
-                                alt="Travel technology and smartphone"
-                                loading="lazy">
+                                src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=85"
+                                alt="Travel smartphone and technology">
 
                         </div>
 
@@ -3333,18 +3347,24 @@
         <section class="method">
 
 
-            <!-- IMAGE -->
+            <!-- LARGE IMAGE -->
 
             <div class="method-visual">
 
                 <img
-                    src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1400&q=85"
-                    alt="Traveler planning a journey"
-                    loading="lazy">
+                    src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1800&q=85"
+                    alt="Traveler exploring a scenic landscape">
 
-                <span class="method-label">
-                    DISCOVER · PREPARE · GO
-                </span>
+                <div class="method-stamp">
+
+                    PINPOINT
+
+                    <strong>
+                        YOUR<br>
+                        JOURNEY
+                    </strong>
+
+                </div>
 
             </div>
 
@@ -3362,7 +3382,6 @@
                 <h2>
 
                     Good trips start with
-
                     <em>
                         good planning.
                     </em>
@@ -3472,7 +3491,6 @@
                     <h2>
 
                         Ideas for your
-
                         <em>
                             next journey.
                         </em>
@@ -3514,12 +3532,11 @@
                     <div class="blog-image">
 
                         <img
-                            src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1400&q=85"
-                            alt="Japan travel guide"
-                            loading="lazy">
+                            src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1400&q=85"
+                            alt="Japan travel guide">
 
-                        <span class="blog-image-label">
-                            JAPAN TRAVEL GUIDE
+                        <span class="blog-tag">
+                            JAPAN GUIDE
                         </span>
 
                     </div>
@@ -3574,12 +3591,11 @@
                     <div class="blog-image">
 
                         <img
-                            src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1000&q=85"
-                            alt="Travel packing guide"
-                            loading="lazy">
+                            src="https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?auto=format&fit=crop&w=1200&q=85"
+                            alt="Travel packing guide">
 
-                        <span class="blog-image-label">
-                            PACKING TIPS
+                        <span class="blog-tag">
+                            PACKING
                         </span>
 
                     </div>
@@ -3625,11 +3641,10 @@
                     <div class="blog-image">
 
                         <img
-                            src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=85"
-                            alt="Travel budget planning"
-                            loading="lazy">
+                            src="https://images.unsplash.com/photo-1521292270410-a8c4d716d518?auto=format&fit=crop&w=1200&q=85"
+                            alt="Travel planning and budget">
 
-                        <span class="blog-image-label">
+                        <span class="blog-tag">
                             TRAVEL PLANNING
                         </span>
 
@@ -3641,7 +3656,7 @@
                         <div class="blog-meta">
 
                             <span>
-                                TRAVEL PLANNING
+                                PLANNING
                             </span>
 
                             <small>
@@ -3770,7 +3785,10 @@
 
                     <span
                         class="logo-symbol"
-                        style="border-color:white;color:white;">
+                        style="
+                            border-color:white;
+                            color:white;
+                        ">
 
                         ✦
 
@@ -3915,12 +3933,16 @@
 
     <script>
 
-        /* MOBILE MENU */
+
+        /* =====================================================
+           MOBILE MENU
+        ===================================================== */
 
         const menuButton =
             document.getElementById(
                 "menuButton"
             );
+
 
         const navigation =
             document.getElementById(
@@ -3940,7 +3962,10 @@
         );
 
 
-        /* CLOSE MOBILE MENU */
+
+        /* =====================================================
+           CLOSE MENU AFTER CLICK
+        ===================================================== */
 
         const navigationLinks =
             navigation.querySelectorAll("a");
@@ -3964,7 +3989,10 @@
         );
 
 
-        /* NEWSLETTER */
+
+        /* =====================================================
+           NEWSLETTER
+        ===================================================== */
 
         const newsletterForm =
             document.getElementById(
