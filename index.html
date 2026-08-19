@@ -26,46 +26,40 @@
         href="https://fonts.gstatic.com"
         crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
 
-
     <style>
-
         /* =========================================================
-           PINPOINT TRAVEL
-           COMPLETE HOMEPAGE CSS
+           PINPOINT TRAVEL - MODERN BLUE REFRESH CSS
         ========================================================= */
 
         :root {
+            --dark: #0a192f;
+            --dark-2: #1e293b;
 
-            --dark: #102b25;
-            --dark-2: #183d34;
+            --blue-primary: #1e3a8a;
+            --blue-accent: #2563eb;
+            --blue-light: #38bdf8;
+            --blue-subtle: #e0f2fe;
 
-            --green: #315f52;
-            --green-light: #739a8d;
-
-            --cream: #f7f5ef;
-            --cream-2: #eee9dc;
+            --cream: #f8fafc;
+            --cream-2: #f1f5f9;
 
             --white: #ffffff;
 
-            --text: #162b26;
-            --muted: #687771;
+            --text: #0f172a;
+            --muted: #64748b;
 
-            --lime: #dce9b6;
+            --lime: #38bdf8;
+            --gold: #f59e0b;
 
-            --gold: #d6bd7b;
+            --line: rgba(15, 23, 42, 0.08);
 
-            --line: rgba(16, 43, 37, 0.12);
+            --shadow: 0 25px 70px rgba(15, 23, 42, 0.08);
 
-            --shadow:
-                0 25px 70px rgba(16, 43, 37, 0.12);
-
-            --radius: 28px;
-
+            --radius: 24px;
         }
-
 
         * {
             margin: 0;
@@ -73,4319 +67,873 @@
             box-sizing: border-box;
         }
 
-
         html {
             scroll-behavior: smooth;
         }
 
-
         body {
-
-            font-family:
-                "DM Sans",
-                Arial,
-                sans-serif;
-
+            font-family: "DM Sans", Arial, sans-serif;
             background: var(--cream);
-
             color: var(--text);
-
             line-height: 1.6;
-
             overflow-x: hidden;
-
+            width: 100%;
         }
-
 
         img {
             max-width: 100%;
             display: block;
         }
 
-
         a {
             text-decoration: none;
             color: inherit;
         }
-
 
         button,
         input {
             font-family: inherit;
         }
 
-
         /* =========================================================
            ANNOUNCEMENT BAR
         ========================================================= */
 
         .announcement {
-
             min-height: 38px;
-
             padding: 8px 5%;
-
             background: var(--dark);
-
             color: white;
-
             display: flex;
-
             justify-content: center;
-
             align-items: center;
-
             gap: 25px;
-
-            font-size: 11px;
-
+            font-size: 12px;
             letter-spacing: .03em;
-
         }
-
 
         .announcement a {
-
-            color: var(--lime);
-
+            color: var(--blue-light);
             font-weight: 700;
-
         }
-
 
         /* =========================================================
            HEADER
         ========================================================= */
 
         .header {
-
-            width: min(1400px, 92%);
-
+            width: 100%;
+            max-width: 1600px;
             min-height: 82px;
-
+            padding: 0 4%;
             margin: auto;
-
             display: flex;
-
             align-items: center;
-
             gap: 35px;
-
             position: relative;
-
             z-index: 100;
-
         }
-
 
         /* LOGO */
 
         .logo {
-
             display: flex;
-
             align-items: center;
-
             gap: 10px;
-
             flex-shrink: 0;
-
         }
-
 
         .logo-symbol {
-
             width: 40px;
-
             height: 40px;
-
-            border: 1px solid var(--dark);
-
+            background: var(--blue-accent);
+            color: var(--white);
             border-radius: 50%;
-
             display: grid;
-
             place-items: center;
-
             font-size: 18px;
-
+            font-weight: 800;
         }
-
 
         .logo-text strong {
-
             display: block;
-
-            font-size: 15px;
-
+            font-size: 16px;
             letter-spacing: .16em;
-
             line-height: 1;
-
+            color: var(--dark);
         }
-
 
         .logo-text small {
-
             display: block;
-
             margin-top: 5px;
-
             color: var(--muted);
-
-            font-size: 8px;
-
+            font-size: 9px;
             letter-spacing: .2em;
-
         }
-
 
         /* NAVIGATION */
 
         .navigation {
-
             margin-left: auto;
-
             display: flex;
-
             align-items: center;
-
-            gap: 28px;
-
+            gap: 32px;
         }
-
 
         .navigation a {
-
-            font-size: 12px;
-
+            font-size: 13px;
             font-weight: 600;
-
-            color: #52635d;
-
+            color: var(--muted);
             transition: .2s;
-
             position: relative;
-
         }
 
-
-        .navigation a:hover {
-
-            color: var(--dark);
-
-        }
-
-
+        .navigation a:hover,
         .navigation a.active {
-
-            color: var(--dark);
-
+            color: var(--blue-accent);
         }
-
 
         .navigation a.active::after {
-
             content: "";
-
             position: absolute;
-
             height: 2px;
-
             left: 0;
-
             right: 0;
-
             bottom: -9px;
-
-            background: var(--dark);
-
+            background: var(--blue-accent);
         }
-
 
         /* HEADER BUTTON */
 
         .header-button {
-
             background: var(--dark);
-
             color: white;
-
-            padding: 13px 19px;
-
+            padding: 12px 24px;
             border-radius: 100px;
-
-            font-size: 11px;
-
+            font-size: 12px;
             font-weight: 700;
-
             transition: .25s;
-
         }
-
 
         .header-button:hover {
-
-            background: var(--green);
-
+            background: var(--blue-accent);
             transform: translateY(-2px);
-
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
         }
-
 
         /* MOBILE BUTTON */
 
         .menu-button {
-
             display: none;
-
             border: none;
-
             background: transparent;
-
             font-size: 25px;
-
             cursor: pointer;
-
             margin-left: auto;
-
+            color: var(--dark);
         }
 
-
         /* =========================================================
-           HERO
+           HERO (FULL DESKTOP WIDTH RETOUCH)
         ========================================================= */
 
         .hero {
-
-            width: min(1400px, 92%);
-
-            min-height: 660px;
-
-            margin: 10px auto 0;
-
-            border-radius: 38px;
-
+            width: 100%;
+            min-height: 680px;
+            margin: 0;
+            border-radius: 0;
             overflow: hidden;
-
             display: grid;
-
-            grid-template-columns: 48% 52%;
-
+            grid-template-columns: 50% 50%;
             position: relative;
-
-            background:
-
-                linear-gradient(
-                    135deg,
-                    #dce6d9,
-                    #bdd3cb 55%,
-                    #7ea69d
-                );
-
+            background: linear-gradient(135deg, #f0f7ff 0%, #e0f2fe 50%, #bae6fd 100%);
         }
-
 
         /* HERO CONTENT */
 
         .hero-content {
-
-            padding:
-
-                90px
-                7vw
-                75px;
-
+            padding: 100px 6vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             position: relative;
-
             z-index: 10;
-
         }
-
 
         .eyebrow {
-
-            font-size: 10px;
-
+            font-size: 11px;
             letter-spacing: .22em;
-
             font-weight: 800;
-
-            color: #68766f;
-
-            margin-bottom: 17px;
-
+            color: var(--blue-accent);
+            text-transform: uppercase;
+            margin-bottom: 20px;
         }
-
 
         .hero h1 {
-
-            font-size: clamp(
-                52px,
-                6vw,
-                88px
-            );
-
-            line-height: .97;
-
-            letter-spacing: -.055em;
-
+            font-size: clamp(48px, 5.5vw, 84px);
+            line-height: 1.02;
+            letter-spacing: -.04em;
             color: var(--dark);
-
         }
-
 
         .hero h1 em {
-
-            font-family:
-                "Playfair Display",
-                serif;
-
+            font-family: "Playfair Display", serif;
             font-weight: 600;
-
+            color: var(--blue-accent);
         }
-
 
         .hero-description {
-
             max-width: 520px;
-
             margin-top: 25px;
-
-            margin-bottom: 30px;
-
-            font-size: 15px;
-
-            color: #53665f;
-
+            margin-bottom: 35px;
+            font-size: 16px;
+            color: var(--muted);
         }
-
 
         /* HERO BUTTONS */
 
         .hero-buttons {
-
             display: flex;
-
             flex-wrap: wrap;
-
-            gap: 12px;
-
+            gap: 14px;
         }
-
 
         .button {
-
-            min-height: 50px;
-
-            padding: 0 22px;
-
+            min-height: 52px;
+            padding: 0 28px;
             border-radius: 100px;
-
             display: inline-flex;
-
             justify-content: center;
-
             align-items: center;
-
-            font-size: 11px;
-
+            font-size: 12px;
             font-weight: 800;
-
             transition: .25s;
-
         }
-
 
         .button-primary {
-
-            background: var(--dark);
-
+            background: var(--blue-accent);
             color: white;
-
         }
-
 
         .button-primary:hover {
-
+            background: var(--blue-primary);
             transform: translateY(-3px);
-
-            box-shadow:
-                0 12px 25px
-                rgba(16,43,37,.2);
-
+            box-shadow: 0 12px 25px rgba(37, 99, 235, 0.3);
         }
-
 
         .button-secondary {
-
-            border: 1px solid
-                rgba(16,43,37,.25);
-
-            background:
-                rgba(255,255,255,.25);
-
+            border: 1px solid rgba(15, 23, 42, 0.15);
+            background: rgba(255, 255, 255, 0.6);
+            color: var(--dark);
             backdrop-filter: blur(10px);
-
         }
 
+        .button-secondary:hover {
+            background: white;
+            border-color: var(--blue-accent);
+        }
 
         .hero-trust {
-
             display: flex;
-
             flex-wrap: wrap;
-
-            gap: 18px;
-
-            margin-top: 45px;
-
-            color: #53645e;
-
-            font-size: 10px;
-
+            gap: 24px;
+            margin-top: 48px;
+            color: var(--muted);
+            font-size: 11px;
             font-weight: 700;
-
+            letter-spacing: .05em;
         }
-
 
         /* =========================================================
            HERO VISUAL
         ========================================================= */
 
         .hero-visual {
-
-            min-height: 660px;
-
+            min-height: 680px;
             position: relative;
-
             overflow: hidden;
-
-            background:
-
-                linear-gradient(
-                    180deg,
-                    #b9d5d2 0%,
-                    #8fb7b0 45%,
-                    #608a81 68%,
-                    #375e56 100%
-                );
-
+            background: linear-gradient(180deg, #0284c7 0%, #0369a1 40%, #075985 70%, #0c4a6e 100%);
         }
 
-
-        /* SUN */
+        /* SUN / GLOW */
 
         .sun {
-
-            width: 160px;
-
-            height: 160px;
-
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
-
             position: absolute;
-
-            top: 80px;
-
-            right: 20%;
-
-            background: #f3e6bd;
-
-            box-shadow:
-                0 0 80px
-                rgba(243,230,189,.75);
-
+            top: 70px;
+            right: 22%;
+            background: #e0f2fe;
+            box-shadow: 0 0 100px rgba(224, 242, 254, 0.8);
         }
-
 
         /* RINGS */
 
         .hero-ring {
-
             position: absolute;
-
-            width: 370px;
-
-            height: 370px;
-
-            border: 1px solid
-                rgba(255,255,255,.28);
-
+            width: 400px;
+            height: 400px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 50%;
-
-            right: -100px;
-
+            right: -80px;
             top: -40px;
-
         }
-
 
         .hero-ring.two {
-
-            width: 530px;
-
-            height: 530px;
-
-            right: -170px;
-
-            top: -110px;
-
-            opacity: .45;
-
+            width: 580px;
+            height: 580px;
+            right: -160px;
+            top: -120px;
+            opacity: .4;
         }
-
 
         /* MOUNTAINS */
 
         .mountain {
-
             position: absolute;
-
             bottom: 28%;
-
             width: 0;
-
             height: 0;
-
-            border-left:
-                250px solid transparent;
-
-            border-right:
-                250px solid transparent;
-
-            border-bottom:
-                340px solid #52786e;
-
+            border-left: 260px solid transparent;
+            border-right: 260px solid transparent;
+            border-bottom: 360px solid #0369a1;
         }
-
 
         .mountain-one {
-
-            left: -100px;
-
-            opacity: .55;
-
+            left: -80px;
+            opacity: .6;
         }
-
 
         .mountain-two {
-
-            right: -100px;
-
-            border-bottom-color:
-                #365e56;
-
+            right: -80px;
+            border-bottom-color: #0c4a6e;
         }
-
 
         .mountain-three {
-
             left: 28%;
-
             transform: scale(.7);
-
-            opacity: .7;
-
-            border-bottom-color:
-                #456d63;
-
+            opacity: .8;
+            border-bottom-color: #075985;
         }
-
 
         /* OCEAN */
 
         .ocean {
-
             position: absolute;
-
             left: 0;
-
             right: 0;
-
             bottom: 0;
-
             height: 34%;
-
-            background:
-
-                repeating-linear-gradient(
-                    175deg,
-                    rgba(255,255,255,.15) 0px,
-                    rgba(255,255,255,.15) 2px,
-                    transparent 2px,
-                    transparent 30px
-                );
-
+            background: repeating-linear-gradient(
+                175deg,
+                rgba(255, 255, 255, 0.15) 0px,
+                rgba(255, 255, 255, 0.15) 2px,
+                transparent 2px,
+                transparent 28px
+            );
         }
-
 
         /* ROAD */
 
         .road {
-
             position: absolute;
-
             bottom: -140px;
-
             left: 50%;
-
-            transform:
-                translateX(-50%)
-                rotate(5deg);
-
+            transform: translateX(-50%) rotate(5deg);
             width: 150px;
-
             height: 430px;
-
-            background: #d7cbb0;
-
-            clip-path:
-                polygon(
-                    42% 0,
-                    58% 0,
-                    100% 100%,
-                    0 100%
-                );
-
+            background: #e2e8f0;
+            clip-path: polygon(42% 0, 58% 0, 100% 100%, 0 100%);
         }
-
 
         /* FLOATING CARDS */
 
         .floating-card {
-
             position: absolute;
-
             z-index: 20;
-
             display: flex;
-
             align-items: center;
-
-            gap: 12px;
-
-            padding: 13px 16px;
-
-            background:
-                rgba(255,255,255,.92);
-
-            backdrop-filter:
-                blur(15px);
-
+            gap: 14px;
+            padding: 14px 18px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
             border-radius: 18px;
-
-            box-shadow:
-                0 15px 40px
-                rgba(16,43,37,.15);
-
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.2);
         }
-
 
         .floating-card small {
-
             display: block;
-
-            font-size: 9px;
-
-            color: #78857f;
-
+            font-size: 10px;
+            color: var(--muted);
         }
-
 
         .floating-card strong {
-
             display: block;
-
-            font-size: 12px;
-
+            font-size: 13px;
+            color: var(--dark);
         }
-
 
         .floating-icon {
-
-            width: 32px;
-
-            height: 32px;
-
+            width: 36px;
+            height: 36px;
             display: grid;
-
             place-items: center;
-
             border-radius: 50%;
-
-            background: var(--dark);
-
+            background: var(--blue-accent);
             color: white;
-
+            font-size: 14px;
         }
-
 
         .location-card {
-
             top: 35%;
-
             left: 8%;
-
         }
-
 
         .guide-card {
-
             bottom: 20%;
-
             right: 8%;
-
         }
-
 
         /* =========================================================
            QUICK LINKS
         ========================================================= */
 
         .quick-links {
-
-            width: min(1250px, 86%);
-
-            margin:
-                -40px auto
-                0;
-
+            width: min(1300px, 92%);
+            margin: -40px auto 0;
             position: relative;
-
             z-index: 30;
-
             background: white;
-
-            border-radius: 23px;
-
+            border-radius: var(--radius);
             box-shadow: var(--shadow);
-
             display: grid;
-
-            grid-template-columns:
-                repeat(3,1fr);
-
+            grid-template-columns: repeat(3, 1fr);
             overflow: hidden;
-
+            border: 1px solid var(--line);
         }
-
 
         .quick-link {
-
-            padding: 25px 28px;
-
-            border-right:
-                1px solid var(--line);
-
+            padding: 28px 32px;
+            border-right: 1px solid var(--line);
             display: grid;
-
             grid-template-columns: 40px 1fr;
-
-            column-gap: 10px;
-
+            column-gap: 12px;
+            align-items: center;
+            transition: background .2s;
         }
 
+        .quick-link:hover {
+            background: var(--cream-2);
+        }
 
         .quick-link:last-child {
-
             border: none;
-
         }
-
 
         .quick-number {
-
-            grid-row:
-                1 / 3;
-
-            color: #98a29d;
-
-            font-size: 10px;
-
+            grid-row: 1 / 3;
+            color: var(--blue-accent);
+            font-size: 12px;
+            font-weight: 800;
         }
-
 
         .quick-link strong {
-
-            font-size: 13px;
-
+            font-size: 14px;
+            color: var(--dark);
         }
-
 
         .quick-link small {
-
             color: var(--muted);
-
-            font-size: 10px;
-
+            font-size: 11px;
         }
-
 
         /* =========================================================
            GENERAL SECTIONS
         ========================================================= */
 
         .section {
-
-            width: min(1250px, 86%);
-
-            margin:
-                120px auto;
-
+            width: min(1300px, 92%);
+            margin: 100px auto;
         }
-
 
         .section-header {
-
             display: flex;
-
             justify-content: space-between;
-
-            align-items: end;
-
+            align-items: flex-end;
             gap: 30px;
-
-            margin-bottom: 35px;
-
+            margin-bottom: 40px;
         }
-
 
         .section-header h2 {
-
-            font-size:
-                clamp(36px,4vw,55px);
-
-            line-height: 1;
-
-            letter-spacing: -.045em;
-
+            font-size: clamp(32px, 3.5vw, 52px);
+            line-height: 1.05;
+            letter-spacing: -.03em;
+            color: var(--dark);
         }
-
 
         .section-header h2 em {
-
-            font-family:
-                "Playfair Display",
-                serif;
-
+            font-family: "Playfair Display", serif;
             font-weight: 600;
-
+            color: var(--blue-accent);
         }
-
 
         .section-description {
-
             max-width: 520px;
-
             color: var(--muted);
-
-            font-size: 13px;
-
-            margin-top: 15px;
-
+            font-size: 14px;
+            margin-top: 12px;
         }
-
 
         .view-all {
-
-            font-size: 11px;
-
+            font-size: 12px;
             font-weight: 800;
-
-            border-bottom:
-                1px solid var(--dark);
-
-            padding-bottom: 5px;
-
+            border-bottom: 2px solid var(--blue-accent);
+            color: var(--blue-accent);
+            padding-bottom: 4px;
             white-space: nowrap;
-
         }
-
 
         /* =========================================================
            DESTINATIONS
         ========================================================= */
 
         .destination-grid {
-
             display: grid;
-
-            grid-template-columns:
-                1.3fr 1fr 1fr;
-
-            gap: 17px;
-
+            grid-template-columns: 1.3fr 1fr 1fr;
+            gap: 24px;
         }
-
 
         .destination-card {
-
             background: white;
-
             border-radius: var(--radius);
-
             overflow: hidden;
-
-            border:
-                1px solid
-                rgba(16,43,37,.06);
-
-            transition:
-                transform .25s,
-                box-shadow .25s;
-
+            border: 1px solid var(--line);
+            transition: transform .25s, box-shadow .25s;
         }
-
 
         .destination-card:hover {
-
-            transform:
-                translateY(-7px);
-
+            transform: translateY(-7px);
             box-shadow: var(--shadow);
-
         }
 
-
         .destination-image {
-
             height: 300px;
-
             position: relative;
-
             overflow: hidden;
-
         }
 
-
-        .destination-card:first-child
-        .destination-image {
-
-            height: 390px;
-
+        .destination-card:first-child .destination-image {
+            height: 380px;
         }
-
 
         /* JAPAN */
 
         .japan {
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #d5dfd0,
-                    #a8c1ad 55%,
-                    #57766c
-                );
-
+            background: linear-gradient(145deg, #e0f2fe, #bae6fd 55%, #0284c7);
         }
-
 
         .japan-sun {
-
             position: absolute;
-
             width: 95px;
-
             height: 95px;
-
-            background:
-                #f0d99d;
-
+            background: #ffffff;
             border-radius: 50%;
-
             top: 45px;
-
             right: 45px;
-
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
         }
-
 
         .japan-mountain {
-
             position: absolute;
-
             bottom: -10px;
-
             left: -10%;
-
             width: 120%;
-
             height: 210px;
-
-            background: #476a5e;
-
-            clip-path:
-                polygon(
-                    0 75%,
-                    22% 25%,
-                    40% 62%,
-                    60% 10%,
-                    80% 57%,
-                    100% 30%,
-                    100% 100%,
-                    0 100%
-                );
-
+            background: #0369a1;
+            clip-path: polygon(0 75%, 22% 25%, 40% 62%, 60% 10%, 80% 57%, 100% 30%, 100% 100%, 0 100%);
         }
-
-
-        .japan-building {
-
-            position: absolute;
-
-            left: 28%;
-
-            top: 42%;
-
-            color: #385449;
-
-            font-size: 75px;
-
-        }
-
 
         /* EUROPE */
 
         .europe {
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #ddd5c5,
-                    #a8bcb5
-                );
-
+            background: linear-gradient(145deg, #f1f5f9, #cbd5e1);
         }
-
 
         .europe-sun {
-
             width: 80px;
-
             height: 80px;
-
             border-radius: 50%;
-
-            background: #e7d29b;
-
+            background: var(--blue-accent);
             position: absolute;
-
             top: 45px;
-
             right: 40px;
-
+            opacity: 0.8;
         }
-
 
         .europe-arch {
-
             width: 130px;
-
             height: 180px;
-
             position: absolute;
-
             bottom: -10px;
-
             left: 30%;
-
-            border:
-                28px solid
-                #536d67;
-
+            border: 28px solid #334155;
             border-bottom: 0;
-
-            border-radius:
-                100px 100px 0 0;
-
+            border-radius: 100px 100px 0 0;
         }
-
 
         /* TROPICAL */
 
         .tropical {
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #cde3df,
-                    #78a99f 55%,
-                    #d7c59d
-                );
-
+            background: linear-gradient(145deg, #e0f2fe, #38bdf8 55%, #0284c7);
         }
-
 
         .island {
-
             position: absolute;
-
             bottom: 40px;
-
             left: 12%;
-
             width: 75%;
-
             height: 80px;
-
-            background: #d7c99b;
-
+            background: #fef08a;
             border-radius: 50%;
-
             transform: rotate(-5deg);
-
         }
-
-
-        .palm {
-
-            position: absolute;
-
-            top: 35px;
-
-            right: 20%;
-
-            font-size: 105px;
-
-            color: #345e54;
-
-        }
-
 
         .destination-content {
-
-            padding: 21px 23px 25px;
-
+            padding: 24px 28px;
         }
-
 
         .category {
-
-            font-size: 9px;
-
+            font-size: 10px;
             letter-spacing: .17em;
-
-            color: #7d8983;
-
+            color: var(--blue-accent);
             font-weight: 800;
-
+            text-transform: uppercase;
         }
-
 
         .destination-content h3 {
-
-            font-size: 25px;
-
-            margin:
-                4px 0;
-
+            font-size: 24px;
+            margin: 6px 0;
+            color: var(--dark);
         }
-
 
         .destination-content p {
-
             color: var(--muted);
-
-            font-size: 11px;
-
-            margin-bottom: 15px;
-
+            font-size: 13px;
+            margin-bottom: 18px;
         }
-
 
         .card-link {
-
-            font-size: 11px;
-
-            font-weight: 800;
-
-        }
-
-
-        /* =========================================================
-           TRAVEL ESSENTIALS
-        ========================================================= */
-
-        .products-section {
-
-            background:
-                #edf0e8;
-
-            padding:
-                110px 0;
-
-        }
-
-
-        .products-container {
-
-            width: min(1250px, 86%);
-
-            margin: auto;
-
-        }
-
-
-        .product-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                1.2fr 1fr 1fr;
-
-            gap: 17px;
-
-        }
-
-
-        .product-card {
-
-            background: white;
-
-            border-radius: var(--radius);
-
-            overflow: hidden;
-
-            transition: .25s;
-
-            position: relative;
-
-        }
-
-
-        .product-card:hover {
-
-            transform:
-                translateY(-7px);
-
-            box-shadow: var(--shadow);
-
-        }
-
-
-        .product-image {
-
-            height: 270px;
-
-            position: relative;
-
-            overflow: hidden;
-
-        }
-
-
-        .product-one {
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #dce8dd,
-                    #bdcfb9
-                );
-
-        }
-
-
-        .packing-box {
-
-            width: 120px;
-
-            height: 90px;
-
-            border:
-                3px solid
-                #35574d;
-
-            border-radius: 13px;
-
-            position: absolute;
-
-            transform:
-                rotate(-12deg);
-
-        }
-
-
-        .box-one {
-
-            left: 18%;
-
-            top: 34%;
-
-        }
-
-
-        .box-two {
-
-            left: 38%;
-
-            top: 22%;
-
-            transform:
-                rotate(8deg);
-
-        }
-
-
-        .box-three {
-
-            left: 50%;
-
-            top: 45%;
-
-            transform:
-                rotate(-5deg);
-
-        }
-
-
-        .product-two {
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #ddd5c6,
-                    #c3d3cd
-                );
-
-        }
-
-
-        .cloud {
-
-            position: absolute;
-
-            left: 10%;
-
-            top: 10%;
-
-            font-size: 120px;
-
-            opacity: .35;
-
-        }
-
-
-        .neck-pillow {
-
-            position: absolute;
-
-            width: 175px;
-
-            height: 115px;
-
-            border:
-                28px solid
-                #536e66;
-
-            border-bottom:
-                28px solid transparent;
-
-            border-radius:
-                100px 100px 0 0;
-
-            right: 16%;
-
-            bottom: 20%;
-
-            transform:
-                rotate(-8deg);
-
-        }
-
-
-        .product-three {
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #d1dfdb,
-                    #a5bdb7
-                );
-
-        }
-
-
-        .phone {
-
-            width: 105px;
-
-            height: 185px;
-
-            border:
-                5px solid
-                #23483f;
-
-            border-radius: 20px;
-
-            position: absolute;
-
-            left: 39%;
-
-            top: 18%;
-
-            background: #e8eee9;
-
-            transform:
-                rotate(9deg);
-
-        }
-
-
-        .signal {
-
-            position: absolute;
-
-            right: 18%;
-
-            top: 25%;
-
-            font-size: 65px;
-
-            color: #345e54;
-
-        }
-
-
-        .product-content {
-
-            padding:
-                20px 21px 23px;
-
-        }
-
-
-        .product-content h3 {
-
-            font-size: 21px;
-
-            margin: 5px 0;
-
-        }
-
-
-        .product-content p {
-
-            color: var(--muted);
-
-            font-size: 11px;
-
-            margin-bottom: 16px;
-
-        }
-
-
-        .product-badge {
-
-            position: absolute;
-
-            top: 15px;
-
-            left: 15px;
-
-            z-index: 5;
-
-            background: var(--dark);
-
-            color: white;
-
-            padding:
-                6px 9px;
-
-            border-radius: 100px;
-
-            font-size: 8px;
-
-            font-weight: 800;
-
-            letter-spacing: .1em;
-
-        }
-
-
-        .affiliate-note {
-
-            margin-top: 18px;
-
-            color: #858e89;
-
-            font-size: 9px;
-
-        }
-
-
-        /* =========================================================
-           PINPOINT METHOD
-        ========================================================= */
-
-        .method {
-
-            background:
-                var(--dark);
-
-            color: white;
-
-            display: grid;
-
-            grid-template-columns:
-                1fr 1fr;
-
-            min-height: 620px;
-
-        }
-
-
-        .method-visual {
-
-            position: relative;
-
-            min-height: 620px;
-
-            overflow: hidden;
-
-            background:
-                radial-gradient(
-                    circle at 55% 30%,
-                    #4c776b,
-                    #183d34 65%
-                );
-
-        }
-
-
-        .map-circle {
-
-            position: absolute;
-
-            width: 600px;
-
-            height: 500px;
-
-            border:
-                1px solid
-                rgba(255,255,255,.15);
-
-            border-radius:
-                45% 55% 42% 58%;
-
-            left: -70px;
-
-            top: 80px;
-
-            transform:
-                rotate(-18deg);
-
-        }
-
-
-        .map-circle::before {
-
-            content: "";
-
-            position: absolute;
-
-            inset: 50px 90px;
-
-            border:
-                1px dashed
-                rgba(255,255,255,.16);
-
-            border-radius: 50%;
-
-        }
-
-
-        .map-circle::after {
-
-            content: "";
-
-            position: absolute;
-
-            inset: 110px 25px;
-
-            border:
-                1px dashed
-                rgba(255,255,255,.12);
-
-            border-radius: 50%;
-
-        }
-
-
-        .route {
-
-            position: absolute;
-
-            width: 330px;
-
-            border-top:
-                2px dashed
-                rgba(220,233,182,.7);
-
-            top: 43%;
-
-            left: 35%;
-
-            transform:
-                rotate(28deg);
-
-        }
-
-
-        .map-pin {
-
-            position: absolute;
-
-            color: var(--lime);
-
-            font-size: 24px;
-
-        }
-
-
-        .pin-one {
-
-            top: 25%;
-
-            left: 48%;
-
-        }
-
-
-        .pin-two {
-
-            top: 54%;
-
-            left: 70%;
-
-        }
-
-
-        .stamp {
-
-            position: absolute;
-
-            bottom: 12%;
-
-            left: 12%;
-
-            width: 150px;
-
-            height: 150px;
-
-            border:
-                1px solid
-                rgba(255,255,255,.3);
-
-            border-radius: 50%;
-
-            display: grid;
-
-            place-items: center;
-
-            text-align: center;
-
-            font-size: 9px;
-
-            letter-spacing: .15em;
-
-            line-height: 1.4;
-
-            transform:
-                rotate(-12deg);
-
-        }
-
-
-        .stamp strong {
-
-            display: block;
-
-            font-size: 18px;
-
-            color: var(--lime);
-
-        }
-
-
-        .method-content {
-
-            padding:
-                90px 8vw;
-
-            align-self: center;
-
-        }
-
-
-        .method-content .eyebrow {
-
-            color: #aebdb6;
-
-        }
-
-
-        .method-content h2 {
-
-            font-size:
-                clamp(40px,4vw,58px);
-
-            line-height: 1.02;
-
-            letter-spacing: -.045em;
-
-        }
-
-
-        .method-content h2 em {
-
-            font-family:
-                "Playfair Display",
-                serif;
-
-        }
-
-
-        .method-content > p {
-
-            max-width: 520px;
-
-            color: #bdcac4;
-
-            font-size: 13px;
-
-            margin:
-                22px 0 30px;
-
-        }
-
-
-        .method-points {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3,1fr);
-
-            gap: 16px;
-
-            margin-bottom: 35px;
-
-        }
-
-
-        .method-point {
-
-            border-top:
-                1px solid
-                rgba(255,255,255,.18);
-
-            padding-top: 12px;
-
-        }
-
-
-        .method-point span {
-
-            font-size: 9px;
-
-            color: var(--lime);
-
-        }
-
-
-        .method-point strong {
-
-            display: block;
-
             font-size: 12px;
-
-            margin:
-                5px 0;
-
-        }
-
-
-        .method-point small {
-
-            display: block;
-
-            color: #9fafaa;
-
-            font-size: 9px;
-
-        }
-
-
-        .method-button {
-
-            background:
-                var(--lime);
-
-            color: var(--dark);
-
-        }
-
-
-        /* =========================================================
-           BLOG
-        ========================================================= */
-
-        .blog-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                1.25fr 1fr 1fr;
-
-            gap: 17px;
-
-        }
-
-
-        .blog-card {
-
-            background: white;
-
-            border-radius: var(--radius);
-
-            overflow: hidden;
-
-            border:
-                1px solid
-                rgba(16,43,37,.06);
-
-            transition: .25s;
-
-        }
-
-
-        .blog-card:hover {
-
-            transform:
-                translateY(-7px);
-
-            box-shadow: var(--shadow);
-
-        }
-
-
-        .blog-image {
-
-            height: 230px;
-
-            display: grid;
-
-            place-items: center;
-
-            position: relative;
-
-            overflow: hidden;
-
-        }
-
-
-        .blog-japan {
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #b7cdbf,
-                    #52776a
-                );
-
-        }
-
-
-        .blog-japan span {
-
-            font-family: serif;
-
-            font-size: 100px;
-
-            color:
-                rgba(255,255,255,.5);
-
-        }
-
-
-        .blog-packing {
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #ddd0b5,
-                    #7d9284
-                );
-
-        }
-
-
-        .blog-packing span {
-
-            color:
-                rgba(255,255,255,.65);
-
-            font-size: 38px;
-
-            font-weight: 900;
-
-            letter-spacing: .16em;
-
-        }
-
-
-        .blog-budget {
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #cbded3,
-                    #728d7e
-                );
-
-        }
-
-
-        .blog-budget span {
-
-            font-size: 110px;
-
-            font-family: serif;
-
-            color:
-                rgba(255,255,255,.5);
-
-        }
-
-
-        .blog-content {
-
-            padding:
-                20px 21px 23px;
-
-        }
-
-
-        .blog-meta {
-
-            display: flex;
-
-            justify-content:
-                space-between;
-
-            gap: 10px;
-
-        }
-
-
-        .blog-meta span {
-
-            font-size: 9px;
-
-            letter-spacing: .14em;
-
-            color: #7e8a84;
-
             font-weight: 800;
-
+            color: var(--blue-accent);
         }
-
-
-        .blog-meta small {
-
-            color: #929b97;
-
-            font-size: 9px;
-
-        }
-
-
-        .blog-content h3 {
-
-            font-size: 21px;
-
-            line-height: 1.2;
-
-            margin:
-                10px 0 17px;
-
-        }
-
-
-        .main-blog .blog-content h3 {
-
-            font-size: 26px;
-
-        }
-
-
-        .blog-content p {
-
-            font-size: 11px;
-
-            color: var(--muted);
-
-            margin-bottom: 16px;
-
-        }
-
 
         /* =========================================================
-           NEWSLETTER
+           RESPONSIVE MOBILE ADJUSTMENTS
         ========================================================= */
 
-        .newsletter {
-
-            width: min(1250px,86%);
-
-            margin:
-                120px auto;
-
-            background:
-                #e2e9df;
-
-            border-radius: 31px;
-
-            padding:
-                60px 7%;
-
-            display: grid;
-
-            grid-template-columns:
-                1fr 1fr;
-
-            gap: 60px;
-
-            align-items: center;
-
-        }
-
-
-        .newsletter h2 {
-
-            font-size:
-                clamp(38px,4vw,55px);
-
-            line-height: 1.02;
-
-            letter-spacing: -.045em;
-
-        }
-
-
-        .newsletter h2 em {
-
-            font-family:
-                "Playfair Display",
-                serif;
-
-        }
-
-
-        .newsletter-description {
-
-            max-width: 500px;
-
-            color: var(--muted);
-
-            font-size: 12px;
-
-            margin-top: 15px;
-
-        }
-
-
-        .newsletter label {
-
-            display: block;
-
-            font-size: 9px;
-
-            font-weight: 800;
-
-            letter-spacing: .13em;
-
-            margin-bottom: 8px;
-
-        }
-
-
-        .email-form {
-
-            display: flex;
-
-            background: white;
-
-            border:
-                1px solid
-                var(--line);
-
-            padding: 5px;
-
-            border-radius: 100px;
-
-        }
-
-
-        .email-form input {
-
-            flex: 1;
-
-            min-width: 0;
-
-            border: none;
-
-            outline: none;
-
-            background: transparent;
-
-            padding:
-                0 15px;
-
-            font-size: 12px;
-
-        }
-
-
-        .email-form button {
-
-            border: none;
-
-            background:
-                var(--dark);
-
-            color: white;
-
-            padding:
-                12px 20px;
-
-            border-radius: 100px;
-
-            font-weight: 800;
-
-            cursor: pointer;
-
-        }
-
-
-        .newsletter-note {
-
-            color: #858f89;
-
-            font-size: 9px;
-
-            margin:
-                9px 12px;
-
-        }
-
-
-        /* =========================================================
-           FOOTER
-        ========================================================= */
-
-        footer {
-
-            background:
-                #102b25;
-
-            color: #dce4df;
-
-            padding:
-                70px 7% 22px;
-
-        }
-
-
-        .footer-grid {
-
-            max-width: 1250px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns:
-                2fr 1fr 1fr 1fr;
-
-            gap: 50px;
-
-        }
-
-
-        .footer-description {
-
-            max-width: 300px;
-
-            color: #9eafa8;
-
-            font-size: 11px;
-
-            margin-top: 18px;
-
-        }
-
-
-        .footer-title {
-
-            color: white;
-
-            font-size: 10px;
-
-            letter-spacing: .13em;
-
-            text-transform: uppercase;
-
-            margin-bottom: 16px;
-
-        }
-
-
-        .footer-column a {
-
-            display: block;
-
-            color: #9eafa8;
-
-            font-size: 11px;
-
-            margin:
-                9px 0;
-
-            transition: .2s;
-
-        }
-
-
-        .footer-column a:hover {
-
-            color: white;
-
-        }
-
-
-        .footer-bottom {
-
-            max-width: 1250px;
-
-            margin:
-                55px auto 0;
-
-            padding-top: 18px;
-
-            border-top:
-                1px solid
-                rgba(255,255,255,.1);
-
-            display: flex;
-
-            justify-content:
-                space-between;
-
-            gap: 20px;
-
-            color: #74877f;
-
-            font-size: 8px;
-
-            letter-spacing: .08em;
-
-        }
-
-
-        /* =========================================================
-           TABLET
-        ========================================================= */
-
-        @media(max-width: 1000px) {
-
-            .navigation {
-
-                gap: 16px;
-
-            }
-
-
+        @media (max-width: 1024px) {
             .hero {
-
-                grid-template-columns:
-                    1fr;
-
+                grid-template-columns: 1fr;
             }
-
-
-            .hero-content {
-
-                padding:
-                    70px 8% 45px;
-
-            }
-
 
             .hero-visual {
-
-                min-height: 470px;
-
+                min-height: 450px;
             }
-
-
-            .destination-grid {
-
-                grid-template-columns:
-                    1fr 1fr;
-
-            }
-
-
-            .destination-card:first-child {
-
-                grid-column:
-                    span 2;
-
-            }
-
-
-            .product-grid {
-
-                grid-template-columns:
-                    1fr 1fr;
-
-            }
-
-
-            .product-card:first-child {
-
-                grid-column:
-                    span 2;
-
-            }
-
-
-            .blog-grid {
-
-                grid-template-columns:
-                    1fr 1fr;
-
-            }
-
-
-            .main-blog {
-
-                grid-column:
-                    span 2;
-
-            }
-
-
-            .method {
-
-                grid-template-columns:
-                    1fr;
-
-            }
-
-
-            .method-visual {
-
-                min-height: 430px;
-
-            }
-
-
-            .newsletter {
-
-                grid-template-columns:
-                    1fr;
-
-            }
-
-
-            .footer-grid {
-
-                grid-template-columns:
-                    2fr 1fr 1fr;
-
-            }
-
-        }
-
-
-        /* =========================================================
-           MOBILE
-        ========================================================= */
-
-        @media(max-width: 720px) {
-
-            .announcement {
-
-                font-size: 9px;
-
-            }
-
-
-            .announcement span {
-
-                display: none;
-
-            }
-
-
-            .header {
-
-                min-height: 72px;
-
-            }
-
-
-            .navigation {
-
-                display: none;
-
-                position: absolute;
-
-                left: 0;
-
-                right: 0;
-
-                top: 68px;
-
-                padding: 20px;
-
-                background: white;
-
-                border-radius: 18px;
-
-                box-shadow: var(--shadow);
-
-                flex-direction: column;
-
-                align-items: flex-start;
-
-                gap: 17px;
-
-            }
-
-
-            .navigation.show {
-
-                display: flex;
-
-            }
-
-
-            .navigation a.active::after {
-
-                display: none;
-
-            }
-
-
-            .header-button {
-
-                display: none;
-
-            }
-
-
-            .menu-button {
-
-                display: block;
-
-            }
-
-
-            .hero {
-
-                width: 94%;
-
-                border-radius: 27px;
-
-            }
-
-
-            .hero-content {
-
-                padding:
-                    58px 7% 42px;
-
-            }
-
-
-            .hero h1 {
-
-                font-size: 51px;
-
-            }
-
-
-            .hero-description {
-
-                font-size: 13px;
-
-            }
-
-
-            .hero-visual {
-
-                min-height: 360px;
-
-            }
-
-
-            .sun {
-
-                width: 105px;
-
-                height: 105px;
-
-                top: 50px;
-
-            }
-
-
-            .mountain {
-
-                border-left-width: 160px;
-
-                border-right-width: 160px;
-
-                border-bottom-width: 220px;
-
-            }
-
-
-            .floating-card {
-
-                transform:
-                    scale(.85);
-
-            }
-
-
-            .location-card {
-
-                left: 3%;
-
-            }
-
-
-            .guide-card {
-
-                right: 2%;
-
-            }
-
-
-            .quick-links {
-
-                width: 90%;
-
-                grid-template-columns:
-                    1fr;
-
-                margin-top:
-                    -20px;
-
-            }
-
-
-            .quick-link {
-
-                border-right: none;
-
-                border-bottom:
-                    1px solid var(--line);
-
-                padding:
-                    18px 20px;
-
-            }
-
-
-            .section {
-
-                width: 90%;
-
-                margin:
-                    80px auto;
-
-            }
-
-
-            .section-header {
-
-                display: block;
-
-            }
-
-
-            .view-all {
-
-                display: inline-block;
-
-                margin-top: 18px;
-
-            }
-
 
             .destination-grid,
-            .product-grid,
-            .blog-grid {
-
-                grid-template-columns:
-                    1fr;
-
+            .quick-links {
+                grid-template-columns: 1fr;
             }
 
-
-            .destination-card:first-child,
-            .product-card:first-child,
-            .main-blog {
-
-                grid-column:
-                    auto;
-
+            .quick-link {
+                border-right: none;
+                border-bottom: 1px solid var(--line);
             }
 
-
-            .destination-card:first-child
-            .destination-image {
-
-                height: 300px;
-
+            .navigation {
+                display: none;
             }
 
-
-            .products-section {
-
-                padding:
-                    80px 0;
-
-            }
-
-
-            .method-content {
-
-                padding:
-                    60px 8%;
-
-            }
-
-
-            .method-points {
-
-                grid-template-columns:
-                    1fr;
-
-            }
-
-
-            .method-visual {
-
-                min-height:
-                    330px;
-
-            }
-
-
-            .map-circle {
-
-                width: 480px;
-
-                height: 400px;
-
-            }
-
-
-            .newsletter {
-
-                width: 90%;
-
-                padding:
-                    45px 8%;
-
-                gap: 35px;
-
-            }
-
-
-            .email-form {
-
-                flex-direction:
-                    column;
-
-                background:
-                    transparent;
-
-                border: none;
-
-                gap: 8px;
-
-                padding: 0;
-
-            }
-
-
-            .email-form input {
-
-                min-height: 45px;
-
-                background:
-                    white;
-
-                border:
-                    1px solid
-                    var(--line);
-
-                border-radius: 100px;
-
-            }
-
-
-            .email-form button {
-
-                min-height: 45px;
-
-            }
-
-
-            .footer-grid {
-
-                grid-template-columns:
-                    1fr 1fr;
-
-                gap: 35px;
-
-            }
-
-
-            .footer-brand {
-
-                grid-column:
-                    span 2;
-
-            }
-
-
-            .footer-bottom {
-
+            .menu-button {
                 display: block;
-
             }
-
-
-            .footer-bottom div {
-
-                margin-top: 8px;
-
-            }
-
         }
 
+        @media (max-width: 640px) {
+            .announcement {
+                font-size: 10px;
+                padding: 8px 12px;
+            }
 
-        /* =========================================================
-           VERY SMALL MOBILE
-        ========================================================= */
-
-        @media(max-width: 420px) {
+            .hero-content {
+                padding: 60px 24px;
+            }
 
             .hero h1 {
-
-                font-size: 44px;
-
+                font-size: 38px;
             }
-
 
             .hero-buttons {
-
-                flex-direction:
-                    column;
-
+                flex-direction: column;
             }
-
 
             .button {
-
                 width: 100%;
-
             }
-
-
-            .hero-trust {
-
-                flex-direction:
-                    column;
-
-                gap: 7px;
-
-            }
-
-
-            .floating-card {
-
-                transform:
-                    scale(.72);
-
-            }
-
         }
-
     </style>
-
 </head>
-
 
 <body>
 
-
-    <!-- =========================================================
-         TOP ANNOUNCEMENT
-    ========================================================= -->
-
+    <!-- ANNOUNCEMENT BAR -->
     <div class="announcement">
-
-        <span>
-            ✦ Smart travel inspiration for your next adventure
-        </span>
-
-        <a href="blog.html">
-            Explore travel guides →
-        </a>
-
+        <span>✨ Explore the Top 10 Destinations for 2026</span>
+        <a href="#destinations">Read Guide &rarr;</a>
     </div>
 
-
-
-    <!-- =========================================================
-         HEADER / NAVIGATION
-    ========================================================= -->
-
+    <!-- HEADER -->
     <header class="header">
+        <div class="logo">
+            <div class="logo-symbol">📍</div>
+            <div class="logo-text">
+                <strong>PINPOINT</strong>
+                <small>TRAVEL & GUIDES</small>
+            </div>
+        </div>
 
-        <a href="index.html"
-            class="logo">
-
-            <span class="logo-symbol">
-                ✦
-            </span>
-
-            <span class="logo-text">
-
-                <strong>
-                    PINPOINT
-                </strong>
-
-                <small>
-                    TRAVEL
-                </small>
-
-            </span>
-
-        </a>
-
-
-        <button
-            class="menu-button"
-            id="menuButton"
-            aria-label="Open navigation">
-
-            ☰
-
-        </button>
-
-
-        <nav
-            class="navigation"
-            id="navigation">
-
-            <a
-                href="index.html"
-                class="active">
-
-                Home
-
-            </a>
-
-
-            <a href="destinations.html">
-
-                Destinations
-
-            </a>
-
-
-            <a href="products.html">
-
-                Travel Essentials
-
-            </a>
-
-
-            <a href="blog.html">
-
-                Travel Guides
-
-            </a>
-
-
-            <a href="about.html">
-
-                About
-
-            </a>
-
+        <nav class="navigation">
+            <a href="#" class="active">Home</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#guides">Travel Guides</a>
+            <a href="#essentials">Essentials</a>
         </nav>
 
-
-        <a
-            href="destinations.html"
-            class="header-button">
-
-            Start Exploring ↗
-
-        </a>
-
+        <a href="#plan" class="header-button">Plan Your Trip</a>
+        <button class="menu-button" aria-label="Open navigation">☰</button>
     </header>
 
-
-
-    <main>
-
-
-        <!-- =====================================================
-             HERO
-        ====================================================== -->
-
-        <section class="hero">
-
-
-            <div class="hero-content">
-
-                <p class="eyebrow">
-
-                    TRAVEL SMART • DISCOVER MORE
-
-                </p>
-
-
-                <h1>
-
-                    Go further.<br>
-
-                    <em>
-                        Travel smarter.
-                    </em>
-
-                </h1>
-
-
-                <p class="hero-description">
-
-                    Discover inspiring destinations,
-                    practical travel guides and useful
-                    travel essentials curated to make
-                    planning your next adventure easier.
-
-                </p>
-
-
-                <div class="hero-buttons">
-
-                    <a
-                        href="destinations.html"
-                        class="button button-primary">
-
-                        Explore Destinations
-                        <span style="margin-left:12px;">
-                            →
-                        </span>
-
-                    </a>
-
-
-                    <a
-                        href="blog.html"
-                        class="button button-secondary">
-
-                        Read Travel Guides
-
-                    </a>
-
-                </div>
-
-
-                <div class="hero-trust">
-
-                    <span>
-                        ✦ Curated destinations
-                    </span>
-
-                    <span>
-                        ✦ Practical guides
-                    </span>
-
-                    <span>
-                        ✦ Useful travel finds
-                    </span>
-
-                </div>
-
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="eyebrow">Discover The World</span>
+            <h1>Travel Smarter. <em>Go Further.</em></h1>
+            <p class="hero-description">
+                Discover inspiring destinations, detailed practical travel guides, and carefully selected travel essentials designed to make every journey seamless.
+            </p>
+            <div class="hero-buttons">
+                <a href="#destinations" class="button button-primary">Explore Destinations</a>
+                <a href="#guides" class="button button-secondary">Browse Guides</a>
             </div>
-
-
-
-            <!-- HERO VISUAL -->
-
-            <div class="hero-visual">
-
-
-                <div class="sun"></div>
-
-                <div class="hero-ring"></div>
-
-                <div class="hero-ring two"></div>
-
-
-                <div
-                    class="mountain mountain-one">
-                </div>
-
-
-                <div
-                    class="mountain mountain-two">
-                </div>
-
-
-                <div
-                    class="mountain mountain-three">
-                </div>
-
-
-                <div class="ocean"></div>
-
-                <div class="road"></div>
-
-
-
-                <!-- FLOATING CARD -->
-
-                <div
-                    class="floating-card location-card">
-
-                    <span class="floating-icon">
-                        ⌖
-                    </span>
-
-                    <div>
-
-                        <small>
-                            YOUR NEXT STOP
-                        </small>
-
-                        <strong>
-                            Find your place
-                        </strong>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- FLOATING CARD -->
-
-                <div
-                    class="floating-card guide-card">
-
-                    <span class="floating-icon">
-                        ✦
-                    </span>
-
-                    <div>
-
-                        <small>
-                            PLAN BETTER
-                        </small>
-
-                        <strong>
-                            Guides + essentials
-                        </strong>
-
-                    </div>
-
-                </div>
-
+            <div class="hero-trust">
+                <span>✓ Verified Guides</span>
+                <span>✓ 100+ Destinations</span>
+                <span>✓ Trusted Reviews</span>
             </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             QUICK LINKS
-        ====================================================== -->
-
-        <section class="quick-links">
-
-
-            <a
-                href="destinations.html"
-                class="quick-link">
-
-                <span class="quick-number">
-                    01
-                </span>
-
-                <strong>
-                    Find a destination
-                </strong>
-
-                <small>
-                    Inspiration for every trip
-                </small>
-
-            </a>
-
-
-            <a
-                href="products.html"
-                class="quick-link">
-
-                <span class="quick-number">
-                    02
-                </span>
-
-                <strong>
-                    Pack better
-                </strong>
-
-                <small>
-                    Useful travel essentials
-                </small>
-
-            </a>
-
-
-            <a
-                href="blog.html"
-                class="quick-link">
-
-                <span class="quick-number">
-                    03
-                </span>
-
-                <strong>
-                    Plan with confidence
-                </strong>
-
-                <small>
-                    Practical travel guides
-                </small>
-
-            </a>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             DESTINATIONS
-        ====================================================== -->
-
-        <section class="section">
-
-
-            <div class="section-header">
-
-                <div>
-
-                    <p class="eyebrow">
-                        WHERE WILL YOU GO?
-                    </p>
-
-                    <h2>
-                        Places worth
-                        <em>
-                            pinpointing.
-                        </em>
-                    </h2>
-
-                    <p class="section-description">
-
-                        Explore destination inspiration
-                        for city breaks, cultural journeys,
-                        tropical escapes and unforgettable
-                        adventures.
-
-                    </p>
-
-                </div>
-
-
-                <a
-                    href="destinations.html"
-                    class="view-all">
-
-                    View all destinations →
-
-                </a>
-
-            </div>
-
-
-
-            <div class="destination-grid">
-
-
-                <!-- JAPAN -->
-
-                <a
-                    href="destinations.html#japan"
-                    class="destination-card">
-
-                    <div
-                        class="destination-image japan">
-
-                        <div
-                            class="japan-sun">
-                        </div>
-
-                        <div
-                            class="japan-mountain">
-                        </div>
-
-                        <div
-                            class="japan-building">
-
-                            ⌂
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="destination-content">
-
-                        <span class="category">
-                            ASIA
-                        </span>
-
-                        <h3>
-                            Japan
-                        </h3>
-
-                        <p>
-                            Culture, food, cities
-                            and hidden gems.
-                        </p>
-
-                        <span class="card-link">
-                            Explore Japan →
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-
-                <!-- EUROPE -->
-
-                <a
-                    href="destinations.html#europe"
-                    class="destination-card">
-
-                    <div
-                        class="destination-image europe">
-
-                        <div
-                            class="europe-sun">
-                        </div>
-
-                        <div
-                            class="europe-arch">
-                        </div>
-
-                    </div>
-
-
-                    <div class="destination-content">
-
-                        <span class="category">
-                            EUROPE
-                        </span>
-
-                        <h3>
-                            European Escapes
-                        </h3>
-
-                        <p>
-                            Classic cities,
-                            culture and slow travel.
-                        </p>
-
-                        <span class="card-link">
-                            Explore Europe →
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-
-                <!-- TROPICAL -->
-
-                <a
-                    href="destinations.html#tropical"
-                    class="destination-card">
-
-                    <div
-                        class="destination-image tropical">
-
-                        <div class="island">
-                        </div>
-
-                        <div class="palm">
-                            ♧
-                        </div>
-
-                    </div>
-
-
-                    <div class="destination-content">
-
-                        <span class="category">
-                            GETAWAYS
-                        </span>
-
-                        <h3>
-                            Tropical Retreats
-                        </h3>
-
-                        <p>
-                            Sun, sea and unforgettable
-                            stays.
-                        </p>
-
-                        <span class="card-link">
-                            Explore getaways →
-                        </span>
-
-                    </div>
-
-                </a>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             TRAVEL ESSENTIALS
-        ====================================================== -->
-
-        <section class="products-section">
-
-
-            <div class="products-container">
-
-
-                <div class="section-header">
-
-                    <div>
-
-                        <p class="eyebrow">
-                            TRAVEL ESSENTIALS
-                        </p>
-
-                        <h2>
-                            Pack less.
-                            <em>
-                                Choose better.
-                            </em>
-                        </h2>
-
-                        <p class="section-description">
-
-                            Discover useful travel products,
-                            packing solutions and practical
-                            gear selected for better journeys.
-
-                        </p>
-
-                    </div>
-
-
-                    <a
-                        href="products.html"
-                        class="view-all">
-
-                        Browse all essentials →
-
-                    </a>
-
-                </div>
-
-
-
-                <div class="product-grid">
-
-
-                    <!-- PACKING -->
-
-                    <a
-                        href="products.html#packing"
-                        class="product-card">
-
-                        <span class="product-badge">
-                            TRAVEL SMART
-                        </span>
-
-
-                        <div
-                            class="product-image product-one">
-
-                            <div
-                                class="packing-box box-one">
-                            </div>
-
-                            <div
-                                class="packing-box box-two">
-                            </div>
-
-                            <div
-                                class="packing-box box-three">
-                            </div>
-
-                        </div>
-
-
-                        <div class="product-content">
-
-                            <span class="category">
-                                PACKING
-                            </span>
-
-                            <h3>
-                                Better Packing Essentials
-                            </h3>
-
-                            <p>
-                                Organize your luggage
-                                and make every trip easier.
-                            </p>
-
-                            <span class="card-link">
-                                Explore collection →
-                            </span>
-
-                        </div>
-
-                    </a>
-
-
-
-                    <!-- COMFORT -->
-
-                    <a
-                        href="products.html#comfort"
-                        class="product-card">
-
-                        <div
-                            class="product-image product-two">
-
-                            <div class="cloud">
-                                ☁
-                            </div>
-
-                            <div
-                                class="neck-pillow">
-                            </div>
-
-                        </div>
-
-
-                        <div class="product-content">
-
-                            <span class="category">
-                                COMFORT
-                            </span>
-
-                            <h3>
-                                Journey Comfort
-                            </h3>
-
-                            <p>
-                                Small upgrades for flights,
-                                road trips and long journeys.
-                            </p>
-
-                            <span class="card-link">
-                                See collection →
-                            </span>
-
-                        </div>
-
-                    </a>
-
-
-
-                    <!-- TECH -->
-
-                    <a
-                        href="products.html#tech"
-                        class="product-card">
-
-                        <div
-                            class="product-image product-three">
-
-                            <div class="phone">
-                            </div>
-
-                            <div class="signal">
-                                ⌁
-                            </div>
-
-                        </div>
-
-
-                        <div class="product-content">
-
-                            <span class="category">
-                                TRAVEL TECH
-                            </span>
-
-                            <h3>
-                                Useful Travel Tech
-                            </h3>
-
-                            <p>
-                                Practical gear that keeps
-                                you connected on the go.
-                            </p>
-
-                            <span class="card-link">
-                                Discover more →
-                            </span>
-
-                        </div>
-
-                    </a>
-
-                </div>
-
-
-                <p class="affiliate-note">
-
-                    Some product links may be affiliate
-                    links. If you purchase through them,
-                    Pinpoint Travel may earn a commission
-                    at no extra cost to you.
-
-                </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             PINPOINT METHOD
-        ====================================================== -->
-
-        <section class="method">
-
-
-            <!-- VISUAL -->
-
-            <div class="method-visual">
-
-                <div class="map-circle">
-                </div>
-
-                <div class="route">
-                </div>
-
-                <span class="map-pin pin-one">
-                    ✦
-                </span>
-
-                <span class="map-pin pin-two">
-                    ✦
-                </span>
-
-
-                <div class="stamp">
-
-                    PINPOINT
-
-                    <strong>
-                        YOUR<br>
-                        JOURNEY
-                    </strong>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- CONTENT -->
-
-            <div class="method-content">
-
-                <p class="eyebrow">
-                    THE PINPOINT METHOD
-                </p>
-
-
-                <h2>
-
-                    Good trips start with
-                    <em>
-                        good planning.
-                    </em>
-
-                </h2>
-
-
-                <p>
-
-                    Skip endless tabs and generic
-                    travel lists. Pinpoint Travel brings
-                    destination inspiration, planning
-                    advice, packing ideas and useful
-                    travel resources together in one place.
-
-                </p>
-
-
-                <div class="method-points">
-
-
-                    <div class="method-point">
-
-                        <span>
-                            01
-                        </span>
-
-                        <strong>
-                            Discover
-                        </strong>
-
-                        <small>
-                            Find places that match
-                            your travel style.
-                        </small>
-
-                    </div>
-
-
-                    <div class="method-point">
-
-                        <span>
-                            02
-                        </span>
-
-                        <strong>
-                            Prepare
-                        </strong>
-
-                        <small>
-                            Use practical guides
-                            before you leave.
-                        </small>
-
-                    </div>
-
-
-                    <div class="method-point">
-
-                        <span>
-                            03
-                        </span>
-
-                        <strong>
-                            Go
-                        </strong>
-
-                        <small>
-                            Travel with less stress
-                            and more confidence.
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-                <a
-                    href="blog.html"
-                    class="button method-button">
-
-                    Explore the travel guides →
-
-                </a>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             BLOG / TRAVEL GUIDES
-        ====================================================== -->
-
-        <section class="section">
-
-
-            <div class="section-header">
-
-                <div>
-
-                    <p class="eyebrow">
-                        FROM THE JOURNAL
-                    </p>
-
-                    <h2>
-                        Ideas for your
-                        <em>
-                            next journey.
-                        </em>
-                    </h2>
-
-                    <p class="section-description">
-
-                        Practical travel advice,
-                        destination inspiration,
-                        packing ideas and planning tips.
-
-                    </p>
-
-                </div>
-
-
-                <a
-                    href="blog.html"
-                    class="view-all">
-
-                    View all articles →
-
-                </a>
-
-            </div>
-
-
-
-            <div class="blog-grid">
-
-
-                <!-- BLOG 1 -->
-
-                <a
-                    href="blog.html#japan-guide"
-                    class="blog-card main-blog">
-
-                    <div
-                        class="blog-image blog-japan">
-
-                        <span>
-                            旅
-                        </span>
-
-                    </div>
-
-
-                    <div class="blog-content">
-
-                        <div class="blog-meta">
-
-                            <span>
-                                DESTINATION GUIDE
-                            </span>
-
-                            <small>
-                                8 min read
-                            </small>
-
-                        </div>
-
-
-                        <h3>
-                            How to plan a memorable
-                            Japan adventure
-                        </h3>
-
-
-                        <p>
-
-                            A practical starting point
-                            for routes, experiences,
-                            packing and planning.
-
-                        </p>
-
-
-                        <span class="card-link">
-                            Read guide →
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-
-                <!-- BLOG 2 -->
-
-                <a
-                    href="blog.html#packing"
-                    class="blog-card">
-
-                    <div
-                        class="blog-image blog-packing">
-
-                        <span>
-                            PACK
-                        </span>
-
-                    </div>
-
-
-                    <div class="blog-content">
-
-                        <div class="blog-meta">
-
-                            <span>
-                                TRAVEL TIPS
-                            </span>
-
-                            <small>
-                                5 min read
-                            </small>
-
-                        </div>
-
-
-                        <h3>
-                            The smarter way to
-                            pack for your next trip
-                        </h3>
-
-
-                        <span class="card-link">
-                            Read article →
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-
-                <!-- BLOG 3 -->
-
-                <a
-                    href="blog.html#budget"
-                    class="blog-card">
-
-                    <div
-                        class="blog-image blog-budget">
-
-                        <span>
-                            $
-                        </span>
-
-                    </div>
-
-
-                    <div class="blog-content">
-
-                        <div class="blog-meta">
-
-                            <span>
-                                TRAVEL PLANNING
-                            </span>
-
-                            <small>
-                                6 min read
-                            </small>
-
-                        </div>
-
-
-                        <h3>
-                            Simple ways to plan
-                            a travel budget
-                        </h3>
-
-
-                        <span class="card-link">
-                            Read article →
-                        </span>
-
-                    </div>
-
-                </a>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             NEWSLETTER
-        ====================================================== -->
-
-        <section class="newsletter">
-
-
-            <div>
-
-                <p class="eyebrow">
-                    STAY IN THE LOOP
-                </p>
-
-
-                <h2>
-
-                    More journeys.<br>
-
-                    <em>
-                        Less guesswork.
-                    </em>
-
-                </h2>
-
-
-                <p class="newsletter-description">
-
-                    Get occasional destination ideas,
-                    travel tips and useful finds from
-                    Pinpoint Travel.
-
-                </p>
-
-            </div>
-
-
-
-            <div>
-
-                <label for="email">
-                    YOUR EMAIL ADDRESS
-                </label>
-
-
-                <form
-                    class="email-form"
-                    id="newsletterForm">
-
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="you@example.com"
-                        required>
-
-
-                    <button type="submit">
-
-                        Join →
-
-                    </button>
-
-                </form>
-
-
-                <p class="newsletter-note">
-
-                    No spam. Just useful travel
-                    inspiration.
-
-                </p>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-
-    <!-- =========================================================
-         FOOTER
-    ========================================================= -->
-
-    <footer>
-
-
-        <div class="footer-grid">
-
-
-            <!-- BRAND -->
-
-            <div class="footer-brand">
-
-                <a
-                    href="index.html"
-                    class="logo">
-
-                    <span
-                        class="logo-symbol"
-                        style="border-color:white;color:white;">
-
-                        ✦
-
-                    </span>
-
-
-                    <span class="logo-text">
-
-                        <strong style="color:white;">
-
-                            PINPOINT
-
-                        </strong>
-
-                        <small style="color:#9eafa8;">
-
-                            TRAVEL
-
-                        </small>
-
-                    </span>
-
-                </a>
-
-
-                <p class="footer-description">
-
-                    Smart inspiration for travelers
-                    who want to discover more,
-                    plan better and travel with
-                    confidence.
-
-                </p>
-
-            </div>
-
-
-
-            <!-- EXPLORE -->
-
-            <div class="footer-column">
-
-                <h4 class="footer-title">
-                    Explore
-                </h4>
-
-
-                <a href="destinations.html">
-                    Destinations
-                </a>
-
-                <a href="products.html">
-                    Travel Essentials
-                </a>
-
-                <a href="blog.html">
-                    Travel Guides
-                </a>
-
-            </div>
-
-
-
-            <!-- COMPANY -->
-
-            <div class="footer-column">
-
-                <h4 class="footer-title">
-                    Pinpoint Travel
-                </h4>
-
-
-                <a href="about.html">
-                    About Us
-                </a>
-
-                <a href="contact.html">
-                    Contact
-                </a>
-
-                <a href="privacy.html">
-                    Privacy Policy
-                </a>
-
-            </div>
-
-
-
-            <!-- SOCIAL -->
-
-            <div class="footer-column">
-
-                <h4 class="footer-title">
-                    Follow
-                </h4>
-
-
-                <a href="#">
-                    Instagram
-                </a>
-
-                <a href="#">
-                    Pinterest
-                </a>
-
-                <a href="#">
-                    Facebook
-                </a>
-
-            </div>
-
         </div>
 
+        <div class="hero-visual">
+            <div class="sun"></div>
+            <div class="hero-ring"></div>
+            <div class="hero-ring two"></div>
+            <div class="mountain mountain-one"></div>
+            <div class="mountain mountain-two"></div>
+            <div class="mountain mountain-three"></div>
+            <div class="ocean"></div>
+            <div class="road"></div>
 
+            <div class="floating-card location-card">
+                <div class="floating-icon">📍</div>
+                <div>
+                    <small>Featured Destination</small>
+                    <strong>Kyoto, Japan</strong>
+                </div>
+            </div>
 
-        <div class="footer-bottom">
+            <div class="floating-card guide-card">
+                <div class="floating-icon">✈️</div>
+                <div>
+                    <small>Handpicked Guide</small>
+                    <strong>2026 Coastal Escapes</strong>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <span>
+    <!-- QUICK LINKS -->
+    <div class="quick-links">
+        <div class="quick-link">
+            <span class="quick-number">01</span>
+            <strong>Handpicked Spots</strong>
+            <small>Curated itineraries for every trip.</small>
+        </div>
+        <div class="quick-link">
+            <span class="quick-number">02</span>
+            <strong>Travel Gear</strong>
+            <small>Essentials tested by expert travelers.</small>
+        </div>
+        <div class="quick-link">
+            <span class="quick-number">03</span>
+            <strong>Smart Savings</strong>
+            <small>Exclusive flight and booking tips.</small>
+        </div>
+    </div>
 
-                © 2026 Pinpoint Travel.
-                All rights reserved.
-
-            </span>
-
-
-            <span>
-
-                PACK LIGHT · WANDER FAR ·
-                DISCOVER MORE
-
-            </span>
-
+    <!-- DESTINATIONS SECTION -->
+    <section class="section" id="destinations">
+        <div class="section-header">
+            <div>
+                <span class="eyebrow">Explore Places</span>
+                <h2>Trending <em>Destinations</em></h2>
+                <p class="section-description">
+                    Handpicked locations offering rich culture, stunning scenery, and unforgettable local experiences.
+                </p>
+            </div>
+            <a href="#" class="view-all">View All Destinations &rarr;</a>
         </div>
 
-    </footer>
+        <div class="destination-grid">
+            <div class="destination-card">
+                <div class="destination-image japan">
+                    <div class="japan-sun"></div>
+                    <div class="japan-mountain"></div>
+                </div>
+                <div class="destination-content">
+                    <span class="category">Asia</span>
+                    <h3>Kyoto & Beyond</h3>
+                    <p>Experience historic temples, serene gardens, and modern culinary journeys.</p>
+                    <a href="#" class="card-link">Explore Guide &rarr;</a>
+                </div>
+            </div>
 
+            <div class="destination-card">
+                <div class="destination-image europe">
+                    <div class="europe-sun"></div>
+                    <div class="europe-arch"></div>
+                </div>
+                <div class="destination-content">
+                    <span class="category">Europe</span>
+                    <h3>Coastal Italy</h3>
+                    <p>Discover picturesque cliffside villages along the Mediterranean coast.</p>
+                    <a href="#" class="card-link">Explore Guide &rarr;</a>
+                </div>
+            </div>
 
-
-    <!-- =========================================================
-         JAVASCRIPT
-    ========================================================= -->
-
-    <script>
-
-        /* ==========================================
-           MOBILE MENU
-        ========================================== */
-
-        const menuButton =
-            document.getElementById(
-                "menuButton"
-            );
-
-        const navigation =
-            document.getElementById(
-                "navigation"
-            );
-
-
-        menuButton.addEventListener(
-            "click",
-            function () {
-
-                navigation.classList.toggle(
-                    "show"
-                );
-
-            }
-        );
-
-
-        /* ==========================================
-           CLOSE MOBILE MENU AFTER CLICK
-        ========================================== */
-
-        const navigationLinks =
-            navigation.querySelectorAll("a");
-
-
-        navigationLinks.forEach(
-            function(link) {
-
-                link.addEventListener(
-                    "click",
-                    function() {
-
-                        navigation.classList.remove(
-                            "show"
-                        );
-
-                    }
-                );
-
-            }
-        );
-
-
-        /* ==========================================
-           NEWSLETTER
-        ========================================== */
-
-        const newsletterForm =
-            document.getElementById(
-                "newsletterForm"
-            );
-
-
-        newsletterForm.addEventListener(
-            "submit",
-            function(event) {
-
-                event.preventDefault();
-
-
-                const email =
-                    document.getElementById(
-                        "email"
-                    );
-
-
-                const button =
-                    newsletterForm.querySelector(
-                        "button"
-                    );
-
-
-                if (
-                    email.value.trim() !== ""
-                ) {
-
-                    button.textContent =
-                        "You're in ✓";
-
-                    email.value = "";
-
-                    email.placeholder =
-                        "Thanks for joining!";
-
-                }
-
-            }
-        );
-
-    </script>
-
+            <div class="destination-card">
+                <div class="destination-image tropical">
+                    <div class="island"></div>
+                </div>
+                <div class="destination-content">
+                    <span class="category">Tropics</span>
+                    <h3>Bali Getaways</h3>
+                    <p>Relax on golden beaches and explore lush tropical rainforests.</p>
+                    <a href="#" class="card-link">Explore Guide &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </body>
 
