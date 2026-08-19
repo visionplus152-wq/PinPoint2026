@@ -1,1542 +1,2939 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <meta charset="UTF-8">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-<title>PinPoint Travel — Discover Your Next Journey</title>
+    <meta name="description"
+        content="Pinpoint Travel — discover inspiring destinations, practical travel guides and carefully selected travel essentials.">
 
-<meta name="description"
-content="Discover beautiful destinations, useful travel guides and carefully selected travel essentials with PinPoint Travel.">
+    <meta name="keywords"
+        content="travel, travel guides, destinations, travel essentials, travel tips, vacation, tourism">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="author"
+        content="Pinpoint Travel">
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
-rel="stylesheet">
+    <title>Pinpoint Travel | Travel Smarter. Go Further.</title>
 
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
 
-<style>
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
-/* =========================================================
-   VARIABLES
-========================================================= */
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap"
+        rel="stylesheet">
 
-:root {
 
-    --deep: #032230;
-    --deep-dark: #021d29;
-    --teal: #053d57;
-    --blue: #0b577a;
-    --light-blue: #127eb0;
+    <style>
 
-    --orange: #ff8400;
+        /* =========================================================
+           PINPOINT TRAVEL
+           COMPLETE HOMEPAGE CSS
+        ========================================================= */
 
-    --cream: #fafafa;
-    --soft: #f1f5f5;
+        :root {
 
-    --text: #17343f;
-    --muted: #74848a;
+            --dark: #102b25;
+            --dark-2: #183d34;
 
-    --white: #ffffff;
+            --green: #315f52;
+            --green-light: #739a8d;
 
-    --radius: 18px;
+            --cream: #f7f5ef;
+            --cream-2: #eee9dc;
 
-}
+            --white: #ffffff;
 
+            --text: #162b26;
+            --muted: #687771;
 
-/* =========================================================
-   RESET
-========================================================= */
+            --lime: #dce9b6;
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+            --gold: #d6bd7b;
 
-html {
-    scroll-behavior: smooth;
-}
+            --line: rgba(16, 43, 37, 0.12);
 
-body {
+            --shadow:
+                0 25px 70px rgba(16, 43, 37, 0.12);
 
-    font-family: "DM Sans", sans-serif;
+            --radius: 28px;
 
-    background: var(--cream);
+        }
 
-    color: var(--text);
 
-    overflow-x: hidden;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-}
 
-img {
+        html {
+            scroll-behavior: smooth;
+        }
 
-    width: 100%;
 
-    display: block;
+        body {
 
-}
+            font-family:
+                "DM Sans",
+                Arial,
+                sans-serif;
 
-a {
+            background: var(--cream);
 
-    color: inherit;
+            color: var(--text);
 
-    text-decoration: none;
+            line-height: 1.6;
 
-}
+            overflow-x: hidden;
 
-button,
-input {
+        }
 
-    font-family: inherit;
 
-}
+        img {
+            max-width: 100%;
+            display: block;
+        }
 
-.container {
 
-    width: min(1160px, 90%);
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    margin: auto;
 
-}
+        button,
+        input {
+            font-family: inherit;
+        }
 
 
-/* =========================================================
-   NAVIGATION
-========================================================= */
+        /* =========================================================
+           ANNOUNCEMENT BAR
+        ========================================================= */
 
-.header {
+        .announcement {
 
-    position: absolute;
+            min-height: 38px;
 
-    top: 0;
+            padding: 8px 5%;
 
-    left: 0;
+            background: var(--dark);
 
-    width: 100%;
+            color: white;
 
-    z-index: 100;
+            display: flex;
 
-    padding: 25px 0;
+            justify-content: center;
 
-}
+            align-items: center;
 
-.nav {
+            gap: 25px;
 
-    display: flex;
+            font-size: 11px;
 
-    justify-content: space-between;
+            letter-spacing: .03em;
 
-    align-items: center;
+        }
 
-}
 
-.logo {
+        .announcement a {
 
-    color: white;
+            color: var(--lime);
 
-    font-size: 21px;
+            font-weight: 700;
 
-    font-weight: 700;
+        }
 
-    letter-spacing: -.8px;
 
-}
+        /* =========================================================
+           HEADER
+        ========================================================= */
 
-.logo span {
+        .header {
 
-    color: var(--orange);
+            width: min(1400px, 92%);
 
-}
+            min-height: 82px;
 
-.nav-links {
+            margin: auto;
 
-    list-style: none;
+            display: flex;
 
-    display: flex;
+            align-items: center;
 
-    align-items: center;
+            gap: 35px;
 
-    gap: 32px;
+            position: relative;
 
-}
+            z-index: 100;
 
-.nav-links a {
+        }
 
-    color: rgba(255,255,255,.72);
 
-    font-size: 13px;
+        /* LOGO */
 
-    transition: .3s;
+        .logo {
 
-}
+            display: flex;
 
-.nav-links a:hover {
+            align-items: center;
 
-    color: white;
+            gap: 10px;
 
-}
+            flex-shrink: 0;
 
-.nav-links .nav-active {
+        }
 
-    color: white;
 
-}
+        .logo-symbol {
 
-.nav-blog {
+            width: 40px;
 
-    padding: 9px 17px;
+            height: 40px;
 
-    border: 1px solid rgba(255,255,255,.25);
+            border: 1px solid var(--dark);
 
-    border-radius: 50px;
+            border-radius: 50%;
 
-}
+            display: grid;
 
-.nav-blog:hover {
+            place-items: center;
 
-    background: white;
+            font-size: 18px;
 
-    color: var(--deep) !important;
+        }
 
-}
 
-.menu {
+        .logo-text strong {
 
-    display: none;
+            display: block;
 
-    color: white;
+            font-size: 15px;
 
-    font-size: 24px;
+            letter-spacing: .16em;
 
-    cursor: pointer;
+            line-height: 1;
 
-}
+        }
 
 
-/* =========================================================
-   HERO
-========================================================= */
+        .logo-text small {
 
-.hero {
+            display: block;
 
-    min-height: 700px;
+            margin-top: 5px;
 
-    position: relative;
+            color: var(--muted);
 
-    overflow: hidden;
+            font-size: 8px;
 
-    background: var(--deep);
+            letter-spacing: .2em;
 
-    color: white;
+        }
 
-}
 
-.hero::before {
+        /* NAVIGATION */
 
-    content: "";
+        .navigation {
 
-    position: absolute;
+            margin-left: auto;
 
-    width: 650px;
+            display: flex;
 
-    height: 650px;
+            align-items: center;
 
-    right: -280px;
+            gap: 28px;
 
-    top: -250px;
+        }
 
-    background:
 
-        radial-gradient(
+        .navigation a {
 
-            circle,
+            font-size: 12px;
 
-            rgba(18,126,176,.35),
+            font-weight: 600;
 
-            transparent 68%
+            color: #52635d;
 
-        );
+            transition: .2s;
 
-}
+            position: relative;
 
-.hero-content {
+        }
 
-    position: relative;
 
-    z-index: 2;
+        .navigation a:hover {
 
-    padding-top: 175px;
+            color: var(--dark);
 
-}
+        }
 
-.hero-label {
 
-    color: #8ac8df;
+        .navigation a.active {
 
-    font-size: 10px;
+            color: var(--dark);
 
-    text-transform: uppercase;
+        }
 
-    letter-spacing: 2.5px;
 
-    margin-bottom: 25px;
+        .navigation a.active::after {
 
-}
+            content: "";
 
-.hero h1 {
+            position: absolute;
 
-    font-family: "Playfair Display", serif;
+            height: 2px;
 
-    font-size: clamp(55px, 8vw, 96px);
+            left: 0;
 
-    font-weight: 500;
+            right: 0;
 
-    line-height: .94;
+            bottom: -9px;
 
-    letter-spacing: -4px;
+            background: var(--dark);
 
-    max-width: 680px;
+        }
 
-}
 
-.hero h1 em {
+        /* HEADER BUTTON */
 
-    color: #91cfe4;
+        .header-button {
 
-    font-weight: 500;
+            background: var(--dark);
 
-}
+            color: white;
 
-.hero-description {
+            padding: 13px 19px;
 
-    margin-top: 32px;
+            border-radius: 100px;
 
-    max-width: 410px;
+            font-size: 11px;
 
-    color: rgba(255,255,255,.55);
+            font-weight: 700;
 
-    font-size: 14px;
+            transition: .25s;
 
-    line-height: 1.8;
+        }
 
-}
 
-.hero-link {
+        .header-button:hover {
 
-    display: inline-flex;
+            background: var(--green);
 
-    align-items: center;
+            transform: translateY(-2px);
 
-    gap: 10px;
+        }
 
-    margin-top: 28px;
 
-    color: white;
+        /* MOBILE BUTTON */
 
-    font-size: 13px;
+        .menu-button {
 
-    font-weight: 600;
+            display: none;
 
-    padding-bottom: 7px;
+            border: none;
 
-    border-bottom: 1px solid rgba(255,255,255,.35);
+            background: transparent;
 
-    transition: .3s;
+            font-size: 25px;
 
-}
+            cursor: pointer;
 
-.hero-link span {
+            margin-left: auto;
 
-    color: var(--orange);
+        }
 
-    transition: .3s;
 
-}
+        /* =========================================================
+           HERO
+        ========================================================= */
 
-.hero-link:hover {
+        .hero {
 
-    border-color: var(--orange);
+            width: min(1400px, 92%);
 
-}
+            min-height: 660px;
 
-.hero-link:hover span {
+            margin: 10px auto 0;
 
-    transform: translateX(5px);
+            border-radius: 38px;
 
-}
+            overflow: hidden;
 
+            display: grid;
 
-/* Hero image */
+            grid-template-columns: 48% 52%;
 
-.hero-image {
+            position: relative;
 
-    position: absolute;
+            background:
 
-    z-index: 2;
+                linear-gradient(
+                    135deg,
+                    #dce6d9,
+                    #bdd3cb 55%,
+                    #7ea69d
+                );
 
-    top: 130px;
+        }
 
-    right: 8%;
 
-    width: 300px;
+        /* HERO CONTENT */
 
-    height: 440px;
+        .hero-content {
 
-    border-radius: 160px 160px 12px 12px;
+            padding:
 
-    overflow: hidden;
+                90px
+                7vw
+                75px;
 
-    box-shadow:
+            position: relative;
 
-        0 30px 80px rgba(0,0,0,.35);
+            z-index: 10;
 
-}
+        }
 
-.hero-image img {
 
-    height: 100%;
+        .eyebrow {
 
-    object-fit: cover;
+            font-size: 10px;
 
-    transition: transform 1s ease;
+            letter-spacing: .22em;
 
-}
+            font-weight: 800;
 
-.hero:hover .hero-image img {
+            color: #68766f;
 
-    transform: scale(1.04);
+            margin-bottom: 17px;
 
-}
+        }
 
-.hero-place {
 
-    position: absolute;
+        .hero h1 {
 
-    left: 22px;
+            font-size: clamp(
+                52px,
+                6vw,
+                88px
+            );
 
-    bottom: 20px;
+            line-height: .97;
 
-    color: white;
+            letter-spacing: -.055em;
 
-    font-size: 10px;
+            color: var(--dark);
 
-    text-transform: uppercase;
+        }
 
-    letter-spacing: 1.5px;
 
-}
+        .hero h1 em {
 
+            font-family:
+                "Playfair Display",
+                serif;
 
-/* =========================================================
-   INTRO
-========================================================= */
+            font-weight: 600;
 
-.intro {
+        }
 
-    padding: 110px 0;
 
-}
+        .hero-description {
 
-.intro-grid {
+            max-width: 520px;
 
-    display: grid;
+            margin-top: 25px;
 
-    grid-template-columns: 1fr 1fr;
+            margin-bottom: 30px;
 
-    gap: 100px;
+            font-size: 15px;
 
-    align-items: center;
+            color: #53665f;
 
-}
+        }
 
-.section-label {
 
-    font-size: 10px;
+        /* HERO BUTTONS */
 
-    text-transform: uppercase;
+        .hero-buttons {
 
-    letter-spacing: 2px;
+            display: flex;
 
-    color: var(--light-blue);
+            flex-wrap: wrap;
 
-    font-weight: 700;
+            gap: 12px;
 
-}
+        }
 
-.intro h2 {
 
-    font-family: "Playfair Display", serif;
+        .button {
 
-    font-size: clamp(38px,5vw,58px);
+            min-height: 50px;
 
-    line-height: 1.05;
+            padding: 0 22px;
 
-    font-weight: 500;
+            border-radius: 100px;
 
-    color: var(--deep);
+            display: inline-flex;
 
-    margin-top: 17px;
+            justify-content: center;
 
-}
+            align-items: center;
 
-.intro-text {
+            font-size: 11px;
 
-    color: var(--muted);
+            font-weight: 800;
 
-    font-size: 14px;
+            transition: .25s;
 
-    line-height: 1.9;
+        }
 
-}
 
-.text-link {
+        .button-primary {
 
-    display: inline-block;
+            background: var(--dark);
 
-    margin-top: 22px;
+            color: white;
 
-    color: var(--deep);
+        }
 
-    font-size: 12px;
 
-    font-weight: 700;
+        .button-primary:hover {
 
-    border-bottom: 1px solid var(--deep);
+            transform: translateY(-3px);
 
-    padding-bottom: 5px;
+            box-shadow:
+                0 12px 25px
+                rgba(16,43,37,.2);
 
-    transition: .3s;
+        }
 
-}
 
-.text-link:hover {
+        .button-secondary {
 
-    color: var(--orange);
+            border: 1px solid
+                rgba(16,43,37,.25);
 
-    border-color: var(--orange);
+            background:
+                rgba(255,255,255,.25);
 
-}
+            backdrop-filter: blur(10px);
 
+        }
 
-/* =========================================================
-   DESTINATION
-========================================================= */
 
-.destination {
+        .hero-trust {
 
-    background: var(--deep-dark);
+            display: flex;
 
-    color: white;
+            flex-wrap: wrap;
 
-    padding: 100px 0;
+            gap: 18px;
 
-}
+            margin-top: 45px;
 
-.destination-header {
+            color: #53645e;
 
-    display: flex;
+            font-size: 10px;
 
-    justify-content: space-between;
+            font-weight: 700;
 
-    align-items: flex-end;
+        }
 
-    margin-bottom: 38px;
 
-}
+        /* =========================================================
+           HERO VISUAL
+        ========================================================= */
 
-.destination-header h2 {
+        .hero-visual {
 
-    font-family: "Playfair Display", serif;
+            min-height: 660px;
 
-    font-size: clamp(38px,5vw,58px);
+            position: relative;
 
-    font-weight: 500;
+            overflow: hidden;
 
-}
+            background:
 
-.destination-header p {
+                linear-gradient(
+                    180deg,
+                    #b9d5d2 0%,
+                    #8fb7b0 45%,
+                    #608a81 68%,
+                    #375e56 100%
+                );
 
-    max-width: 260px;
+        }
 
-    color: rgba(255,255,255,.45);
 
-    font-size: 12px;
+        /* SUN */
 
-    line-height: 1.7;
+        .sun {
 
-}
+            width: 160px;
 
-.destination-image {
+            height: 160px;
 
-    height: 500px;
+            border-radius: 50%;
 
-    border-radius: 20px;
+            position: absolute;
 
-    overflow: hidden;
+            top: 80px;
 
-    position: relative;
+            right: 20%;
 
-}
+            background: #f3e6bd;
 
-.destination-image img {
+            box-shadow:
+                0 0 80px
+                rgba(243,230,189,.75);
 
-    height: 100%;
+        }
 
-    object-fit: cover;
 
-    transition: transform .8s ease;
+        /* RINGS */
 
-}
+        .hero-ring {
 
-.destination-image:hover img {
+            position: absolute;
 
-    transform: scale(1.035);
+            width: 370px;
 
-}
+            height: 370px;
 
-.destination-info {
+            border: 1px solid
+                rgba(255,255,255,.28);
 
-    position: absolute;
+            border-radius: 50%;
 
-    left: 32px;
+            right: -100px;
 
-    bottom: 30px;
+            top: -40px;
 
-}
+        }
 
-.destination-info small {
 
-    text-transform: uppercase;
+        .hero-ring.two {
 
-    letter-spacing: 2px;
+            width: 530px;
 
-    font-size: 9px;
+            height: 530px;
 
-    color: rgba(255,255,255,.65);
+            right: -170px;
 
-}
+            top: -110px;
 
-.destination-info h3 {
+            opacity: .45;
 
-    font-family: "Playfair Display", serif;
+        }
 
-    font-size: 38px;
 
-    font-weight: 500;
+        /* MOUNTAINS */
 
-    margin-top: 5px;
+        .mountain {
 
-}
+            position: absolute;
 
+            bottom: 28%;
 
-/* =========================================================
-   BLOG PREVIEW
-========================================================= */
+            width: 0;
 
-.blog-preview {
+            height: 0;
 
-    padding: 110px 0;
+            border-left:
+                250px solid transparent;
 
-}
+            border-right:
+                250px solid transparent;
 
-.blog-top {
+            border-bottom:
+                340px solid #52786e;
 
-    display: flex;
+        }
 
-    justify-content: space-between;
 
-    align-items: flex-end;
+        .mountain-one {
 
-    margin-bottom: 42px;
+            left: -100px;
 
-}
+            opacity: .55;
 
-.blog-top h2 {
+        }
 
-    font-family: "Playfair Display", serif;
 
-    font-size: clamp(40px,5vw,60px);
+        .mountain-two {
 
-    font-weight: 500;
+            right: -100px;
 
-    color: var(--deep);
+            border-bottom-color:
+                #365e56;
 
-}
+        }
 
-.blog-top p {
 
-    max-width: 290px;
+        .mountain-three {
 
-    color: var(--muted);
+            left: 28%;
 
-    font-size: 12px;
+            transform: scale(.7);
 
-    line-height: 1.7;
+            opacity: .7;
 
-}
+            border-bottom-color:
+                #456d63;
 
-.blog-layout {
+        }
 
-    display: grid;
 
-    grid-template-columns: 1.4fr .8fr;
+        /* OCEAN */
 
-    gap: 25px;
+        .ocean {
 
-}
+            position: absolute;
 
+            left: 0;
 
-/* Main article */
+            right: 0;
 
-.main-article {
+            bottom: 0;
 
-    position: relative;
+            height: 34%;
 
-    height: 430px;
+            background:
 
-    overflow: hidden;
+                repeating-linear-gradient(
+                    175deg,
+                    rgba(255,255,255,.15) 0px,
+                    rgba(255,255,255,.15) 2px,
+                    transparent 2px,
+                    transparent 30px
+                );
 
-    border-radius: 18px;
+        }
 
-}
 
-.main-article img {
+        /* ROAD */
 
-    height: 100%;
+        .road {
 
-    object-fit: cover;
+            position: absolute;
 
-    transition: transform .8s ease;
+            bottom: -140px;
 
-}
+            left: 50%;
 
-.main-article:hover img {
+            transform:
+                translateX(-50%)
+                rotate(5deg);
 
-    transform: scale(1.04);
+            width: 150px;
 
-}
+            height: 430px;
 
-.main-article::after {
+            background: #d7cbb0;
 
-    content: "";
+            clip-path:
+                polygon(
+                    42% 0,
+                    58% 0,
+                    100% 100%,
+                    0 100%
+                );
 
-    position: absolute;
+        }
 
-    inset: 0;
 
-    background:
+        /* FLOATING CARDS */
 
-        linear-gradient(
+        .floating-card {
 
-            transparent 30%,
+            position: absolute;
 
-            rgba(0,0,0,.75)
+            z-index: 20;
 
-        );
+            display: flex;
 
-}
+            align-items: center;
 
-.article-content {
+            gap: 12px;
 
-    position: absolute;
+            padding: 13px 16px;
 
-    z-index: 2;
+            background:
+                rgba(255,255,255,.92);
 
-    left: 28px;
+            backdrop-filter:
+                blur(15px);
 
-    bottom: 28px;
+            border-radius: 18px;
 
-    color: white;
+            box-shadow:
+                0 15px 40px
+                rgba(16,43,37,.15);
 
-    max-width: 520px;
+        }
 
-}
 
-.article-content small {
+        .floating-card small {
 
-    color: #9ed5e7;
+            display: block;
 
-    font-size: 9px;
+            font-size: 9px;
 
-    text-transform: uppercase;
+            color: #78857f;
 
-    letter-spacing: 2px;
+        }
 
-}
 
-.article-content h3 {
+        .floating-card strong {
 
-    font-family: "Playfair Display", serif;
+            display: block;
 
-    font-size: 31px;
+            font-size: 12px;
 
-    font-weight: 500;
+        }
 
-    line-height: 1.15;
 
-    margin-top: 8px;
+        .floating-icon {
 
-}
+            width: 32px;
 
-.article-content p {
+            height: 32px;
 
-    margin-top: 8px;
+            display: grid;
 
-    color: rgba(255,255,255,.65);
+            place-items: center;
 
-    font-size: 12px;
+            border-radius: 50%;
 
-}
+            background: var(--dark);
 
+            color: white;
 
-/* Blog side */
+        }
 
-.blog-side {
 
-    background: var(--soft);
+        .location-card {
 
-    border-radius: 18px;
+            top: 35%;
 
-    padding: 30px;
+            left: 8%;
 
-    display: flex;
+        }
 
-    flex-direction: column;
 
-    justify-content: space-between;
+        .guide-card {
 
-}
+            bottom: 20%;
 
-.blog-side-label {
+            right: 8%;
 
-    font-size: 10px;
+        }
 
-    text-transform: uppercase;
 
-    letter-spacing: 2px;
+        /* =========================================================
+           QUICK LINKS
+        ========================================================= */
 
-    color: var(--light-blue);
+        .quick-links {
 
-}
+            width: min(1250px, 86%);
 
-.blog-side h3 {
+            margin:
+                -40px auto
+                0;
 
-    font-family: "Playfair Display", serif;
+            position: relative;
 
-    font-size: 32px;
+            z-index: 30;
 
-    font-weight: 500;
+            background: white;
 
-    line-height: 1.1;
+            border-radius: 23px;
 
-    color: var(--deep);
+            box-shadow: var(--shadow);
 
-    margin-top: 20px;
+            display: grid;
 
-}
+            grid-template-columns:
+                repeat(3,1fr);
 
-.blog-side p {
+            overflow: hidden;
 
-    color: var(--muted);
+        }
 
-    font-size: 13px;
 
-    line-height: 1.8;
+        .quick-link {
 
-    margin-top: 15px;
+            padding: 25px 28px;
 
-}
+            border-right:
+                1px solid var(--line);
 
-.blog-button {
+            display: grid;
 
-    display: inline-flex;
+            grid-template-columns: 40px 1fr;
 
-    align-items: center;
+            column-gap: 10px;
 
-    justify-content: center;
+        }
 
-    width: fit-content;
 
-    margin-top: 25px;
+        .quick-link:last-child {
 
-    padding: 12px 20px;
+            border: none;
 
-    border-radius: 50px;
+        }
 
-    background: var(--orange);
 
-    color: white;
+        .quick-number {
 
-    font-size: 11px;
+            grid-row:
+                1 / 3;
 
-    font-weight: 700;
+            color: #98a29d;
 
-    transition: .3s;
+            font-size: 10px;
 
-}
+        }
 
-.blog-button:hover {
 
-    transform: translateY(-3px);
+        .quick-link strong {
 
-    box-shadow:
+            font-size: 13px;
 
-        0 10px 25px rgba(255,132,0,.25);
+        }
 
-}
 
+        .quick-link small {
 
-/* =========================================================
-   AMAZON SECTION
-========================================================= */
+            color: var(--muted);
 
-.gear {
+            font-size: 10px;
 
-    background: #edf3f4;
+        }
 
-    padding: 90px 0;
 
-}
+        /* =========================================================
+           GENERAL SECTIONS
+        ========================================================= */
 
-.gear-header {
+        .section {
 
-    display: flex;
+            width: min(1250px, 86%);
 
-    justify-content: space-between;
+            margin:
+                120px auto;
 
-    align-items: flex-end;
+        }
 
-    margin-bottom: 35px;
 
-}
+        .section-header {
 
-.gear-header h2 {
+            display: flex;
 
-    font-family: "Playfair Display", serif;
+            justify-content: space-between;
 
-    font-size: clamp(38px,5vw,55px);
+            align-items: end;
 
-    font-weight: 500;
+            gap: 30px;
 
-    color: var(--deep);
+            margin-bottom: 35px;
 
-}
+        }
 
-.gear-header p {
 
-    max-width: 270px;
+        .section-header h2 {
 
-    font-size: 12px;
+            font-size:
+                clamp(36px,4vw,55px);
 
-    color: var(--muted);
+            line-height: 1;
 
-    line-height: 1.7;
+            letter-spacing: -.045em;
 
-}
+        }
 
-.gear-grid {
 
-    display: grid;
+        .section-header h2 em {
 
-    grid-template-columns:
+            font-family:
+                "Playfair Display",
+                serif;
 
-        repeat(3,1fr);
+            font-weight: 600;
 
-    gap: 18px;
+        }
 
-}
 
-.gear-card {
+        .section-description {
 
-    background: white;
+            max-width: 520px;
 
-    border-radius: 16px;
+            color: var(--muted);
 
-    padding: 10px;
+            font-size: 13px;
 
-    box-shadow:
+            margin-top: 15px;
 
-        0 10px 35px rgba(3,34,48,.06);
+        }
 
-    transition: .35s;
 
-}
+        .view-all {
 
-.gear-card:hover {
+            font-size: 11px;
 
-    transform: translateY(-7px);
+            font-weight: 800;
 
-    box-shadow:
+            border-bottom:
+                1px solid var(--dark);
 
-        0 20px 45px rgba(3,34,48,.12);
+            padding-bottom: 5px;
 
-}
+            white-space: nowrap;
 
-.gear-img {
+        }
 
-    height: 220px;
 
-    background: #f3f4f4;
+        /* =========================================================
+           DESTINATIONS
+        ========================================================= */
 
-    border-radius: 11px;
+        .destination-grid {
 
-    overflow: hidden;
+            display: grid;
 
-}
+            grid-template-columns:
+                1.3fr 1fr 1fr;
 
-.gear-img img {
+            gap: 17px;
 
-    height: 100%;
+        }
 
-    object-fit: cover;
 
-}
+        .destination-card {
 
-.gear-info {
+            background: white;
 
-    padding: 15px 7px 8px;
+            border-radius: var(--radius);
 
-}
+            overflow: hidden;
 
-.gear-info h3 {
+            border:
+                1px solid
+                rgba(16,43,37,.06);
 
-    color: var(--deep);
+            transition:
+                transform .25s,
+                box-shadow .25s;
 
-    font-size: 14px;
+        }
 
-}
 
-.gear-info p {
+        .destination-card:hover {
 
-    color: var(--muted);
+            transform:
+                translateY(-7px);
 
-    font-size: 11px;
+            box-shadow: var(--shadow);
 
-    margin-top: 5px;
+        }
 
-}
 
-.amazon-link {
+        .destination-image {
 
-    display: inline-block;
+            height: 300px;
 
-    margin-top: 12px;
+            position: relative;
 
-    color: var(--orange);
+            overflow: hidden;
 
-    font-size: 11px;
+        }
 
-    font-weight: 700;
 
-    transition: .3s;
+        .destination-card:first-child
+        .destination-image {
 
-}
+            height: 390px;
 
-.amazon-link:hover {
+        }
 
-    transform: translateX(4px);
 
-}
+        /* JAPAN */
 
+        .japan {
 
-/* =========================================================
-   SIMPLE CTA
-========================================================= */
+            background:
+                linear-gradient(
+                    145deg,
+                    #d5dfd0,
+                    #a8c1ad 55%,
+                    #57766c
+                );
 
-.final-cta {
+        }
 
-    padding: 120px 0;
 
-    text-align: center;
+        .japan-sun {
 
-}
+            position: absolute;
 
-.final-cta h2 {
+            width: 95px;
 
-    max-width: 650px;
+            height: 95px;
 
-    margin: auto;
+            background:
+                #f0d99d;
 
-    font-family: "Playfair Display", serif;
+            border-radius: 50%;
 
-    font-size: clamp(40px,5vw,62px);
+            top: 45px;
 
-    line-height: 1.08;
+            right: 45px;
 
-    font-weight: 500;
+        }
 
-    color: var(--deep);
 
-}
+        .japan-mountain {
 
-.final-cta p {
+            position: absolute;
 
-    margin: 20px auto 0;
+            bottom: -10px;
 
-    max-width: 420px;
+            left: -10%;
 
-    color: var(--muted);
+            width: 120%;
 
-    font-size: 13px;
+            height: 210px;
 
-    line-height: 1.8;
+            background: #476a5e;
 
-}
+            clip-path:
+                polygon(
+                    0 75%,
+                    22% 25%,
+                    40% 62%,
+                    60% 10%,
+                    80% 57%,
+                    100% 30%,
+                    100% 100%,
+                    0 100%
+                );
 
-.final-link {
+        }
 
-    display: inline-flex;
 
-    margin-top: 25px;
+        .japan-building {
 
-    padding: 12px 22px;
+            position: absolute;
 
-    background: var(--deep);
+            left: 28%;
 
-    color: white;
+            top: 42%;
 
-    border-radius: 50px;
+            color: #385449;
 
-    font-size: 11px;
+            font-size: 75px;
 
-    font-weight: 700;
+        }
 
-    transition: .3s;
 
-}
+        /* EUROPE */
 
-.final-link:hover {
+        .europe {
 
-    background: var(--orange);
+            background:
+                linear-gradient(
+                    145deg,
+                    #ddd5c5,
+                    #a8bcb5
+                );
 
-    transform: translateY(-3px);
+        }
 
-}
 
+        .europe-sun {
 
-/* =========================================================
-   FOOTER
-========================================================= */
+            width: 80px;
 
-.footer {
+            height: 80px;
 
-    background: var(--deep);
+            border-radius: 50%;
 
-    color: white;
+            background: #e7d29b;
 
-    padding: 65px 0 22px;
+            position: absolute;
 
-}
+            top: 45px;
 
-.footer-top {
+            right: 40px;
 
-    display: flex;
+        }
 
-    justify-content: space-between;
 
-    gap: 50px;
+        .europe-arch {
 
-    padding-bottom: 50px;
+            width: 130px;
 
-}
+            height: 180px;
 
-.footer-description {
+            position: absolute;
 
-    max-width: 300px;
+            bottom: -10px;
 
-}
+            left: 30%;
 
-.footer-description p {
+            border:
+                28px solid
+                #536d67;
 
-    color: rgba(255,255,255,.4);
+            border-bottom: 0;
 
-    font-size: 11px;
+            border-radius:
+                100px 100px 0 0;
 
-    line-height: 1.8;
+        }
 
-    margin-top: 14px;
 
-}
+        /* TROPICAL */
 
-.footer-links {
+        .tropical {
 
-    display: flex;
+            background:
+                linear-gradient(
+                    145deg,
+                    #cde3df,
+                    #78a99f 55%,
+                    #d7c59d
+                );
 
-    gap: 65px;
+        }
 
-}
 
-.footer-column h4 {
+        .island {
 
-    font-size: 11px;
+            position: absolute;
 
-    margin-bottom: 16px;
+            bottom: 40px;
 
-}
+            left: 12%;
 
-.footer-column a {
+            width: 75%;
 
-    display: block;
+            height: 80px;
 
-    color: rgba(255,255,255,.42);
+            background: #d7c99b;
 
-    font-size: 10px;
+            border-radius: 50%;
 
-    margin-bottom: 9px;
+            transform: rotate(-5deg);
 
-    transition: .3s;
+        }
 
-}
 
-.footer-column a:hover {
+        .palm {
 
-    color: var(--orange);
+            position: absolute;
 
-}
+            top: 35px;
 
-.footer-bottom {
+            right: 20%;
 
-    border-top: 1px solid rgba(255,255,255,.08);
+            font-size: 105px;
 
-    padding-top: 20px;
+            color: #345e54;
 
-    display: flex;
+        }
 
-    justify-content: space-between;
 
-    color: rgba(255,255,255,.25);
+        .destination-content {
 
-    font-size: 9px;
+            padding: 21px 23px 25px;
 
-}
+        }
 
 
-/* =========================================================
-   ANIMATION
-========================================================= */
+        .category {
 
-.reveal {
+            font-size: 9px;
 
-    opacity: 0;
+            letter-spacing: .17em;
 
-    transform: translateY(25px);
+            color: #7d8983;
 
-    transition:
+            font-weight: 800;
 
-        opacity .8s ease,
+        }
 
-        transform .8s ease;
 
-}
+        .destination-content h3 {
 
-.reveal.active {
+            font-size: 25px;
 
-    opacity: 1;
+            margin:
+                4px 0;
 
-    transform: translateY(0);
+        }
 
-}
 
+        .destination-content p {
 
-/* =========================================================
-   TABLET
-========================================================= */
+            color: var(--muted);
 
-@media(max-width:950px) {
+            font-size: 11px;
 
-    .hero-image {
+            margin-bottom: 15px;
 
-        right: 3%;
+        }
 
-        width: 250px;
 
-        height: 380px;
+        .card-link {
 
-    }
+            font-size: 11px;
 
-    .intro-grid {
+            font-weight: 800;
 
-        gap: 50px;
+        }
 
-    }
 
-    .blog-layout {
+        /* =========================================================
+           TRAVEL ESSENTIALS
+        ========================================================= */
 
-        grid-template-columns: 1fr;
+        .products-section {
 
-    }
+            background:
+                #edf0e8;
 
-    .blog-side {
+            padding:
+                110px 0;
 
-        min-height: 300px;
+        }
 
-    }
 
-}
+        .products-container {
 
+            width: min(1250px, 86%);
 
-/* =========================================================
-   MOBILE
-========================================================= */
+            margin: auto;
 
-@media(max-width:700px) {
+        }
 
-    .header {
 
-        padding: 20px 0;
+        .product-grid {
 
-    }
+            display: grid;
 
-    .nav-links {
+            grid-template-columns:
+                1.2fr 1fr 1fr;
 
-        display: none;
+            gap: 17px;
 
-        position: absolute;
+        }
 
-        top: 70px;
 
-        left: 5%;
+        .product-card {
 
-        width: 90%;
+            background: white;
 
-        background: var(--deep);
+            border-radius: var(--radius);
 
-        padding: 25px;
+            overflow: hidden;
 
-        border-radius: 15px;
+            transition: .25s;
 
-        flex-direction: column;
+            position: relative;
 
-        align-items: flex-start;
+        }
 
-        gap: 20px;
 
-        box-shadow:
+        .product-card:hover {
 
-            0 20px 50px rgba(0,0,0,.3);
+            transform:
+                translateY(-7px);
 
-    }
+            box-shadow: var(--shadow);
 
-    .nav-links.active {
+        }
 
-        display: flex;
 
-    }
+        .product-image {
 
-    .menu {
+            height: 270px;
 
-        display: block;
+            position: relative;
 
-    }
+            overflow: hidden;
 
-    .hero {
+        }
 
-        min-height: 760px;
 
-    }
+        .product-one {
 
-    .hero-content {
+            background:
+                linear-gradient(
+                    135deg,
+                    #dce8dd,
+                    #bdcfb9
+                );
 
-        padding-top: 145px;
+        }
 
-    }
 
-    .hero h1 {
+        .packing-box {
 
-        font-size: 56px;
+            width: 120px;
 
-        letter-spacing: -2.5px;
+            height: 90px;
 
-    }
+            border:
+                3px solid
+                #35574d;
 
-    .hero-description {
+            border-radius: 13px;
 
-        max-width: 340px;
+            position: absolute;
 
-    }
+            transform:
+                rotate(-12deg);
 
-    .hero-image {
+        }
 
-        width: 170px;
 
-        height: 235px;
+        .box-one {
 
-        top: auto;
+            left: 18%;
 
-        bottom: -45px;
+            top: 34%;
 
-        right: 7%;
+        }
 
-        border-radius: 100px 100px 10px 10px;
 
-        opacity: .9;
+        .box-two {
 
-    }
+            left: 38%;
 
-    .intro,
-    .destination,
-    .blog-preview,
-    .gear,
-    .final-cta {
+            top: 22%;
 
-        padding: 80px 0;
+            transform:
+                rotate(8deg);
 
-    }
+        }
 
-    .intro-grid {
 
-        grid-template-columns: 1fr;
+        .box-three {
 
-        gap: 30px;
+            left: 50%;
 
-    }
+            top: 45%;
 
-    .destination-header,
-    .blog-top,
-    .gear-header {
+            transform:
+                rotate(-5deg);
 
-        display: block;
+        }
 
-    }
 
-    .destination-header p,
-    .blog-top p,
-    .gear-header p {
+        .product-two {
 
-        margin-top: 12px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #ddd5c6,
+                    #c3d3cd
+                );
 
-    }
+        }
 
-    .destination-image {
 
-        height: 380px;
+        .cloud {
 
-    }
+            position: absolute;
 
-    .destination-info {
+            left: 10%;
 
-        left: 20px;
+            top: 10%;
 
-        bottom: 20px;
+            font-size: 120px;
 
-    }
+            opacity: .35;
 
-    .destination-info h3 {
+        }
 
-        font-size: 30px;
 
-    }
+        .neck-pillow {
 
-    .main-article {
+            position: absolute;
 
-        height: 360px;
+            width: 175px;
 
-    }
+            height: 115px;
 
-    .article-content {
+            border:
+                28px solid
+                #536e66;
 
-        left: 20px;
+            border-bottom:
+                28px solid transparent;
 
-        bottom: 20px;
+            border-radius:
+                100px 100px 0 0;
 
-        right: 20px;
+            right: 16%;
 
-    }
+            bottom: 20%;
 
-    .article-content h3 {
+            transform:
+                rotate(-8deg);
 
-        font-size: 25px;
+        }
 
-    }
 
-    .blog-side {
+        .product-three {
 
-        min-height: 330px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #d1dfdb,
+                    #a5bdb7
+                );
 
-        padding: 25px;
+        }
 
-    }
 
-    .gear-grid {
+        .phone {
 
-        grid-template-columns: 1fr 1fr;
+            width: 105px;
 
-    }
+            height: 185px;
 
-    .gear-img {
+            border:
+                5px solid
+                #23483f;
 
-        height: 180px;
+            border-radius: 20px;
 
-    }
+            position: absolute;
 
-    .footer-top {
+            left: 39%;
 
-        flex-direction: column;
+            top: 18%;
 
-    }
+            background: #e8eee9;
 
-    .footer-links {
+            transform:
+                rotate(9deg);
 
-        gap: 40px;
+        }
 
-        flex-wrap: wrap;
 
-    }
+        .signal {
 
-}
+            position: absolute;
 
+            right: 18%;
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
+            top: 25%;
 
-@media(max-width:450px) {
+            font-size: 65px;
 
-    .hero h1 {
+            color: #345e54;
 
-        font-size: 50px;
+        }
 
-    }
 
-    .hero {
+        .product-content {
 
-        min-height: 730px;
+            padding:
+                20px 21px 23px;
 
-    }
+        }
 
-    .gear-grid {
 
-        grid-template-columns: 1fr;
+        .product-content h3 {
 
-    }
+            font-size: 21px;
 
-    .gear-img {
+            margin: 5px 0;
 
-        height: 230px;
+        }
 
-    }
 
-    .footer-links {
+        .product-content p {
 
-        gap: 25px;
+            color: var(--muted);
 
-    }
+            font-size: 11px;
 
-    .footer-bottom {
+            margin-bottom: 16px;
 
-        flex-direction: column;
+        }
 
-        gap: 8px;
 
-    }
+        .product-badge {
 
-}
+            position: absolute;
 
-</style>
+            top: 15px;
+
+            left: 15px;
+
+            z-index: 5;
+
+            background: var(--dark);
+
+            color: white;
+
+            padding:
+                6px 9px;
+
+            border-radius: 100px;
+
+            font-size: 8px;
+
+            font-weight: 800;
+
+            letter-spacing: .1em;
+
+        }
+
+
+        .affiliate-note {
+
+            margin-top: 18px;
+
+            color: #858e89;
+
+            font-size: 9px;
+
+        }
+
+
+        /* =========================================================
+           PINPOINT METHOD
+        ========================================================= */
+
+        .method {
+
+            background:
+                var(--dark);
+
+            color: white;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            min-height: 620px;
+
+        }
+
+
+        .method-visual {
+
+            position: relative;
+
+            min-height: 620px;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 55% 30%,
+                    #4c776b,
+                    #183d34 65%
+                );
+
+        }
+
+
+        .map-circle {
+
+            position: absolute;
+
+            width: 600px;
+
+            height: 500px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.15);
+
+            border-radius:
+                45% 55% 42% 58%;
+
+            left: -70px;
+
+            top: 80px;
+
+            transform:
+                rotate(-18deg);
+
+        }
+
+
+        .map-circle::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 50px 90px;
+
+            border:
+                1px dashed
+                rgba(255,255,255,.16);
+
+            border-radius: 50%;
+
+        }
+
+
+        .map-circle::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 110px 25px;
+
+            border:
+                1px dashed
+                rgba(255,255,255,.12);
+
+            border-radius: 50%;
+
+        }
+
+
+        .route {
+
+            position: absolute;
+
+            width: 330px;
+
+            border-top:
+                2px dashed
+                rgba(220,233,182,.7);
+
+            top: 43%;
+
+            left: 35%;
+
+            transform:
+                rotate(28deg);
+
+        }
+
+
+        .map-pin {
+
+            position: absolute;
+
+            color: var(--lime);
+
+            font-size: 24px;
+
+        }
+
+
+        .pin-one {
+
+            top: 25%;
+
+            left: 48%;
+
+        }
+
+
+        .pin-two {
+
+            top: 54%;
+
+            left: 70%;
+
+        }
+
+
+        .stamp {
+
+            position: absolute;
+
+            bottom: 12%;
+
+            left: 12%;
+
+            width: 150px;
+
+            height: 150px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.3);
+
+            border-radius: 50%;
+
+            display: grid;
+
+            place-items: center;
+
+            text-align: center;
+
+            font-size: 9px;
+
+            letter-spacing: .15em;
+
+            line-height: 1.4;
+
+            transform:
+                rotate(-12deg);
+
+        }
+
+
+        .stamp strong {
+
+            display: block;
+
+            font-size: 18px;
+
+            color: var(--lime);
+
+        }
+
+
+        .method-content {
+
+            padding:
+                90px 8vw;
+
+            align-self: center;
+
+        }
+
+
+        .method-content .eyebrow {
+
+            color: #aebdb6;
+
+        }
+
+
+        .method-content h2 {
+
+            font-size:
+                clamp(40px,4vw,58px);
+
+            line-height: 1.02;
+
+            letter-spacing: -.045em;
+
+        }
+
+
+        .method-content h2 em {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+        }
+
+
+        .method-content > p {
+
+            max-width: 520px;
+
+            color: #bdcac4;
+
+            font-size: 13px;
+
+            margin:
+                22px 0 30px;
+
+        }
+
+
+        .method-points {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 16px;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        .method-point {
+
+            border-top:
+                1px solid
+                rgba(255,255,255,.18);
+
+            padding-top: 12px;
+
+        }
+
+
+        .method-point span {
+
+            font-size: 9px;
+
+            color: var(--lime);
+
+        }
+
+
+        .method-point strong {
+
+            display: block;
+
+            font-size: 12px;
+
+            margin:
+                5px 0;
+
+        }
+
+
+        .method-point small {
+
+            display: block;
+
+            color: #9fafaa;
+
+            font-size: 9px;
+
+        }
+
+
+        .method-button {
+
+            background:
+                var(--lime);
+
+            color: var(--dark);
+
+        }
+
+
+        /* =========================================================
+           BLOG
+        ========================================================= */
+
+        .blog-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1.25fr 1fr 1fr;
+
+            gap: 17px;
+
+        }
+
+
+        .blog-card {
+
+            background: white;
+
+            border-radius: var(--radius);
+
+            overflow: hidden;
+
+            border:
+                1px solid
+                rgba(16,43,37,.06);
+
+            transition: .25s;
+
+        }
+
+
+        .blog-card:hover {
+
+            transform:
+                translateY(-7px);
+
+            box-shadow: var(--shadow);
+
+        }
+
+
+        .blog-image {
+
+            height: 230px;
+
+            display: grid;
+
+            place-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .blog-japan {
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #b7cdbf,
+                    #52776a
+                );
+
+        }
+
+
+        .blog-japan span {
+
+            font-family: serif;
+
+            font-size: 100px;
+
+            color:
+                rgba(255,255,255,.5);
+
+        }
+
+
+        .blog-packing {
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ddd0b5,
+                    #7d9284
+                );
+
+        }
+
+
+        .blog-packing span {
+
+            color:
+                rgba(255,255,255,.65);
+
+            font-size: 38px;
+
+            font-weight: 900;
+
+            letter-spacing: .16em;
+
+        }
+
+
+        .blog-budget {
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #cbded3,
+                    #728d7e
+                );
+
+        }
+
+
+        .blog-budget span {
+
+            font-size: 110px;
+
+            font-family: serif;
+
+            color:
+                rgba(255,255,255,.5);
+
+        }
+
+
+        .blog-content {
+
+            padding:
+                20px 21px 23px;
+
+        }
+
+
+        .blog-meta {
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            gap: 10px;
+
+        }
+
+
+        .blog-meta span {
+
+            font-size: 9px;
+
+            letter-spacing: .14em;
+
+            color: #7e8a84;
+
+            font-weight: 800;
+
+        }
+
+
+        .blog-meta small {
+
+            color: #929b97;
+
+            font-size: 9px;
+
+        }
+
+
+        .blog-content h3 {
+
+            font-size: 21px;
+
+            line-height: 1.2;
+
+            margin:
+                10px 0 17px;
+
+        }
+
+
+        .main-blog .blog-content h3 {
+
+            font-size: 26px;
+
+        }
+
+
+        .blog-content p {
+
+            font-size: 11px;
+
+            color: var(--muted);
+
+            margin-bottom: 16px;
+
+        }
+
+
+        /* =========================================================
+           NEWSLETTER
+        ========================================================= */
+
+        .newsletter {
+
+            width: min(1250px,86%);
+
+            margin:
+                120px auto;
+
+            background:
+                #e2e9df;
+
+            border-radius: 31px;
+
+            padding:
+                60px 7%;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+
+        }
+
+
+        .newsletter h2 {
+
+            font-size:
+                clamp(38px,4vw,55px);
+
+            line-height: 1.02;
+
+            letter-spacing: -.045em;
+
+        }
+
+
+        .newsletter h2 em {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+        }
+
+
+        .newsletter-description {
+
+            max-width: 500px;
+
+            color: var(--muted);
+
+            font-size: 12px;
+
+            margin-top: 15px;
+
+        }
+
+
+        .newsletter label {
+
+            display: block;
+
+            font-size: 9px;
+
+            font-weight: 800;
+
+            letter-spacing: .13em;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .email-form {
+
+            display: flex;
+
+            background: white;
+
+            border:
+                1px solid
+                var(--line);
+
+            padding: 5px;
+
+            border-radius: 100px;
+
+        }
+
+
+        .email-form input {
+
+            flex: 1;
+
+            min-width: 0;
+
+            border: none;
+
+            outline: none;
+
+            background: transparent;
+
+            padding:
+                0 15px;
+
+            font-size: 12px;
+
+        }
+
+
+        .email-form button {
+
+            border: none;
+
+            background:
+                var(--dark);
+
+            color: white;
+
+            padding:
+                12px 20px;
+
+            border-radius: 100px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+        }
+
+
+        .newsletter-note {
+
+            color: #858f89;
+
+            font-size: 9px;
+
+            margin:
+                9px 12px;
+
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+
+            background:
+                #102b25;
+
+            color: #dce4df;
+
+            padding:
+                70px 7% 22px;
+
+        }
+
+
+        .footer-grid {
+
+            max-width: 1250px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                2fr 1fr 1fr 1fr;
+
+            gap: 50px;
+
+        }
+
+
+        .footer-description {
+
+            max-width: 300px;
+
+            color: #9eafa8;
+
+            font-size: 11px;
+
+            margin-top: 18px;
+
+        }
+
+
+        .footer-title {
+
+            color: white;
+
+            font-size: 10px;
+
+            letter-spacing: .13em;
+
+            text-transform: uppercase;
+
+            margin-bottom: 16px;
+
+        }
+
+
+        .footer-column a {
+
+            display: block;
+
+            color: #9eafa8;
+
+            font-size: 11px;
+
+            margin:
+                9px 0;
+
+            transition: .2s;
+
+        }
+
+
+        .footer-column a:hover {
+
+            color: white;
+
+        }
+
+
+        .footer-bottom {
+
+            max-width: 1250px;
+
+            margin:
+                55px auto 0;
+
+            padding-top: 18px;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,.1);
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            gap: 20px;
+
+            color: #74877f;
+
+            font-size: 8px;
+
+            letter-spacing: .08em;
+
+        }
+
+
+        /* =========================================================
+           TABLET
+        ========================================================= */
+
+        @media(max-width: 1000px) {
+
+            .navigation {
+
+                gap: 16px;
+
+            }
+
+
+            .hero {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .hero-content {
+
+                padding:
+                    70px 8% 45px;
+
+            }
+
+
+            .hero-visual {
+
+                min-height: 470px;
+
+            }
+
+
+            .destination-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .destination-card:first-child {
+
+                grid-column:
+                    span 2;
+
+            }
+
+
+            .product-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .product-card:first-child {
+
+                grid-column:
+                    span 2;
+
+            }
+
+
+            .blog-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .main-blog {
+
+                grid-column:
+                    span 2;
+
+            }
+
+
+            .method {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .method-visual {
+
+                min-height: 430px;
+
+            }
+
+
+            .newsletter {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .footer-grid {
+
+                grid-template-columns:
+                    2fr 1fr 1fr;
+
+            }
+
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media(max-width: 720px) {
+
+            .announcement {
+
+                font-size: 9px;
+
+            }
+
+
+            .announcement span {
+
+                display: none;
+
+            }
+
+
+            .header {
+
+                min-height: 72px;
+
+            }
+
+
+            .navigation {
+
+                display: none;
+
+                position: absolute;
+
+                left: 0;
+
+                right: 0;
+
+                top: 68px;
+
+                padding: 20px;
+
+                background: white;
+
+                border-radius: 18px;
+
+                box-shadow: var(--shadow);
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 17px;
+
+            }
+
+
+            .navigation.show {
+
+                display: flex;
+
+            }
+
+
+            .navigation a.active::after {
+
+                display: none;
+
+            }
+
+
+            .header-button {
+
+                display: none;
+
+            }
+
+
+            .menu-button {
+
+                display: block;
+
+            }
+
+
+            .hero {
+
+                width: 94%;
+
+                border-radius: 27px;
+
+            }
+
+
+            .hero-content {
+
+                padding:
+                    58px 7% 42px;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 51px;
+
+            }
+
+
+            .hero-description {
+
+                font-size: 13px;
+
+            }
+
+
+            .hero-visual {
+
+                min-height: 360px;
+
+            }
+
+
+            .sun {
+
+                width: 105px;
+
+                height: 105px;
+
+                top: 50px;
+
+            }
+
+
+            .mountain {
+
+                border-left-width: 160px;
+
+                border-right-width: 160px;
+
+                border-bottom-width: 220px;
+
+            }
+
+
+            .floating-card {
+
+                transform:
+                    scale(.85);
+
+            }
+
+
+            .location-card {
+
+                left: 3%;
+
+            }
+
+
+            .guide-card {
+
+                right: 2%;
+
+            }
+
+
+            .quick-links {
+
+                width: 90%;
+
+                grid-template-columns:
+                    1fr;
+
+                margin-top:
+                    -20px;
+
+            }
+
+
+            .quick-link {
+
+                border-right: none;
+
+                border-bottom:
+                    1px solid var(--line);
+
+                padding:
+                    18px 20px;
+
+            }
+
+
+            .section {
+
+                width: 90%;
+
+                margin:
+                    80px auto;
+
+            }
+
+
+            .section-header {
+
+                display: block;
+
+            }
+
+
+            .view-all {
+
+                display: inline-block;
+
+                margin-top: 18px;
+
+            }
+
+
+            .destination-grid,
+            .product-grid,
+            .blog-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .destination-card:first-child,
+            .product-card:first-child,
+            .main-blog {
+
+                grid-column:
+                    auto;
+
+            }
+
+
+            .destination-card:first-child
+            .destination-image {
+
+                height: 300px;
+
+            }
+
+
+            .products-section {
+
+                padding:
+                    80px 0;
+
+            }
+
+
+            .method-content {
+
+                padding:
+                    60px 8%;
+
+            }
+
+
+            .method-points {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .method-visual {
+
+                min-height:
+                    330px;
+
+            }
+
+
+            .map-circle {
+
+                width: 480px;
+
+                height: 400px;
+
+            }
+
+
+            .newsletter {
+
+                width: 90%;
+
+                padding:
+                    45px 8%;
+
+                gap: 35px;
+
+            }
+
+
+            .email-form {
+
+                flex-direction:
+                    column;
+
+                background:
+                    transparent;
+
+                border: none;
+
+                gap: 8px;
+
+                padding: 0;
+
+            }
+
+
+            .email-form input {
+
+                min-height: 45px;
+
+                background:
+                    white;
+
+                border:
+                    1px solid
+                    var(--line);
+
+                border-radius: 100px;
+
+            }
+
+
+            .email-form button {
+
+                min-height: 45px;
+
+            }
+
+
+            .footer-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+                gap: 35px;
+
+            }
+
+
+            .footer-brand {
+
+                grid-column:
+                    span 2;
+
+            }
+
+
+            .footer-bottom {
+
+                display: block;
+
+            }
+
+
+            .footer-bottom div {
+
+                margin-top: 8px;
+
+            }
+
+        }
+
+
+        /* =========================================================
+           VERY SMALL MOBILE
+        ========================================================= */
+
+        @media(max-width: 420px) {
+
+            .hero h1 {
+
+                font-size: 44px;
+
+            }
+
+
+            .hero-buttons {
+
+                flex-direction:
+                    column;
+
+            }
+
+
+            .button {
+
+                width: 100%;
+
+            }
+
+
+            .hero-trust {
+
+                flex-direction:
+                    column;
+
+                gap: 7px;
+
+            }
+
+
+            .floating-card {
+
+                transform:
+                    scale(.72);
+
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -1544,692 +2941,1452 @@ input {
 <body>
 
 
-<!-- =========================================================
-     HEADER
-========================================================= -->
+    <!-- =========================================================
+         TOP ANNOUNCEMENT
+    ========================================================= -->
 
-<header class="header">
+    <div class="announcement">
 
-<div class="container">
+        <span>
+            ✦ Smart travel inspiration for your next adventure
+        </span>
 
-<nav class="nav">
+        <a href="blog.html">
+            Explore travel guides →
+        </a>
 
-<a href="#" class="logo">
-PinPoint<span>Travel</span>
-</a>
+    </div>
 
 
-<ul class="nav-links" id="navLinks">
 
-<li>
-<a href="#destinations">Destinations</a>
-</li>
+    <!-- =========================================================
+         HEADER / NAVIGATION
+    ========================================================= -->
 
-<li>
-<a href="#blog">Travel Journal</a>
-</li>
+    <header class="header">
 
-<li>
-<a href="#gear">Travel Gear</a>
-</li>
+        <a href="index.html"
+            class="logo">
 
-<li>
-<a href="#about">About</a>
-</li>
+            <span class="logo-symbol">
+                ✦
+            </span>
 
-<li>
-<a href="blog.html" class="nav-blog">
-Blog
-</a>
-</li>
+            <span class="logo-text">
 
-</ul>
+                <strong>
+                    PINPOINT
+                </strong>
 
+                <small>
+                    TRAVEL
+                </small>
 
-<div class="menu" id="menu">
-☰
-</div>
+            </span>
 
-</nav>
+        </a>
 
-</div>
 
-</header>
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Open navigation">
 
+            ☰
 
+        </button>
 
-<!-- =========================================================
-     HERO
-========================================================= -->
 
-<section class="hero">
+        <nav
+            class="navigation"
+            id="navigation">
 
-<div class="container">
+            <a
+                href="index.html"
+                class="active">
 
-<div class="hero-content reveal">
+                Home
 
-<div class="hero-label">
-Travel • Discover • Explore
-</div>
+            </a>
 
-<h1>
-Go somewhere
-<br>
-<em>beautiful.</em>
-</h1>
 
-<p class="hero-description">
-Destination inspiration, simple travel guides
-and a few things worth taking with you.
-</p>
+            <a href="destinations.html">
 
-<a href="#destinations" class="hero-link">
-Explore destinations
-<span>→</span>
-</a>
+                Destinations
 
-</div>
+            </a>
 
-</div>
 
+            <a href="products.html">
 
-<div class="hero-image">
+                Travel Essentials
 
-<img
-src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=85"
-alt="Mountain destination"
->
+            </a>
 
-<div class="hero-place">
-Mountain Escape
-</div>
 
-</div>
+            <a href="blog.html">
 
-</section>
+                Travel Guides
 
+            </a>
 
 
-<!-- =========================================================
-     INTRO
-========================================================= -->
+            <a href="about.html">
 
-<section class="intro" id="about">
+                About
 
-<div class="container">
+            </a>
 
-<div class="intro-grid reveal">
+        </nav>
 
 
-<div>
+        <a
+            href="destinations.html"
+            class="header-button">
 
-<div class="section-label">
-PinPoint Travel
-</div>
+            Start Exploring ↗
 
-<h2>
-A little inspiration
-for the next journey.
-</h2>
+        </a>
 
-</div>
+    </header>
 
 
-<div class="intro-text">
 
-<p>
-Discover destinations worth adding to your list,
-read practical travel ideas and find useful
-essentials for the journey.
-</p>
+    <main>
 
-<p>
-Our travel journal keeps things simple —
-short articles, useful recommendations and
-ideas for your next escape.
-</p>
 
-<a href="blog.html" class="text-link">
-Visit the travel journal →
-</a>
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
 
-</div>
+        <section class="hero">
 
 
-</div>
+            <div class="hero-content">
 
-</div>
+                <p class="eyebrow">
 
-</section>
+                    TRAVEL SMART • DISCOVER MORE
 
+                </p>
 
 
-<!-- =========================================================
-     FEATURED DESTINATION
-========================================================= -->
+                <h1>
 
-<section class="destination" id="destinations">
+                    Go further.<br>
 
-<div class="container">
+                    <em>
+                        Travel smarter.
+                    </em>
 
+                </h1>
 
-<div class="destination-header reveal">
 
-<h2>
-Where to next?
-</h2>
+                <p class="hero-description">
 
-<p>
-A few places worth putting
-on your travel list.
-</p>
+                    Discover inspiring destinations,
+                    practical travel guides and useful
+                    travel essentials curated to make
+                    planning your next adventure easier.
 
-</div>
+                </p>
 
 
-<div class="destination-image reveal">
+                <div class="hero-buttons">
 
-<img
-src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1800&q=85"
-alt="Paris France"
->
+                    <a
+                        href="destinations.html"
+                        class="button button-primary">
 
-<div class="destination-info">
+                        Explore Destinations
+                        <span style="margin-left:12px;">
+                            →
+                        </span>
 
-<small>
-Europe
-</small>
+                    </a>
 
-<h3>
-Paris, France
-</h3>
 
-</div>
+                    <a
+                        href="blog.html"
+                        class="button button-secondary">
 
-</div>
+                        Read Travel Guides
 
+                    </a>
 
-</div>
+                </div>
 
-</section>
 
+                <div class="hero-trust">
 
+                    <span>
+                        ✦ Curated destinations
+                    </span>
 
-<!-- =========================================================
-     BLOG
-========================================================= -->
+                    <span>
+                        ✦ Practical guides
+                    </span>
 
-<section class="blog-preview" id="blog">
+                    <span>
+                        ✦ Useful travel finds
+                    </span>
 
-<div class="container">
+                </div>
 
+            </div>
 
-<div class="blog-top reveal">
 
-<h2>
-Travel Journal
-</h2>
 
-<p>
-Short guides and ideas to help
-plan your next trip.
-</p>
+            <!-- HERO VISUAL -->
 
-</div>
+            <div class="hero-visual">
 
 
-<div class="blog-layout">
+                <div class="sun"></div>
 
+                <div class="hero-ring"></div>
 
-<!-- Main article -->
+                <div class="hero-ring two"></div>
 
-<a href="blog.html" class="main-article reveal">
 
-<img
-src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&fit=crop&w=1400&q=85"
-alt="Winter travel"
->
+                <div
+                    class="mountain mountain-one">
+                </div>
 
-<div class="article-content">
 
-<small>
-Latest guide
-</small>
+                <div
+                    class="mountain mountain-two">
+                </div>
 
-<h3>
-Beautiful places to experience
-during winter
-</h3>
 
-<p>
-Explore destinations, travel ideas and
-simple planning tips.
-</p>
+                <div
+                    class="mountain mountain-three">
+                </div>
 
-</div>
 
-</a>
+                <div class="ocean"></div>
 
+                <div class="road"></div>
 
-<!-- Blog CTA -->
 
-<div class="blog-side reveal">
 
-<div>
+                <!-- FLOATING CARD -->
 
-<div class="blog-side-label">
-The Journal
-</div>
+                <div
+                    class="floating-card location-card">
 
-<h3>
-Travel stories,
-tips & inspiration.
-</h3>
+                    <span class="floating-icon">
+                        ⌖
+                    </span>
 
-<p>
-Our blog is where you'll find short
-destination guides, useful travel tips
-and travel recommendations.
-</p>
+                    <div>
 
-</div>
+                        <small>
+                            YOUR NEXT STOP
+                        </small>
 
+                        <strong>
+                            Find your place
+                        </strong>
 
-<div>
+                    </div>
 
-<a href="blog.html" class="blog-button">
-Explore the blog →
-</a>
+                </div>
 
-</div>
 
-</div>
 
+                <!-- FLOATING CARD -->
 
-</div>
+                <div
+                    class="floating-card guide-card">
 
-</div>
+                    <span class="floating-icon">
+                        ✦
+                    </span>
 
-</section>
+                    <div>
 
+                        <small>
+                            PLAN BETTER
+                        </small>
 
+                        <strong>
+                            Guides + essentials
+                        </strong>
 
-<!-- =========================================================
-     TRAVEL GEAR
-========================================================= -->
+                    </div>
 
-<section class="gear" id="gear">
+                </div>
 
-<div class="container">
+            </div>
 
+        </section>
 
-<div class="gear-header reveal">
 
-<h2>
-Travel essentials
-</h2>
 
-<p>
-A few useful things for
-your next adventure.
-</p>
+        <!-- =====================================================
+             QUICK LINKS
+        ====================================================== -->
 
-</div>
+        <section class="quick-links">
 
 
-<div class="gear-grid">
+            <a
+                href="destinations.html"
+                class="quick-link">
 
+                <span class="quick-number">
+                    01
+                </span>
 
-<!-- Product 1 -->
+                <strong>
+                    Find a destination
+                </strong>
 
-<div class="gear-card reveal">
+                <small>
+                    Inspiration for every trip
+                </small>
 
-<div class="gear-img">
+            </a>
 
-<img
-src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"
-alt="Travel backpack"
->
 
-</div>
+            <a
+                href="products.html"
+                class="quick-link">
 
-<div class="gear-info">
+                <span class="quick-number">
+                    02
+                </span>
 
-<h3>
-Travel Backpack
-</h3>
+                <strong>
+                    Pack better
+                </strong>
 
-<p>
-Useful for everyday travel.
-</p>
+                <small>
+                    Useful travel essentials
+                </small>
 
-<a
-href="YOUR-AMAZON-AFFILIATE-LINK"
-target="_blank"
-rel="nofollow sponsored"
-class="amazon-link"
->
-View on Amazon →
-</a>
+            </a>
 
-</div>
 
-</div>
+            <a
+                href="blog.html"
+                class="quick-link">
 
+                <span class="quick-number">
+                    03
+                </span>
 
-<!-- Product 2 -->
+                <strong>
+                    Plan with confidence
+                </strong>
 
-<div class="gear-card reveal">
+                <small>
+                    Practical travel guides
+                </small>
 
-<div class="gear-img">
+            </a>
 
-<img
-src="https://images.unsplash.com/photo-1584467541268-b040f83be3fd?auto=format&fit=crop&w=800&q=80"
-alt="Travel water bottle"
->
+        </section>
 
-</div>
 
-<div class="gear-info">
 
-<h3>
-Travel Bottle
-</h3>
+        <!-- =====================================================
+             DESTINATIONS
+        ====================================================== -->
 
-<p>
-Simple everyday essential.
-</p>
+        <section class="section">
 
-<a
-href="YOUR-AMAZON-AFFILIATE-LINK"
-target="_blank"
-rel="nofollow sponsored"
-class="amazon-link"
->
-View on Amazon →
-</a>
 
-</div>
+            <div class="section-header">
 
-</div>
+                <div>
 
+                    <p class="eyebrow">
+                        WHERE WILL YOU GO?
+                    </p>
 
-<!-- Product 3 -->
+                    <h2>
+                        Places worth
+                        <em>
+                            pinpointing.
+                        </em>
+                    </h2>
 
-<div class="gear-card reveal">
+                    <p class="section-description">
 
-<div class="gear-img">
+                        Explore destination inspiration
+                        for city breaks, cultural journeys,
+                        tropical escapes and unforgettable
+                        adventures.
 
-<img
-src="https://images.unsplash.com/photo-1556306535-38febf6782e7?auto=format&fit=crop&w=800&q=80"
-alt="Travel headphones"
->
+                    </p>
 
-</div>
+                </div>
 
-<div class="gear-info">
 
-<h3>
-Travel Headphones
-</h3>
+                <a
+                    href="destinations.html"
+                    class="view-all">
 
-<p>
-For long journeys.
-</p>
+                    View all destinations →
 
-<a
-href="YOUR-AMAZON-AFFILIATE-LINK"
-target="_blank"
-rel="nofollow sponsored"
-class="amazon-link"
->
-View on Amazon →
-</a>
+                </a>
 
-</div>
+            </div>
 
-</div>
 
 
-</div>
+            <div class="destination-grid">
 
 
-<p style="
-text-align:center;
-margin-top:25px;
-font-size:9px;
-color:#8a989c;
-">
-As an Amazon Associate, we may earn from qualifying purchases.
-</p>
+                <!-- JAPAN -->
 
+                <a
+                    href="destinations.html#japan"
+                    class="destination-card">
 
-</div>
+                    <div
+                        class="destination-image japan">
 
-</section>
+                        <div
+                            class="japan-sun">
+                        </div>
 
+                        <div
+                            class="japan-mountain">
+                        </div>
 
+                        <div
+                            class="japan-building">
 
-<!-- =========================================================
-     FINAL CTA
-========================================================= -->
+                            ⌂
 
-<section class="final-cta">
+                        </div>
 
-<div class="container reveal">
+                    </div>
 
-<h2>
-Your next destination
-could be closer than you think.
-</h2>
 
-<p>
-Explore our travel journal for destination ideas,
-tips and inspiration.
-</p>
+                    <div class="destination-content">
 
-<a href="blog.html" class="final-link">
-Explore Travel Journal →
-</a>
+                        <span class="category">
+                            ASIA
+                        </span>
 
-</div>
+                        <h3>
+                            Japan
+                        </h3>
 
-</section>
+                        <p>
+                            Culture, food, cities
+                            and hidden gems.
+                        </p>
 
+                        <span class="card-link">
+                            Explore Japan →
+                        </span>
 
+                    </div>
 
-<!-- =========================================================
-     FOOTER
-========================================================= -->
+                </a>
 
-<footer class="footer">
 
-<div class="container">
 
+                <!-- EUROPE -->
 
-<div class="footer-top">
+                <a
+                    href="destinations.html#europe"
+                    class="destination-card">
 
+                    <div
+                        class="destination-image europe">
 
-<div class="footer-description">
+                        <div
+                            class="europe-sun">
+                        </div>
 
-<a href="#" class="logo">
-PinPoint<span>Travel</span>
-</a>
+                        <div
+                            class="europe-arch">
+                        </div>
 
-<p>
-Travel inspiration, useful guides
-and carefully selected travel finds.
-</p>
+                    </div>
 
-</div>
 
+                    <div class="destination-content">
 
-<div class="footer-links">
+                        <span class="category">
+                            EUROPE
+                        </span>
 
+                        <h3>
+                            European Escapes
+                        </h3>
 
-<div class="footer-column">
+                        <p>
+                            Classic cities,
+                            culture and slow travel.
+                        </p>
 
-<h4>
-Explore
-</h4>
+                        <span class="card-link">
+                            Explore Europe →
+                        </span>
 
-<a href="#destinations">
-Destinations
-</a>
+                    </div>
 
-<a href="blog.html">
-Travel Journal
-</a>
+                </a>
 
-<a href="#gear">
-Travel Gear
-</a>
 
-</div>
 
+                <!-- TROPICAL -->
 
-<div class="footer-column">
+                <a
+                    href="destinations.html#tropical"
+                    class="destination-card">
 
-<h4>
-Information
-</h4>
+                    <div
+                        class="destination-image tropical">
 
-<a href="#about">
-About
-</a>
+                        <div class="island">
+                        </div>
 
-<a href="#">
-Contact
-</a>
+                        <div class="palm">
+                            ♧
+                        </div>
 
-<a href="#">
-Affiliate Disclosure
-</a>
+                    </div>
 
-</div>
 
+                    <div class="destination-content">
 
-<div class="footer-column">
+                        <span class="category">
+                            GETAWAYS
+                        </span>
 
-<h4>
-Follow
-</h4>
+                        <h3>
+                            Tropical Retreats
+                        </h3>
 
-<a href="#">
-Instagram
-</a>
+                        <p>
+                            Sun, sea and unforgettable
+                            stays.
+                        </p>
 
-<a href="#">
-Pinterest
-</a>
+                        <span class="card-link">
+                            Explore getaways →
+                        </span>
 
-<a href="#">
-Facebook
-</a>
+                    </div>
 
-</div>
+                </a>
 
+            </div>
 
-</div>
+        </section>
 
 
-</div>
 
+        <!-- =====================================================
+             TRAVEL ESSENTIALS
+        ====================================================== -->
 
-<div class="footer-bottom">
+        <section class="products-section">
 
-<span>
-© 2026 PinPoint Travel
-</span>
 
-<span>
-Travel • Discover • Explore
-</span>
+            <div class="products-container">
 
-</div>
 
+                <div class="section-header">
 
-</div>
+                    <div>
 
-</footer>
+                        <p class="eyebrow">
+                            TRAVEL ESSENTIALS
+                        </p>
 
+                        <h2>
+                            Pack less.
+                            <em>
+                                Choose better.
+                            </em>
+                        </h2>
 
+                        <p class="section-description">
 
-<!-- =========================================================
-     JAVASCRIPT
-========================================================= -->
+                            Discover useful travel products,
+                            packing solutions and practical
+                            gear selected for better journeys.
 
-<script>
+                        </p>
 
+                    </div>
 
-/* Mobile navigation */
 
-const menu =
-document.getElementById("menu");
+                    <a
+                        href="products.html"
+                        class="view-all">
 
-const navLinks =
-document.getElementById("navLinks");
+                        Browse all essentials →
 
+                    </a>
 
-menu.addEventListener("click", () => {
+                </div>
 
-navLinks.classList.toggle("active");
 
-});
 
+                <div class="product-grid">
 
-/* Close menu */
 
-document.querySelectorAll(".nav-links a")
-.forEach(link => {
+                    <!-- PACKING -->
 
-link.addEventListener("click", () => {
+                    <a
+                        href="products.html#packing"
+                        class="product-card">
 
-navLinks.classList.remove("active");
+                        <span class="product-badge">
+                            TRAVEL SMART
+                        </span>
 
-});
 
-});
+                        <div
+                            class="product-image product-one">
 
+                            <div
+                                class="packing-box box-one">
+                            </div>
 
-/* Scroll animation */
+                            <div
+                                class="packing-box box-two">
+                            </div>
 
-const revealElements =
-document.querySelectorAll(".reveal");
+                            <div
+                                class="packing-box box-three">
+                            </div>
 
+                        </div>
 
-const observer =
-new IntersectionObserver(
 
-(entries) => {
+                        <div class="product-content">
 
-entries.forEach(entry => {
+                            <span class="category">
+                                PACKING
+                            </span>
 
-if(entry.isIntersecting) {
+                            <h3>
+                                Better Packing Essentials
+                            </h3>
 
-entry.target.classList.add("active");
+                            <p>
+                                Organize your luggage
+                                and make every trip easier.
+                            </p>
 
-}
+                            <span class="card-link">
+                                Explore collection →
+                            </span>
 
-});
+                        </div>
 
-},
+                    </a>
 
-{
-threshold: 0.12
-}
 
-);
 
+                    <!-- COMFORT -->
 
-revealElements.forEach(element => {
+                    <a
+                        href="products.html#comfort"
+                        class="product-card">
 
-observer.observe(element);
+                        <div
+                            class="product-image product-two">
 
-});
+                            <div class="cloud">
+                                ☁
+                            </div>
 
-</script>
+                            <div
+                                class="neck-pillow">
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-content">
+
+                            <span class="category">
+                                COMFORT
+                            </span>
+
+                            <h3>
+                                Journey Comfort
+                            </h3>
+
+                            <p>
+                                Small upgrades for flights,
+                                road trips and long journeys.
+                            </p>
+
+                            <span class="card-link">
+                                See collection →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- TECH -->
+
+                    <a
+                        href="products.html#tech"
+                        class="product-card">
+
+                        <div
+                            class="product-image product-three">
+
+                            <div class="phone">
+                            </div>
+
+                            <div class="signal">
+                                ⌁
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-content">
+
+                            <span class="category">
+                                TRAVEL TECH
+                            </span>
+
+                            <h3>
+                                Useful Travel Tech
+                            </h3>
+
+                            <p>
+                                Practical gear that keeps
+                                you connected on the go.
+                            </p>
+
+                            <span class="card-link">
+                                Discover more →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+
+                <p class="affiliate-note">
+
+                    Some product links may be affiliate
+                    links. If you purchase through them,
+                    Pinpoint Travel may earn a commission
+                    at no extra cost to you.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PINPOINT METHOD
+        ====================================================== -->
+
+        <section class="method">
+
+
+            <!-- VISUAL -->
+
+            <div class="method-visual">
+
+                <div class="map-circle">
+                </div>
+
+                <div class="route">
+                </div>
+
+                <span class="map-pin pin-one">
+                    ✦
+                </span>
+
+                <span class="map-pin pin-two">
+                    ✦
+                </span>
+
+
+                <div class="stamp">
+
+                    PINPOINT
+
+                    <strong>
+                        YOUR<br>
+                        JOURNEY
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CONTENT -->
+
+            <div class="method-content">
+
+                <p class="eyebrow">
+                    THE PINPOINT METHOD
+                </p>
+
+
+                <h2>
+
+                    Good trips start with
+                    <em>
+                        good planning.
+                    </em>
+
+                </h2>
+
+
+                <p>
+
+                    Skip endless tabs and generic
+                    travel lists. Pinpoint Travel brings
+                    destination inspiration, planning
+                    advice, packing ideas and useful
+                    travel resources together in one place.
+
+                </p>
+
+
+                <div class="method-points">
+
+
+                    <div class="method-point">
+
+                        <span>
+                            01
+                        </span>
+
+                        <strong>
+                            Discover
+                        </strong>
+
+                        <small>
+                            Find places that match
+                            your travel style.
+                        </small>
+
+                    </div>
+
+
+                    <div class="method-point">
+
+                        <span>
+                            02
+                        </span>
+
+                        <strong>
+                            Prepare
+                        </strong>
+
+                        <small>
+                            Use practical guides
+                            before you leave.
+                        </small>
+
+                    </div>
+
+
+                    <div class="method-point">
+
+                        <span>
+                            03
+                        </span>
+
+                        <strong>
+                            Go
+                        </strong>
+
+                        <small>
+                            Travel with less stress
+                            and more confidence.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="blog.html"
+                    class="button method-button">
+
+                    Explore the travel guides →
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             BLOG / TRAVEL GUIDES
+        ====================================================== -->
+
+        <section class="section">
+
+
+            <div class="section-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        FROM THE JOURNAL
+                    </p>
+
+                    <h2>
+                        Ideas for your
+                        <em>
+                            next journey.
+                        </em>
+                    </h2>
+
+                    <p class="section-description">
+
+                        Practical travel advice,
+                        destination inspiration,
+                        packing ideas and planning tips.
+
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="blog.html"
+                    class="view-all">
+
+                    View all articles →
+
+                </a>
+
+            </div>
+
+
+
+            <div class="blog-grid">
+
+
+                <!-- BLOG 1 -->
+
+                <a
+                    href="blog.html#japan-guide"
+                    class="blog-card main-blog">
+
+                    <div
+                        class="blog-image blog-japan">
+
+                        <span>
+                            旅
+                        </span>
+
+                    </div>
+
+
+                    <div class="blog-content">
+
+                        <div class="blog-meta">
+
+                            <span>
+                                DESTINATION GUIDE
+                            </span>
+
+                            <small>
+                                8 min read
+                            </small>
+
+                        </div>
+
+
+                        <h3>
+                            How to plan a memorable
+                            Japan adventure
+                        </h3>
+
+
+                        <p>
+
+                            A practical starting point
+                            for routes, experiences,
+                            packing and planning.
+
+                        </p>
+
+
+                        <span class="card-link">
+                            Read guide →
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- BLOG 2 -->
+
+                <a
+                    href="blog.html#packing"
+                    class="blog-card">
+
+                    <div
+                        class="blog-image blog-packing">
+
+                        <span>
+                            PACK
+                        </span>
+
+                    </div>
+
+
+                    <div class="blog-content">
+
+                        <div class="blog-meta">
+
+                            <span>
+                                TRAVEL TIPS
+                            </span>
+
+                            <small>
+                                5 min read
+                            </small>
+
+                        </div>
+
+
+                        <h3>
+                            The smarter way to
+                            pack for your next trip
+                        </h3>
+
+
+                        <span class="card-link">
+                            Read article →
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- BLOG 3 -->
+
+                <a
+                    href="blog.html#budget"
+                    class="blog-card">
+
+                    <div
+                        class="blog-image blog-budget">
+
+                        <span>
+                            $
+                        </span>
+
+                    </div>
+
+
+                    <div class="blog-content">
+
+                        <div class="blog-meta">
+
+                            <span>
+                                TRAVEL PLANNING
+                            </span>
+
+                            <small>
+                                6 min read
+                            </small>
+
+                        </div>
+
+
+                        <h3>
+                            Simple ways to plan
+                            a travel budget
+                        </h3>
+
+
+                        <span class="card-link">
+                            Read article →
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             NEWSLETTER
+        ====================================================== -->
+
+        <section class="newsletter">
+
+
+            <div>
+
+                <p class="eyebrow">
+                    STAY IN THE LOOP
+                </p>
+
+
+                <h2>
+
+                    More journeys.<br>
+
+                    <em>
+                        Less guesswork.
+                    </em>
+
+                </h2>
+
+
+                <p class="newsletter-description">
+
+                    Get occasional destination ideas,
+                    travel tips and useful finds from
+                    Pinpoint Travel.
+
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <label for="email">
+                    YOUR EMAIL ADDRESS
+                </label>
+
+
+                <form
+                    class="email-form"
+                    id="newsletterForm">
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="you@example.com"
+                        required>
+
+
+                    <button type="submit">
+
+                        Join →
+
+                    </button>
+
+                </form>
+
+
+                <p class="newsletter-note">
+
+                    No spam. Just useful travel
+                    inspiration.
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <footer>
+
+
+        <div class="footer-grid">
+
+
+            <!-- BRAND -->
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="logo">
+
+                    <span
+                        class="logo-symbol"
+                        style="border-color:white;color:white;">
+
+                        ✦
+
+                    </span>
+
+
+                    <span class="logo-text">
+
+                        <strong style="color:white;">
+
+                            PINPOINT
+
+                        </strong>
+
+                        <small style="color:#9eafa8;">
+
+                            TRAVEL
+
+                        </small>
+
+                    </span>
+
+                </a>
+
+
+                <p class="footer-description">
+
+                    Smart inspiration for travelers
+                    who want to discover more,
+                    plan better and travel with
+                    confidence.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- EXPLORE -->
+
+            <div class="footer-column">
+
+                <h4 class="footer-title">
+                    Explore
+                </h4>
+
+
+                <a href="destinations.html">
+                    Destinations
+                </a>
+
+                <a href="products.html">
+                    Travel Essentials
+                </a>
+
+                <a href="blog.html">
+                    Travel Guides
+                </a>
+
+            </div>
+
+
+
+            <!-- COMPANY -->
+
+            <div class="footer-column">
+
+                <h4 class="footer-title">
+                    Pinpoint Travel
+                </h4>
+
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="privacy.html">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+
+
+            <!-- SOCIAL -->
+
+            <div class="footer-column">
+
+                <h4 class="footer-title">
+                    Follow
+                </h4>
+
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    Pinterest
+                </a>
+
+                <a href="#">
+                    Facebook
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <span>
+
+                © 2026 Pinpoint Travel.
+                All rights reserved.
+
+            </span>
+
+
+            <span>
+
+                PACK LIGHT · WANDER FAR ·
+                DISCOVER MORE
+
+            </span>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================= -->
+
+    <script>
+
+        /* ==========================================
+           MOBILE MENU
+        ========================================== */
+
+        const menuButton =
+            document.getElementById(
+                "menuButton"
+            );
+
+        const navigation =
+            document.getElementById(
+                "navigation"
+            );
+
+
+        menuButton.addEventListener(
+            "click",
+            function () {
+
+                navigation.classList.toggle(
+                    "show"
+                );
+
+            }
+        );
+
+
+        /* ==========================================
+           CLOSE MOBILE MENU AFTER CLICK
+        ========================================== */
+
+        const navigationLinks =
+            navigation.querySelectorAll("a");
+
+
+        navigationLinks.forEach(
+            function(link) {
+
+                link.addEventListener(
+                    "click",
+                    function() {
+
+                        navigation.classList.remove(
+                            "show"
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* ==========================================
+           NEWSLETTER
+        ========================================== */
+
+        const newsletterForm =
+            document.getElementById(
+                "newsletterForm"
+            );
+
+
+        newsletterForm.addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+
+                const email =
+                    document.getElementById(
+                        "email"
+                    );
+
+
+                const button =
+                    newsletterForm.querySelector(
+                        "button"
+                    );
+
+
+                if (
+                    email.value.trim() !== ""
+                ) {
+
+                    button.textContent =
+                        "You're in ✓";
+
+                    email.value = "";
+
+                    email.placeholder =
+                        "Thanks for joining!";
+
+                }
+
+            }
+        );
+
+    </script>
 
 
 </body>
+
 </html>
