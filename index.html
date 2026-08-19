@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
         content="Pinpoint Travel — discover inspiring destinations, practical travel guides and carefully selected travel essentials.">
@@ -13,14 +12,12 @@
     <meta name="keywords"
         content="travel, travel guides, destinations, travel essentials, travel tips, vacation, tourism">
 
-    <meta name="author"
-        content="Pinpoint Travel">
+    <meta name="author" content="Pinpoint Travel">
 
     <title>Pinpoint Travel | Travel Smarter. Go Further.</title>
 
     <!-- Google Fonts -->
-    <link rel="preconnect"
-        href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect"
         href="https://fonts.gstatic.com"
@@ -29,12 +26,49 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap"
         rel="stylesheet">
 
-
     <style>
 
         /* =========================================================
-           PINPOINT TRAVEL
-           COMPLETE HOMEPAGE CSS
+           RESET
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", Arial, sans-serif;
+            background: #f7f5ef;
+            color: #162b26;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button,
+        input {
+            font-family: inherit;
+        }
+
+
+        /* =========================================================
+           VARIABLES
         ========================================================= */
 
         :root {
@@ -64,66 +98,19 @@
 
             --radius: 28px;
 
-        }
-
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-
-        body {
-
-            font-family:
-                "DM Sans",
-                Arial,
-                sans-serif;
-
-            background: var(--cream);
-
-            color: var(--text);
-
-            line-height: 1.6;
-
-            overflow-x: hidden;
-
-        }
-
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-
-        button,
-        input {
-            font-family: inherit;
+            --container: 1250px;
         }
 
 
         /* =========================================================
-           ANNOUNCEMENT BAR
+           ANNOUNCEMENT
         ========================================================= */
 
         .announcement {
 
             min-height: 38px;
 
-            padding: 8px 5%;
+            padding: 8px 20px;
 
             background: var(--dark);
 
@@ -141,15 +128,14 @@
 
             letter-spacing: .03em;
 
+            text-align: center;
         }
-
 
         .announcement a {
 
             color: var(--lime);
 
             font-weight: 700;
-
         }
 
 
@@ -159,7 +145,7 @@
 
         .header {
 
-            width: min(1400px, 92%);
+            width: min(var(--container), 92%);
 
             min-height: 82px;
 
@@ -169,12 +155,11 @@
 
             align-items: center;
 
-            gap: 35px;
+            gap: 30px;
 
             position: relative;
 
             z-index: 100;
-
         }
 
 
@@ -189,9 +174,7 @@
             gap: 10px;
 
             flex-shrink: 0;
-
         }
-
 
         .logo-symbol {
 
@@ -207,10 +190,8 @@
 
             place-items: center;
 
-            font-size: 18px;
-
+            font-size: 17px;
         }
-
 
         .logo-text strong {
 
@@ -221,9 +202,7 @@
             letter-spacing: .16em;
 
             line-height: 1;
-
         }
-
 
         .logo-text small {
 
@@ -236,7 +215,6 @@
             font-size: 8px;
 
             letter-spacing: .2em;
-
         }
 
 
@@ -251,9 +229,7 @@
             align-items: center;
 
             gap: 28px;
-
         }
-
 
         .navigation a {
 
@@ -266,23 +242,17 @@
             transition: .2s;
 
             position: relative;
-
         }
-
 
         .navigation a:hover {
 
             color: var(--dark);
-
         }
-
 
         .navigation a.active {
 
             color: var(--dark);
-
         }
-
 
         .navigation a.active::after {
 
@@ -299,7 +269,6 @@
             bottom: -9px;
 
             background: var(--dark);
-
         }
 
 
@@ -321,19 +290,18 @@
 
             transition: .25s;
 
+            white-space: nowrap;
         }
-
 
         .header-button:hover {
 
             background: var(--green);
 
             transform: translateY(-2px);
-
         }
 
 
-        /* MOBILE BUTTON */
+        /* MOBILE MENU */
 
         .menu-button {
 
@@ -349,6 +317,7 @@
 
             margin-left: auto;
 
+            color: var(--dark);
         }
 
 
@@ -360,9 +329,9 @@
 
             width: min(1400px, 92%);
 
-            min-height: 660px;
-
             margin: 10px auto 0;
+
+            min-height: 620px;
 
             border-radius: 38px;
 
@@ -370,19 +339,11 @@
 
             display: grid;
 
-            grid-template-columns: 48% 52%;
+            grid-template-columns: 47% 53%;
+
+            background: #dce6d9;
 
             position: relative;
-
-            background:
-
-                linear-gradient(
-                    135deg,
-                    #dce6d9,
-                    #bdd3cb 55%,
-                    #7ea69d
-                );
-
         }
 
 
@@ -390,18 +351,18 @@
 
         .hero-content {
 
-            padding:
+            padding: 85px clamp(35px, 6vw, 90px);
 
-                90px
-                7vw
-                75px;
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
 
             position: relative;
 
-            z-index: 10;
-
+            z-index: 2;
         }
-
 
         .eyebrow {
 
@@ -414,37 +375,25 @@
             color: #68766f;
 
             margin-bottom: 17px;
-
         }
-
 
         .hero h1 {
 
-            font-size: clamp(
-                52px,
-                6vw,
-                88px
-            );
+            font-size: clamp(48px, 6vw, 88px);
 
             line-height: .97;
 
             letter-spacing: -.055em;
 
             color: var(--dark);
-
         }
-
 
         .hero h1 em {
 
-            font-family:
-                "Playfair Display",
-                serif;
+            font-family: "Playfair Display", serif;
 
             font-weight: 600;
-
         }
-
 
         .hero-description {
 
@@ -457,7 +406,6 @@
             font-size: 15px;
 
             color: #53665f;
-
         }
 
 
@@ -470,9 +418,7 @@
             flex-wrap: wrap;
 
             gap: 12px;
-
         }
-
 
         .button {
 
@@ -493,42 +439,39 @@
             font-weight: 800;
 
             transition: .25s;
-
         }
-
 
         .button-primary {
 
             background: var(--dark);
 
             color: white;
-
         }
-
 
         .button-primary:hover {
 
             transform: translateY(-3px);
 
             box-shadow:
-                0 12px 25px
-                rgba(16,43,37,.2);
-
+                0 12px 25px rgba(16, 43, 37, .2);
         }
-
 
         .button-secondary {
 
-            border: 1px solid
-                rgba(16,43,37,.25);
+            border: 1px solid rgba(16, 43, 37, .25);
 
-            background:
-                rgba(255,255,255,.25);
+            background: rgba(255, 255, 255, .25);
 
             backdrop-filter: blur(10px);
-
         }
 
+        .button-secondary:hover {
+
+            background: white;
+        }
+
+
+        /* HERO TRUST */
 
         .hero-trust {
 
@@ -545,219 +488,60 @@
             font-size: 10px;
 
             font-weight: 700;
-
         }
 
 
         /* =========================================================
-           HERO VISUAL
+           HERO IMAGE
         ========================================================= */
 
         .hero-visual {
 
-            min-height: 660px;
+            min-height: 620px;
 
             position: relative;
 
             overflow: hidden;
+        }
+
+        .hero-visual img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            object-position: center;
+        }
+
+        .hero-visual::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
 
             background:
-
                 linear-gradient(
-                    180deg,
-                    #b9d5d2 0%,
-                    #8fb7b0 45%,
-                    #608a81 68%,
-                    #375e56 100%
+                    90deg,
+                    rgba(16,43,37,.15),
+                    transparent 45%,
+                    rgba(16,43,37,.08)
                 );
 
+            pointer-events: none;
         }
 
 
-        /* SUN */
-
-        .sun {
-
-            width: 160px;
-
-            height: 160px;
-
-            border-radius: 50%;
-
-            position: absolute;
-
-            top: 80px;
-
-            right: 20%;
-
-            background: #f3e6bd;
-
-            box-shadow:
-                0 0 80px
-                rgba(243,230,189,.75);
-
-        }
-
-
-        /* RINGS */
-
-        .hero-ring {
-
-            position: absolute;
-
-            width: 370px;
-
-            height: 370px;
-
-            border: 1px solid
-                rgba(255,255,255,.28);
-
-            border-radius: 50%;
-
-            right: -100px;
-
-            top: -40px;
-
-        }
-
-
-        .hero-ring.two {
-
-            width: 530px;
-
-            height: 530px;
-
-            right: -170px;
-
-            top: -110px;
-
-            opacity: .45;
-
-        }
-
-
-        /* MOUNTAINS */
-
-        .mountain {
-
-            position: absolute;
-
-            bottom: 28%;
-
-            width: 0;
-
-            height: 0;
-
-            border-left:
-                250px solid transparent;
-
-            border-right:
-                250px solid transparent;
-
-            border-bottom:
-                340px solid #52786e;
-
-        }
-
-
-        .mountain-one {
-
-            left: -100px;
-
-            opacity: .55;
-
-        }
-
-
-        .mountain-two {
-
-            right: -100px;
-
-            border-bottom-color:
-                #365e56;
-
-        }
-
-
-        .mountain-three {
-
-            left: 28%;
-
-            transform: scale(.7);
-
-            opacity: .7;
-
-            border-bottom-color:
-                #456d63;
-
-        }
-
-
-        /* OCEAN */
-
-        .ocean {
-
-            position: absolute;
-
-            left: 0;
-
-            right: 0;
-
-            bottom: 0;
-
-            height: 34%;
-
-            background:
-
-                repeating-linear-gradient(
-                    175deg,
-                    rgba(255,255,255,.15) 0px,
-                    rgba(255,255,255,.15) 2px,
-                    transparent 2px,
-                    transparent 30px
-                );
-
-        }
-
-
-        /* ROAD */
-
-        .road {
-
-            position: absolute;
-
-            bottom: -140px;
-
-            left: 50%;
-
-            transform:
-                translateX(-50%)
-                rotate(5deg);
-
-            width: 150px;
-
-            height: 430px;
-
-            background: #d7cbb0;
-
-            clip-path:
-                polygon(
-                    42% 0,
-                    58% 0,
-                    100% 100%,
-                    0 100%
-                );
-
-        }
-
-
-        /* FLOATING CARDS */
+        /* HERO FLOATING CARDS */
 
         .floating-card {
 
             position: absolute;
 
-            z-index: 20;
+            z-index: 10;
 
             display: flex;
 
@@ -767,20 +551,15 @@
 
             padding: 13px 16px;
 
-            background:
-                rgba(255,255,255,.92);
+            background: rgba(255,255,255,.94);
 
-            backdrop-filter:
-                blur(15px);
+            backdrop-filter: blur(15px);
 
             border-radius: 18px;
 
             box-shadow:
-                0 15px 40px
-                rgba(16,43,37,.15);
-
+                0 15px 40px rgba(16,43,37,.15);
         }
-
 
         .floating-card small {
 
@@ -789,18 +568,14 @@
             font-size: 9px;
 
             color: #78857f;
-
         }
-
 
         .floating-card strong {
 
             display: block;
 
             font-size: 12px;
-
         }
-
 
         .floating-icon {
 
@@ -817,25 +592,20 @@
             background: var(--dark);
 
             color: white;
-
         }
-
 
         .location-card {
 
-            top: 35%;
+            top: 32%;
 
-            left: 8%;
-
+            left: 7%;
         }
-
 
         .guide-card {
 
-            bottom: 20%;
+            bottom: 12%;
 
-            right: 8%;
-
+            right: 7%;
         }
 
 
@@ -845,11 +615,9 @@
 
         .quick-links {
 
-            width: min(1250px, 86%);
+            width: min(1150px, 86%);
 
-            margin:
-                -40px auto
-                0;
+            margin: -40px auto 0;
 
             position: relative;
 
@@ -863,20 +631,16 @@
 
             display: grid;
 
-            grid-template-columns:
-                repeat(3,1fr);
+            grid-template-columns: repeat(3, 1fr);
 
             overflow: hidden;
-
         }
-
 
         .quick-link {
 
             padding: 25px 28px;
 
-            border-right:
-                1px solid var(--line);
+            border-right: 1px solid var(--line);
 
             display: grid;
 
@@ -884,41 +648,38 @@
 
             column-gap: 10px;
 
+            transition: .2s;
         }
 
+        .quick-link:hover {
+
+            background: #fafbf8;
+        }
 
         .quick-link:last-child {
 
             border: none;
-
         }
-
 
         .quick-number {
 
-            grid-row:
-                1 / 3;
+            grid-row: 1 / 3;
 
             color: #98a29d;
 
             font-size: 10px;
-
         }
-
 
         .quick-link strong {
 
             font-size: 13px;
-
         }
-
 
         .quick-link small {
 
             color: var(--muted);
 
             font-size: 10px;
-
         }
 
 
@@ -928,13 +689,10 @@
 
         .section {
 
-            width: min(1250px, 86%);
+            width: min(var(--container), 86%);
 
-            margin:
-                120px auto;
-
+            margin: 120px auto;
         }
-
 
         .section-header {
 
@@ -942,37 +700,28 @@
 
             justify-content: space-between;
 
-            align-items: end;
+            align-items: flex-end;
 
             gap: 30px;
 
             margin-bottom: 35px;
-
         }
-
 
         .section-header h2 {
 
-            font-size:
-                clamp(36px,4vw,55px);
+            font-size: clamp(36px, 4vw, 55px);
 
             line-height: 1;
 
             letter-spacing: -.045em;
-
         }
-
 
         .section-header h2 em {
 
-            font-family:
-                "Playfair Display",
-                serif;
+            font-family: "Playfair Display", serif;
 
             font-weight: 600;
-
         }
-
 
         .section-description {
 
@@ -983,9 +732,7 @@
             font-size: 13px;
 
             margin-top: 15px;
-
         }
-
 
         .view-all {
 
@@ -993,13 +740,11 @@
 
             font-weight: 800;
 
-            border-bottom:
-                1px solid var(--dark);
+            border-bottom: 1px solid var(--dark);
 
             padding-bottom: 5px;
 
             white-space: nowrap;
-
         }
 
 
@@ -1011,13 +756,10 @@
 
             display: grid;
 
-            grid-template-columns:
-                1.3fr 1fr 1fr;
+            grid-template-columns: 1.3fr 1fr 1fr;
 
             gap: 17px;
-
         }
-
 
         .destination-card {
 
@@ -1027,26 +769,19 @@
 
             overflow: hidden;
 
-            border:
-                1px solid
-                rgba(16,43,37,.06);
+            border: 1px solid rgba(16,43,37,.06);
 
             transition:
                 transform .25s,
                 box-shadow .25s;
-
         }
-
 
         .destination-card:hover {
 
-            transform:
-                translateY(-7px);
+            transform: translateY(-7px);
 
             box-shadow: var(--shadow);
-
         }
-
 
         .destination-image {
 
@@ -1055,211 +790,53 @@
             position: relative;
 
             overflow: hidden;
-
         }
-
 
         .destination-card:first-child
         .destination-image {
 
             height: 390px;
-
         }
 
+        .destination-image img {
 
-        /* JAPAN */
+            width: 100%;
 
-        .japan {
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: transform .6s ease;
+        }
+
+        .destination-card:hover
+        .destination-image img {
+
+            transform: scale(1.05);
+        }
+
+        .destination-image::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
 
             background:
                 linear-gradient(
-                    145deg,
-                    #d5dfd0,
-                    #a8c1ad 55%,
-                    #57766c
+                    180deg,
+                    transparent 55%,
+                    rgba(16,43,37,.28)
                 );
 
+            pointer-events: none;
         }
-
-
-        .japan-sun {
-
-            position: absolute;
-
-            width: 95px;
-
-            height: 95px;
-
-            background:
-                #f0d99d;
-
-            border-radius: 50%;
-
-            top: 45px;
-
-            right: 45px;
-
-        }
-
-
-        .japan-mountain {
-
-            position: absolute;
-
-            bottom: -10px;
-
-            left: -10%;
-
-            width: 120%;
-
-            height: 210px;
-
-            background: #476a5e;
-
-            clip-path:
-                polygon(
-                    0 75%,
-                    22% 25%,
-                    40% 62%,
-                    60% 10%,
-                    80% 57%,
-                    100% 30%,
-                    100% 100%,
-                    0 100%
-                );
-
-        }
-
-
-        .japan-building {
-
-            position: absolute;
-
-            left: 28%;
-
-            top: 42%;
-
-            color: #385449;
-
-            font-size: 75px;
-
-        }
-
-
-        /* EUROPE */
-
-        .europe {
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #ddd5c5,
-                    #a8bcb5
-                );
-
-        }
-
-
-        .europe-sun {
-
-            width: 80px;
-
-            height: 80px;
-
-            border-radius: 50%;
-
-            background: #e7d29b;
-
-            position: absolute;
-
-            top: 45px;
-
-            right: 40px;
-
-        }
-
-
-        .europe-arch {
-
-            width: 130px;
-
-            height: 180px;
-
-            position: absolute;
-
-            bottom: -10px;
-
-            left: 30%;
-
-            border:
-                28px solid
-                #536d67;
-
-            border-bottom: 0;
-
-            border-radius:
-                100px 100px 0 0;
-
-        }
-
-
-        /* TROPICAL */
-
-        .tropical {
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #cde3df,
-                    #78a99f 55%,
-                    #d7c59d
-                );
-
-        }
-
-
-        .island {
-
-            position: absolute;
-
-            bottom: 40px;
-
-            left: 12%;
-
-            width: 75%;
-
-            height: 80px;
-
-            background: #d7c99b;
-
-            border-radius: 50%;
-
-            transform: rotate(-5deg);
-
-        }
-
-
-        .palm {
-
-            position: absolute;
-
-            top: 35px;
-
-            right: 20%;
-
-            font-size: 105px;
-
-            color: #345e54;
-
-        }
-
 
         .destination-content {
 
             padding: 21px 23px 25px;
-
         }
-
 
         .category {
 
@@ -1270,19 +847,14 @@
             color: #7d8983;
 
             font-weight: 800;
-
         }
-
 
         .destination-content h3 {
 
             font-size: 25px;
 
-            margin:
-                4px 0;
-
+            margin: 4px 0;
         }
-
 
         .destination-content p {
 
@@ -1291,54 +863,42 @@
             font-size: 11px;
 
             margin-bottom: 15px;
-
         }
-
 
         .card-link {
 
             font-size: 11px;
 
             font-weight: 800;
-
         }
 
 
         /* =========================================================
-           TRAVEL ESSENTIALS
+           PRODUCTS
         ========================================================= */
 
         .products-section {
 
-            background:
-                #edf0e8;
+            background: #edf0e8;
 
-            padding:
-                110px 0;
-
+            padding: 110px 0;
         }
-
 
         .products-container {
 
-            width: min(1250px, 86%);
+            width: min(var(--container), 86%);
 
             margin: auto;
-
         }
-
 
         .product-grid {
 
             display: grid;
 
-            grid-template-columns:
-                1.2fr 1fr 1fr;
+            grid-template-columns: 1.2fr 1fr 1fr;
 
             gap: 17px;
-
         }
-
 
         .product-card {
 
@@ -1351,19 +911,14 @@
             transition: .25s;
 
             position: relative;
-
         }
-
 
         .product-card:hover {
 
-            transform:
-                translateY(-7px);
+            transform: translateY(-7px);
 
             box-shadow: var(--shadow);
-
         }
-
 
         .product-image {
 
@@ -1372,199 +927,52 @@
             position: relative;
 
             overflow: hidden;
-
         }
 
+        .product-image img {
 
-        .product-one {
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: transform .6s ease;
+        }
+
+        .product-card:hover
+        .product-image img {
+
+            transform: scale(1.05);
+        }
+
+        .product-image::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
 
             background:
                 linear-gradient(
-                    135deg,
-                    #dce8dd,
-                    #bdcfb9
+                    180deg,
+                    transparent 50%,
+                    rgba(16,43,37,.18)
                 );
-
         }
-
-
-        .packing-box {
-
-            width: 120px;
-
-            height: 90px;
-
-            border:
-                3px solid
-                #35574d;
-
-            border-radius: 13px;
-
-            position: absolute;
-
-            transform:
-                rotate(-12deg);
-
-        }
-
-
-        .box-one {
-
-            left: 18%;
-
-            top: 34%;
-
-        }
-
-
-        .box-two {
-
-            left: 38%;
-
-            top: 22%;
-
-            transform:
-                rotate(8deg);
-
-        }
-
-
-        .box-three {
-
-            left: 50%;
-
-            top: 45%;
-
-            transform:
-                rotate(-5deg);
-
-        }
-
-
-        .product-two {
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #ddd5c6,
-                    #c3d3cd
-                );
-
-        }
-
-
-        .cloud {
-
-            position: absolute;
-
-            left: 10%;
-
-            top: 10%;
-
-            font-size: 120px;
-
-            opacity: .35;
-
-        }
-
-
-        .neck-pillow {
-
-            position: absolute;
-
-            width: 175px;
-
-            height: 115px;
-
-            border:
-                28px solid
-                #536e66;
-
-            border-bottom:
-                28px solid transparent;
-
-            border-radius:
-                100px 100px 0 0;
-
-            right: 16%;
-
-            bottom: 20%;
-
-            transform:
-                rotate(-8deg);
-
-        }
-
-
-        .product-three {
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #d1dfdb,
-                    #a5bdb7
-                );
-
-        }
-
-
-        .phone {
-
-            width: 105px;
-
-            height: 185px;
-
-            border:
-                5px solid
-                #23483f;
-
-            border-radius: 20px;
-
-            position: absolute;
-
-            left: 39%;
-
-            top: 18%;
-
-            background: #e8eee9;
-
-            transform:
-                rotate(9deg);
-
-        }
-
-
-        .signal {
-
-            position: absolute;
-
-            right: 18%;
-
-            top: 25%;
-
-            font-size: 65px;
-
-            color: #345e54;
-
-        }
-
 
         .product-content {
 
-            padding:
-                20px 21px 23px;
-
+            padding: 20px 21px 23px;
         }
-
 
         .product-content h3 {
 
             font-size: 21px;
 
             margin: 5px 0;
-
         }
-
 
         .product-content p {
 
@@ -1573,9 +981,7 @@
             font-size: 11px;
 
             margin-bottom: 16px;
-
         }
-
 
         .product-badge {
 
@@ -1591,8 +997,7 @@
 
             color: white;
 
-            padding:
-                6px 9px;
+            padding: 6px 9px;
 
             border-radius: 100px;
 
@@ -1601,9 +1006,7 @@
             font-weight: 800;
 
             letter-spacing: .1em;
-
         }
-
 
         .affiliate-note {
 
@@ -1612,7 +1015,6 @@
             color: #858e89;
 
             font-size: 9px;
-
         }
 
 
@@ -1622,20 +1024,16 @@
 
         .method {
 
-            background:
-                var(--dark);
+            background: var(--dark);
 
             color: white;
 
             display: grid;
 
-            grid-template-columns:
-                1fr 1fr;
+            grid-template-columns: 1fr 1fr;
 
             min-height: 620px;
-
         }
-
 
         .method-visual {
 
@@ -1644,140 +1042,50 @@
             min-height: 620px;
 
             overflow: hidden;
+        }
+
+        .method-visual img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            object-position: center;
+        }
+
+        .method-visual::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
 
             background:
-                radial-gradient(
-                    circle at 55% 30%,
-                    #4c776b,
-                    #183d34 65%
+                linear-gradient(
+                    90deg,
+                    rgba(16,43,37,.12),
+                    rgba(16,43,37,.35)
                 );
-
         }
 
-
-        .map-circle {
+        .method-badge {
 
             position: absolute;
 
-            width: 600px;
+            z-index: 3;
 
-            height: 500px;
-
-            border:
-                1px solid
-                rgba(255,255,255,.15);
-
-            border-radius:
-                45% 55% 42% 58%;
-
-            left: -70px;
-
-            top: 80px;
-
-            transform:
-                rotate(-18deg);
-
-        }
-
-
-        .map-circle::before {
-
-            content: "";
-
-            position: absolute;
-
-            inset: 50px 90px;
-
-            border:
-                1px dashed
-                rgba(255,255,255,.16);
-
-            border-radius: 50%;
-
-        }
-
-
-        .map-circle::after {
-
-            content: "";
-
-            position: absolute;
-
-            inset: 110px 25px;
-
-            border:
-                1px dashed
-                rgba(255,255,255,.12);
-
-            border-radius: 50%;
-
-        }
-
-
-        .route {
-
-            position: absolute;
-
-            width: 330px;
-
-            border-top:
-                2px dashed
-                rgba(220,233,182,.7);
-
-            top: 43%;
-
-            left: 35%;
-
-            transform:
-                rotate(28deg);
-
-        }
-
-
-        .map-pin {
-
-            position: absolute;
-
-            color: var(--lime);
-
-            font-size: 24px;
-
-        }
-
-
-        .pin-one {
-
-            top: 25%;
-
-            left: 48%;
-
-        }
-
-
-        .pin-two {
-
-            top: 54%;
-
-            left: 70%;
-
-        }
-
-
-        .stamp {
-
-            position: absolute;
+            left: 10%;
 
             bottom: 12%;
-
-            left: 12%;
 
             width: 150px;
 
             height: 150px;
 
-            border:
-                1px solid
-                rgba(255,255,255,.3);
+            border: 1px solid rgba(255,255,255,.5);
 
             border-radius: 50%;
 
@@ -1793,60 +1101,47 @@
 
             line-height: 1.4;
 
-            transform:
-                rotate(-12deg);
+            transform: rotate(-8deg);
 
+            background: rgba(16,43,37,.15);
+
+            backdrop-filter: blur(5px);
         }
 
-
-        .stamp strong {
+        .method-badge strong {
 
             display: block;
 
-            font-size: 18px;
+            font-size: 17px;
 
             color: var(--lime);
-
         }
-
 
         .method-content {
 
-            padding:
-                90px 8vw;
+            padding: 90px clamp(35px, 8vw, 110px);
 
             align-self: center;
-
         }
-
 
         .method-content .eyebrow {
 
             color: #aebdb6;
-
         }
-
 
         .method-content h2 {
 
-            font-size:
-                clamp(40px,4vw,58px);
+            font-size: clamp(40px, 4vw, 58px);
 
             line-height: 1.02;
 
             letter-spacing: -.045em;
-
         }
-
 
         .method-content h2 em {
 
-            font-family:
-                "Playfair Display",
-                serif;
-
+            font-family: "Playfair Display", serif;
         }
-
 
         .method-content > p {
 
@@ -1856,45 +1151,33 @@
 
             font-size: 13px;
 
-            margin:
-                22px 0 30px;
-
+            margin: 22px 0 30px;
         }
-
 
         .method-points {
 
             display: grid;
 
-            grid-template-columns:
-                repeat(3,1fr);
+            grid-template-columns: repeat(3, 1fr);
 
             gap: 16px;
 
             margin-bottom: 35px;
-
         }
-
 
         .method-point {
 
-            border-top:
-                1px solid
-                rgba(255,255,255,.18);
+            border-top: 1px solid rgba(255,255,255,.18);
 
             padding-top: 12px;
-
         }
-
 
         .method-point span {
 
             font-size: 9px;
 
             color: var(--lime);
-
         }
-
 
         .method-point strong {
 
@@ -1902,11 +1185,8 @@
 
             font-size: 12px;
 
-            margin:
-                5px 0;
-
+            margin: 5px 0;
         }
-
 
         .method-point small {
 
@@ -1915,17 +1195,20 @@
             color: #9fafaa;
 
             font-size: 9px;
-
         }
-
 
         .method-button {
 
-            background:
-                var(--lime);
+            background: var(--lime);
 
             color: var(--dark);
+        }
 
+        .method-button:hover {
+
+            transform: translateY(-3px);
+
+            background: #e8f2c9;
         }
 
 
@@ -1937,13 +1220,10 @@
 
             display: grid;
 
-            grid-template-columns:
-                1.25fr 1fr 1fr;
+            grid-template-columns: 1.25fr 1fr 1fr;
 
             gap: 17px;
-
         }
-
 
         .blog-card {
 
@@ -1953,133 +1233,72 @@
 
             overflow: hidden;
 
-            border:
-                1px solid
-                rgba(16,43,37,.06);
+            border: 1px solid rgba(16,43,37,.06);
 
             transition: .25s;
-
         }
-
 
         .blog-card:hover {
 
-            transform:
-                translateY(-7px);
+            transform: translateY(-7px);
 
             box-shadow: var(--shadow);
-
         }
-
 
         .blog-image {
 
             height: 230px;
 
-            display: grid;
-
-            place-items: center;
-
             position: relative;
 
             overflow: hidden;
-
         }
 
+        .blog-image img {
 
-        .blog-japan {
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: transform .6s ease;
+        }
+
+        .blog-card:hover .blog-image img {
+
+            transform: scale(1.05);
+        }
+
+        .blog-image::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
 
             background:
                 linear-gradient(
-                    145deg,
-                    #b7cdbf,
-                    #52776a
+                    180deg,
+                    transparent 50%,
+                    rgba(16,43,37,.3)
                 );
-
         }
-
-
-        .blog-japan span {
-
-            font-family: serif;
-
-            font-size: 100px;
-
-            color:
-                rgba(255,255,255,.5);
-
-        }
-
-
-        .blog-packing {
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #ddd0b5,
-                    #7d9284
-                );
-
-        }
-
-
-        .blog-packing span {
-
-            color:
-                rgba(255,255,255,.65);
-
-            font-size: 38px;
-
-            font-weight: 900;
-
-            letter-spacing: .16em;
-
-        }
-
-
-        .blog-budget {
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #cbded3,
-                    #728d7e
-                );
-
-        }
-
-
-        .blog-budget span {
-
-            font-size: 110px;
-
-            font-family: serif;
-
-            color:
-                rgba(255,255,255,.5);
-
-        }
-
 
         .blog-content {
 
-            padding:
-                20px 21px 23px;
-
+            padding: 20px 21px 23px;
         }
-
 
         .blog-meta {
 
             display: flex;
 
-            justify-content:
-                space-between;
+            justify-content: space-between;
 
             gap: 10px;
-
         }
-
 
         .blog-meta span {
 
@@ -2090,18 +1309,14 @@
             color: #7e8a84;
 
             font-weight: 800;
-
         }
-
 
         .blog-meta small {
 
             color: #929b97;
 
             font-size: 9px;
-
         }
-
 
         .blog-content h3 {
 
@@ -2109,18 +1324,13 @@
 
             line-height: 1.2;
 
-            margin:
-                10px 0 17px;
-
+            margin: 10px 0 17px;
         }
-
 
         .main-blog .blog-content h3 {
 
             font-size: 26px;
-
         }
-
 
         .blog-content p {
 
@@ -2129,7 +1339,6 @@
             color: var(--muted);
 
             margin-bottom: 16px;
-
         }
 
 
@@ -2139,51 +1348,38 @@
 
         .newsletter {
 
-            width: min(1250px,86%);
+            width: min(var(--container), 86%);
 
-            margin:
-                120px auto;
+            margin: 120px auto;
 
-            background:
-                #e2e9df;
+            background: #e2e9df;
 
             border-radius: 31px;
 
-            padding:
-                60px 7%;
+            padding: 60px clamp(30px, 7%, 90px);
 
             display: grid;
 
-            grid-template-columns:
-                1fr 1fr;
+            grid-template-columns: 1fr 1fr;
 
             gap: 60px;
 
             align-items: center;
-
         }
-
 
         .newsletter h2 {
 
-            font-size:
-                clamp(38px,4vw,55px);
+            font-size: clamp(38px, 4vw, 55px);
 
             line-height: 1.02;
 
             letter-spacing: -.045em;
-
         }
-
 
         .newsletter h2 em {
 
-            font-family:
-                "Playfair Display",
-                serif;
-
+            font-family: "Playfair Display", serif;
         }
-
 
         .newsletter-description {
 
@@ -2194,9 +1390,7 @@
             font-size: 12px;
 
             margin-top: 15px;
-
         }
-
 
         .newsletter label {
 
@@ -2209,9 +1403,7 @@
             letter-spacing: .13em;
 
             margin-bottom: 8px;
-
         }
-
 
         .email-form {
 
@@ -2219,16 +1411,12 @@
 
             background: white;
 
-            border:
-                1px solid
-                var(--line);
+            border: 1px solid var(--line);
 
             padding: 5px;
 
             border-radius: 100px;
-
         }
-
 
         .email-form input {
 
@@ -2242,34 +1430,27 @@
 
             background: transparent;
 
-            padding:
-                0 15px;
+            padding: 0 15px;
 
             font-size: 12px;
-
         }
-
 
         .email-form button {
 
             border: none;
 
-            background:
-                var(--dark);
+            background: var(--dark);
 
             color: white;
 
-            padding:
-                12px 20px;
+            padding: 12px 20px;
 
             border-radius: 100px;
 
             font-weight: 800;
 
             cursor: pointer;
-
         }
-
 
         .newsletter-note {
 
@@ -2277,9 +1458,7 @@
 
             font-size: 9px;
 
-            margin:
-                9px 12px;
-
+            margin: 9px 12px;
         }
 
 
@@ -2289,32 +1468,25 @@
 
         footer {
 
-            background:
-                #102b25;
+            background: #102b25;
 
             color: #dce4df;
 
-            padding:
-                70px 7% 22px;
-
+            padding: 70px 7% 22px;
         }
-
 
         .footer-grid {
 
-            max-width: 1250px;
+            max-width: var(--container);
 
             margin: auto;
 
             display: grid;
 
-            grid-template-columns:
-                2fr 1fr 1fr 1fr;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
 
             gap: 50px;
-
         }
-
 
         .footer-description {
 
@@ -2325,9 +1497,7 @@
             font-size: 11px;
 
             margin-top: 18px;
-
         }
-
 
         .footer-title {
 
@@ -2340,9 +1510,7 @@
             text-transform: uppercase;
 
             margin-bottom: 16px;
-
         }
-
 
         .footer-column a {
 
@@ -2352,38 +1520,29 @@
 
             font-size: 11px;
 
-            margin:
-                9px 0;
+            margin: 9px 0;
 
             transition: .2s;
-
         }
-
 
         .footer-column a:hover {
 
             color: white;
-
         }
-
 
         .footer-bottom {
 
-            max-width: 1250px;
+            max-width: var(--container);
 
-            margin:
-                55px auto 0;
+            margin: 55px auto 0;
 
             padding-top: 18px;
 
-            border-top:
-                1px solid
-                rgba(255,255,255,.1);
+            border-top: 1px solid rgba(255,255,255,.1);
 
             display: flex;
 
-            justify-content:
-                space-between;
+            justify-content: space-between;
 
             gap: 20px;
 
@@ -2392,7 +1551,6 @@
             font-size: 8px;
 
             letter-spacing: .08em;
-
         }
 
 
@@ -2400,145 +1558,103 @@
            TABLET
         ========================================================= */
 
-        @media(max-width: 1000px) {
+        @media (max-width: 1100px) {
 
             .navigation {
 
-                gap: 16px;
-
+                gap: 18px;
             }
 
+            .header-button {
+
+                display: none;
+            }
 
             .hero {
 
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr 1fr;
 
+                min-height: 580px;
             }
-
 
             .hero-content {
 
-                padding:
-                    70px 8% 45px;
-
+                padding: 65px 7%;
             }
-
 
             .hero-visual {
 
-                min-height: 470px;
-
+                min-height: 580px;
             }
-
 
             .destination-grid {
 
-                grid-template-columns:
-                    1fr 1fr;
-
+                grid-template-columns: 1fr 1fr;
             }
-
 
             .destination-card:first-child {
 
-                grid-column:
-                    span 2;
-
+                grid-column: span 2;
             }
 
+            .destination-card:first-child
+            .destination-image {
+
+                height: 330px;
+            }
 
             .product-grid {
 
-                grid-template-columns:
-                    1fr 1fr;
-
+                grid-template-columns: 1fr 1fr;
             }
-
 
             .product-card:first-child {
 
-                grid-column:
-                    span 2;
-
+                grid-column: span 2;
             }
-
 
             .blog-grid {
 
-                grid-template-columns:
-                    1fr 1fr;
-
+                grid-template-columns: 1fr 1fr;
             }
-
 
             .main-blog {
 
-                grid-column:
-                    span 2;
-
+                grid-column: span 2;
             }
-
 
             .method {
 
-                grid-template-columns:
-                    1fr;
-
+                grid-template-columns: 1fr 1fr;
             }
 
+            .method-content {
 
-            .method-visual {
-
-                min-height: 430px;
-
+                padding: 70px 7%;
             }
-
 
             .newsletter {
 
-                grid-template-columns:
-                    1fr;
-
+                gap: 35px;
             }
-
 
             .footer-grid {
 
-                grid-template-columns:
-                    2fr 1fr 1fr;
-
+                grid-template-columns: 2fr 1fr 1fr;
             }
 
+            .footer-brand {
+
+                grid-column: span 3;
+            }
         }
 
 
         /* =========================================================
-           MOBILE
+           TABLET / SMALL LAPTOP
         ========================================================= */
 
-        @media(max-width: 720px) {
-
-            .announcement {
-
-                font-size: 9px;
-
-            }
-
-
-            .announcement span {
-
-                display: none;
-
-            }
-
-
-            .header {
-
-                min-height: 72px;
-
-            }
-
+        @media (max-width: 850px) {
 
             .navigation {
 
@@ -2550,7 +1666,7 @@
 
                 right: 0;
 
-                top: 68px;
+                top: 70px;
 
                 padding: 20px;
 
@@ -2565,324 +1681,414 @@
                 align-items: flex-start;
 
                 gap: 17px;
-
             }
-
 
             .navigation.show {
 
                 display: flex;
-
             }
-
 
             .navigation a.active::after {
 
                 display: none;
-
             }
-
-
-            .header-button {
-
-                display: none;
-
-            }
-
 
             .menu-button {
 
                 display: block;
-
             }
 
+            .hero {
+
+                grid-template-columns: 1fr;
+
+                min-height: auto;
+            }
+
+            .hero-content {
+
+                padding: 70px 8% 55px;
+            }
+
+            .hero-visual {
+
+                min-height: 480px;
+
+                height: 480px;
+            }
+
+            .quick-links {
+
+                margin-top: -30px;
+            }
+
+            .method {
+
+                grid-template-columns: 1fr;
+            }
+
+            .method-visual {
+
+                min-height: 450px;
+
+                height: 450px;
+            }
+
+            .method-content {
+
+                padding: 75px 8%;
+            }
+
+            .newsletter {
+
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 600px) {
+
+            .announcement {
+
+                min-height: 34px;
+
+                padding: 7px 12px;
+
+                font-size: 8px;
+
+                gap: 8px;
+            }
+
+            .announcement span {
+
+                display: none;
+            }
+
+            .header {
+
+                width: 92%;
+
+                min-height: 70px;
+            }
+
+            .logo-symbol {
+
+                width: 36px;
+
+                height: 36px;
+            }
+
+            .logo-text strong {
+
+                font-size: 13px;
+            }
 
             .hero {
 
                 width: 94%;
 
-                border-radius: 27px;
-
+                border-radius: 26px;
             }
-
 
             .hero-content {
 
-                padding:
-                    58px 7% 42px;
-
+                padding: 55px 7% 45px;
             }
-
 
             .hero h1 {
 
-                font-size: 51px;
-
+                font-size: clamp(43px, 13vw, 58px);
             }
-
 
             .hero-description {
 
                 font-size: 13px;
 
+                line-height: 1.7;
             }
 
+            .hero-buttons {
+
+                flex-direction: column;
+
+                width: 100%;
+            }
+
+            .button {
+
+                width: 100%;
+
+                min-height: 48px;
+            }
+
+            .hero-trust {
+
+                flex-direction: column;
+
+                gap: 8px;
+
+                margin-top: 30px;
+            }
 
             .hero-visual {
 
-                min-height: 360px;
+                height: 370px;
 
+                min-height: 370px;
             }
 
+            .hero-visual img {
 
-            .sun {
-
-                width: 105px;
-
-                height: 105px;
-
-                top: 50px;
-
+                object-position: center;
             }
-
-
-            .mountain {
-
-                border-left-width: 160px;
-
-                border-right-width: 160px;
-
-                border-bottom-width: 220px;
-
-            }
-
 
             .floating-card {
 
-                transform:
-                    scale(.85);
+                transform: scale(.78);
 
+                transform-origin: left center;
             }
-
 
             .location-card {
 
-                left: 3%;
+                left: -2%;
 
+                top: 28%;
             }
-
 
             .guide-card {
 
-                right: 2%;
+                right: -3%;
 
+                bottom: 8%;
+
+                transform-origin: right center;
             }
-
 
             .quick-links {
 
                 width: 90%;
 
-                grid-template-columns:
-                    1fr;
+                margin-top: -20px;
 
-                margin-top:
-                    -20px;
+                grid-template-columns: 1fr;
 
+                border-radius: 18px;
             }
-
 
             .quick-link {
 
                 border-right: none;
 
-                border-bottom:
-                    1px solid var(--line);
+                border-bottom: 1px solid var(--line);
 
-                padding:
-                    18px 20px;
-
+                padding: 18px 20px;
             }
 
+            .quick-link:last-child {
+
+                border-bottom: none;
+            }
 
             .section {
 
                 width: 90%;
 
-                margin:
-                    80px auto;
-
+                margin: 80px auto;
             }
-
 
             .section-header {
 
                 display: block;
 
+                margin-bottom: 28px;
             }
 
+            .section-header h2 {
+
+                font-size: clamp(34px, 10vw, 48px);
+            }
+
+            .section-description {
+
+                font-size: 12px;
+            }
 
             .view-all {
 
                 display: inline-block;
 
                 margin-top: 18px;
-
             }
-
 
             .destination-grid,
             .product-grid,
             .blog-grid {
 
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr;
 
+                gap: 16px;
             }
-
 
             .destination-card:first-child,
             .product-card:first-child,
             .main-blog {
 
-                grid-column:
-                    auto;
-
+                grid-column: auto;
             }
-
 
             .destination-card:first-child
             .destination-image {
 
                 height: 300px;
-
             }
 
+            .destination-image {
+
+                height: 260px;
+            }
 
             .products-section {
 
-                padding:
-                    80px 0;
-
+                padding: 75px 0;
             }
 
+            .products-container {
 
-            .method-content {
-
-                padding:
-                    60px 8%;
-
+                width: 90%;
             }
 
+            .product-image {
 
-            .method-points {
-
-                grid-template-columns:
-                    1fr;
-
+                height: 250px;
             }
-
 
             .method-visual {
 
-                min-height:
-                    330px;
+                min-height: 360px;
 
+                height: 360px;
             }
 
+            .method-badge {
 
-            .map-circle {
+                width: 115px;
 
-                width: 480px;
+                height: 115px;
 
-                height: 400px;
+                font-size: 7px;
 
+                left: 7%;
+
+                bottom: 10%;
             }
 
+            .method-badge strong {
+
+                font-size: 14px;
+            }
+
+            .method-content {
+
+                padding: 60px 8%;
+            }
+
+            .method-content h2 {
+
+                font-size: clamp(38px, 10vw, 50px);
+            }
+
+            .method-points {
+
+                grid-template-columns: 1fr;
+
+                gap: 22px;
+            }
+
+            .blog-image {
+
+                height: 220px;
+            }
 
             .newsletter {
 
                 width: 90%;
 
-                padding:
-                    45px 8%;
+                margin: 80px auto;
 
-                gap: 35px;
+                padding: 45px 8%;
 
+                border-radius: 25px;
             }
 
+            .newsletter h2 {
+
+                font-size: clamp(38px, 10vw, 50px);
+            }
 
             .email-form {
 
-                flex-direction:
-                    column;
+                flex-direction: column;
 
-                background:
-                    transparent;
+                background: transparent;
 
                 border: none;
 
                 gap: 8px;
 
                 padding: 0;
-
             }
-
 
             .email-form input {
 
-                min-height: 45px;
+                min-height: 46px;
 
-                background:
-                    white;
+                background: white;
 
-                border:
-                    1px solid
-                    var(--line);
+                border: 1px solid var(--line);
 
                 border-radius: 100px;
-
             }
-
 
             .email-form button {
 
-                min-height: 45px;
-
+                min-height: 46px;
             }
 
+            footer {
+
+                padding: 60px 7% 22px;
+            }
 
             .footer-grid {
 
-                grid-template-columns:
-                    1fr 1fr;
+                grid-template-columns: 1fr 1fr;
 
                 gap: 35px;
-
             }
-
 
             .footer-brand {
 
-                grid-column:
-                    span 2;
-
+                grid-column: span 2;
             }
-
 
             .footer-bottom {
 
                 display: block;
 
+                line-height: 1.8;
             }
-
 
             .footer-bottom div {
 
                 margin-top: 8px;
-
             }
-
         }
 
 
@@ -2890,47 +2096,64 @@
            VERY SMALL MOBILE
         ========================================================= */
 
-        @media(max-width: 420px) {
+        @media (max-width: 400px) {
 
             .hero h1 {
 
-                font-size: 44px;
-
+                font-size: 42px;
             }
 
+            .hero-visual {
 
-            .hero-buttons {
+                height: 330px;
 
-                flex-direction:
-                    column;
-
+                min-height: 330px;
             }
-
-
-            .button {
-
-                width: 100%;
-
-            }
-
-
-            .hero-trust {
-
-                flex-direction:
-                    column;
-
-                gap: 7px;
-
-            }
-
 
             .floating-card {
 
-                transform:
-                    scale(.72);
-
+                transform: scale(.68);
             }
 
+            .location-card {
+
+                left: -5%;
+            }
+
+            .guide-card {
+
+                right: -7%;
+            }
+
+            .destination-image,
+            .destination-card:first-child
+            .destination-image {
+
+                height: 250px;
+            }
+
+            .product-image {
+
+                height: 230px;
+            }
+        }
+
+
+        /* =========================================================
+           LARGE SCREEN
+        ========================================================= */
+
+        @media (min-width: 1600px) {
+
+            .hero {
+
+                min-height: 680px;
+            }
+
+            .hero-visual {
+
+                min-height: 680px;
+            }
         }
 
     </style>
@@ -2942,7 +2165,7 @@
 
 
     <!-- =========================================================
-         TOP ANNOUNCEMENT
+         ANNOUNCEMENT
     ========================================================= -->
 
     <div class="announcement">
@@ -2960,13 +2183,12 @@
 
 
     <!-- =========================================================
-         HEADER / NAVIGATION
+         HEADER
     ========================================================= -->
 
     <header class="header">
 
-        <a href="index.html"
-            class="logo">
+        <a href="index.html" class="logo">
 
             <span class="logo-symbol">
                 ✦
@@ -3001,40 +2223,24 @@
             class="navigation"
             id="navigation">
 
-            <a
-                href="index.html"
-                class="active">
-
+            <a href="index.html" class="active">
                 Home
-
             </a>
-
 
             <a href="destinations.html">
-
                 Destinations
-
             </a>
-
 
             <a href="products.html">
-
                 Travel Essentials
-
             </a>
-
 
             <a href="blog.html">
-
                 Travel Guides
-
             </a>
 
-
             <a href="about.html">
-
                 About
-
             </a>
 
         </nav>
@@ -3065,9 +2271,7 @@
             <div class="hero-content">
 
                 <p class="eyebrow">
-
                     TRAVEL SMART • DISCOVER MORE
-
                 </p>
 
 
@@ -3099,6 +2303,7 @@
                         class="button button-primary">
 
                         Explore Destinations
+
                         <span style="margin-left:12px;">
                             →
                         </span>
@@ -3137,43 +2342,16 @@
 
 
 
-            <!-- HERO VISUAL -->
+            <!-- HERO REAL IMAGE -->
 
             <div class="hero-visual">
 
+                <img
+                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=85"
+                    alt="Beautiful mountain travel destination"
+                    loading="eager">
 
-                <div class="sun"></div>
-
-                <div class="hero-ring"></div>
-
-                <div class="hero-ring two"></div>
-
-
-                <div
-                    class="mountain mountain-one">
-                </div>
-
-
-                <div
-                    class="mountain mountain-two">
-                </div>
-
-
-                <div
-                    class="mountain mountain-three">
-                </div>
-
-
-                <div class="ocean"></div>
-
-                <div class="road"></div>
-
-
-
-                <!-- FLOATING CARD -->
-
-                <div
-                    class="floating-card location-card">
+                <div class="floating-card location-card">
 
                     <span class="floating-icon">
                         ⌖
@@ -3194,11 +2372,7 @@
                 </div>
 
 
-
-                <!-- FLOATING CARD -->
-
-                <div
-                    class="floating-card guide-card">
+                <div class="floating-card guide-card">
 
                     <span class="floating-icon">
                         ✦
@@ -3229,7 +2403,6 @@
         ====================================================== -->
 
         <section class="quick-links">
-
 
             <a
                 href="destinations.html"
@@ -3307,10 +2480,12 @@
                     </p>
 
                     <h2>
+
                         Places worth
                         <em>
                             pinpointing.
                         </em>
+
                     </h2>
 
                     <p class="section-description">
@@ -3346,23 +2521,12 @@
                     href="destinations.html#japan"
                     class="destination-card">
 
-                    <div
-                        class="destination-image japan">
+                    <div class="destination-image">
 
-                        <div
-                            class="japan-sun">
-                        </div>
-
-                        <div
-                            class="japan-mountain">
-                        </div>
-
-                        <div
-                            class="japan-building">
-
-                            ⌂
-
-                        </div>
+                        <img
+                            src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1200&q=85"
+                            alt="Traditional Japanese street and architecture"
+                            loading="lazy">
 
                     </div>
 
@@ -3398,16 +2562,12 @@
                     href="destinations.html#europe"
                     class="destination-card">
 
-                    <div
-                        class="destination-image europe">
+                    <div class="destination-image">
 
-                        <div
-                            class="europe-sun">
-                        </div>
-
-                        <div
-                            class="europe-arch">
-                        </div>
+                        <img
+                            src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1000&q=85"
+                            alt="European city street and architecture"
+                            loading="lazy">
 
                     </div>
 
@@ -3443,15 +2603,12 @@
                     href="destinations.html#tropical"
                     class="destination-card">
 
-                    <div
-                        class="destination-image tropical">
+                    <div class="destination-image">
 
-                        <div class="island">
-                        </div>
-
-                        <div class="palm">
-                            ♧
-                        </div>
+                        <img
+                            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85"
+                            alt="Tropical beach destination"
+                            loading="lazy">
 
                     </div>
 
@@ -3504,10 +2661,12 @@
                         </p>
 
                         <h2>
+
                             Pack less.
                             <em>
                                 Choose better.
                             </em>
+
                         </h2>
 
                         <p class="section-description">
@@ -3547,20 +2706,12 @@
                         </span>
 
 
-                        <div
-                            class="product-image product-one">
+                        <div class="product-image">
 
-                            <div
-                                class="packing-box box-one">
-                            </div>
-
-                            <div
-                                class="packing-box box-two">
-                            </div>
-
-                            <div
-                                class="packing-box box-three">
-                            </div>
+                            <img
+                                src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1200&q=85"
+                                alt="Travel suitcase and packing essentials"
+                                loading="lazy">
 
                         </div>
 
@@ -3596,16 +2747,12 @@
                         href="products.html#comfort"
                         class="product-card">
 
-                        <div
-                            class="product-image product-two">
+                        <div class="product-image">
 
-                            <div class="cloud">
-                                ☁
-                            </div>
-
-                            <div
-                                class="neck-pillow">
-                            </div>
+                            <img
+                                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1000&q=85"
+                                alt="Comfortable airplane travel"
+                                loading="lazy">
 
                         </div>
 
@@ -3641,15 +2788,12 @@
                         href="products.html#tech"
                         class="product-card">
 
-                        <div
-                            class="product-image product-three">
+                        <div class="product-image">
 
-                            <div class="phone">
-                            </div>
-
-                            <div class="signal">
-                                ⌁
-                            </div>
+                            <img
+                                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=85"
+                                alt="Travel technology and laptop"
+                                loading="lazy">
 
                         </div>
 
@@ -3702,26 +2846,14 @@
         <section class="method">
 
 
-            <!-- VISUAL -->
-
             <div class="method-visual">
 
-                <div class="map-circle">
-                </div>
+                <img
+                    src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1400&q=85"
+                    alt="Traveler exploring a scenic destination"
+                    loading="lazy">
 
-                <div class="route">
-                </div>
-
-                <span class="map-pin pin-one">
-                    ✦
-                </span>
-
-                <span class="map-pin pin-two">
-                    ✦
-                </span>
-
-
-                <div class="stamp">
+                <div class="method-badge">
 
                     PINPOINT
 
@@ -3735,8 +2867,6 @@
             </div>
 
 
-
-            <!-- CONTENT -->
 
             <div class="method-content">
 
@@ -3840,7 +2970,7 @@
 
 
         <!-- =====================================================
-             BLOG / TRAVEL GUIDES
+             BLOG
         ====================================================== -->
 
         <section class="section">
@@ -3855,10 +2985,12 @@
                     </p>
 
                     <h2>
+
                         Ideas for your
                         <em>
                             next journey.
                         </em>
+
                     </h2>
 
                     <p class="section-description">
@@ -3893,12 +3025,12 @@
                     href="blog.html#japan-guide"
                     class="blog-card main-blog">
 
-                    <div
-                        class="blog-image blog-japan">
+                    <div class="blog-image">
 
-                        <span>
-                            旅
-                        </span>
+                        <img
+                            src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1400&q=85"
+                            alt="Japan travel destination"
+                            loading="lazy">
 
                     </div>
 
@@ -3949,12 +3081,12 @@
                     href="blog.html#packing"
                     class="blog-card">
 
-                    <div
-                        class="blog-image blog-packing">
+                    <div class="blog-image">
 
-                        <span>
-                            PACK
-                        </span>
+                        <img
+                            src="https://images.unsplash.com/photo-1553531384-397c80973a0b?auto=format&fit=crop&w=1000&q=85"
+                            alt="Travel packing essentials"
+                            loading="lazy">
 
                     </div>
 
@@ -3996,12 +3128,12 @@
                     href="blog.html#budget"
                     class="blog-card">
 
-                    <div
-                        class="blog-image blog-budget">
+                    <div class="blog-image">
 
-                        <span>
-                            $
-                        </span>
+                        <img
+                            src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1000&q=85"
+                            alt="Traveler planning a trip"
+                            loading="lazy">
 
                     </div>
 
@@ -4313,7 +3445,7 @@
 
 
         /* ==========================================
-           CLOSE MOBILE MENU AFTER CLICK
+           CLOSE MOBILE MENU
         ========================================== */
 
         const navigationLinks =
@@ -4378,6 +3510,29 @@
 
                     email.placeholder =
                         "Thanks for joining!";
+
+                }
+
+            }
+        );
+
+
+        /* ==========================================
+           CLOSE MENU WHEN CLICKING OUTSIDE
+        ========================================== */
+
+        document.addEventListener(
+            "click",
+            function(event) {
+
+                if (
+                    !navigation.contains(event.target) &&
+                    !menuButton.contains(event.target)
+                ) {
+
+                    navigation.classList.remove(
+                        "show"
+                    );
 
                 }
 
