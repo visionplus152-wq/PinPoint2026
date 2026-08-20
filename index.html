@@ -164,176 +164,6 @@ input {
 
 
 /* =========================================================
-   SIDE NAV
-========================================================= */
-
-.side-nav {
-
-    position: fixed;
-
-    top: 50%;
-    right: 22px;
-
-    transform:
-        translateY(-50%);
-
-    z-index: 300;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    gap: 7px;
-
-    padding: 12px 8px;
-
-    background:
-        rgba(8,80,94,.94);
-
-    backdrop-filter:
-        blur(14px);
-
-    border:
-        1px solid
-        rgba(255,255,255,.15);
-
-    border-radius: 24px;
-
-    box-shadow:
-        0 18px 45px
-        rgba(8,80,94,.22);
-}
-
-
-.side-nav-link {
-
-    position: relative;
-
-    width: 38px;
-    height: 38px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 12px;
-
-    color:
-        rgba(255,255,255,.72);
-
-    transition:
-        background .25s ease,
-        color .25s ease,
-        transform .25s ease;
-}
-
-
-.side-nav-link:hover {
-
-    background:
-        rgba(255,255,255,.12);
-
-    color: #ffffff;
-
-    transform:
-        translateX(-2px);
-}
-
-
-.side-nav-link.active {
-
-    background: #ffffff;
-
-    color: var(--card-teal);
-}
-
-
-.side-nav-icon {
-
-    width: 8px;
-    height: 8px;
-
-    border-radius: 50%;
-
-    background: currentColor;
-
-    transition:
-        transform .25s ease;
-}
-
-
-.side-nav-link.active
-.side-nav-icon {
-
-    transform:
-        scale(1.25);
-}
-
-
-.side-nav-link::after {
-
-    content: attr(data-label);
-
-    position: absolute;
-
-    right: 50px;
-    top: 50%;
-
-    transform:
-        translateY(-50%)
-        translateX(5px);
-
-    background:
-        var(--card-teal);
-
-    color: #ffffff;
-
-    font-size: 10px;
-
-    font-weight: 800;
-
-    letter-spacing: .04em;
-
-    padding: 8px 13px;
-
-    border-radius: 10px;
-
-    white-space: nowrap;
-
-    opacity: 0;
-
-    visibility: hidden;
-
-    pointer-events: none;
-
-    transition:
-        opacity .2s ease,
-        transform .2s ease,
-        visibility .2s ease;
-
-    box-shadow:
-        0 10px 25px
-        rgba(0,0,0,.18);
-}
-
-
-.side-nav-link:hover::after,
-.side-nav-link:focus-visible::after {
-
-    opacity: 1;
-
-    visibility: visible;
-
-    transform:
-        translateY(-50%)
-        translateX(0);
-}
-
-
-/* =========================================================
    HEADER
 ========================================================= */
 
@@ -365,6 +195,13 @@ input {
 
     gap: 10px;
 
+    flex-shrink: 0;
+}
+
+.logo-image {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
     flex-shrink: 0;
 }
 
@@ -2079,14 +1916,7 @@ footer {
 ========================================================= */
 
 @media(max-width:720px) {
-
-    .side-nav {
-        display:
-            none;
-    }
-
-
-    .header {
+.header {
 
         width:
             94%;
@@ -2524,20 +2354,15 @@ footer {
 
 <header class="header">
 
-    <a href="index.html"
-       class="logo"
-       src="logo.png.png"
-       aria-label="Pinpoint Travel home">
-   <span class="logo-text">
+    <a href="index.html" class="logo" aria-label="Pinpoint Travel home">
 
-            <strong>
-                PINPOINT
-            </strong>
+        <img src="images/logo.png.png"
+             alt="Pinpoint Travel Logo"
+             class="logo-image">
 
-            <small>
-                TRAVEL
-            </small>
-
+        <span class="logo-text">
+            <strong>PINPOINT</strong>
+            <small>TRAVEL</small>
         </span>
 
     </a>
@@ -3470,101 +3295,6 @@ navigationLinks.forEach(
 
             }
         );
-
-    }
-);
-
-
-/* =========================================================
-   SIDE NAV ACTIVE SECTION
-========================================================= */
-
-const sideNavLinks =
-    document.querySelectorAll(
-        ".side-nav-link"
-    );
-
-
-const pageSections = [
-
-    document.getElementById("hero"),
-
-    document.getElementById("destinations"),
-
-    document.getElementById("essentials"),
-
-    document.getElementById("method"),
-
-    document.getElementById("newsletter")
-
-];
-
-
-const sectionObserver =
-    new IntersectionObserver(
-
-        function(entries) {
-
-            entries.forEach(
-                function(entry) {
-
-                    if (entry.isIntersecting) {
-
-                        sideNavLinks.forEach(
-                            function(link) {
-
-                                link.classList.remove(
-                                    "active"
-                                );
-
-                            }
-                        );
-
-
-                        const activeLink =
-                            document.querySelector(
-                                '.side-nav-link[href="#' +
-                                entry.target.id +
-                                '"]'
-                            );
-
-
-                        if (activeLink) {
-
-                            activeLink.classList.add(
-                                "active"
-                            );
-
-                        }
-
-                    }
-
-                }
-            );
-
-        },
-
-        {
-            rootMargin:
-                "-35% 0px -55% 0px",
-
-            threshold:
-                0
-        }
-
-    );
-
-
-pageSections.forEach(
-    function(section) {
-
-        if (section) {
-
-            sectionObserver.observe(
-                section
-            );
-
-        }
 
     }
 );
