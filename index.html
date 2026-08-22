@@ -26,7 +26,7 @@ rel="stylesheet">
 
 /* =========================================================
    PINPOINT TRAVEL
-   COMPACT PROFESSIONAL HOMEPAGE
+   COMPACT 98% WIDTH HOMEPAGE
 ========================================================= */
 
 :root {
@@ -55,9 +55,13 @@ rel="stylesheet">
     --line: rgba(16,43,37,.12);
 
     --shadow:
-        0 25px 70px rgba(16,43,37,.12);
+        0 20px 55px rgba(16,43,37,.12);
 
-    --radius: 28px;
+    --radius: 25px;
+
+    /* MAIN CONTENT WIDTH */
+    --content-width: 98%;
+    --max-width: 1500px;
 }
 
 
@@ -74,7 +78,7 @@ rel="stylesheet">
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 30px;
+    scroll-padding-top: 25px;
 }
 
 
@@ -140,7 +144,7 @@ input {
 
     color: #ffffff;
 
-    padding: 11px 18px;
+    padding: 10px 17px;
 
     border-radius: 999px;
 
@@ -179,19 +183,18 @@ input {
 
     align-items: center;
 
-    gap: 35px;
+    gap: 30px;
 
     position: relative;
 
     z-index: 100;
 
     background: #ffffff;
-   
 }
 
 
 /* =========================================================
-   BRAND LOGO
+   BRAND
 ========================================================= */
 
 .logo {
@@ -200,13 +203,11 @@ input {
 
     align-items: center;
 
-    gap: 11px;
+    gap: 10px;
 
     flex-shrink: 0;
 }
 
-
-/* Rounded logo border */
 
 .logo-image {
 
@@ -225,22 +226,19 @@ input {
 
     padding: 3px;
 
-
+    transition: .2s;
 }
 
 
 .logo:hover .logo-image {
 
     transform:
-        rotate(-0.1deg)
         scale(1.04);
 
     border-color:
         var(--accent);
 }
 
-
-/* Premium brand typography */
 
 .logo-text {
 
@@ -251,15 +249,23 @@ input {
     justify-content: center;
 
     line-height: 1;
-
 }
 
+
 .logo-text strong {
-    font-family: "Baloo 2", sans-serif;
+
+    font-family:
+        "Baloo 2",
+        sans-serif;
+
     font-weight: 700;
+
     letter-spacing: .03em;
+
     font-size: 25px;
-    color: var(--dark);
+
+    color:
+        var(--dark);
 }
 
 
@@ -275,7 +281,7 @@ input {
 
     align-items: center;
 
-    gap: 4px;
+    gap: 3px;
 
     padding: 3px;
 
@@ -286,12 +292,11 @@ input {
         1px solid
         #0d88a1;
 
-    border-radius:
-        100px;
+    border-radius: 100px;
 
     box-shadow:
-        0 8px 25px
-        rgba(16,43,37,.06);
+        0 7px 22px
+        rgba(16,43,37,.05);
 
     backdrop-filter:
         blur(10px);
@@ -303,7 +308,7 @@ input {
 
 .navigation a {
 
-    font-size: 13.8px;
+    font-size: 13px;
 
     font-weight: 800;
 
@@ -317,7 +322,7 @@ input {
     position: relative;
 
     padding:
-        6px 14px;
+        6px 13px;
 
     border-radius:
         100px;
@@ -350,21 +355,17 @@ input {
 
     box-shadow:
         0 5px 15px
-        rgba(5, 5, 5, 0.16);
+        rgba(5,5,5,.16);
 }
 
 
-/* Remove old underline */
-
 .navigation a.active::after {
-
-    display:
-        none;
+    display: none;
 }
 
 
 /* =========================================================
-   MOBILE MENU BUTTON
+   MOBILE MENU
 ========================================================= */
 
 .menu-button {
@@ -386,9 +387,6 @@ input {
 
 /* =========================================================
    HERO
-
-   IMPORTANT:
-   The hero now ends directly before destinations.
 ========================================================= */
 
 .hero {
@@ -461,7 +459,7 @@ input {
     max-width: 620px;
 
     padding:
-        80px 5vw;
+        70px 3.5%;
 }
 
 
@@ -475,14 +473,12 @@ input {
 
     color: #ffffff;
 
-    margin-bottom: 17px;
+    margin-bottom: 15px;
 }
 
 
 .hero-content .eyebrow {
-
-    color:
-        var(--accent);
+    color: var(--accent);
 }
 
 
@@ -518,17 +514,13 @@ input {
 
 .hero-description {
 
-    max-width:
-        460px;
+    max-width: 460px;
 
-    margin-top:
-        22px;
+    margin-top: 20px;
 
-    margin-bottom:
-        32px;
+    margin-bottom: 29px;
 
-    font-size:
-        14px;
+    font-size: 14px;
 
     color:
         rgba(255,255,255,.82);
@@ -537,69 +529,49 @@ input {
 
 .hero-buttons {
 
-    display:
-        flex;
+    display: flex;
 
-    flex-wrap:
-        wrap;
+    flex-wrap: wrap;
 
-    gap:
-        12px;
-    
+    gap: 10px;
 }
 
 
 .button {
 
-    min-height:
-        50px;
+    min-height: 48px;
 
-    padding:
-        0 24px;
+    padding: 0 23px;
 
-    border-radius:
-        100px;
+    border-radius: 100px;
 
-    display:
-        inline-flex;
+    display: inline-flex;
 
-    justify-content:
-        center;
+    justify-content: center;
 
-    align-items:
-        center;
+    align-items: center;
 
-    font-size:
-        11px;
+    font-size: 11px;
 
-    font-weight:
-        800;
+    font-weight: 800;
 
-    letter-spacing:
-        .02em;
+    letter-spacing: .02em;
 
-    transition:
-        .25s;
+    transition: .25s;
 }
+
 
 .hero-buttons .button {
 
-    font-size:
-        14px;
+    font-size: 14px;
 
-    font-weight:
-        800;
+    font-weight: 800;
 
-    letter-spacing:
-        .01em;
+    min-height: 52px;
 
-    min-height:
-        54px;
-
-    padding:
-        0 18px;
- 
+    padding: 0 18px;
 }
+
 
 .button-primary {
 
@@ -627,7 +599,7 @@ input {
         translateY(-3px);
 
     box-shadow:
-        0 12px 25px
+        0 10px 23px
         rgba(0,0,0,.3);
 }
 
@@ -663,19 +635,20 @@ input {
 
 
 /* =========================================================
-   GENERAL SECTIONS
+   GENERAL SECTION
+   98% WIDTH
 ========================================================= */
 
 .section {
 
     width:
-        94%;
+        var(--content-width);
 
     max-width:
-        1500px;
+        var(--max-width);
 
     margin:
-        55px auto;
+        32px auto;
 }
 
 
@@ -698,22 +671,26 @@ input {
         0;
 
     padding:
-        30px 3% 60px;
+        25px 0 38px;
 }
 
 
 #destinations .section-inner {
 
     width:
-        94%;
+        var(--content-width);
 
     max-width:
-        1500px;
+        var(--max-width);
 
     margin:
         auto;
 }
 
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
 
 .section-header {
 
@@ -727,20 +704,20 @@ input {
         end;
 
     gap:
-        30px;
+        25px;
 
     margin-bottom:
-        28px;
+        20px;
 }
 
 
 .section-header h2 {
 
     font-size:
-        clamp(36px,4vw,55px);
+        clamp(34px,4vw,53px);
 
     line-height:
-        1;
+        .98;
 
     letter-spacing:
         -.045em;
@@ -770,7 +747,7 @@ input {
         13px;
 
     margin-top:
-        12px;
+        9px;
 }
 
 
@@ -812,7 +789,7 @@ input {
         repeat(3,1fr);
 
     gap:
-        17px;
+        14px;
 }
 
 
@@ -852,7 +829,7 @@ input {
 .destination-card:hover {
 
     transform:
-        translateY(-7px);
+        translateY(-5px);
 
     box-shadow:
         var(--shadow);
@@ -862,7 +839,7 @@ input {
 .destination-image {
 
     height:
-        330px;
+        285px;
 
     position:
         relative;
@@ -895,7 +872,7 @@ input {
 .destination-image img {
 
     transform:
-        scale(1.06);
+        scale(1.05);
 }
 
 
@@ -922,7 +899,7 @@ input {
 .destination-content {
 
     padding:
-        20px 23px 23px;
+        17px 20px 20px;
 
     flex:
         1;
@@ -964,10 +941,10 @@ input {
 .destination-content h3 {
 
     font-size:
-        25px;
+        23px;
 
     margin:
-        4px 0;
+        3px 0;
 }
 
 
@@ -980,7 +957,7 @@ input {
         11px;
 
     margin-bottom:
-        15px;
+        12px;
 }
 
 
@@ -1005,7 +982,8 @@ input {
 
 
 /* =========================================================
-   PRODUCTS
+   TRAVEL ESSENTIALS
+   MATCHES DESTINATIONS WIDTH
 ========================================================= */
 
 .products-section {
@@ -1014,28 +992,27 @@ input {
         #dcf1f5;
 
     padding:
-        60px 0;
+        38px 0 42px;
 }
 
 
 .products-container {
 
     width:
-        94%;
+        var(--content-width);
 
     max-width:
-        1500px;
+        var(--max-width);
 
     margin:
         auto;
 }
 
 
-.products-section
-.section-header {
+.products-section .section-header {
 
     margin-bottom:
-        28px;
+        20px;
 }
 
 
@@ -1048,7 +1025,7 @@ input {
         repeat(3,1fr);
 
     gap:
-        17px;
+        14px;
 }
 
 
@@ -1086,10 +1063,10 @@ input {
 .product-card:hover {
 
     transform:
-        translateY(-7px);
+        translateY(-5px);
 
     box-shadow:
-        0 25px 60px
+        0 20px 50px
         rgba(8,80,94,.25);
 }
 
@@ -1097,7 +1074,7 @@ input {
 .product-image {
 
     height:
-        300px;
+        270px;
 
     position:
         relative;
@@ -1130,7 +1107,7 @@ input {
 .product-image img {
 
     transform:
-        scale(1.06);
+        scale(1.05);
 }
 
 
@@ -1157,7 +1134,7 @@ input {
 .product-content {
 
     padding:
-        20px 21px 23px;
+        17px 19px 20px;
 
     flex:
         1;
@@ -1174,22 +1151,17 @@ input {
 
 
 .product-content .category {
-
-    color:
-        #ffffff;
+    color: #ffffff;
 }
 
 
 .product-content h3 {
 
     font-size:
-        21px;
+        20px;
 
     margin:
-        5px 0;
-
-    color:
-        #ffffff;
+        4px 0;
 }
 
 
@@ -1202,7 +1174,7 @@ input {
         11px;
 
     margin-bottom:
-        16px;
+        13px;
 }
 
 
@@ -1222,10 +1194,10 @@ input {
         absolute;
 
     top:
-        15px;
+        13px;
 
     left:
-        15px;
+        13px;
 
     z-index:
         5;
@@ -1237,7 +1209,7 @@ input {
         var(--card-teal);
 
     padding:
-        6px 9px;
+        5px 8px;
 
     border-radius:
         100px;
@@ -1256,7 +1228,7 @@ input {
 .affiliate-note {
 
     margin-top:
-        14px;
+        11px;
 
     color:
         rgba(8,80,94,.72);
@@ -1272,6 +1244,9 @@ input {
 
 .method {
 
+    width:
+        100%;
+
     background:
         #08505e;
 
@@ -1285,7 +1260,7 @@ input {
         1fr 1fr;
 
     min-height:
-        580px;
+        520px;
 }
 
 
@@ -1295,7 +1270,7 @@ input {
         relative;
 
     min-height:
-        580px;
+        520px;
 
     overflow:
         hidden;
@@ -1311,7 +1286,7 @@ input {
         100%;
 
     min-height:
-        580px;
+        520px;
 
     object-fit:
         cover;
@@ -1347,16 +1322,16 @@ input {
         5;
 
     bottom:
-        12%;
-
-    left:
         10%;
 
+    left:
+        8%;
+
     width:
-        150px;
+        135px;
 
     height:
-        150px;
+        135px;
 
     border:
         1px solid
@@ -1400,7 +1375,7 @@ input {
         block;
 
     font-size:
-        18px;
+        17px;
 
     color:
         var(--lime);
@@ -1410,7 +1385,7 @@ input {
 .method-content {
 
     padding:
-        65px 6vw;
+        50px 5vw;
 
     align-self:
         center;
@@ -1427,7 +1402,7 @@ input {
 .method-content h2 {
 
     font-size:
-        clamp(40px,4vw,58px);
+        clamp(38px,4vw,56px);
 
     line-height:
         1.02;
@@ -1457,7 +1432,7 @@ input {
         13px;
 
     margin:
-        18px 0 25px;
+        15px 0 21px;
 }
 
 
@@ -1470,10 +1445,10 @@ input {
         repeat(3,1fr);
 
     gap:
-        16px;
+        13px;
 
     margin-bottom:
-        28px;
+        23px;
 }
 
 
@@ -1484,7 +1459,7 @@ input {
         rgba(255,255,255,.35);
 
     padding-top:
-        12px;
+        10px;
 }
 
 
@@ -1507,7 +1482,7 @@ input {
         12px;
 
     margin:
-        5px 0;
+        4px 0;
 }
 
 
@@ -1561,22 +1536,22 @@ input {
 .newsletter {
 
     width:
-        94%;
+        var(--content-width);
 
     max-width:
-        1500px;
+        var(--max-width);
 
     margin:
-        60px auto;
+        35px auto;
 
     background:
         #e2e9df;
 
     border-radius:
-        31px;
+        27px;
 
     padding:
-        55px 6%;
+        42px 5%;
 
     display:
         grid;
@@ -1585,7 +1560,7 @@ input {
         1fr 1fr;
 
     gap:
-        50px;
+        40px;
 
     align-items:
         center;
@@ -1595,7 +1570,7 @@ input {
 .newsletter h2 {
 
     font-size:
-        clamp(38px,4vw,55px);
+        clamp(36px,4vw,53px);
 
     line-height:
         1.02;
@@ -1625,7 +1600,7 @@ input {
         12px;
 
     margin-top:
-        12px;
+        10px;
 }
 
 
@@ -1644,7 +1619,7 @@ input {
         .13em;
 
     margin-bottom:
-        8px;
+        7px;
 }
 
 
@@ -1705,7 +1680,7 @@ input {
         white;
 
     padding:
-        12px 20px;
+        11px 19px;
 
     border-radius:
         100px;
@@ -1727,7 +1702,7 @@ input {
         9px;
 
     margin:
-        9px 12px;
+        8px 12px;
 }
 
 
@@ -1744,14 +1719,17 @@ footer {
         #dce4df;
 
     padding:
-        65px 3% 22px;
+        50px 3% 20px;
 }
 
 
 .footer-grid {
 
+    width:
+        var(--content-width);
+
     max-width:
-        1500px;
+        var(--max-width);
 
     margin:
         auto;
@@ -1763,7 +1741,7 @@ footer {
         2fr 1fr 1fr 1fr;
 
     gap:
-        50px;
+        40px;
 }
 
 
@@ -1779,7 +1757,7 @@ footer {
         11px;
 
     margin-top:
-        18px;
+        15px;
 }
 
 
@@ -1798,7 +1776,7 @@ footer {
         uppercase;
 
     margin-bottom:
-        16px;
+        13px;
 }
 
 
@@ -1814,7 +1792,7 @@ footer {
         11px;
 
     margin:
-        9px 0;
+        7px 0;
 
     transition:
         .2s;
@@ -1830,14 +1808,17 @@ footer {
 
 .footer-bottom {
 
+    width:
+        var(--content-width);
+
     max-width:
-        1500px;
+        var(--max-width);
 
     margin:
-        45px auto 0;
+        35px auto 0;
 
     padding-top:
-        18px;
+        15px;
 
     border-top:
         1px solid
@@ -1875,8 +1856,9 @@ footer {
 
 
     .navigation a {
+
         padding:
-            6px 10px;
+            6px 9px;
 
         font-size:
             10px;
@@ -1884,31 +1866,18 @@ footer {
 
 
     .hero {
-        min-height: 560px;
+        min-height: 550px;
     }
 
 
     .hero-content {
         padding:
-            55px 6vw;
-    }
-
-
-    .hero h1 {
-        font-size:
-            clamp(42px,6vw,68px);
+            50px 3.5%;
     }
 
 
     .destination-grid,
     .product-grid {
-
-        grid-template-columns:
-            1fr 1fr;
-    }
-
-
-    .blog-grid {
 
         grid-template-columns:
             1fr 1fr;
@@ -1925,14 +1894,14 @@ footer {
     .method-visual {
 
         min-height:
-            450px;
+            430px;
     }
 
 
     .method-visual img {
 
         min-height:
-            450px;
+            430px;
     }
 
 
@@ -1961,14 +1930,12 @@ footer {
     .header {
 
         width:
-            94%;
+            96%;
 
         min-height:
             52px;
     }
 
-
-    /* Keep logo clean on mobile */
 
     .logo-image {
 
@@ -1987,16 +1954,6 @@ footer {
 
         font-size:
             15px;
-    }
-
-
-    .logo-text small {
-
-        font-size:
-            7px;
-
-        letter-spacing:
-            .25em;
     }
 
 
@@ -2072,18 +2029,6 @@ footer {
     }
 
 
-    .navigation a.active::after {
-        display:
-            none;
-    }
-
-
-    .header-button {
-        display:
-            none;
-    }
-
-
     .menu-button {
         display:
             block;
@@ -2095,7 +2040,7 @@ footer {
     .hero {
 
         min-height:
-            500px;
+            490px;
     }
 
 
@@ -2117,7 +2062,7 @@ footer {
             100%;
 
         padding:
-            0 6% 40px;
+            0 4% 34px;
 
         align-self:
             flex-end;
@@ -2125,9 +2070,8 @@ footer {
 
 
     .hero h1 {
-
         font-size:
-            44px;
+            43px;
     }
 
 
@@ -2137,36 +2081,26 @@ footer {
             13px;
 
         margin-top:
-            18px;
+            16px;
 
         margin-bottom:
-            25px;
+            22px;
     }
 
 
-    /* GENERAL */
-
-    .section {
-
-        width:
-            92%;
-
-        margin:
-            45px auto;
-    }
-
+    /* DESTINATIONS */
 
     #destinations {
 
         padding:
-            40px 0 45px;
+            25px 0 30px;
     }
 
 
     #destinations .section-inner {
 
         width:
-            92%;
+            96%;
     }
 
 
@@ -2176,14 +2110,21 @@ footer {
             block;
 
         margin-bottom:
-            24px;
+            19px;
+    }
+
+
+    .section-header h2 {
+
+        font-size:
+            36px;
     }
 
 
     .section-description {
 
         margin-top:
-            10px;
+            8px;
     }
 
 
@@ -2193,7 +2134,7 @@ footer {
             inline-block;
 
         margin-top:
-            13px;
+            10px;
     }
 
 
@@ -2202,13 +2143,23 @@ footer {
 
         grid-template-columns:
             1fr;
+
+        gap:
+            13px;
     }
 
 
     .destination-image {
 
         height:
-            300px;
+            270px;
+    }
+
+
+    .destination-content {
+
+        padding:
+            16px 18px 19px;
     }
 
 
@@ -2217,21 +2168,28 @@ footer {
     .products-section {
 
         padding:
-            50px 0;
+            30px 0 33px;
     }
 
 
     .products-container {
 
         width:
-            92%;
+            96%;
     }
 
 
     .product-image {
 
         height:
-            280px;
+            260px;
+    }
+
+
+    .product-content {
+
+        padding:
+            16px 18px 19px;
     }
 
 
@@ -2240,7 +2198,7 @@ footer {
     .method-content {
 
         padding:
-            55px 7%;
+            45px 5%;
     }
 
 
@@ -2248,20 +2206,23 @@ footer {
 
         grid-template-columns:
             1fr;
+
+        gap:
+            12px;
     }
 
 
     .method-visual {
 
         min-height:
-            360px;
+            340px;
     }
 
 
     .method-visual img {
 
         min-height:
-            360px;
+            340px;
     }
 
 
@@ -2270,16 +2231,16 @@ footer {
     .newsletter {
 
         width:
-            92%;
+            96%;
 
         margin:
-            45px auto;
+            30px auto;
 
         padding:
-            42px 7%;
+            35px 6%;
 
         gap:
-            30px;
+            25px;
     }
 
 
@@ -2295,7 +2256,7 @@ footer {
             none;
 
         gap:
-            8px;
+            7px;
 
         padding:
             0;
@@ -2305,7 +2266,7 @@ footer {
     .email-form input {
 
         min-height:
-            45px;
+            44px;
 
         background:
             white;
@@ -2322,7 +2283,7 @@ footer {
     .email-form button {
 
         min-height:
-            45px;
+            44px;
     }
 
 
@@ -2331,17 +2292,20 @@ footer {
     footer {
 
         padding:
-            55px 6% 22px;
+            45px 4% 20px;
     }
 
 
     .footer-grid {
 
+        width:
+            96%;
+
         grid-template-columns:
             1fr 1fr;
 
         gap:
-            35px;
+            30px;
     }
 
 
@@ -2354,15 +2318,21 @@ footer {
 
     .footer-bottom {
 
+        width:
+            96%;
+
         display:
             block;
+
+        margin-top:
+            30px;
     }
 
 
     .footer-bottom div {
 
         margin-top:
-            8px;
+            7px;
     }
 
 }
@@ -2375,9 +2345,8 @@ footer {
 @media(max-width:420px) {
 
     .hero h1 {
-
         font-size:
-            44px;
+            42px;
     }
 
 
@@ -2389,14 +2358,12 @@ footer {
 
 
     .button {
-
         width:
             100%;
     }
 
 
     .hero {
-
         min-height:
             450px;
     }
@@ -2414,6 +2381,7 @@ footer {
         scroll-behavior:
             auto;
     }
+
 
     *,
     *::before,
@@ -2436,7 +2404,6 @@ footer {
 
 
 <body>
-
 
 <a href="#main-content" class="skip-link">
     Skip to main content
@@ -2490,40 +2457,28 @@ footer {
         <a
             href="index.html"
             class="active">
-
             Home
-
         </a>
-       
+
         <a
             href="travelcenter.html">
-
             Travel Center
-
         </a>
 
         <a href="destinations.html">
-
             Travel Essentials
-
         </a>
 
         <a href="products.html">
-
             Tour Packages
-
         </a>
 
         <a href="blog.html">
-
-            Transpotation
-
+            Transportation
         </a>
 
         <a href="about.html">
-
             Bookings
-
         </a>
 
     </nav>
@@ -2541,16 +2496,13 @@ footer {
     id="hero"
     aria-label="Travel introduction">
 
-
     <img
         class="hero-bg"
         src="images/imagehero.webp"
         alt="Scenic mountain landscape travel destination"
         loading="eager">
 
-
     <div class="hero-overlay"></div>
-
 
     <div class="hero-content">
 
@@ -2558,24 +2510,17 @@ footer {
             YOUR JOURNEY • STARTS HERE
         </p>
 
-
         <h1>
-
             Plan better.<br>
-
-            <em>
-                Travel smarter.
-            </em>
-
+            <em>Travel smarter.</em>
         </h1>
-
 
         <p class="hero-description">
 
-            Explore destinations, find the right travel options, and discover great ways to make your next trip happen.
+            Explore destinations, find the right travel options,
+            and discover great ways to make your next trip happen.
 
         </p>
-
 
         <div class="hero-buttons">
 
@@ -2590,7 +2535,6 @@ footer {
                 </span>
 
             </a>
-
 
             <a
                 href="blog.html"
@@ -2624,27 +2568,18 @@ footer {
             <div>
 
                 <h2 id="destinations-title">
-
-                    Places worth
-
-                    <em>
-                        pinpointing.
-                    </em>
+                 Plan Your 
+                    <em>journey.</em>
 
                 </h2>
 
-
                 <p class="section-description">
 
-                    Explore destination inspiration
-                    for city breaks, cultural journeys,
-                    tropical escapes and unforgettable
-                    adventures.
+                    Find stays, travel packages and transportation options to make planning your next journey easier.
 
                 </p>
 
             </div>
-
 
             <a
                 href="destinations.html"
@@ -2660,8 +2595,6 @@ footer {
         <div class="destination-grid">
 
 
-            <!-- JAPAN -->
-
             <a
                 href="destinations.html#japan"
                 class="destination-card"
@@ -2675,7 +2608,6 @@ footer {
                         loading="lazy">
 
                 </div>
-
 
                 <div class="destination-content">
 
@@ -2702,8 +2634,6 @@ footer {
 
 
 
-            <!-- EUROPE -->
-
             <a
                 href="destinations.html#europe"
                 class="destination-card"
@@ -2717,7 +2647,6 @@ footer {
                         loading="lazy">
 
                 </div>
-
 
                 <div class="destination-content">
 
@@ -2744,8 +2673,6 @@ footer {
 
 
 
-            <!-- TROPICAL -->
-
             <a
                 href="destinations.html#tropical"
                 class="destination-card"
@@ -2759,7 +2686,6 @@ footer {
                         loading="lazy">
 
                 </div>
-
 
                 <div class="destination-content">
 
@@ -2810,13 +2736,9 @@ footer {
                 <h2 id="essentials-title">
 
                     Pack less.
-
-                    <em>
-                        Choose better.
-                    </em>
+                    <em>Choose better.</em>
 
                 </h2>
-
 
                 <p class="section-description">
 
@@ -2827,7 +2749,6 @@ footer {
                 </p>
 
             </div>
-
 
             <a
                 href="products.html"
@@ -2852,7 +2773,6 @@ footer {
                     TRAVEL SMART
                 </span>
 
-
                 <div class="product-image">
 
                     <img
@@ -2861,7 +2781,6 @@ footer {
                         loading="lazy">
 
                 </div>
-
 
                 <div class="product-content">
 
@@ -2902,7 +2821,6 @@ footer {
 
                 </div>
 
-
                 <div class="product-content">
 
                     <span class="category">
@@ -2941,7 +2859,6 @@ footer {
                         loading="lazy">
 
                 </div>
-
 
                 <div class="product-content">
 
@@ -2993,14 +2910,12 @@ footer {
     id="method"
     aria-labelledby="method-title">
 
-
     <div class="method-visual">
 
         <img
             src="https://images.unsplash.com/photo-1524666041070-9b8762f2c8c1?auto=format&fit=crop&w=1600&q=85"
             alt="Traveler planning a journey with a map"
             loading="lazy">
-
 
         <div class="stamp">
 
@@ -3022,17 +2937,12 @@ footer {
             THE PINPOINT METHOD
         </p>
 
-
         <h2 id="method-title">
 
             Good trips start with
-
-            <em>
-                good planning.
-            </em>
+            <em>good planning.</em>
 
         </h2>
-
 
         <p>
 
@@ -3047,12 +2957,9 @@ footer {
 
         <div class="method-points">
 
-
             <div class="method-point">
 
-                <span>
-                    01
-                </span>
+                <span>01</span>
 
                 <strong>
                     Discover
@@ -3068,9 +2975,7 @@ footer {
 
             <div class="method-point">
 
-                <span>
-                    02
-                </span>
+                <span>02</span>
 
                 <strong>
                     Prepare
@@ -3086,9 +2991,7 @@ footer {
 
             <div class="method-point">
 
-                <span>
-                    03
-                </span>
+                <span>03</span>
 
                 <strong>
                     Go
@@ -3133,7 +3036,6 @@ footer {
             STAY IN THE LOOP
         </p>
 
-
         <h2 id="newsletter-title">
 
             More journeys.<br>
@@ -3143,7 +3045,6 @@ footer {
             </em>
 
         </h2>
-
 
         <p class="newsletter-description">
 
@@ -3162,7 +3063,6 @@ footer {
             YOUR EMAIL ADDRESS
         </label>
 
-
         <form
             class="email-form"
             id="newsletterForm">
@@ -3175,13 +3075,11 @@ footer {
                 placeholder="you@example.com"
                 required>
 
-
             <button type="submit">
                 Join →
             </button>
 
         </form>
-
 
         <p class="newsletter-note">
 
@@ -3204,7 +3102,6 @@ footer {
 
     <div class="footer-grid">
 
-
         <div class="footer-brand">
 
             <a
@@ -3219,7 +3116,6 @@ footer {
                     ✦
 
                 </span>
-
 
                 <span class="logo-text">
 
@@ -3248,7 +3144,6 @@ footer {
         </div>
 
 
-
         <div class="footer-column">
 
             <h4 class="footer-title">
@@ -3270,7 +3165,6 @@ footer {
         </div>
 
 
-
         <div class="footer-column">
 
             <h4 class="footer-title">
@@ -3290,7 +3184,6 @@ footer {
             </a>
 
         </div>
-
 
 
         <div class="footer-column">
@@ -3316,7 +3209,6 @@ footer {
     </div>
 
 
-
     <div class="footer-bottom">
 
         <span>
@@ -3325,7 +3217,6 @@ footer {
             All rights reserved.
 
         </span>
-
 
         <span>
 
@@ -3426,10 +3317,8 @@ newsletterForm.addEventListener(
 
         event.preventDefault();
 
-
         const email =
             document.getElementById("email");
-
 
         const button =
             newsletterForm.querySelector(
