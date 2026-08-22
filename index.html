@@ -653,10 +653,10 @@ input {
 
 
 /* =========================================================
-   DESTINATIONS
+   TRAVEL SERVICES
 ========================================================= */
 
-#destinations {
+#travel-services {
 
     background:
         #ffffff;
@@ -675,7 +675,7 @@ input {
 }
 
 
-#destinations .section-inner {
+#travel-services .section-inner {
 
     width:
         var(--content-width);
@@ -763,24 +763,67 @@ input {
         #0d88a1;
 
     text-decoration:
-        underline;
-
-    text-decoration-thickness:
-        1px;
-
-    text-underline-offset:
-        4px;
+        none;
 
     white-space:
         nowrap;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    padding:
+        9px 16px;
+
+    border:
+        1.5px solid
+        #0d88a1;
+
+    border-radius:
+        100px;
+
+    transition:
+        .25s;
+}
+
+
+.view-all:hover {
+
+    background:
+        #0d88a1;
+
+    color:
+        #ffffff;
+
+    transform:
+        translateY(-2px);
+}
+
+
+.products-section .view-all {
+
+    border-color:
+        #12ccf1;
+}
+
+
+.products-section .view-all:hover {
+
+    background:
+        #12ccf1;
+
+    color:
+        #033646;
 }
 
 
 /* =========================================================
-   DESTINATION GRID
+   SERVICE GRID
 ========================================================= */
 
-.destination-grid {
+.service-grid {
 
     display:
         grid;
@@ -793,7 +836,7 @@ input {
 }
 
 
-.destination-card {
+.service-card {
 
     background:
         #0c606e;
@@ -826,7 +869,7 @@ input {
 }
 
 
-.destination-card:hover {
+.service-card:hover {
 
     transform:
         translateY(-5px);
@@ -836,7 +879,7 @@ input {
 }
 
 
-.destination-image {
+.service-image {
 
     height:
         285px;
@@ -852,7 +895,7 @@ input {
 }
 
 
-.destination-image img {
+.service-image img {
 
     width:
         100%;
@@ -868,15 +911,15 @@ input {
 }
 
 
-.destination-card:hover
-.destination-image img {
+.service-card:hover
+.service-image img {
 
     transform:
         scale(1.05);
 }
 
 
-.destination-image::after {
+.service-image::after {
 
     content:
         "";
@@ -896,10 +939,10 @@ input {
 }
 
 
-.destination-content {
+.service-content {
 
     padding:
-        17px 20px 20px;
+        22px 20px 26px;
 
     flex:
         1;
@@ -911,7 +954,16 @@ input {
         column;
 
     align-items:
-        flex-start;
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    gap:
+        4px;
 }
 
 
@@ -931,24 +983,36 @@ input {
 }
 
 
-.destination-content .category {
+.service-content .category {
 
     color:
         rgba(255,255,255,.7);
+
+    text-align:
+        center;
+
+    width:
+        100%;
 }
 
 
-.destination-content h3 {
+.service-content h3 {
 
     font-size:
         23px;
 
     margin:
         3px 0;
+
+    text-align:
+        center;
+
+    width:
+        100%;
 }
 
 
-.destination-content p {
+.service-content p {
 
     color:
         rgba(255,255,255,.78);
@@ -956,34 +1020,14 @@ input {
     font-size:
         11px;
 
-    margin-bottom:
-        12px;
-}
-
-
-.card-link {
-
-    font-size:
-        11px;
-
-    font-weight:
-        800;
-}
-
-
-.destination-card .card-link {
-
-    margin-top:
-        auto;
-
-    color:
-        #ffffff;
+    max-width:
+        88%;
 }
 
 
 /* =========================================================
    TRAVEL ESSENTIALS
-   MATCHES DESTINATIONS WIDTH
+   MATCHES SERVICES WIDTH
 ========================================================= */
 
 .products-section {
@@ -999,7 +1043,7 @@ input {
     color: #ffffff;
 }
 .products-section .section-description {
-    color: #8ce9facc;
+    color: #cee6ec;
 }
 
 .products-container {
@@ -1014,7 +1058,7 @@ input {
         auto;
 }
 .products-section .view-all {
-    color: #12ccf1;
+    color: #f9fbfc;
 }
 
 .products-section .section-header {
@@ -1142,7 +1186,7 @@ input {
 .product-content {
 
     padding:
-        17px 19px 20px;
+        22px 19px 26px;
 
     flex:
         1;
@@ -1154,7 +1198,16 @@ input {
         column;
 
     align-items:
-        flex-start;
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    gap:
+        4px;
 }
 
 
@@ -1181,18 +1234,8 @@ input {
     font-size:
         11px;
 
-    margin-bottom:
-        13px;
-}
-
-
-.product-content .card-link {
-
-    color:
-        #1d90a7;
-
-    margin-top:
-        auto;
+    max-width:
+        90%;
 }
 
 
@@ -1884,7 +1927,7 @@ footer {
     }
 
 
-    .destination-grid,
+    .service-grid,
     .product-grid {
 
         grid-template-columns:
@@ -2096,16 +2139,16 @@ footer {
     }
 
 
-    /* DESTINATIONS */
+    /* SERVICES */
 
-    #destinations {
+    #travel-services {
 
         padding:
             25px 0 30px;
     }
 
 
-    #destinations .section-inner {
+    #travel-services .section-inner {
 
         width:
             96%;
@@ -2146,7 +2189,7 @@ footer {
     }
 
 
-    .destination-grid,
+    .service-grid,
     .product-grid {
 
         grid-template-columns:
@@ -2157,14 +2200,14 @@ footer {
     }
 
 
-    .destination-image {
+    .service-image {
 
         height:
             270px;
     }
 
 
-    .destination-content {
+    .service-content {
 
         padding:
             16px 18px 19px;
@@ -2561,13 +2604,13 @@ footer {
 
 
 <!-- =========================================================
-     DESTINATIONS
+     TRAVEL SERVICES
 ========================================================= -->
 
 <section
     class="section"
-    id="destinations"
-    aria-labelledby="destinations-title">
+    id="travel-services"
+    aria-labelledby="travel-services-title">
 
     <div class="section-inner">
 
@@ -2575,7 +2618,7 @@ footer {
 
             <div>
 
-                <h2 id="destinations-title">
+                <h2 id="travel-services-title">
                  Plan Your 
                     <em>journey.</em>
 
@@ -2593,22 +2636,22 @@ footer {
                 href="destinations.html"
                 class="view-all">
 
-                View all destinations →
+                View all services →
 
             </a>
 
         </div>
 
 
-        <div class="destination-grid">
+        <div class="service-grid">
 
 
             <a
                 href="destinations.html#japan"
-                class="destination-card"
-                aria-label="Explore Japan">
+                class="service-card"
+                aria-label="Explore tours and experiences">
 
-                <div class="destination-image">
+                <div class="service-image">
 
                     <img
                         src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=85"
@@ -2617,24 +2660,20 @@ footer {
 
                 </div>
 
-                <div class="destination-content">
+                <div class="service-content">
 
                     <span class="category">
-                        ASIA
+                        TRAVEL OFFERS
                     </span>
 
                     <h3>
-                        Japan
+                        Tours & Experiences
                     </h3>
 
                     <p>
-                        Culture, food, cities
-                        and hidden gems.
+                        Discover day tours, activities, excursions and travel packages
+                         for your next adventure
                     </p>
-
-                    <span class="card-link">
-                        Explore Japan →
-                    </span>
 
                 </div>
 
@@ -2644,36 +2683,31 @@ footer {
 
             <a
                 href="destinations.html#europe"
-                class="destination-card"
-                aria-label="Explore European escapes">
+                class="service-card"
+                aria-label="Explore flights and car rentals">
 
-                <div class="destination-image">
+                <div class="service-image">
 
                     <img
-                        src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=85"
+                        src="images/transport.webp"
                         alt="European city architecture and Eiffel Tower"
                         loading="lazy">
 
                 </div>
 
-                <div class="destination-content">
+                <div class="service-content">
 
                     <span class="category">
-                        EUROPE
+                        TRANSPORT
                     </span>
 
                     <h3>
-                        European Escapes
+                        Flights & Car Rentals
                     </h3>
 
                     <p>
-                        Classic cities,
-                        culture and slow travel.
+                        Find flights, car rentals, transfers and other transport options for destinations worldwide.
                     </p>
-
-                    <span class="card-link">
-                        Explore Europe →
-                    </span>
 
                 </div>
 
@@ -2683,10 +2717,10 @@ footer {
 
             <a
                 href="destinations.html#tropical"
-                class="destination-card"
-                aria-label="Explore tropical retreats">
+                class="service-card"
+                aria-label="Explore hotels and stays">
 
-                <div class="destination-image">
+                <div class="service-image">
 
                     <img
                         src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85"
@@ -2695,24 +2729,19 @@ footer {
 
                 </div>
 
-                <div class="destination-content">
+                <div class="service-content">
 
                     <span class="category">
-                        GETAWAYS
+                        ACCOMMODATION
                     </span>
 
                     <h3>
-                        Tropical Retreats
+                        Hotels & Stays
                     </h3>
 
                     <p>
-                        Sun, sea and unforgettable
-                        stays.
+                        Discover hotels, resorts, apartments and comfortable stays for your next trip.
                     </p>
-
-                    <span class="card-link">
-                        Explore getaways →
-                    </span>
 
                 </div>
 
@@ -2805,10 +2834,6 @@ footer {
                         every journey organized.
                     </p>
 
-                    <span class="card-link">
-                        Explore collection →
-                    </span>
-
                 </div>
 
             </a>
@@ -2844,10 +2869,6 @@ footer {
                         comfortable flights and journeys.
                     </p>
 
-                    <span class="card-link">
-                        See collection →
-                    </span>
-
                 </div>
 
             </a>
@@ -2882,10 +2903,6 @@ footer {
                         Stay connected, charged and
                         ready wherever you go.
                     </p>
-
-                    <span class="card-link">
-                        Discover more →
-                    </span>
 
                 </div>
 
