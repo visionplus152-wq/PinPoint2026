@@ -31,11 +31,11 @@ rel="stylesheet">
 
 :root {
 
-    --dark: #05353f;
-    --dark-2: #095666;
+    --dark: #022e3b;
+    --dark-2: #084b5f;
 
-    --green: #208fa5;
-    --green-light: #12a6c4;
+    --green: #0c7797;
+    --green-light: #0c7797;
 
     --cream: #f7f5ef;
     --cream-2: #eee9dc;
@@ -48,7 +48,7 @@ rel="stylesheet">
     --lime: #dce9b6;
     --gold: #d6bd7b;
 
-    --accent: #0d88a1;
+    --accent: #0c7797;
     --card-teal: #0c6e81;
     --light-teal: #b2e8ed;
 
@@ -265,7 +265,7 @@ input {
     font-size: 25px;
 
     color:
-        var(--dark);
+       #00151b;
 }
 
 
@@ -290,7 +290,7 @@ input {
 
     border:
         1px solid
-        #0d88a1;
+        #0c7797;
 
     border-radius: 100px;
 
@@ -335,7 +335,7 @@ input {
 .navigation a:hover {
 
     color:
-        #14b6d6;
+        #0cafe0;
 
     background:
         #000000e3;
@@ -351,7 +351,7 @@ input {
         #ffffff;
 
     background:
-        #0d88a1;
+        #0c7797;
 
     box-shadow:
         0 5px 15px
@@ -406,7 +406,7 @@ input {
     align-items: center;
 
     background:
-        #0c2a2a;
+        #010e13;
 }
 
 
@@ -760,7 +760,7 @@ input {
         800;
 
     color:
-        #0d88a1;
+        #0c7797;
 
     text-decoration:
         none;
@@ -779,7 +779,7 @@ input {
 
     border:
         1.5px solid
-        #0d88a1;
+        #0c7797;
 
     border-radius:
         100px;
@@ -792,7 +792,7 @@ input {
 .view-all:hover {
 
     background:
-        #0d88a1;
+        #0c7797;
 
     color:
         #ffffff;
@@ -805,17 +805,17 @@ input {
 .products-section .view-all {
 
     border-color:
-        #12ccf1;
+        #0c7797;
 }
 
 
 .products-section .view-all:hover {
 
     background:
-        #12ccf1;
+        #0587af;
 
     color:
-        #033646;
+        #09537e;
 }
 
 
@@ -839,7 +839,7 @@ input {
 .service-card {
 
     background:
-        #0c606e;
+        #035b75;
 
     color:
         #ffffff;
@@ -911,11 +911,16 @@ input {
 }
 
 
-.service-card:hover
+.service-card:hover{
+    box-shadow:
+        0 10px 20px
+        #000000;
+}
 .service-image img {
 
     transform:
         scale(1.05);
+    
 }
 
 
@@ -1033,7 +1038,7 @@ input {
 .products-section {
 
     background:
-        #033646fa;
+        #02495f;
 
     padding:
         38px 0 42px;
@@ -1058,7 +1063,13 @@ input {
         auto;
 }
 .products-section .view-all {
+    border-color: #0c7797;
     color: #f9fbfc;
+}
+
+.products-section .view-all:hover {
+    background: #ffffff;
+    color: #09537e;
 }
 
 .products-section .section-header {
@@ -1087,7 +1098,7 @@ input {
          #ffffff;
 
     color:
-        #0a5a69;
+        #0c7797;
 
     border-radius:
         var(--radius);
@@ -1118,8 +1129,8 @@ input {
         translateY(-5px);
 
     box-shadow:
-        0 20px 50px
-        rgba(8,80,94,.25);
+        0 10px 20px
+        #000000e7;
 }
 
 
@@ -1212,7 +1223,7 @@ input {
 
 
 .product-content .category {
-    color: #0c5b6b;
+    color: #0c556b;
 }
 
 
@@ -1229,7 +1240,7 @@ input {
 .product-content p {
 
     color:
-        #083e49;
+        #0c7797;
 
     font-size:
         11px;
@@ -1299,7 +1310,7 @@ input {
         100%;
 
     background:
-        #08505e;
+        #011014;
 
     color:
         white;
@@ -1342,27 +1353,6 @@ input {
     object-fit:
         cover;
 }
-
-
-.method-visual::after {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    inset:
-        0;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(8,80,94,.05),
-            rgba(8,80,94,.4)
-        );
-}
-
 
 .stamp {
 
@@ -1413,7 +1403,7 @@ input {
         rotate(-12deg);
 
     background:
-        rgba(8,80,94,.2);
+        #033b4d;
 
     backdrop-filter:
         blur(8px);
@@ -1581,190 +1571,13 @@ input {
 
 
 /* =========================================================
-   NEWSLETTER
-========================================================= */
-
-.newsletter {
-
-    width:
-        var(--content-width);
-
-    max-width:
-        var(--max-width);
-
-    margin:
-        35px auto;
-
-    background:
-        #e2e9df;
-
-    border-radius:
-        27px;
-
-    padding:
-        42px 5%;
-
-    display:
-        grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap:
-        40px;
-
-    align-items:
-        center;
-}
-
-
-.newsletter h2 {
-
-    font-size:
-        clamp(36px,4vw,53px);
-
-    line-height:
-        1.02;
-
-    letter-spacing:
-        -.045em;
-}
-
-
-.newsletter h2 em {
-
-    font-family:
-        "Playfair Display",
-        serif;
-}
-
-
-.newsletter-description {
-
-    max-width:
-        500px;
-
-    color:
-        var(--muted);
-
-    font-size:
-        12px;
-
-    margin-top:
-        10px;
-}
-
-
-.newsletter label {
-
-    display:
-        block;
-
-    font-size:
-        9px;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        .13em;
-
-    margin-bottom:
-        7px;
-}
-
-
-.email-form {
-
-    display:
-        flex;
-
-    background:
-        white;
-
-    border:
-        1px solid
-        var(--line);
-
-    padding:
-        5px;
-
-    border-radius:
-        100px;
-}
-
-
-.email-form input {
-
-    flex:
-        1;
-
-    min-width:
-        0;
-
-    border:
-        none;
-
-    outline:
-        none;
-
-    background:
-        transparent;
-
-    padding:
-        0 15px;
-
-    font-size:
-        12px;
-}
-
-
-.email-form button {
-
-    border:
-        none;
-
-    background:
-        var(--dark);
-
-    color:
-        white;
-
-    padding:
-        11px 19px;
-
-    border-radius:
-        100px;
-
-    font-weight:
-        800;
-
-    cursor:
-        pointer;
-}
-
-
-.newsletter-note {
-
-    color:
-        #858f89;
-
-    font-size:
-        9px;
-
-    margin:
-        8px 12px;
-}
-
-
-/* =========================================================
    FOOTER
 ========================================================= */
 
 footer {
 
     background:
-        #102b25;
+        #044558;
 
     color:
         #dce4df;
@@ -1894,6 +1707,11 @@ footer {
         .08em;
 }
 
+/* Footer logo image (replaces old star icon) */
+footer .logo-image {
+    border-color: #ffffff;
+}
+
 
 /* =========================================================
    TABLET
@@ -1953,13 +1771,6 @@ footer {
 
         min-height:
             430px;
-    }
-
-
-    .newsletter {
-
-        grid-template-columns:
-            1fr;
     }
 
 
@@ -2274,67 +2085,6 @@ footer {
 
         min-height:
             340px;
-    }
-
-
-    /* NEWSLETTER */
-
-    .newsletter {
-
-        width:
-            96%;
-
-        margin:
-            30px auto;
-
-        padding:
-            35px 6%;
-
-        gap:
-            25px;
-    }
-
-
-    .email-form {
-
-        flex-direction:
-            column;
-
-        background:
-            transparent;
-
-        border:
-            none;
-
-        gap:
-            7px;
-
-        padding:
-            0;
-    }
-
-
-    .email-form input {
-
-        min-height:
-            44px;
-
-        background:
-            white;
-
-        border:
-            1px solid
-            var(--line);
-
-        border-radius:
-            100px;
-    }
-
-
-    .email-form button {
-
-        min-height:
-            44px;
     }
 
 
@@ -3044,81 +2794,6 @@ footer {
 
 </section>
 
-
-
-<!-- =========================================================
-     NEWSLETTER
-========================================================= -->
-
-<section
-    class="newsletter"
-    id="newsletter"
-    aria-labelledby="newsletter-title">
-
-    <div>
-
-        <p class="eyebrow">
-            STAY IN THE LOOP
-        </p>
-
-        <h2 id="newsletter-title">
-
-            More journeys.<br>
-
-            <em>
-                Less guesswork.
-            </em>
-
-        </h2>
-
-        <p class="newsletter-description">
-
-            Get occasional destination ideas,
-            travel tips and useful finds from
-            Pinpoint Travel.
-
-        </p>
-
-    </div>
-
-
-    <div>
-
-        <label for="email">
-            YOUR EMAIL ADDRESS
-        </label>
-
-        <form
-            class="email-form"
-            id="newsletterForm">
-
-            <input
-                type="email"
-                id="email"
-                name="email"
-                autocomplete="email"
-                placeholder="you@example.com"
-                required>
-
-            <button type="submit">
-                Join →
-            </button>
-
-        </form>
-
-        <p class="newsletter-note">
-
-            No spam. Just useful travel
-            inspiration.
-
-        </p>
-
-    </div>
-
-</section>
-
-
-
 <!-- =========================================================
      FOOTER
 ========================================================= -->
@@ -3134,13 +2809,10 @@ footer {
                 class="logo"
                 aria-label="Pinpoint Travel home">
 
-                <span
-                    class="logo-symbol"
-                    style="border-color:white;color:white;">
-
-                    ✦
-
-                </span>
+                <img
+                    src="/favicon.png"
+                    alt="Pinpoint Travel Logo"
+                    class="logo-image">
 
                 <span class="logo-text">
 
@@ -3172,11 +2844,11 @@ footer {
         <div class="footer-column">
 
             <h4 class="footer-title">
-                Explore
+                Travel Center
             </h4>
 
             <a href="destinations.html">
-                Destinations
+                Bookings
             </a>
 
             <a href="products.html">
@@ -3184,7 +2856,7 @@ footer {
             </a>
 
             <a href="blog.html">
-                Travel Guides
+                Transportation
             </a>
 
         </div>
@@ -3324,51 +2996,6 @@ navigationLinks.forEach(
 
     }
 );
-
-
-/* =========================================================
-   NEWSLETTER
-========================================================= */
-
-const newsletterForm =
-    document.getElementById(
-        "newsletterForm"
-    );
-
-
-newsletterForm.addEventListener(
-    "submit",
-    function(event) {
-
-        event.preventDefault();
-
-        const email =
-            document.getElementById("email");
-
-        const button =
-            newsletterForm.querySelector(
-                "button"
-            );
-
-
-        if (
-            email.value.trim() !== ""
-        ) {
-
-            button.textContent =
-                "You're in ✓";
-
-            email.value =
-                "";
-
-            email.placeholder =
-                "Thanks for joining!";
-
-        }
-
-    }
-);
-
 </script>
 
 </body>
