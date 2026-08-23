@@ -655,14 +655,17 @@ input {
     display:
         flex;
 
-    justify-content:
-        space-between;
+    flex-direction:
+        column;
 
     align-items:
-        end;
+        center;
+
+    text-align:
+        center;
 
     gap:
-        25px;
+        14px;
 
     margin-bottom:
         20px;
@@ -696,16 +699,16 @@ input {
 .section-description {
 
     max-width:
-        100%;
+        640px;
+
+    margin:
+        9px auto 0;
 
     color:
         var(--muted);
 
     font-size:
         13px;
-
-    margin-top:
-        9px;
 }
 
 
@@ -1877,6 +1880,18 @@ footer .logo-image {
 
         align-self:
             flex-end;
+
+        text-align:
+            center;
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        align-items:
+            center;
     }
 
 
@@ -1896,6 +1911,19 @@ footer .logo-image {
 
         margin-bottom:
             22px;
+
+        margin-left:
+            auto;
+
+        margin-right:
+            auto;
+    }
+
+
+    .hero-buttons {
+
+        justify-content:
+            center;
     }
 
 
@@ -2010,6 +2038,28 @@ footer .logo-image {
 
         padding:
             45px 5%;
+
+        text-align:
+            center;
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        align-items:
+            center;
+    }
+
+
+    .method-content > p {
+
+        margin-left:
+            auto;
+
+        margin-right:
+            auto;
     }
 
 
@@ -2020,6 +2070,23 @@ footer .logo-image {
 
         gap:
             12px;
+
+        width:
+            100%;
+    }
+
+
+    .method-point {
+
+        text-align:
+            center;
+    }
+
+
+    .method-button {
+
+        align-self:
+            center;
     }
 
 
@@ -2241,16 +2308,18 @@ footer .logo-image {
     aria-label="Travel introduction">
 
     <picture>
-    <source
-        media="(max-width: 720px)"
-        srcset="images/heronew.png">
 
-    <img
-        class="hero-bg"
-        src="images/imagehero.webp"
-        alt="Scenic mountain landscape travel destination"
-        loading="eager">
-</picture>
+        <source
+            media="(max-width: 720px)"
+            srcset="images/imagehero-mobile.webp">
+
+        <img
+            class="hero-bg"
+            src="images/imagehero.webp"
+            alt="Scenic mountain landscape travel destination"
+            loading="eager">
+
+    </picture>
 
     <div class="hero-overlay"></div>
 
