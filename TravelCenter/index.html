@@ -1,1 +1,4627 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Pinpoint Travel Center — discover travel offers, tour packages, transportation, stays and useful travel essentials for your next journey.">
+
+<meta name="theme-color"
+content="#05353f">
+
+<title>Travel Center | Pinpoint Travel</title>
+
+
+<style>
+
+/* =========================================================
+   PINPOINT TRAVEL CENTER
+========================================================= */
+
+:root {
+
+    --dark: #05353f;
+    --dark-2: #095666;
+    --dark-3: #063e49;
+
+    --green: #208fa5;
+    --green-light: #12a6c4;
+    --accent: #0d88a1;
+
+    --cream: #f7f5ef;
+    --white: #ffffff;
+    --soft: #f3f7f7;
+
+    --text: #17353b;
+    --muted: #667b80;
+
+    --border: rgba(5,53,63,.10);
+
+    --radius-xl: 28px;
+    --radius-lg: 21px;
+    --radius-md: 17px;
+    --radius-sm: 11px;
+
+    --shadow:
+        0 15px 40px rgba(16,43,37,.09);
+
+    --container: 1500px;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 78px;
+}
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    color: var(--text);
+
+    background: var(--white);
+
+    line-height: 1.55;
+
+    overflow-x: hidden;
+}
+
+img {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    object-fit: cover;
+}
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+}
+
+button {
+
+    font: inherit;
+
+    cursor: pointer;
+}
+
+.container {
+
+    width: min(96%, var(--container));
+
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
+
+    background:
+        rgba(255,255,255,.95);
+
+    backdrop-filter:
+        blur(16px);
+
+    -webkit-backdrop-filter:
+        blur(16px);
+
+    border-bottom:
+        1px solid rgba(5,53,63,.08);
+}
+
+.nav {
+
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+/* LOGO */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: var(--dark);
+
+    font-size: 20px;
+
+    font-weight: 900;
+
+    letter-spacing: -.04em;
+
+    white-space: nowrap;
+}
+
+.logo-mark {
+
+    width: 35px;
+
+    height: 35px;
+
+    display: grid;
+
+    place-items: center;
+
+    color: white;
+
+    background: var(--dark);
+
+    border-radius: 10px;
+}
+
+
+/* NAV */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+.nav-links a {
+
+    color: #50666b;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: .2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+
+    color: var(--green);
+}
+
+
+/* MOBILE BUTTON */
+
+.mobile-menu {
+
+    display: none;
+
+    width: 40px;
+
+    height: 40px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    background: var(--soft);
+
+    color: var(--dark);
+
+    font-size: 19px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    position: relative;
+
+    overflow: hidden;
+
+    color: white;
+
+    background:
+
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(18,166,196,.30),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(32,143,165,.25),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #05353f 0%,
+            #07596a 55%,
+            #0b7382 100%
+        );
+}
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 560px;
+
+    height: 560px;
+
+    right: -250px;
+
+    top: -310px;
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    border-radius: 50%;
+}
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+
+    height: 400px;
+
+    left: -270px;
+
+    bottom: -280px;
+
+    border:
+        1px solid rgba(255,255,255,.09);
+
+    border-radius: 50%;
+}
+
+
+.hero-inner {
+
+    position: relative;
+
+    z-index: 2;
+
+    min-height: 535px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0,1.08fr)
+        minmax(380px,.92fr);
+
+    align-items: center;
+
+    gap: 55px;
+
+    padding: 55px 0;
+}
+
+
+/* HERO COPY */
+
+.hero-copy {
+
+    max-width: 760px;
+}
+
+.hero-eyebrow {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+
+    color: #a2e6ef;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: .15em;
+
+    text-transform: uppercase;
+}
+
+.hero-eyebrow span {
+
+    width: 24px;
+
+    height: 2px;
+
+    background: currentColor;
+
+    border-radius: 99px;
+}
+
+.hero h1 {
+
+    max-width: 780px;
+
+    font-size:
+        clamp(43px,6vw,72px);
+
+    line-height: .98;
+
+    letter-spacing: -.055em;
+
+    font-weight: 900;
+
+    margin-bottom: 19px;
+}
+
+.hero h1 em {
+
+    color: #99e6ef;
+
+    font-style: normal;
+}
+
+.hero-hook {
+
+    max-width: 650px;
+
+    color: white;
+
+    font-size:
+        clamp(20px,2vw,27px);
+
+    line-height: 1.18;
+
+    letter-spacing: -.025em;
+
+    font-weight: 800;
+
+    margin-bottom: 12px;
+}
+
+.hero-description {
+
+    max-width: 650px;
+
+    color:
+        rgba(255,255,255,.72);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   HERO QUICK ACCESS
+========================================================= */
+
+.hero-access {
+
+    padding: 17px;
+
+    background:
+        rgba(255,255,255,.10);
+
+    border:
+        1px solid rgba(255,255,255,.17);
+
+    border-radius: 23px;
+
+    backdrop-filter:
+        blur(14px);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.14);
+}
+
+.access-heading {
+
+    margin-bottom: 10px;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 850;
+}
+
+.access-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap: 8px;
+}
+
+.access-card {
+
+    min-height: 112px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding: 13px;
+
+    color: white;
+
+    background:
+        rgba(255,255,255,.08);
+
+    border:
+        1px solid rgba(255,255,255,.10);
+
+    border-radius: 15px;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+}
+
+.access-card:hover {
+
+    transform: translateY(-3px);
+
+    background:
+        rgba(255,255,255,.15);
+}
+
+.access-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 11px;
+
+    background:
+        rgba(255,255,255,.12);
+
+    font-size: 17px;
+}
+
+.access-card strong {
+
+    font-size: 12px;
+
+    line-height: 1.25;
+}
+
+.access-card small {
+
+    color:
+        rgba(255,255,255,.58);
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+.section {
+
+    padding: 32px 0;
+}
+
+.section-header {
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-bottom: 15px;
+}
+
+.eyebrow {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--green);
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: .14em;
+
+    text-transform: uppercase;
+
+    margin-bottom: 6px;
+}
+
+.eyebrow::before {
+
+    content: "";
+
+    width: 22px;
+
+    height: 2px;
+
+    background: currentColor;
+
+    border-radius: 99px;
+}
+
+.section-title {
+
+    color: var(--dark);
+
+    font-size:
+        clamp(29px,3.3vw,43px);
+
+    line-height: 1.03;
+
+    letter-spacing: -.04em;
+
+    font-weight: 900;
+}
+
+.section-description {
+
+    max-width: 560px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FEATURED TRAVEL OFFERS
+========================================================= */
+
+.offers-section {
+
+    background: var(--cream);
+}
+
+.offers-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,minmax(0,1fr));
+
+    gap: 13px;
+}
+
+.offer-card {
+
+    overflow: hidden;
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 9px 28px rgba(16,43,37,.06);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.offer-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 18px 40px rgba(16,43,37,.11);
+}
+
+.offer-image {
+
+    position: relative;
+
+    height: 190px;
+
+    overflow: hidden;
+}
+
+.offer-image img {
+
+    height: 100%;
+
+    transition:
+        transform .45s ease;
+}
+
+.offer-card:hover
+.offer-image img {
+
+    transform: scale(1.055);
+}
+
+.offer-tag,
+.offer-badge {
+
+    position: absolute;
+
+    top: 10px;
+
+    z-index: 3;
+
+    padding: 5px 8px;
+
+    border-radius: 99px;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+}
+
+.offer-tag {
+
+    left: 10px;
+
+    color: var(--dark);
+
+    background: white;
+}
+
+.offer-badge {
+
+    right: 10px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0c9bb3,
+            #087086
+        );
+}
+
+.offer-body {
+
+    padding: 13px;
+}
+
+.offer-location {
+
+    color: var(--green);
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: .10em;
+
+    text-transform: uppercase;
+
+    margin-bottom: 4px;
+}
+
+.offer-body h3 {
+
+    color: var(--dark);
+
+    font-size: 17px;
+
+    line-height: 1.14;
+
+    margin-bottom: 6px;
+}
+
+.offer-body p {
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    min-height: 45px;
+
+    margin-bottom: 10px;
+}
+
+.offer-footer {
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    gap: 8px;
+}
+
+.price-area {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1px;
+}
+
+.old-price {
+
+    color: #9aa8ab;
+
+    font-size: 9px;
+
+    text-decoration: line-through;
+}
+
+.price {
+
+    color: var(--dark);
+
+    font-size: 14px;
+
+    font-weight: 900;
+}
+
+.price-note {
+
+    color: var(--green);
+
+    font-size: 8px;
+
+    font-weight: 800;
+}
+
+.card-cta {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 34px;
+
+    padding: 0 10px;
+
+    color: white;
+
+    background: var(--dark);
+
+    border-radius: 9px;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    white-space: nowrap;
+
+    transition: .2s ease;
+}
+
+.card-cta:hover {
+
+    background: var(--green);
+}
+
+
+/* =========================================================
+   TOUR PACKAGES
+========================================================= */
+
+.packages-section {
+
+    background: white;
+}
+
+.category-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,minmax(0,1fr));
+
+    gap: 13px;
+}
+
+.category-card {
+
+    overflow: hidden;
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 9px 28px rgba(16,43,37,.055);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.category-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 18px 40px rgba(16,43,37,.10);
+}
+
+.category-image {
+
+    height: 190px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.category-image img {
+
+    height: 100%;
+
+    transition:
+        transform .4s ease;
+}
+
+.category-card:hover
+.category-image img {
+
+    transform: scale(1.05);
+}
+
+.category-badge {
+
+    position: absolute;
+
+    top: 10px;
+
+    left: 10px;
+
+    padding: 5px 8px;
+
+    color: white;
+
+    background:
+        rgba(5,53,63,.90);
+
+    border-radius: 99px;
+
+    font-size: 8px;
+
+    font-weight: 900;
+}
+
+.category-content {
+
+    padding: 13px;
+}
+
+.category-content small {
+
+    color: var(--green);
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    letter-spacing: .09em;
+}
+
+.category-content h3 {
+
+    color: var(--dark);
+
+    font-size: 17px;
+
+    line-height: 1.15;
+
+    margin: 5px 0 6px;
+}
+
+.category-content p {
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    min-height: 45px;
+
+    margin-bottom: 11px;
+}
+
+.category-bottom {
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    gap: 8px;
+}
+
+
+/* =========================================================
+   TRANSPORTATION
+   SAME CARD STYLE AS OTHER SECTIONS
+========================================================= */
+
+.transportation-section {
+
+    background: var(--soft);
+}
+
+.transport-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,minmax(0,1fr));
+
+    gap: 13px;
+}
+
+
+/* TRANSPORT CARD */
+
+.transport-card {
+
+    overflow: hidden;
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 9px 28px rgba(16,43,37,.055);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.transport-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 18px 40px rgba(16,43,37,.11);
+}
+
+
+/* TRANSPORT IMAGE */
+
+.transport-image {
+
+    position: relative;
+
+    height: 190px;
+
+    overflow: hidden;
+
+    background: #dce8ea;
+}
+
+.transport-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    transition:
+        transform .45s ease;
+}
+
+.transport-card:hover
+.transport-image img {
+
+    transform: scale(1.055);
+}
+
+
+/* BADGES */
+
+.transport-tag {
+
+    position: absolute;
+
+    top: 10px;
+
+    left: 10px;
+
+    z-index: 2;
+
+    padding: 5px 8px;
+
+    color: var(--dark);
+
+    background: white;
+
+    border-radius: 99px;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+}
+
+.transport-offer {
+
+    position: absolute;
+
+    top: 10px;
+
+    right: 10px;
+
+    z-index: 2;
+
+    padding: 5px 8px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0c9bb3,
+            #087086
+        );
+
+    border-radius: 99px;
+
+    font-size: 8px;
+
+    font-weight: 900;
+}
+
+
+/* TRANSPORT BODY */
+
+.transport-body {
+
+    padding: 13px;
+}
+
+.transport-category {
+
+    color: var(--green);
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: .10em;
+
+    text-transform: uppercase;
+
+    margin-bottom: 4px;
+}
+
+.transport-title-row {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 6px;
+}
+
+.transport-icon {
+
+    width: 28px;
+
+    height: 28px;
+
+    flex: 0 0 28px;
+
+    display: grid;
+
+    place-items: center;
+
+    color: white;
+
+    background: var(--dark);
+
+    border-radius: 8px;
+
+    font-size: 13px;
+}
+
+.transport-body h3 {
+
+    color: var(--dark);
+
+    font-size: 17px;
+
+    line-height: 1.14;
+}
+
+.transport-body p {
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    min-height: 45px;
+
+    margin-bottom: 10px;
+}
+
+.transport-footer {
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    gap: 8px;
+}
+
+.transport-price {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1px;
+
+    color: var(--dark);
+
+    font-size: 14px;
+
+    font-weight: 900;
+}
+
+.transport-price span {
+
+    color: var(--green);
+
+    font-size: 8px;
+
+    font-weight: 800;
+}
+
+.transport-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 34px;
+
+    padding: 0 10px;
+
+    color: white;
+
+    background: var(--dark);
+
+    border-radius: 9px;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    white-space: nowrap;
+
+    transition: .2s ease;
+}
+
+.transport-button:hover {
+
+    background: var(--green);
+}
+
+
+/* =========================================================
+   BOOKINGS
+========================================================= */
+
+.booking-section {
+
+    background: var(--cream);
+}
+
+.booking-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,minmax(0,1fr));
+
+    gap: 13px;
+}
+
+
+/* =========================================================
+   TRAVEL ESSENTIALS
+========================================================= */
+
+.essentials-section {
+
+    background:
+        #033646;
+
+    color: white;
+}
+
+.essentials-section
+.section-title {
+
+    color: white;
+}
+
+.essentials-section
+.section-description {
+
+    color:
+        rgba(255,255,255,.64);
+}
+
+.essentials-section
+.eyebrow {
+
+    color: #83dce8;
+}
+
+.essentials-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,minmax(0,1fr));
+
+    gap: 13px;
+}
+
+.essential-card {
+
+    overflow: hidden;
+
+    position: relative;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 13px 35px rgba(0,0,0,.14);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.essential-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.20);
+}
+
+.essential-image {
+
+    height: 190px;
+
+    overflow: hidden;
+
+    background: #e9eeee;
+}
+
+.essential-image img {
+
+    height: 100%;
+
+    transition:
+        transform .45s ease;
+}
+
+.essential-card:hover
+.essential-image img {
+
+    transform: scale(1.06);
+}
+
+.essential-offer {
+
+    position: absolute;
+
+    top: 10px;
+
+    right: 10px;
+
+    z-index: 2;
+
+    padding: 6px 9px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ef7c49,
+            #d95035
+        );
+
+    border-radius: 99px;
+
+    font-size: 8px;
+
+    font-weight: 900;
+}
+
+.essential-content {
+
+    padding: 13px;
+}
+
+.essential-label {
+
+    color: var(--green);
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    letter-spacing: .09em;
+
+    margin-bottom: 4px;
+}
+
+.essential-content h3 {
+
+    color: var(--dark);
+
+    font-size: 14px;
+
+    line-height: 1.25;
+
+    min-height: 53px;
+
+    margin-bottom: 10px;
+}
+
+.essential-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 8px;
+}
+
+.essential-price {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.essential-price .old {
+
+    color: #a3acad;
+
+    font-size: 8px;
+
+    text-decoration: line-through;
+}
+
+.essential-price strong {
+
+    color: var(--dark);
+
+    font-size: 14px;
+}
+
+.essential-price small {
+
+    color: #1591a2;
+
+    font-size: 8px;
+
+    font-weight: 900;
+}
+
+.amazon-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 33px;
+
+    padding: 0 10px;
+
+    color: white;
+
+    background: var(--dark);
+
+    border-radius: 9px;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    white-space: nowrap;
+
+    transition: .2s ease;
+}
+
+.amazon-button:hover {
+
+    background: var(--green);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+
+    padding:
+        30px 0 20px;
+
+    color:
+        rgba(255,255,255,.64);
+
+    background:
+        #032c35;
+}
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1.4fr
+        repeat(3,1fr);
+
+    gap: 30px;
+
+    padding-bottom: 25px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.10);
+}
+
+.footer-brand {
+
+    max-width: 340px;
+}
+
+.footer-brand h3 {
+
+    color: white;
+
+    font-size: 19px;
+
+    margin-bottom: 7px;
+}
+
+.footer-brand p {
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+.footer-column h4 {
+
+    color: white;
+
+    font-size: 11px;
+
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+
+    display: block;
+
+    color:
+        rgba(255,255,255,.58);
+
+    font-size: 10px;
+
+    margin-bottom: 6px;
+}
+
+.footer-column a:hover {
+
+    color: white;
+}
+
+.footer-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding-top: 15px;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width:1100px) {
+
+    .hero-inner {
+
+        grid-template-columns:
+            1fr 350px;
+
+        gap: 30px;
+    }
+
+    .offers-grid,
+    .category-grid,
+    .transport-grid,
+    .booking-grid,
+    .essentials-grid {
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+
+}
+
+
+/* =========================================================
+   SMALL LAPTOP / TABLET
+========================================================= */
+
+@media (max-width:900px) {
+
+    .nav-links {
+
+        display: none;
+    }
+
+    .mobile-menu {
+
+        display: block;
+    }
+
+    .hero-inner {
+
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        padding: 45px 0 40px;
+
+        gap: 28px;
+    }
+
+    .hero-access {
+
+        max-width: 650px;
+    }
+
+    .footer-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .footer-brand {
+
+        grid-column: 1 / -1;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width:650px) {
+
+    .container {
+
+        width: 94%;
+    }
+
+    .nav {
+
+        min-height: 60px;
+    }
+
+    .logo {
+
+        font-size: 17px;
+    }
+
+    .logo-mark {
+
+        width: 31px;
+
+        height: 31px;
+    }
+
+
+    /* HERO */
+
+    .hero-inner {
+
+        padding:
+            34px 0 30px;
+
+        gap: 22px;
+    }
+
+    .hero-eyebrow {
+
+        font-size: 8px;
+
+        margin-bottom: 12px;
+    }
+
+    .hero h1 {
+
+        font-size:
+            clamp(38px,11vw,53px);
+
+        margin-bottom: 15px;
+    }
+
+    .hero-hook {
+
+        font-size: 19px;
+
+        margin-bottom: 10px;
+    }
+
+    .hero-description {
+
+        font-size: 11px;
+
+        line-height: 1.6;
+    }
+
+    .hero-access {
+
+        padding: 12px;
+
+        border-radius: 18px;
+    }
+
+    .access-heading {
+
+        font-size: 12px;
+
+        margin-bottom: 8px;
+    }
+
+    .access-grid {
+
+        gap: 6px;
+    }
+
+    .access-card {
+
+        min-height: 90px;
+
+        padding: 10px;
+
+        border-radius: 12px;
+    }
+
+    .access-icon {
+
+        width: 29px;
+
+        height: 29px;
+
+        font-size: 13px;
+    }
+
+    .access-card strong {
+
+        font-size: 10px;
+    }
+
+    .access-card small {
+
+        font-size: 8px;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+
+        padding:
+            22px 0;
+    }
+
+    .section-header {
+
+        display: block;
+
+        margin-bottom: 11px;
+    }
+
+    .section-title {
+
+        font-size: 28px;
+    }
+
+    .section-description {
+
+        margin-top: 5px;
+
+        font-size: 10px;
+    }
+
+    .eyebrow {
+
+        font-size: 8px;
+
+        margin-bottom: 4px;
+    }
+
+
+    /* GRIDS */
+
+    .offers-grid,
+    .category-grid,
+    .booking-grid,
+    .essentials-grid,
+    .transport-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 8px;
+    }
+
+
+    /* OFFER */
+
+    .offer-image {
+
+        height: 130px;
+    }
+
+    .offer-body {
+
+        padding: 9px;
+    }
+
+    .offer-body h3 {
+
+        font-size: 13px;
+    }
+
+    .offer-body p {
+
+        font-size: 8px;
+
+        min-height: 34px;
+
+        margin-bottom: 7px;
+    }
+
+    .price {
+
+        font-size: 11px;
+    }
+
+    .old-price {
+
+        font-size: 7px;
+    }
+
+    .price-note {
+
+        font-size: 7px;
+    }
+
+    .card-cta {
+
+        min-height: 29px;
+
+        padding: 0 7px;
+
+        font-size: 7px;
+    }
+
+
+    /* CATEGORY */
+
+    .category-image {
+
+        height: 135px;
+    }
+
+    .category-content {
+
+        padding: 9px;
+    }
+
+    .category-content h3 {
+
+        font-size: 13px;
+    }
+
+    .category-content p {
+
+        font-size: 8px;
+
+        min-height: 34px;
+    }
+
+
+    /* TRANSPORT */
+
+    .transport-image {
+
+        height: 135px;
+    }
+
+    .transport-body {
+
+        padding: 9px;
+    }
+
+    .transport-tag,
+    .transport-offer {
+
+        font-size: 6px;
+
+        padding: 5px 7px;
+    }
+
+    .transport-category {
+
+        font-size: 6px;
+    }
+
+    .transport-title-row {
+
+        gap: 5px;
+
+        margin-bottom: 5px;
+    }
+
+    .transport-icon {
+
+        width: 25px;
+
+        height: 25px;
+
+        flex-basis: 25px;
+
+        font-size: 11px;
+
+        border-radius: 7px;
+    }
+
+    .transport-body h3 {
+
+        font-size: 13px;
+    }
+
+    .transport-body p {
+
+        font-size: 8px;
+
+        min-height: 34px;
+
+        margin-bottom: 7px;
+    }
+
+    .transport-price {
+
+        font-size: 11px;
+    }
+
+    .transport-price span {
+
+        font-size: 7px;
+    }
+
+    .transport-button {
+
+        min-height: 29px;
+
+        padding: 0 7px;
+
+        font-size: 7px;
+    }
+
+
+    /* ESSENTIALS */
+
+    .essential-image {
+
+        height: 135px;
+    }
+
+    .essential-content {
+
+        padding: 9px;
+    }
+
+    .essential-content h3 {
+
+        font-size: 11px;
+
+        min-height: 43px;
+    }
+
+    .essential-price strong {
+
+        font-size: 11px;
+    }
+
+    .amazon-button {
+
+        min-height: 27px;
+
+        padding: 0 7px;
+
+        font-size: 7px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+
+        padding:
+            25px 0 17px;
+    }
+
+    .footer-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 20px;
+    }
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width:390px) {
+
+    .container {
+
+        width: 93%;
+    }
+
+    .hero h1 {
+
+        font-size: 36px;
+    }
+
+    .access-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .offers-grid,
+    .category-grid,
+    .booking-grid,
+    .essentials-grid,
+    .transport-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .offer-image,
+    .category-image {
+
+        height: 180px;
+    }
+
+    .transport-image {
+
+        height: 180px;
+    }
+
+    .essential-image {
+
+        height: 190px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+
+        scroll-behavior: auto !important;
+
+        animation: none !important;
+
+        transition: none !important;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
+
+<div class="container">
+
+<nav class="nav">
+
+<a href="https://pinpointtravel.store/"
+   class="logo">
+
+    <span class="logo-mark">
+        ✦
+    </span>
+
+    Pinpoint Travel
+
+</a>
+
+
+<div class="nav-links">
+
+    <a href="https://pinpointtravel.store/">
+        Home
+    </a>
+
+    <a href="#travel-offers"
+       class="active">
+        Travel Center
+    </a>
+
+    <a href="#tour-packages">
+        Packages
+    </a>
+
+    <a href="#transportation">
+        Transportation
+    </a>
+
+    <a href="#bookings">
+        Bookings
+    </a>
+
+    <a href="#travel-essentials">
+        Essentials
+    </a>
+
+</div>
+
+
+<button
+    class="mobile-menu"
+    id="menuButton"
+    aria-label="Open navigation">
+
+    ☰
+
+</button>
+
+</nav>
+
+
+<div
+    id="mobileNav"
+    style="display:none;padding-bottom:14px;">
+
+<div style="
+    display:grid;
+    gap:6px;
+">
+
+<a href="https://pinpointtravel.store/"
+   class="mobile-link">
+    Home
+</a>
+
+<a href="#travel-offers"
+   class="mobile-link">
+    Travel Center
+</a>
+
+<a href="#tour-packages"
+   class="mobile-link">
+    Tour Packages
+</a>
+
+<a href="#transportation"
+   class="mobile-link">
+    Transportation
+</a>
+
+<a href="#bookings"
+   class="mobile-link">
+    Bookings
+</a>
+
+<a href="#travel-essentials"
+   class="mobile-link">
+    Travel Essentials
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-inner">
+
+<div class="hero-copy">
+
+<div class="hero-eyebrow">
+
+    <span></span>
+
+    Welcome to Pinpoint Travel Center
+
+</div>
+
+
+<h1>
+
+    Everything you need
+    for your <em>next journey.</em>
+
+</h1>
+
+
+<div class="hero-hook">
+
+    Discover. Book. Prepare.
+    Travel better.
+
+</div>
+
+
+<p class="hero-description">
+
+    Explore travel offers, tour packages,
+    transportation, stays and useful travel
+    essentials — brought together in one place
+    to make planning your next adventure easier.
+
+</p>
+
+</div>
+
+
+
+<!-- QUICK ACCESS -->
+
+<div class="hero-access">
+
+<div class="access-heading">
+
+    What are you looking for?
+
+</div>
+
+
+<div class="access-grid">
+
+<a href="#travel-essentials"
+   class="access-card">
+
+    <div class="access-icon">
+        ◈
+    </div>
+
+    <strong>
+        Travel Essentials
+    </strong>
+
+    <small>
+        Pack smarter →
+    </small>
+
+</a>
+
+
+<a href="#tour-packages"
+   class="access-card">
+
+    <div class="access-icon">
+        ✦
+    </div>
+
+    <strong>
+        Tour Packages
+    </strong>
+
+    <small>
+        Explore experiences →
+    </small>
+
+</a>
+
+
+<a href="#transportation"
+   class="access-card">
+
+    <div class="access-icon">
+        ✈
+    </div>
+
+    <strong>
+        Transportation
+    </strong>
+
+    <small>
+        Flights & more →
+    </small>
+
+</a>
+
+
+<a href="#bookings"
+   class="access-card">
+
+    <div class="access-icon">
+        ⌂
+    </div>
+
+    <strong>
+        Stays & Bookings
+    </strong>
+
+    <small>
+        Find a place →
+    </small>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FEATURED TRAVEL OFFERS
+========================================================= -->
+
+<section
+    class="section offers-section"
+    id="travel-offers">
+
+<div class="container">
+
+<div class="section-header">
+
+<div>
+
+<div class="eyebrow">
+    Featured Travel Offers
+</div>
+
+<h2 class="section-title">
+    Experiences worth the trip.
+</h2>
+
+</div>
+
+<p class="section-description">
+
+    Discover tours, activities, day trips and
+    experiences selected to help you make more
+    of your journey.
+
+</p>
+
+</div>
+
+
+<div class="offers-grid">
+
+
+<!-- 01 -->
+
+<article class="offer-card">
+
+<div class="offer-image">
+
+<img
+src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1000&q=85"
+alt="Kyoto Japan travel experience">
+
+<span class="offer-tag">
+    Experience
+</span>
+
+<span class="offer-badge">
+    Popular
+</span>
+
+</div>
+
+<div class="offer-body">
+
+<div class="offer-location">
+    Kyoto · Japan
+</div>
+
+<h3>
+    Discover Kyoto's timeless side
+</h3>
+
+<p>
+    Explore temples, traditional streets,
+    culture and unforgettable local experiences.
+</p>
+
+<div class="offer-footer">
+
+<div class="price-area">
+
+<span class="old-price">
+    From $89
+</span>
+
+<span class="price">
+    From $69
+</span>
+
+<span class="price-note">
+    Limited offer
+</span>
+
+</div>
+
+<a href="#tour-packages"
+   class="card-cta">
+    Explore →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- 02 -->
+
+<article class="offer-card">
+
+<div class="offer-image">
+
+<img
+src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1000&q=85"
+alt="Venice Italy travel experience">
+
+<span class="offer-tag">
+    Day Tour
+</span>
+
+<span class="offer-badge">
+    -20%
+</span>
+
+</div>
+
+<div class="offer-body">
+
+<div class="offer-location">
+    Venice · Italy
+</div>
+
+<h3>
+    See Venice beyond the postcard
+</h3>
+
+<p>
+    Discover canals, historic landmarks,
+    hidden corners and memorable experiences.
+</p>
+
+<div class="offer-footer">
+
+<div class="price-area">
+
+<span class="old-price">
+    From $125
+</span>
+
+<span class="price">
+    From $99
+</span>
+
+<span class="price-note">
+    Save 20%
+</span>
+
+</div>
+
+<a href="#tour-packages"
+   class="card-cta">
+    Explore →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- 03 -->
+
+<article class="offer-card">
+
+<div class="offer-image">
+
+<img
+src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1000&q=85"
+alt="Swiss Alps travel">
+
+<span class="offer-tag">
+    Adventure
+</span>
+
+<span class="offer-badge">
+    Popular
+</span>
+
+</div>
+
+<div class="offer-body">
+
+<div class="offer-location">
+    Switzerland
+</div>
+
+<h3>
+    Escape into the Swiss Alps
+</h3>
+
+<p>
+    Experience dramatic mountain scenery,
+    alpine villages and unforgettable views.
+</p>
+
+<div class="offer-footer">
+
+<div class="price-area">
+
+<span class="old-price">
+    From $179
+</span>
+
+<span class="price">
+    From $149
+</span>
+
+<span class="price-note">
+    Special offer
+</span>
+
+</div>
+
+<a href="#tour-packages"
+   class="card-cta">
+    Explore →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- 04 -->
+
+<article class="offer-card">
+
+<div class="offer-image">
+
+<img
+src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1000&q=85"
+alt="Dubai travel">
+
+<span class="offer-tag">
+    Activity
+</span>
+
+<span class="offer-badge">
+    -15%
+</span>
+
+</div>
+
+<div class="offer-body">
+
+<div class="offer-location">
+    Dubai · UAE
+</div>
+
+<h3>
+    Experience Dubai your way
+</h3>
+
+<p>
+    Discover desert adventures, city attractions,
+    entertainment and unique experiences.
+</p>
+
+<div class="offer-footer">
+
+<div class="price-area">
+
+<span class="old-price">
+    From $80
+</span>
+
+<span class="price">
+    From $68
+</span>
+
+<span class="price-note">
+    Save 15%
+</span>
+
+</div>
+
+<a href="#tour-packages"
+   class="card-cta">
+    Explore →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- 05 -->
+
+<article class="offer-card">
+
+<div class="offer-image">
+
+<img
+src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1000&q=85"
+alt="Bali travel">
+
+<span class="offer-tag">
+    Escape
+</span>
+
+<span class="offer-badge">
+    Popular
+</span>
+
+</div>
+
+<div class="offer-body">
+
+<div class="offer-location">
+    Bali · Indonesia
+</div>
+
+<h3>
+    Find your Bali escape
+</h3>
+
+<p>
+    Discover tropical landscapes, cultural
+    experiences and unforgettable adventures.
+</p>
+
+<div class="offer-footer">
+
+<div class="price-area">
+
+<span class="old-price">
+    From $95
+</span>
+
+<span class="price">
+    From $76
+</span>
+
+<span class="price-note">
+    Save 20%
+</span>
+
+</div>
+
+<a href="#tour-packages"
+   class="card-cta">
+    Explore →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- 06 -->
+
+<article class="offer-card">
+
+<div class="offer-image">
+
+<img
+src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=85"
+alt="Santorini Greece">
+
+<span class="offer-tag">
+    Getaway
+</span>
+
+<span class="offer-badge">
+    Deal
+</span>
+
+</div>
+
+<div class="offer-body">
+
+<div class="offer-location">
+    Santorini · Greece
+</div>
+
+<h3>
+    A Greek island escape
+</h3>
+
+<p>
+    Explore spectacular views, island villages,
+    local culture and unforgettable moments.
+</p>
+
+<div class="offer-footer">
+
+<div class="price-area">
+
+<span class="old-price">
+    From $150
+</span>
+
+<span class="price">
+    From $119
+</span>
+
+<span class="price-note">
+    Special price
+</span>
+
+</div>
+
+<a href="#tour-packages"
+   class="card-cta">
+    Explore →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- 07 -->
+
+<article class="offer-card">
+
+<div class="offer-image">
+
+<img
+src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85"
+alt="Norway travel">
+
+<span class="offer-tag">
+    Nature
+</span>
+
+<span class="offer-badge">
+    New
+</span>
+
+</div>
+
+<div class="offer-body">
+
+<div class="offer-location">
+    Norway
+</div>
+
+<h3>
+    Into the wild north
+</h3>
+
+<p>
+    Experience dramatic landscapes, quiet
+    escapes and northern adventures.
+</p>
+
+<div class="offer-footer">
+
+<div class="price-area">
+
+<span class="old-price">
+    From $210
+</span>
+
+<span class="price">
+    From $179
+</span>
+
+<span class="price-note">
+    New offer
+</span>
+
+</div>
+
+<a href="#tour-packages"
+   class="card-cta">
+    Explore →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- 08 -->
+
+<article class="offer-card">
+
+<div class="offer-image">
+
+<img
+src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1000&q=85"
+alt="Greek islands">
+
+<span class="offer-tag">
+    Island
+</span>
+
+<span class="offer-badge">
+    -18%
+</span>
+
+</div>
+
+<div class="offer-body">
+
+<div class="offer-location">
+    Greece
+</div>
+
+<h3>
+    Discover the Greek islands
+</h3>
+
+<p>
+    Find island tours, boat trips, cultural
+    experiences and coastal escapes.
+</p>
+
+<div class="offer-footer">
+
+<div class="price-area">
+
+<span class="old-price">
+    From $140
+</span>
+
+<span class="price">
+    From $115
+</span>
+
+<span class="price-note">
+    Save 18%
+</span>
+
+</div>
+
+<a href="#tour-packages"
+   class="card-cta">
+    Explore →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TOUR PACKAGES
+========================================================= -->
+
+<section
+    class="section packages-section"
+    id="tour-packages">
+
+<div class="container">
+
+<div class="section-header">
+
+<div>
+
+<div class="eyebrow">
+    Tour Packages
+</div>
+
+<h2 class="section-title">
+    Make the trip a package.
+</h2>
+
+</div>
+
+<p class="section-description">
+
+    Explore multi-day trips, destination packages
+    and experiences designed to make planning easier.
+
+</p>
+
+</div>
+
+
+<div class="category-grid">
+
+
+<!-- JAPAN -->
+
+<article class="category-card">
+
+<div class="category-image">
+
+<img
+src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1000&q=85"
+alt="Japan tour package">
+
+<span class="category-badge">
+    Popular
+</span>
+
+</div>
+
+<div class="category-content">
+
+<small>
+    Japan
+</small>
+
+<h3>
+    Japan Discovery Package
+</h3>
+
+<p>
+    Explore Tokyo, Kyoto, culture, food and
+    iconic Japanese experiences.
+</p>
+
+<div class="category-bottom">
+
+<div class="price-area">
+
+<span class="old-price">
+    From $899
+</span>
+
+<span class="price">
+    From $749
+</span>
+
+<span class="price-note">
+    Save 17%
+</span>
+
+</div>
+
+<a href="#travel-offers"
+   class="card-cta">
+    View Package →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- FRANCE -->
+
+<article class="category-card">
+
+<div class="category-image">
+
+<img
+src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1000&q=85"
+alt="Paris France package">
+
+<span class="category-badge">
+    Special
+</span>
+
+</div>
+
+<div class="category-content">
+
+<small>
+    France
+</small>
+
+<h3>
+    Paris & France Escape
+</h3>
+
+<p>
+    Experience Paris landmarks, local culture,
+    food and memorable French escapes.
+</p>
+
+<div class="category-bottom">
+
+<div class="price-area">
+
+<span class="old-price">
+    From $799
+</span>
+
+<span class="price">
+    From $679
+</span>
+
+<span class="price-note">
+    Limited offer
+</span>
+
+</div>
+
+<a href="#travel-offers"
+   class="card-cta">
+    View Package →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- TROPICAL -->
+
+<article class="category-card">
+
+<div class="category-image">
+
+<img
+src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85"
+alt="Tropical holiday package">
+
+<span class="category-badge">
+    Getaway
+</span>
+
+</div>
+
+<div class="category-content">
+
+<small>
+    Tropical
+</small>
+
+<h3>
+    Tropical Island Escape
+</h3>
+
+<p>
+    Discover beaches, island experiences
+    and relaxing stays.
+</p>
+
+<div class="category-bottom">
+
+<div class="price-area">
+
+<span class="old-price">
+    From $699
+</span>
+
+<span class="price">
+    From $589
+</span>
+
+<span class="price-note">
+    Save 16%
+</span>
+
+</div>
+
+<a href="#travel-offers"
+   class="card-cta">
+    View Package →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- EUROPE -->
+
+<article class="category-card">
+
+<div class="category-image">
+
+<img
+src="https://images.unsplash.com/photo-1473951574080-01fe45a40f7d?auto=format&fit=crop&w=1000&q=85"
+alt="European travel package">
+
+<span class="category-badge">
+    Multi-City
+</span>
+
+</div>
+
+<div class="category-content">
+
+<small>
+    Europe
+</small>
+
+<h3>
+    European Highlights
+</h3>
+
+<p>
+    Combine iconic cities, cultural attractions
+    and memorable experiences.
+</p>
+
+<div class="category-bottom">
+
+<div class="price-area">
+
+<span class="old-price">
+    From $1,099
+</span>
+
+<span class="price">
+    From $899
+</span>
+
+<span class="price-note">
+    Save 18%
+</span>
+
+</div>
+
+<a href="#travel-offers"
+   class="card-cta">
+    View Package →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TRANSPORTATION
+========================================================= -->
+
+<section
+    class="section transportation-section"
+    id="transportation">
+
+<div class="container">
+
+<div class="section-header">
+
+<div>
+
+<div class="eyebrow">
+    Transportation
+</div>
+
+<h2 class="section-title">
+    Get there. Get around.
+</h2>
+
+</div>
+
+<p class="section-description">
+
+    Find flights, cars, airport transfers and
+    other transportation options for your journey.
+
+</p>
+
+</div>
+
+
+<div class="transport-grid">
+
+
+<!-- =====================================================
+     FLIGHTS
+===================================================== -->
+
+<article
+    class="transport-card"
+    id="flights">
+
+<div class="transport-image">
+
+<img
+src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1000&q=85"
+alt="Flight booking and airline travel">
+
+<span class="transport-tag">
+    Air Travel
+</span>
+
+<span class="transport-offer">
+    DEALS FROM $49
+</span>
+
+</div>
+
+
+<div class="transport-body">
+
+<div class="transport-category">
+    Flights & Airline Tickets
+</div>
+
+<div class="transport-title-row">
+
+<div class="transport-icon">
+    ✈
+</div>
+
+<h3>
+    Flights
+</h3>
+
+</div>
+
+<p>
+    Search flight options, compare routes
+    and find convenient airline tickets.
+</p>
+
+
+<div class="transport-footer">
+
+<div class="transport-price">
+
+    From $49
+
+    <span>
+        Selected flight deals
+    </span>
+
+</div>
+
+<a href="#"
+   class="transport-button">
+    Find Flights →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- =====================================================
+     CAR RENTALS
+===================================================== -->
+
+<article
+    class="transport-card"
+    id="car-rentals">
+
+<div class="transport-image">
+
+<img
+src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1000&q=85"
+alt="Car rental for travel">
+
+<span class="transport-tag">
+    Road Travel
+</span>
+
+<span class="transport-offer">
+    FROM $25/DAY
+</span>
+
+</div>
+
+
+<div class="transport-body">
+
+<div class="transport-category">
+    Cars & Vehicle Rental
+</div>
+
+<div class="transport-title-row">
+
+<div class="transport-icon">
+    🚗
+</div>
+
+<h3>
+    Car Rentals
+</h3>
+
+</div>
+
+<p>
+    Find rental cars for road trips, city travel
+    and exploring destinations at your own pace.
+</p>
+
+
+<div class="transport-footer">
+
+<div class="transport-price">
+
+    From $25/day
+
+    <span>
+        Rental deals
+    </span>
+
+</div>
+
+<a href="#"
+   class="transport-button">
+    Find Cars →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- =====================================================
+     AIRPORT TRANSFERS
+===================================================== -->
+
+<article
+    class="transport-card"
+    id="airport-transfers">
+
+<div class="transport-image">
+
+<img
+src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&fit=crop&w=1000&q=85"
+alt="Airport transfer transportation">
+
+<span class="transport-tag">
+    Airport
+</span>
+
+<span class="transport-offer">
+    FROM $12
+</span>
+
+</div>
+
+
+<div class="transport-body">
+
+<div class="transport-category">
+    Airport Transfers
+</div>
+
+<div class="transport-title-row">
+
+<div class="transport-icon">
+    ⇄
+</div>
+
+<h3>
+    Airport Transfers
+</h3>
+
+</div>
+
+<p>
+    Arrange convenient airport pickups,
+    drop-offs and transfers for your journey.
+</p>
+
+
+<div class="transport-footer">
+
+<div class="transport-price">
+
+    From $12
+
+    <span>
+        Transfer options
+    </span>
+
+</div>
+
+<a href="#"
+   class="transport-button">
+    Find Transfers →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- =====================================================
+     FERRIES
+===================================================== -->
+
+<article
+    class="transport-card"
+    id="ferries">
+
+<div class="transport-image">
+
+<img
+src="https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=1000&q=85"
+alt="Ferry and boat transportation">
+
+<span class="transport-tag">
+    Sea Travel
+</span>
+
+<span class="transport-offer">
+    SPECIAL OFFERS
+</span>
+
+</div>
+
+
+<div class="transport-body">
+
+<div class="transport-category">
+    Ferries & Boats
+</div>
+
+<div class="transport-title-row">
+
+<div class="transport-icon">
+    ⛴
+</div>
+
+<h3>
+    Ferries & More
+</h3>
+
+</div>
+
+<p>
+    Explore ferries, boats and alternative
+    transportation connecting destinations.
+</p>
+
+
+<div class="transport-footer">
+
+<div class="transport-price">
+
+    From $19
+
+    <span>
+        Selected routes
+    </span>
+
+</div>
+
+<a href="#"
+   class="transport-button">
+    Explore Offers →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     BOOKINGS
+========================================================= -->
+
+<section
+    class="section booking-section"
+    id="bookings">
+
+<div class="container">
+
+<div class="section-header">
+
+<div>
+
+<div class="eyebrow">
+    Stays & Bookings
+</div>
+
+<h2 class="section-title">
+    Find somewhere worth staying.
+</h2>
+
+</div>
+
+<p class="section-description">
+
+    Find hotels, resorts, apartments and unique
+    accommodation for your journey.
+
+</p>
+
+</div>
+
+
+<div class="booking-grid">
+
+
+<!-- CITY HOTELS -->
+
+<article class="category-card">
+
+<div class="category-image">
+
+<img
+src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=85"
+alt="City hotel">
+
+<span class="category-badge">
+    Popular
+</span>
+
+</div>
+
+<div class="category-content">
+
+<small>
+    Hotels
+</small>
+
+<h3>
+    City Hotels
+</h3>
+
+<p>
+    Comfortable stays in convenient locations
+    close to the places you want to explore.
+</p>
+
+<div class="category-bottom">
+
+<div class="price-area">
+
+<span class="old-price">
+    From $120
+</span>
+
+<span class="price">
+    From $89
+</span>
+
+<span class="price-note">
+    Selected deals
+</span>
+
+</div>
+
+<a href="#"
+   class="card-cta">
+    Find a Stay →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- RESORTS -->
+
+<article class="category-card">
+
+<div class="category-image">
+
+<img
+src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=85"
+alt="Beach resort">
+
+<span class="category-badge">
+    Getaway
+</span>
+
+</div>
+
+<div class="category-content">
+
+<small>
+    Resorts
+</small>
+
+<h3>
+    Beach Resorts
+</h3>
+
+<p>
+    Relaxing stays for tropical escapes,
+    holidays and unforgettable getaways.
+</p>
+
+<div class="category-bottom">
+
+<div class="price-area">
+
+<span class="old-price">
+    From $190
+</span>
+
+<span class="price">
+    From $149
+</span>
+
+<span class="price-note">
+    Save up to 21%
+</span>
+
+</div>
+
+<a href="#"
+   class="card-cta">
+    Find a Stay →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- APARTMENTS -->
+
+<article class="category-card">
+
+<div class="category-image">
+
+<img
+src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"
+alt="Apartment stay">
+
+<span class="category-badge">
+    Flexible
+</span>
+
+</div>
+
+<div class="category-content">
+
+<small>
+    Apartments
+</small>
+
+<h3>
+    Apartment Stays
+</h3>
+
+<p>
+    Find spacious accommodation for couples,
+    families and longer journeys.
+</p>
+
+<div class="category-bottom">
+
+<div class="price-area">
+
+<span class="old-price">
+    From $110
+</span>
+
+<span class="price">
+    From $82
+</span>
+
+<span class="price-note">
+    Selected deals
+</span>
+
+</div>
+
+<a href="#"
+   class="card-cta">
+    Find a Stay →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- PREMIUM -->
+
+<article class="category-card">
+
+<div class="category-image">
+
+<img
+src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=85"
+alt="Premium hotel">
+
+<span class="category-badge">
+    Premium
+</span>
+
+</div>
+
+<div class="category-content">
+
+<small>
+    Luxury
+</small>
+
+<h3>
+    Premium Stays
+</h3>
+
+<p>
+    Discover memorable hotels and premium
+    accommodation for special trips.
+</p>
+
+<div class="category-bottom">
+
+<div class="price-area">
+
+<span class="old-price">
+    From $240
+</span>
+
+<span class="price">
+    From $189
+</span>
+
+<span class="price-note">
+    Special rates
+</span>
+
+</div>
+
+<a href="#"
+   class="card-cta">
+    Find a Stay →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TRAVEL ESSENTIALS
+========================================================= -->
+
+<section
+    class="section essentials-section"
+    id="travel-essentials">
+
+<div class="container">
+
+<div class="section-header">
+
+<div>
+
+<div class="eyebrow">
+    Travel Essentials
+</div>
+
+<h2 class="section-title">
+    Pack better. Travel smarter.
+</h2>
+
+</div>
+
+<p class="section-description">
+
+    Useful products and practical travel gear
+    selected for better journeys.
+
+</p>
+
+</div>
+
+
+<div class="essentials-grid">
+
+
+<!-- 01 -->
+
+<article class="essential-card">
+
+<div class="essential-image">
+
+<img
+src="https://images.unsplash.com/photo-1581553680321-4fffae59fccd?auto=format&fit=crop&w=900&q=85"
+alt="Travel packing organizers">
+
+<span class="essential-offer">
+    -25%
+</span>
+
+</div>
+
+<div class="essential-content">
+
+<div class="essential-label">
+    Smart Packing
+</div>
+
+<h3>
+    18-Pack Refillable Travel Bottles and
+    Toiletry Organizer Set for Carry-On Travel
+</h3>
+
+<div class="essential-bottom">
+
+<div class="essential-price">
+
+<span class="old">
+    $24.99
+</span>
+
+<strong>
+    $18.99
+</strong>
+
+<small>
+    Limited offer
+</small>
+
+</div>
+
+<a href="#"
+   class="amazon-button">
+    View Product →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- 02 -->
+
+<article class="essential-card">
+
+<div class="essential-image">
+
+<img
+src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85"
+alt="Travel backpack">
+
+<span class="essential-offer">
+    DEAL
+</span>
+
+</div>
+
+<div class="essential-content">
+
+<div class="essential-label">
+    Travel Gear
+</div>
+
+<h3>
+    Lightweight Carry-On Travel Backpack
+    with Laptop Compartment and Storage
+</h3>
+
+<div class="essential-bottom">
+
+<div class="essential-price">
+
+<span class="old">
+    $79.99
+</span>
+
+<strong>
+    $59.99
+</strong>
+
+<small>
+    Save 25%
+</small>
+
+</div>
+
+<a href="#"
+   class="amazon-button">
+    View Product →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- 03 -->
+
+<article class="essential-card">
+
+<div class="essential-image">
+
+<img
+src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=900&q=85"
+alt="Travel adapter">
+
+<span class="essential-offer">
+    -18%
+</span>
+
+</div>
+
+<div class="essential-content">
+
+<div class="essential-label">
+    Travel Tech
+</div>
+
+<h3>
+    Universal Travel Adapter with USB
+    Charging Ports for International Trips
+</h3>
+
+<div class="essential-bottom">
+
+<div class="essential-price">
+
+<span class="old">
+    $39.99
+</span>
+
+<strong>
+    $32.79
+</strong>
+
+<small>
+    Limited deal
+</small>
+
+</div>
+
+<a href="#"
+   class="amazon-button">
+    View Product →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- 04 -->
+
+<article class="essential-card">
+
+<div class="essential-image">
+
+<img
+src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=900&q=85"
+alt="Travel neck pillow">
+
+<span class="essential-offer">
+    -20%
+</span>
+
+</div>
+
+<div class="essential-content">
+
+<div class="essential-label">
+    Travel Comfort
+</div>
+
+<h3>
+    Premium Memory Foam Travel Neck
+    Pillow for Long Flights and Journeys
+</h3>
+
+<div class="essential-bottom">
+
+<div class="essential-price">
+
+<span class="old">
+    $34.99
+</span>
+
+<strong>
+    $27.99
+</strong>
+
+<small>
+    Save 20%
+</small>
+
+</div>
+
+<a href="#"
+   class="amazon-button">
+    View Product →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- 05 -->
+
+<article class="essential-card">
+
+<div class="essential-image">
+
+<img
+src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=85"
+alt="Travel toiletry bag">
+
+<span class="essential-offer">
+    DEAL
+</span>
+
+</div>
+
+<div class="essential-content">
+
+<div class="essential-label">
+    Organization
+</div>
+
+<h3>
+    Hanging Travel Toiletry Bag with
+    Multiple Compartments
+</h3>
+
+<div class="essential-bottom">
+
+<div class="essential-price">
+
+<span class="old">
+    $29.99
+</span>
+
+<strong>
+    $22.99
+</strong>
+
+<small>
+    Special price
+</small>
+
+</div>
+
+<a href="#"
+   class="amazon-button">
+    View Product →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- 06 -->
+
+<article class="essential-card">
+
+<div class="essential-image">
+
+<img
+src="https://images.unsplash.com/photo-1491637639811-60e2756cc1c7?auto=format&fit=crop&w=900&q=85"
+alt="Travel suitcase">
+
+<span class="essential-offer">
+    -15%
+</span>
+
+</div>
+
+<div class="essential-content">
+
+<div class="essential-label">
+    Luggage
+</div>
+
+<h3>
+    Lightweight Expandable Carry-On
+    Suitcase with Spinner Wheels
+</h3>
+
+<div class="essential-bottom">
+
+<div class="essential-price">
+
+<span class="old">
+    $129.99
+</span>
+
+<strong>
+    $109.99
+</strong>
+
+<small>
+    Save 15%
+</small>
+
+</div>
+
+<a href="#"
+   class="amazon-button">
+    View Product →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- 07 -->
+
+<article class="essential-card">
+
+<div class="essential-image">
+
+<img
+src="https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=900&q=85"
+alt="Travel cable organizer">
+
+<span class="essential-offer">
+    -22%
+</span>
+
+</div>
+
+<div class="essential-content">
+
+<div class="essential-label">
+    Travel Tech
+</div>
+
+<h3>
+    Compact Travel Cable Organizer
+    Case for Chargers and Electronics
+</h3>
+
+<div class="essential-bottom">
+
+<div class="essential-price">
+
+<span class="old">
+    $25.99
+</span>
+
+<strong>
+    $20.19
+</strong>
+
+<small>
+    Save 22%
+</small>
+
+</div>
+
+<a href="#"
+   class="amazon-button">
+    View Product →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- 08 -->
+
+<article class="essential-card">
+
+<div class="essential-image">
+
+<img
+src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85"
+alt="Travel shoes">
+
+<span class="essential-offer">
+    DEAL
+</span>
+
+</div>
+
+<div class="essential-content">
+
+<div class="essential-label">
+    Travel Wear
+</div>
+
+<h3>
+    Lightweight Comfortable Walking Shoes
+    for Long Travel Days
+</h3>
+
+<div class="essential-bottom">
+
+<div class="essential-price">
+
+<span class="old">
+    $89.99
+</span>
+
+<strong>
+    $69.99
+</strong>
+
+<small>
+    Limited offer
+</small>
+
+</div>
+
+<a href="#"
+   class="amazon-button">
+    View Product →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div class="footer-brand">
+
+<h3>
+    Pinpoint Travel
+</h3>
+
+<p>
+    Discover smarter ways to travel — from
+    experiences and stays to transportation
+    and useful travel essentials.
+</p>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>
+    Travel Center
+</h4>
+
+<a href="#travel-offers">
+    Travel Offers
+</a>
+
+<a href="#tour-packages">
+    Tour Packages
+</a>
+
+<a href="#transportation">
+    Transportation
+</a>
+
+<a href="#bookings">
+    Bookings
+</a>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>
+    Transportation
+</h4>
+
+<a href="#flights">
+    Flights
+</a>
+
+<a href="#car-rentals">
+    Car Rentals
+</a>
+
+<a href="#airport-transfers">
+    Airport Transfers
+</a>
+
+<a href="#ferries">
+    Ferries & More
+</a>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>
+    Pinpoint Travel
+</h4>
+
+<a href="https://pinpointtravel.store/">
+    Home
+</a>
+
+<a href="#">
+    About
+</a>
+
+<a href="#">
+    Contact
+</a>
+
+<a href="#">
+    Privacy
+</a>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<span>
+    © 2026 Pinpoint Travel. All rights reserved.
+</span>
+
+<span>
+    Some links may be affiliate links.
+</span>
+
+</div>
+
+</div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+const menuButton =
+    document.getElementById("menuButton");
+
+const mobileNav =
+    document.getElementById("mobileNav");
+
+
+menuButton.addEventListener(
+    "click",
+    function() {
+
+        if (
+            mobileNav.style.display === "none" ||
+            mobileNav.style.display === ""
+        ) {
+
+            mobileNav.style.display = "block";
+
+        } else {
+
+            mobileNav.style.display = "none";
+
+        }
+
+    }
+);
+
+
+/* MOBILE NAV */
+
+document
+    .querySelectorAll("#mobileNav a")
+    .forEach(function(link) {
+
+        link.addEventListener(
+            "click",
+            function() {
+
+                mobileNav.style.display =
+                    "none";
+
+            }
+        );
+
+    });
+
+
+/* SMOOTH SCROLL */
+
+document
+    .querySelectorAll('a[href^="#"]')
+    .forEach(function(link) {
+
+        link.addEventListener(
+            "click",
+            function(event) {
+
+                const targetId =
+                    this.getAttribute("href");
+
+                if (
+                    !targetId ||
+                    targetId === "#"
+                ) {
+
+                    return;
+
+                }
+
+                const target =
+                    document.querySelector(targetId);
+
+                if (target) {
+
+                    event.preventDefault();
+
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                }
+
+            }
+        );
+
+    });
+
+</script>
+
+</body>
+
+</html>
