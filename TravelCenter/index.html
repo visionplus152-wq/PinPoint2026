@@ -565,6 +565,11 @@ button {
 .section {
 
     padding: 32px 0;
+
+    /* Sections stay completely fixed. Only individual cards may transform. */
+    transform: none !important;
+    transition: none !important;
+    will-change: auto !important;
 }
 
 .section-header {
@@ -671,7 +676,7 @@ button {
     border-radius: 18px;
 
     box-shadow:
-        0 9px 28px rgba(16,43,37,.06);
+        0 50px 108px rgba(195, 34, 34, 0.06);
 
     transition:
         transform .25s ease,
@@ -683,7 +688,7 @@ button {
     transform: translateY(-4px);
 
     box-shadow:
-        0 18px 40px rgba(16,43,37,.11);
+        10px 200px 150px rgba(0, 0, 0, 0.947);
 }
 
 .offer-image {
@@ -703,8 +708,7 @@ button {
         transform .45s ease;
 }
 
-.offer-card:hover
-.offer-image img {
+.offer-card:hover {
 
     transform: scale(1.055);
 }
@@ -3119,7 +3123,6 @@ footer .logo-image {
 <!-- =========================================================
      FEATURED TRAVEL OFFERS
 ========================================================= -->
-<article class="category-card" id="TravelOffers">
 <section
     class="section offers-section"
     id="travel-offers">
@@ -3682,7 +3685,6 @@ alt="Greek islands">
 <!-- =========================================================
      TOUR PACKAGES
 ========================================================= -->
-<article class="category-card" id="TourPackages">
 <section
     class="section packages-section"
     id="tour-packages">
@@ -3970,7 +3972,6 @@ alt="European travel package">
 <!-- =========================================================
      TRANSPORTATION
 ========================================================= -->
-<article class="category-card" id="Transportation">
 <section
     class="section transportation-section"
     id="transportation">
@@ -4340,7 +4341,6 @@ alt="Ferry and boat transportation">
 
 </div>
 
-<article class="category-card" id="Bookings">
 <div class="booking-grid">
 
 
