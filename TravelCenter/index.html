@@ -2158,6 +2158,837 @@ button {
     }
 }
 
+
+/* =========================================================
+   UPDATED CARD DEPTH + HERO QUICK NAVIGATION
+   ========================================================= */
+
+/* Stronger, thicker drop shadow for ALL content cards */
+.offer-card,
+.category-card,
+.transport-card,
+.essential-card,
+.access-card,
+.hero-access {
+    box-shadow:
+        0 12px 24px rgba(5, 53, 63, 0.13),
+        0 28px 65px rgba(5, 53, 63, 0.11),
+        0 3px 8px rgba(5, 53, 63, 0.08);
+}
+
+/* Keep shadows visible around clipped card images */
+.offer-card,
+.category-card,
+.transport-card,
+.essential-card {
+    isolation: isolate;
+}
+
+.offer-card:hover,
+.category-card:hover,
+.transport-card:hover,
+.essential-card:hover {
+    box-shadow:
+        0 18px 30px rgba(5, 53, 63, 0.17),
+        0 34px 75px rgba(5, 53, 63, 0.15),
+        0 5px 12px rgba(5, 53, 63, 0.10);
+}
+
+/* Hero quick-access panel */
+.hero-access {
+    padding: 22px;
+    border-radius: 30px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.14),
+            rgba(255,255,255,.06)
+        );
+    border: 1px solid rgba(255,255,255,.22);
+    box-shadow:
+        0 18px 35px rgba(0,0,0,.18),
+        0 35px 75px rgba(0,0,0,.18);
+}
+
+.access-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto 18px;
+    padding: 9px 17px;
+    border: 1px solid rgba(255,255,255,.22);
+    border-radius: 999px;
+    background: rgba(255,255,255,.11);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    box-shadow: 0 8px 20px rgba(0,0,0,.10);
+}
+
+.access-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    align-items: center;
+    justify-items: center;
+}
+
+.access-card {
+    width: 142px;
+    height: 142px;
+    min-height: 142px;
+    padding: 14px 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 7px;
+    border-radius: 50%;
+    background:
+        radial-gradient(
+            circle at 35% 25%,
+            rgba(255,255,255,.20),
+            rgba(255,255,255,.08) 55%,
+            rgba(255,255,255,.045)
+        );
+    border: 1px solid rgba(255,255,255,.19);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.16),
+        0 12px 25px rgba(0,0,0,.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.access-card::before {
+    content: "";
+    position: absolute;
+    inset: 7px;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.access-card:hover {
+    transform: translateY(-7px) scale(1.04);
+    background:
+        radial-gradient(
+            circle at 35% 25%,
+            rgba(255,255,255,.27),
+            rgba(255,255,255,.13) 55%,
+            rgba(255,255,255,.07)
+        );
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.20),
+        0 18px 35px rgba(0,0,0,.23);
+}
+
+.access-icon {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.15);
+    font-size: 19px;
+    box-shadow: 0 7px 16px rgba(0,0,0,.12);
+}
+
+.access-card strong {
+    max-width: 105px;
+    font-size: 11px;
+    line-height: 1.15;
+}
+
+.access-card small {
+    font-size: 8px;
+    color: rgba(255,255,255,.68);
+}
+
+/* Give the circular navigation a subtle stagger */
+.access-card:nth-child(1) { transform: translateY(7px); }
+.access-card:nth-child(2) { transform: translateY(-4px); }
+.access-card:nth-child(3) { transform: translateY(-4px); }
+.access-card:nth-child(4) { transform: translateY(7px); }
+
+.access-card:nth-child(1):hover,
+.access-card:nth-child(2):hover,
+.access-card:nth-child(3):hover,
+.access-card:nth-child(4):hover {
+    transform: translateY(-7px) scale(1.04);
+}
+
+/* Better outer wrapper treatment where the original markup uses
+   category-card as a section wrapper */
+section.section + .section {
+    position: relative;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .access-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 9px;
+    }
+
+    .access-card {
+        width: 116px;
+        height: 116px;
+        min-height: 116px;
+        padding: 10px 7px;
+    }
+
+    .access-icon {
+        width: 39px;
+        height: 39px;
+        flex-basis: 39px;
+        font-size: 16px;
+    }
+
+    .access-card strong {
+        font-size: 9px;
+    }
+
+    .access-card small {
+        font-size: 7px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    .hero-access {
+        padding: 15px 10px 17px;
+        border-radius: 24px;
+    }
+
+    .access-heading {
+        margin-bottom: 14px;
+        padding: 8px 13px;
+        font-size: 9px;
+    }
+
+    .access-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 11px 8px;
+    }
+
+    .access-card {
+        width: 122px;
+        height: 122px;
+        min-height: 122px;
+        padding: 10px;
+    }
+
+    .access-icon {
+        width: 38px;
+        height: 38px;
+        flex-basis: 38px;
+        font-size: 15px;
+    }
+
+    .access-card strong {
+        font-size: 9px;
+    }
+
+    .access-card small {
+        font-size: 7px;
+    }
+
+    .access-card:nth-child(1),
+    .access-card:nth-child(2),
+    .access-card:nth-child(3),
+    .access-card:nth-child(4) {
+        transform: none;
+    }
+
+    .access-card:nth-child(1):hover,
+    .access-card:nth-child(2):hover,
+    .access-card:nth-child(3):hover,
+    .access-card:nth-child(4):hover {
+        transform: translateY(-5px) scale(1.03);
+    }
+
+    .offer-card,
+    .category-card,
+    .transport-card,
+    .essential-card {
+        box-shadow:
+            0 9px 19px rgba(5, 53, 63, 0.14),
+            0 20px 42px rgba(5, 53, 63, 0.10);
+    }
+}
+
+/* Very small phones */
+@media (max-width: 390px) {
+    .access-card {
+        width: 112px;
+        height: 112px;
+        min-height: 112px;
+    }
+
+    .access-icon {
+        width: 34px;
+        height: 34px;
+        flex-basis: 34px;
+        font-size: 14px;
+    }
+}
+
+
+/* === UNIVERSAL CARD HOVER — NO IMAGE MOVEMENT === */
+.offer-card, .category-card, .transport-card, .essential-card, .access-card {
+    transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease, background-color .28s ease;
+    will-change: transform, box-shadow;
+}
+
+.offer-card:hover, .category-card:hover, .transport-card:hover, .essential-card:hover, .access-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 38px rgba(0,0,0,.30), 0 8px 16px rgba(0,0,0,.18);
+}
+
+/* Keep every image completely still on card hover */
+.offer-card img, .category-card img, .transport-card img, .essential-card img, .access-card img {
+    transform: none !important;
+    transition: none !important;
+}
+
+.offer-card:hover img, .category-card:hover img, .transport-card:hover img, .essential-card:hover img, .access-card:hover img {
+    transform: none !important;
+    scale: 1 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .offer-card, .category-card, .transport-card, .essential-card, .access-card {
+        transition: none;
+    }
+}
+
+/* =========================================================
+   HOMEPAGE THEME — SHARED WITH TRAVEL CENTER
+   ========================================================= */
+:root {
+    --dark: #022e3b;
+    --dark-2: #084b5f;
+    --green: #0c7797;
+    --green-light: #0c7797;
+    --cream: #f7f5ef;
+    --cream-2: #eee9dc;
+    --white: #ffffff;
+    --text: #000102;
+    --muted: #687771;
+    --lime: #dce9b6;
+    --gold: #d6bd7b;
+    --accent: #0c7797;
+    --card-teal: #0c6e81;
+    --light-teal: #b2e8ed;
+    --line: rgba(16,43,37,.12);
+    --shadow: 0 20px 55px rgba(16,43,37,.12);
+    --radius: 25px;
+    --content-width: 98%;
+    --max-width: 1500px;
+}
+
+body {
+    background: var(--cream) !important;
+    color: var(--text);
+    font-family: "DM Sans", Arial, sans-serif;
+}
+
+.header {
+    width: 98% !important;
+    min-height: 58px !important;
+    margin: auto !important;
+    background: #ffffff !important;
+    gap: 30px !important;
+}
+
+.logo {
+    gap: 10px !important;
+}
+
+.logo-image {
+    width: 38px !important;
+    height: 38px !important;
+    border: 2.5px solid #0d88a1 !important;
+    border-radius: 50% !important;
+    padding: 3px !important;
+}
+
+.logo-text strong {
+    font-family: "Baloo 2", sans-serif !important;
+    font-size: 25px !important;
+    font-weight: 700 !important;
+    letter-spacing: .03em !important;
+    color: #00151b !important;
+}
+
+.navigation {
+    margin-left: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 3px !important;
+    padding: 3px !important;
+    background: rgba(255,255,255,.55) !important;
+    border: 1px solid #0c7797 !important;
+    border-radius: 100px !important;
+    box-shadow: 0 7px 22px rgba(16,43,37,.05) !important;
+    backdrop-filter: blur(10px);
+}
+
+.navigation a {
+    font-size: 13px !important;
+    font-weight: 800 !important;
+    color: #080808 !important;
+    padding: 6px 13px !important;
+    border-radius: 100px !important;
+    transition: color .2s, background .2s, transform .2s !important;
+}
+
+.navigation a:hover {
+    color: #0cafe0 !important;
+    background: #000000e3 !important;
+    transform: translateY(-1px);
+}
+
+.navigation a.active {
+    color: #ffffff !important;
+    background: #0c7797 !important;
+    box-shadow: 0 5px 15px rgba(5,5,5,.16) !important;
+}
+
+footer {
+    background: #044558 !important;
+    color: #dce4df !important;
+    padding: 50px 3% 20px !important;
+}
+
+.footer-grid {
+    width: 98% !important;
+    max-width: 1500px !important;
+    margin: auto !important;
+    display: grid !important;
+    grid-template-columns: 2fr 1fr 1fr 1fr !important;
+    gap: 40px !important;
+}
+
+.footer-description {
+    max-width: 330px !important;
+    color: #9eafa8 !important;
+    font-size: 11px !important;
+    margin-top: 15px !important;
+}
+
+.footer-title {
+    color: white !important;
+    font-size: 10px !important;
+    letter-spacing: .13em !important;
+    text-transform: uppercase !important;
+    margin-bottom: 13px !important;
+}
+
+.footer-column a {
+    display: block !important;
+    color: #9eafa8 !important;
+    font-size: 11px !important;
+    margin: 7px 0 !important;
+    transition: .2s !important;
+}
+
+.footer-column a:hover {
+    color: white !important;
+}
+
+.footer-bottom {
+    width: 98% !important;
+    max-width: 1500px !important;
+    margin: 35px auto 0 !important;
+    padding-top: 15px !important;
+    border-top: 1px solid rgba(255,255,255,.1) !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    gap: 20px !important;
+    color: #74877f !important;
+    font-size: 8px !important;
+    letter-spacing: .08em !important;
+}
+
+footer .logo-image {
+    border-color: #ffffff !important;
+}
+
+/* Shared homepage-style links/buttons */
+.button,
+.view-all {
+    border-radius: 100px !important;
+}
+
+@media(max-width:1000px) {
+    .navigation a {
+        padding: 6px 9px !important;
+        font-size: 10px !important;
+    }
+}
+
+@media(max-width:720px) {
+    .header {
+        width: 96% !important;
+        min-height: 52px !important;
+    }
+
+    .logo-image {
+        width: 34px !important;
+        height: 34px !important;
+    }
+
+    .logo-text strong {
+        font-size: 15px !important;
+    }
+
+    .navigation {
+        display: none !important;
+        position: absolute !important;
+        left: 0 !important;
+        right: 0 !important;
+        top: 50px !important;
+        padding: 8px !important;
+        background: rgba(255,255,255,.97) !important;
+        border: 1px solid rgba(16,43,37,.12) !important;
+        border-radius: 20px !important;
+        box-shadow: var(--shadow) !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 4px !important;
+        backdrop-filter: blur(14px);
+    }
+
+    .navigation.show {
+        display: flex !important;
+    }
+
+    .navigation a {
+        width: 100% !important;
+        padding: 9px 15px !important;
+        border-radius: 13px !important;
+        font-size: 11px !important;
+    }
+
+    .menu-button {
+        display: block !important;
+    }
+
+    footer {
+        padding: 45px 4% 20px !important;
+    }
+
+    .footer-grid {
+        width: 96% !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 30px !important;
+    }
+
+    .footer-brand {
+        grid-column: span 2;
+    }
+
+    .footer-bottom {
+        width: 96% !important;
+        display: block !important;
+        margin-top: 30px !important;
+    }
+
+    .footer-bottom div {
+        margin-top: 7px !important;
+    }
+}
+
+
+
+/* =========================================================
+   FINAL HEADER + HERO NAV FIXES
+   One navigation bar only.
+========================================================= */
+
+.header {
+    width: 100%;
+    min-height: 58px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 0;
+}
+
+.header .logo {
+    flex: 0 0 auto;
+}
+
+.header .navigation {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 3px;
+    border: 1px solid #0c7797;
+    border-radius: 999px;
+    background: rgba(255,255,255,.96);
+    box-shadow: 0 8px 25px rgba(16,43,37,.10);
+}
+
+.header .navigation a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    padding: 0 14px;
+    border-radius: 999px;
+    color: #000102;
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    white-space: nowrap;
+    transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+
+.header .navigation a:hover {
+    color: #b2e8ed;
+    background: #000102;
+}
+
+.header .navigation a.active {
+    color: #fff;
+    background: #0c7797;
+}
+
+.header .menu-button {
+    display: none;
+}
+
+
+/* =========================================================
+   UPDATED HERO — H1 + SUBHEADING + BLANK IMAGE
+   Circular hero navigation removed.
+========================================================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    color: white;
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(18,166,196,.30),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(32,143,165,.25),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #05353f 0%,
+            #07596a 55%,
+            #0b7382 100%
+        );
+}
+
+.hero-inner {
+    position: relative;
+    z-index: 2;
+    min-height: 560px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(380px, .9fr);
+    align-items: center;
+    gap: 70px;
+    padding: 65px 0;
+}
+
+.hero-copy {
+    max-width: 760px;
+}
+
+.hero h1 {
+    max-width: 780px;
+    font-size: clamp(45px, 6vw, 76px);
+    line-height: .98;
+    letter-spacing: -.055em;
+    font-weight: 900;
+    margin: 0 0 22px;
+}
+
+.hero h1 em {
+    color: #99e6ef;
+    font-style: normal;
+}
+
+.hero-hook {
+    max-width: 680px;
+    color: white;
+    font-size: clamp(21px, 2.2vw, 29px);
+    line-height: 1.2;
+    letter-spacing: -.025em;
+    font-weight: 800;
+    margin: 0;
+}
+
+.hero-image {
+    width: 100%;
+    min-height: 390px;
+    border-radius: 28px;
+    border: 1px solid rgba(255,255,255,.20);
+    background: rgba(255,255,255,.06);
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.16),
+        0 35px 75px rgba(0,0,0,.13);
+}
+
+@media (max-width: 900px) {
+    .hero-inner {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        gap: 35px;
+        padding: 55px 0 50px;
+    }
+
+    .hero-image {
+        min-height: 320px;
+    }
+}
+
+@media (max-width: 650px) {
+    .hero-inner {
+        gap: 25px;
+        padding: 42px 0 38px;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 11vw, 54px);
+        margin-bottom: 16px;
+    }
+
+    .hero-hook {
+        font-size: 19px;
+    }
+
+    .hero-image {
+        min-height: 230px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 390px) {
+    .hero-image {
+        min-height: 200px;
+    }
+}
+
+
+/* =========================================================
+   FINAL HEADER WIDTH FIX
+   Header matches the full-width hero section.
+   Removes the side gaps on desktop and mobile.
+========================================================= */
+
+.header {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+@media (max-width: 720px) {
+    .header {
+        width: 100% !important;
+        max-width: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+
+
+/* =========================================================
+   FINAL MOBILE NAVIGATION FIX
+   Mobile menu stays CLOSED until the menu button is clicked.
+========================================================= */
+
+@media (max-width: 720px) {
+    .header {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 1000 !important;
+        width: 100% !important;
+        max-width: none !important;
+        min-height: 58px !important;
+        margin: 0 !important;
+    }
+
+    .header .menu-button {
+        display: grid !important;
+        place-items: center !important;
+        width: 40px !important;
+        height: 40px !important;
+        padding: 0 !important;
+        border: 0 !important;
+        border-radius: 12px !important;
+        background: #f3f7f7 !important;
+        color: #022e3b !important;
+        font-size: 21px !important;
+        line-height: 1 !important;
+        cursor: pointer !important;
+        flex: 0 0 auto !important;
+    }
+
+    /* CLOSED by default */
+    .header .navigation {
+        display: none !important;
+        position: absolute !important;
+        top: calc(100% + 8px) !important;
+        left: 12px !important;
+        right: 12px !important;
+        width: auto !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 8px !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 4px !important;
+        border: 1px solid rgba(12,119,151,.18) !important;
+        border-radius: 18px !important;
+        background: rgba(255,255,255,.98) !important;
+        box-shadow: 0 18px 40px rgba(16,43,37,.18) !important;
+        backdrop-filter: blur(14px) !important;
+        -webkit-backdrop-filter: blur(14px) !important;
+    }
+
+    /* OPEN only when JavaScript adds .show */
+    .header .navigation.show {
+        display: flex !important;
+    }
+
+    .header .navigation a {
+        display: flex !important;
+        width: 100% !important;
+        min-height: 42px !important;
+        padding: 10px 14px !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        border-radius: 12px !important;
+        font-size: 12px !important;
+        white-space: nowrap !important;
+    }
+
+    .header .navigation a:hover {
+        transform: none !important;
+    }
+}
 </style>
 
 </head>
@@ -2170,110 +3001,74 @@ button {
      HEADER
 ========================================================= -->
 
-<header class="site-header">
+<header class="header">
 
-<div class="container">
+    <a
+        href="index.html"
+        class="logo"
+        aria-label="Pinpoint Travel home">
 
-<nav class="nav">
+        <img
+            src="/favicon.png"
+            alt="Pinpoint Travel Logo"
+            class="logo-image">
 
-<a href="https://pinpointtravel.store/"
-   class="logo">
+        <span class="logo-text">
 
-    <span class="logo-mark">
-        ✦
-    </span>
+            <strong>
+                PINPOINT TRAVEL
+            </strong>
 
-    Pinpoint Travel
+        </span>
 
-</a>
-
-
-<div class="nav-links">
-
-    <a href="https://pinpointtravel.store/">
-        Home
     </a>
 
-    <a href="#travel-offers"
-       class="active">
-        Travel Center
-    </a>
 
-    <a href="#tour-packages">
-        Packages
-    </a>
+    <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Open navigation"
+        aria-controls="navigation"
+        aria-expanded="false">
 
-    <a href="#transportation">
-        Transportation
-    </a>
+        ☰
 
-    <a href="#bookings">
-        Bookings
-    </a>
-
-    <a href="#travel-essentials">
-        Essentials
-    </a>
-
-</div>
+    </button>
 
 
-<button
-    class="mobile-menu"
-    id="menuButton"
-    aria-label="Open navigation">
+    <nav
+        class="navigation"
+        id="navigation"
+        aria-label="Main navigation">
 
-    ☰
+        <a
+            href="index.html">
+            Home
+        </a>
 
-</button>
+        <a
+            href="https://pinpointtravel.store/TravelCenter/"
+            class="active">
+            Travel Center
+        </a>
 
-</nav>
+        <a href="#travel-essentials">
+            Travel Essentials
+        </a>
 
+        <a href="#tour-packages">
+            Tour Packages
+        </a>
 
-<div
-    id="mobileNav"
-    style="display:none;padding-bottom:14px;">
+        <a href="#transportation">
+            Transportation
+        </a>
 
-<div style="
-    display:grid;
-    gap:6px;
-">
+        <a href="#bookings">
+            Bookings
+        </a>
 
-<a href="https://pinpointtravel.store/"
-   class="mobile-link">
-    Home
-</a>
-
-<a href="#travel-offers"
-   class="mobile-link">
-    Travel Center
-</a>
-
-<a href="#tour-packages"
-   class="mobile-link">
-    Tour Packages
-</a>
-
-<a href="#transportation"
-   class="mobile-link">
-    Transportation
-</a>
-
-<a href="#bookings"
-   class="mobile-link">
-    Bookings
-</a>
-
-<a href="#travel-essentials"
-   class="mobile-link">
-    Travel Essentials
-</a>
-
-</div>
-
-</div>
-
-</div>
+    </nav>
 
 </header>
 
@@ -2285,141 +3080,37 @@ button {
 
 <section class="hero">
 
-<div class="container">
+    <div class="container">
 
-<div class="hero-inner">
+        <div class="hero-inner">
 
-<div class="hero-copy">
+            <div class="hero-copy">
 
-<div class="hero-eyebrow">
+                <h1>
+                    Everything you need
+                    for your <em>next journey.</em>
+                </h1>
 
-    <span></span>
+                <div class="hero-hook">
+                    Discover. Book. Prepare.
+                    Travel better.
+                </div>
 
-    Welcome to Pinpoint Travel Center
+            </div>
 
-</div>
+            <!--
+                HERO IMAGE PLACEHOLDER
+                Add your image URL inside this div later if needed.
+                It is intentionally blank for now.
+            -->
+            <div
+                class="hero-image"
+                aria-label="Hero image placeholder">
+            </div>
 
+        </div>
 
-<h1>
-
-    Everything you need
-    for your <em>next journey.</em>
-
-</h1>
-
-
-<div class="hero-hook">
-
-    Discover. Book. Prepare.
-    Travel better.
-
-</div>
-
-
-<p class="hero-description">
-
-    Explore travel offers, tour packages,
-    transportation, stays and useful travel
-    essentials — brought together in one place
-    to make planning your next adventure easier.
-
-</p>
-
-</div>
-
-
-
-<!-- QUICK ACCESS -->
-
-<div class="hero-access">
-
-<div class="access-heading">
-
-    What are you looking for?
-
-</div>
-
-
-<div class="access-grid">
-
-<a href="#travel-essentials"
-   class="access-card">
-
-    <div class="access-icon">
-        ◈
     </div>
-
-    <strong>
-        Travel Essentials
-    </strong>
-
-    <small>
-        Pack smarter →
-    </small>
-
-</a>
-
-
-<a href="#tour-packages"
-   class="access-card">
-
-    <div class="access-icon">
-        ✦
-    </div>
-
-    <strong>
-        Tour Packages
-    </strong>
-
-    <small>
-        Explore experiences →
-    </small>
-
-</a>
-
-
-<a href="#transportation"
-   class="access-card">
-
-    <div class="access-icon">
-        ✈
-    </div>
-
-    <strong>
-        Transportation
-    </strong>
-
-    <small>
-        Flights & more →
-    </small>
-
-</a>
-
-
-<a href="#Bookings"
-   class="access-card">
-
-    <div class="access-icon">
-        ⌂
-    </div>
-
-    <strong>
-        Stays & Bookings
-    </strong>
-
-    <small>
-        Find a place →
-    </small>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
 
 </section>
 
@@ -2440,20 +3131,18 @@ button {
 <div>
 
 <div class="eyebrow">
-    Featured Travel Offers
+    
 </div>
 
 <h2 class="section-title">
-    Experiences worth the trip.
+    
 </h2>
 
 </div>
 
 <p class="section-description">
 
-    Discover tours, activities, day trips and
-    experiences selected to help you make more
-    of your journey.
+    
 
 </p>
 
@@ -4410,117 +5099,131 @@ alt="Travel shoes">
      FOOTER
 ========================================================= -->
 
-<footer class="footer">
+<footer>
 
-<div class="container">
+    <div class="footer-grid">
 
-<div class="footer-grid">
+        <div class="footer-brand">
 
-<div class="footer-brand">
+            <a
+                href="https://pinpointtravel.store"
+                class="logo"
+                aria-label="Pinpoint Travel home">
 
-<h3>
-    Pinpoint Travel
-</h3>
+                <img
+                    src="/favicon.png"
+                    alt="Pinpoint Travel Logo"
+                    class="logo-image">
 
-<p>
-    Discover smarter ways to travel — from
-    experiences and stays to transportation
-    and useful travel essentials.
-</p>
+                <span class="logo-text">
 
-</div>
+                    <strong style="color:white;">
+                        PINPOINT
+                    </strong>
 
+                    <small style="color:#9eafa8;">
+                        TRAVEL
+                    </small>
 
-<div class="footer-column">
+                </span>
 
-<h4>
-    Travel Center
-</h4>
-
-<a href="#travel-offers">
-    Travel Offers
-</a>
-
-<a href="#tour-packages">
-    Tour Packages
-</a>
-
-<a href="#transportation">
-    Transportation
-</a>
-
-<a href="#bookings">
-    Bookings
-</a>
-
-</div>
+            </a>
 
 
-<div class="footer-column">
+            <p class="footer-description">
 
-<h4>
-    Transportation
-</h4>
+                Smart inspiration for travelers
+                who want to discover more,
+                plan better and travel with
+                confidence.
 
-<a href="#flights">
-    Flights
-</a>
+            </p>
 
-<a href="#car-rentals">
-    Car Rentals
-</a>
-
-<a href="#airport-transfers">
-    Airport Transfers
-</a>
-
-<a href="#ferries">
-    Ferries & More
-</a>
-
-</div>
+        </div>
 
 
-<div class="footer-column">
+        <div class="footer-column">
 
-<h4>
-    Pinpoint Travel
-</h4>
+            <h4 class="footer-title">
+                Travel Center
+            </h4>
 
-<a href="https://pinpointtravel.store/">
-    Home
-</a>
+            <a href="destinations.html">
+                Bookings
+            </a>
 
-<a href="#">
-    About
-</a>
+            <a href="products.html">
+                Travel Essentials
+            </a>
 
-<a href="#">
-    Contact
-</a>
+            <a href="blog.html">
+                Transportation
+            </a>
 
-<a href="#">
-    Privacy
-</a>
-
-</div>
-
-</div>
+        </div>
 
 
-<div class="footer-bottom">
+        <div class="footer-column">
 
-<span>
-    © 2026 Pinpoint Travel. All rights reserved.
-</span>
+            <h4 class="footer-title">
+                Pinpoint Travel
+            </h4>
 
-<span>
-    Some links may be affiliate links.
-</span>
+            <a href="about.html">
+                About Us
+            </a>
 
-</div>
+            <a href="contact.html">
+                Contact
+            </a>
 
-</div>
+            <a href="privacy.html">
+                Privacy Policy
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4 class="footer-title">
+                Follow
+            </h4>
+
+            <a href="#">
+                Instagram
+            </a>
+
+            <a href="#">
+                Pinterest
+            </a>
+
+            <a href="#">
+                Facebook
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+
+            © 2026 Pinpoint Travel.
+            All rights reserved.
+
+        </span>
+
+        <span>
+
+            PACK LIGHT · WANDER FAR ·
+            DISCOVER MORE
+
+        </span>
+
+    </div>
 
 </footer>
 
@@ -4536,47 +5239,65 @@ const menuButton =
     document.getElementById("menuButton");
 
 const mobileNav =
-    document.getElementById("mobileNav");
+    document.getElementById("navigation");
 
 
-menuButton.addEventListener(
-    "click",
-    function() {
+/* MOBILE NAVIGATION */
+if (menuButton && mobileNav) {
 
-        if (
-            mobileNav.style.display === "none" ||
-            mobileNav.style.display === ""
-        ) {
+    menuButton.addEventListener("click", function(event) {
+        event.stopPropagation();
 
-            mobileNav.style.display = "block";
+        const isOpen =
+            mobileNav.classList.toggle("show");
 
-        } else {
-
-            mobileNav.style.display = "none";
-
-        }
-
-    }
-);
-
-
-/* MOBILE NAV */
-
-document
-    .querySelectorAll("#mobileNav a")
-    .forEach(function(link) {
-
-        link.addEventListener(
-            "click",
-            function() {
-
-                mobileNav.style.display =
-                    "none";
-
-            }
+        menuButton.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false"
         );
 
+        menuButton.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation" : "Open navigation"
+        );
+
+        menuButton.textContent =
+            isOpen ? "✕" : "☰";
     });
+
+
+    /* Close the menu after selecting a navigation link. */
+    mobileNav.querySelectorAll("a").forEach(function(link) {
+        link.addEventListener("click", function() {
+            mobileNav.classList.remove("show");
+            menuButton.setAttribute("aria-expanded", "false");
+            menuButton.setAttribute("aria-label", "Open navigation");
+            menuButton.textContent = "☰";
+        });
+    });
+
+
+    /* Close when clicking outside the header. */
+    document.addEventListener("click", function(event) {
+        if (!event.target.closest(".header")) {
+            mobileNav.classList.remove("show");
+            menuButton.setAttribute("aria-expanded", "false");
+            menuButton.setAttribute("aria-label", "Open navigation");
+            menuButton.textContent = "☰";
+        }
+    });
+
+
+    /* Close with the Escape key. */
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            mobileNav.classList.remove("show");
+            menuButton.setAttribute("aria-expanded", "false");
+            menuButton.setAttribute("aria-label", "Open navigation");
+            menuButton.textContent = "☰";
+        }
+    });
+}
 
 
 /* SMOOTH SCROLL */
