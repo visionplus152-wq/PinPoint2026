@@ -348,6 +348,16 @@ input {
    SMALL HERO (Travel Center)
 ========================================================= */
 
+.hero-frame {
+
+    width: 100%;
+
+    background: #000000;
+
+    padding: 16px;
+}
+
+
 .hero {
 
     width: 100%;
@@ -366,6 +376,9 @@ input {
 
     background:
         #010e13;
+
+    border-radius:
+        var(--radius);
 }
 
 
@@ -434,7 +447,12 @@ input {
 .hero-box {
 
     background:
-        rgba(2,20,26,.42);
+        linear-gradient(
+            150deg,
+            rgba(12,119,151,.55) 0%,
+            rgba(2,46,59,.55) 55%,
+            rgba(2,14,19,.6) 100%
+        );
 
     border:
         1px solid
@@ -818,7 +836,7 @@ input {
 .offer-image {
 
     height:
-        220px;
+        300px;
 
     position:
         relative;
@@ -926,22 +944,25 @@ input {
         5;
 
     background:
-        rgba(2,20,26,.72);
+        rgba(2,20,26,.75);
 
     color:
         #ffffff;
 
     padding:
-        6px 10px;
+        8px 15px;
 
     border-radius:
         100px;
 
     font-size:
-        11px;
+        17px;
 
     font-weight:
         800;
+
+    letter-spacing:
+        -.01em;
 
     backdrop-filter:
         blur(4px);
@@ -951,7 +972,7 @@ input {
 .offer-content {
 
     padding:
-        20px 20px 24px;
+        18px 20px 24px;
 
     flex:
         1;
@@ -973,29 +994,6 @@ input {
 
     gap:
         5px;
-}
-
-
-.offer-content .category {
-
-    font-size:
-        9px;
-
-    letter-spacing:
-        .17em;
-
-    color:
-        #7d8983;
-
-    font-weight:
-        800;
-}
-
-
-.offer-card.dark .category {
-
-    color:
-        rgba(255,255,255,.7);
 }
 
 
@@ -1397,6 +1395,11 @@ footer .logo-image {
 ========================================================= */
 
 @media(max-width:720px) {
+
+    .hero-frame {
+        padding: 8px;
+    }
+
 
     .header {
 
@@ -1865,6 +1868,8 @@ footer .logo-image {
      HERO
 ========================================================= -->
 
+<div class="hero-frame">
+
 <section
     class="hero"
     id="hero"
@@ -1912,6 +1917,8 @@ footer .logo-image {
     </div>
 
 </section>
+
+</div>
 
 
 
@@ -1980,10 +1987,6 @@ footer .logo-image {
 
             <div class="offer-content">
 
-                <span class="category">
-                    MULTI-DAY TOURS
-                </span>
-
                 <h3>
                     Guided Group Adventures
                 </h3>
@@ -2035,10 +2038,6 @@ footer .logo-image {
 
             <div class="offer-content">
 
-                <span class="category">
-                    DAY TOURS
-                </span>
-
                 <h3>
                     Private Day Experiences
                 </h3>
@@ -2089,10 +2088,6 @@ footer .logo-image {
             </div>
 
             <div class="offer-content">
-
-                <span class="category">
-                    CITY PASSES
-                </span>
 
                 <h3>
                     Attraction & Activity Passes
@@ -2189,10 +2184,6 @@ footer .logo-image {
 
                 <div class="offer-content">
 
-                    <span class="category">
-                        FLIGHTS
-                    </span>
-
                     <h3>
                         Search & Compare Flights
                     </h3>
@@ -2244,10 +2235,6 @@ footer .logo-image {
 
                 <div class="offer-content">
 
-                    <span class="category">
-                        CAR RENTALS
-                    </span>
-
                     <h3>
                         Rental Cars, Any Destination
                     </h3>
@@ -2298,10 +2285,6 @@ footer .logo-image {
                 </div>
 
                 <div class="offer-content">
-
-                    <span class="category">
-                        TRANSFERS
-                    </span>
 
                     <h3>
                         Airport & City Transfers
@@ -2398,10 +2381,6 @@ footer .logo-image {
 
             <div class="offer-content">
 
-                <span class="category">
-                    HOTELS
-                </span>
-
                 <h3>
                     Hotels & Resorts
                 </h3>
@@ -2453,10 +2432,6 @@ footer .logo-image {
 
             <div class="offer-content">
 
-                <span class="category">
-                    VILLAS & APARTMENTS
-                </span>
-
                 <h3>
                     Villas & Private Apartments
                 </h3>
@@ -2506,10 +2481,6 @@ footer .logo-image {
             </div>
 
             <div class="offer-content">
-
-                <span class="category">
-                    HOSTELS
-                </span>
 
                 <h3>
                     Hostels & Shared Stays
@@ -2605,10 +2576,6 @@ footer .logo-image {
 
                 <div class="offer-content">
 
-                    <span class="category">
-                        PACKING
-                    </span>
-
                     <h3>
                         Smart Packing Essentials
                     </h3>
@@ -2660,10 +2627,6 @@ footer .logo-image {
 
                 <div class="offer-content">
 
-                    <span class="category">
-                        COMFORT
-                    </span>
-
                     <h3>
                         Travel Comfort Essentials
                     </h3>
@@ -2714,10 +2677,6 @@ footer .logo-image {
                 </div>
 
                 <div class="offer-content">
-
-                    <span class="category">
-                        TRAVEL TECH
-                    </span>
 
                     <h3>
                         Smart Travel Technology
