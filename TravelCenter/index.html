@@ -41,16 +41,10 @@ button,input{font-family:inherit}
 /* HERO */
 .hero-frame{width:100%}
 .hero{width:100%;min-height:380px;margin:0;overflow:hidden;position:relative;display:flex;align-items:center;background:#010e13}
-.hero picture{position:absolute;inset:0;z-index:1;display:block}
 .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:1}
-.hero-overlay{position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(100deg,rgba(5,20,24,.75) 0%,rgba(5,20,24,.45) 40%,rgba(5,20,24,.1) 75%,rgba(5,20,24,0) 100%)}
+.hero-main{z-index:2}
+.hero-overlay{position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(100deg,rgba(5,20,24,.3) 0%,rgba(5,20,24,.12) 50%,rgba(5,20,24,0) 100%)}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.hero-content{position:relative;z-index:10;width:100%;max-width:var(--max-width);padding:30px 3.5%;display:flex;align-items:center;gap:30px;min-height:100%}
-.hero-photo{flex:0 0 330px;height:270px;margin:0;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(255,255,255,.22);box-shadow:var(--shadow);position:relative;opacity:0;animation:hero-box-in .75s cubic-bezier(.2,.8,.2,1) .3s forwards;background:#0c4a5c}
-.hero-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
-.hero-photo:hover img{transform:scale(1.05)}
-.hero-photo figcaption{position:absolute;left:12px;bottom:12px;background:rgba(2,20,26,.72);color:#fff;font-size:9px;font-weight:800;letter-spacing:.14em;padding:6px 11px;border-radius:100px;backdrop-filter:blur(4px)}
-@keyframes hero-box-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 
 /* SECTIONS */
 .section{width:var(--content-width);max-width:var(--max-width);margin:32px auto;scroll-margin-top:20px}
@@ -109,7 +103,6 @@ footer .logo-image{border-color:#fff}
 
 /* TABLET */
 @media(max-width:1000px){
-.hero-photo{flex-basis:260px;height:230px}
 .navigation{gap:2px}
 .navigation a{padding:6px 9px;font-size:10px}
 .hero{min-height:320px}
@@ -127,8 +120,7 @@ footer .logo-image{border-color:#fff}
 .navigation a{width:100%;padding:9px 15px;border-radius:13px;font-size:11px}
 .menu-button{display:block}
 .hero{min-height:300px}
-.hero-photo{display:none}
-.hero-overlay{background:linear-gradient(180deg,rgba(5,20,24,.3) 0%,rgba(5,20,24,.78) 55%,rgba(5,20,24,.95) 100%)}
+.hero-overlay{background:linear-gradient(180deg,rgba(5,20,24,.1) 0%,rgba(5,20,24,.25) 100%)}
 .section-header{flex-direction:column;align-items:center;text-align:center;gap:10px;margin-bottom:19px}
 .section-header h2{font-size:36px}
 .section-description{max-width:100%;margin:8px auto 0}
@@ -167,21 +159,15 @@ footer{padding:45px 4% 20px}
   </nav>
 </header>
 
-<!-- HERO: banner image + photo panel (no text card) -->
+<!-- HERO: full-area image -->
 <div class="hero-frame">
   <section class="hero" id="hero" aria-label="Travel Center banner">
-    <picture>
-      <source media="(max-width: 720px)" srcset="TravelCenter/Travelcenter%20banner.webp">
-      <img class="hero-bg" src="TravelCenter/Travelcenter%20banner.webp" alt="Traveler planning a journey with a map" loading="eager">
-    </picture>
+    <!-- fallback banner (shows if the main image fails to load) -->
+    <img class="hero-bg" src="TravelCenter/Travelcenter%20banner.webp" alt="" loading="eager">
+    <!-- main full-area image -->
+    <img class="hero-bg hero-main" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=2000&q=80" alt="Traveler enjoying a mountain lake view" loading="eager" onerror="this.style.display='none'">
     <div class="hero-overlay"></div>
     <h1 class="sr-only">Pinpoint Travel Center</h1>
-    <div class="hero-content">
-      <figure class="hero-photo">
-        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=75" alt="Traveler enjoying a mountain lake view" loading="eager" onerror="this.parentNode.style.display='none'">
-        <figcaption>EXPLORE MORE</figcaption>
-      </figure>
-    </div>
   </section>
 </div>
 
