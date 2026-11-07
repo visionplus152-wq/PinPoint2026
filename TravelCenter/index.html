@@ -43,9 +43,8 @@ button,input{font-family:inherit}
 /* BANNER (full width, no side gaps) */
 .banner{width:100%;max-width:none;margin:0}
 .banner-link{display:block;border-radius:0;overflow:hidden;box-shadow:none;background:#02495f;line-height:0}
-.banner-link img{width:100%;height:auto;aspect-ratio:1600/420;object-fit:cover;display:block;transition:transform .6s ease}
+.banner-link img{width:100%;height:auto;display:block;transition:transform .6s ease}
 .banner-link:hover img{transform:scale(1.02)}
-@media(max-width:720px){.banner-link img{aspect-ratio:16/7}}
 
 /* SECTIONS */
 .section{width:var(--content-width);max-width:var(--max-width);margin:32px auto;scroll-margin-top:20px}
@@ -158,9 +157,10 @@ footer{padding:45px 4% 20px}
 
 <h1 class="sr-only">Pinpoint Travel Center</h1>
 
-<!-- BANNER: change the link (href) and image (src) below to swap it later -->
+<!-- BANNER -->
 <section class="banner" aria-label="Featured banner">
-    <img src="images/tcbanner.webp" alt="Featured travel offer" width="1600" height="420" fetchpriority="high">
+  <a href="https://www.travelpayouts.com/" class="banner-link" target="_blank" rel="noopener sponsored">
+    <img src="images/tcbanner.webp" alt="Discover the World with PinPoint Travel" width="2048" height="768" fetchpriority="high">
   </a>
 </section>
 
