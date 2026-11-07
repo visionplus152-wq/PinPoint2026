@@ -40,10 +40,9 @@ button,input{font-family:inherit}
 
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-/* BANNER (full width, no side gaps) */
-.banner{width:100%;max-width:none;margin:0}
-.banner-link{display:block;border-radius:0;overflow:hidden;box-shadow:none;background:#02495f;line-height:0}
-.banner-link img{width:100%;height:auto;display:block}
+/* BANNER (full width, no side gaps, no link) */
+.banner{width:100%;max-width:none;margin:0;background:#02495f;line-height:0}
+.banner img{width:100%;height:auto;display:block}
 
 /* SECTIONS */
 .section{width:var(--content-width);max-width:var(--max-width);margin:32px auto;scroll-margin-top:20px}
@@ -157,9 +156,7 @@ footer{padding:45px 4% 20px}
 
 <!-- BANNER -->
 <section class="banner" aria-label="Featured banner">
-  <a href="https://www.travelpayouts.com/" class="banner-link" target="_blank" rel="noopener sponsored">
-    <img src="https://pinpointtravel.store/images/tcbanner.webp" alt="Discover the World with PinPoint Travel" width="2048" height="768" fetchpriority="high">
-  </a>
+  <img src="https://pinpointtravel.store/images/tcbanner.webp" alt="Discover the World with PinPoint Travel" width="2048" height="768" fetchpriority="high">
 </section>
 
 <!-- TOUR PACKAGES -->
