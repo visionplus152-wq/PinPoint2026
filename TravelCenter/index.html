@@ -38,11 +38,14 @@ button,input{font-family:inherit}
 .navigation a.active::after{display:none}
 .menu-button{display:none;border:none;background:transparent;font-size:25px;cursor:pointer;margin-left:auto}
 
-/* HERO (image only) */
-.hero-frame{width:100%}
-.hero{width:100%;line-height:0;background:#010e13}
-.hero img{width:100%;height:auto;display:block}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* BANNER (full width, no side gaps) */
+.banner{width:100%;max-width:none;margin:0}
+.banner-link{display:block;border-radius:0;overflow:hidden;box-shadow:none;background:#02495f;line-height:0}
+.banner-link img{width:100%;height:auto;aspect-ratio:1600/420;object-fit:cover;display:block;transition:transform .6s ease}
+.banner-link:hover img{transform:scale(1.02)}
+@media(max-width:720px){.banner-link img{aspect-ratio:16/7}}
 
 /* SECTIONS */
 .section{width:var(--content-width);max-width:var(--max-width);margin:32px auto;scroll-margin-top:20px}
@@ -153,13 +156,14 @@ footer{padding:45px 4% 20px}
   </nav>
 </header>
 
-<!-- HERO: image only -->
-<div class="hero-frame">
-  <section class="hero" id="hero" aria-label="Travel Center banner">
-    <h1 class="sr-only">Pinpoint Travel Center</h1>
-    <img src="TravelCenter/Travelcenter%20hero.webp" alt="Discover the World with PinPoint Travel" fetchpriority="high">
-  </section>
-</div>
+<h1 class="sr-only">Pinpoint Travel Center</h1>
+
+<!-- BANNER: change the link (href) and image (src) below to swap it later -->
+<section class="banner" aria-label="Featured banner">
+  <a href="https://www.travelpayouts.com/" class="banner-link" target="_blank" rel="noopener sponsored">
+    <img src="https://picsum.photos/seed/pinpoint-banner/1600/420" alt="Featured travel offer" width="1600" height="420" fetchpriority="high">
+  </a>
+</section>
 
 <!-- TOUR PACKAGES -->
 <section class="section" id="packages" aria-labelledby="packages-title">
