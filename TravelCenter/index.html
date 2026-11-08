@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Baloo+2:wght@600;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="/favicon.png">
 <style>
-:root{--dark:#022e3b;--cream:#f7f5ef;--white:#fff;--text:#000102;--muted:#687771;--lime:#dce9b6;--accent:#0c7797;--card-teal:#0c6e81;--shadow:0 20px 55px rgba(16,43,37,.12);--radius:25px;--content-width:98%;--max-width:1500px}
+:root{--dark:#022e3b;--cream:#f7f5ef;--white:#fff;--text:#000102;--muted:#687771;--lime:#dce9b6;--accent:#0084b9;--card-teal:#0084b9;--shadow:0 20px 55px rgba(16,43,37,.12);--radius:25px;--content-width:98%;--max-width:1500px}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:25px}
 body{font-family:"DM Sans",Arial,sans-serif;background:var(--cream);color:var(--text);line-height:1.6;overflow-x:hidden}
@@ -24,24 +24,24 @@ a{text-decoration:none;color:inherit}
 button,input{font-family:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:4px}
 
-/* HEADER */
-.header{width:98%;min-height:58px;margin:auto;display:flex;align-items:center;gap:30px;position:relative;z-index:100;background:#fff}
+/* HEADER (full width, low side padding, no color difference at the edges) */
+.header{width:100%;min-height:68px;margin:0;padding:0 12px;display:flex;align-items:center;gap:30px;position:relative;z-index:100;background:#fff}
 .logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
-.logo-image{width:38px;height:38px;object-fit:contain;flex-shrink:0;border:2.5px solid #0d88a1;border-radius:50%;padding:3px;transition:.2s}
+.logo-image{width:42px;height:42px;object-fit:contain;flex-shrink:0;border:2.5px solid #0084b9;border-radius:50%;padding:3px;transition:.2s}
 .logo:hover .logo-image{transform:scale(1.04);border-color:var(--accent)}
 .logo-text{display:flex;flex-direction:column;justify-content:center;line-height:1}
-.logo-text strong{font-family:"Baloo 2",sans-serif;font-weight:700;letter-spacing:.03em;font-size:25px;color:#00151b}
-.navigation{margin-left:auto;display:flex;align-items:center;gap:3px;padding:3px;background:rgba(255,255,255,.55);border:1px solid #0c7797;border-radius:100px;box-shadow:0 7px 22px rgba(16,43,37,.05);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-.navigation a{font-size:13px;font-weight:800;color:#080808;transition:color .2s,background .2s,transform .2s;position:relative;padding:6px 13px;border-radius:100px;white-space:nowrap}
-.navigation a:hover{color:#0cafe0;background:#000000e3;transform:translateY(-1px)}
-.navigation a.active{color:#fff;background:#0c7797;box-shadow:0 5px 15px rgba(5,5,5,.16)}
+.logo-text strong{font-family:"Baloo 2",sans-serif;font-weight:700;letter-spacing:.03em;font-size:27px;color:#00151b}
+.navigation{margin-left:auto;display:flex;align-items:center;gap:3px;padding:4px;background:rgba(255,255,255,.55);border:1px solid #0084b9;border-radius:100px;box-shadow:0 7px 22px rgba(16,43,37,.05);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.navigation a{font-size:14.5px;font-weight:800;color:#080808;transition:color .2s,background .2s,transform .2s;position:relative;padding:9px 16px;border-radius:100px;white-space:nowrap}
+.navigation a:hover{color:#0084b9;background:#000000e3;transform:translateY(-1px)}
+.navigation a.active{color:#fff;background:#0084b9;box-shadow:0 5px 15px rgba(5,5,5,.16)}
 .navigation a.active::after{display:none}
-.menu-button{display:none;border:none;background:transparent;font-size:25px;cursor:pointer;margin-left:auto}
+.menu-button{display:none;border:none;background:transparent;font-size:27px;cursor:pointer;margin-left:auto}
 
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 /* BANNER (full width, no side gaps, no link) */
-.banner{width:100%;max-width:none;margin:0;background:#02495f;line-height:0}
+.banner{width:100%;max-width:none;margin:0;background:#0084b9;line-height:0}
 .banner img{width:100%;height:auto;display:block}
 
 /* SECTIONS */
@@ -50,17 +50,17 @@ button,input{font-family:inherit}
 .section-header h2{font-size:clamp(34px,3vw,45px);line-height:.98;letter-spacing:-.045em}
 .section-header h2 em{font-family:"Playfair Display",serif;font-weight:600}
 .section-description{max-width:100%;color:var(--muted);font-size:13px;margin-top:9px}
-.view-all{font-size:11px;font-weight:800;color:#0c7797;white-space:nowrap;display:inline-flex;align-items:center;padding:9px 16px;border:1.5px solid #0c7797;border-radius:100px;transition:.25s}
-.view-all:hover{background:#0c7797;color:#fff;transform:translateY(-2px)}
+.view-all{font-size:11px;font-weight:800;color:#0084b9;white-space:nowrap;display:inline-flex;align-items:center;padding:9px 16px;border:1.5px solid #0084b9;border-radius:100px;transition:.25s}
+.view-all:hover{background:#0084b9;color:#fff;transform:translateY(-2px)}
 
 /* OFFER CARDS */
 .offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .offer-card{background:#fff;color:var(--text);border-radius:var(--radius);overflow:hidden;border:1px solid rgba(16,43,37,.08);box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s,outline-color .25s;display:flex;flex-direction:column;height:100%;scroll-margin-top:26px;outline:3px solid transparent;outline-offset:4px}
-.offer-card:target{outline-color:var(--accent);box-shadow:0 0 0 8px rgba(12,119,151,.14),var(--shadow);animation:pulse-target 1.6s ease-out 1}
+.offer-card:target{outline-color:var(--accent);box-shadow:0 0 0 8px rgba(12,175,224,.14),var(--shadow);animation:pulse-target 1.6s ease-out 1}
 .offer-card.dark:target{outline-color:#fff;box-shadow:0 0 0 8px rgba(255,255,255,.18),var(--shadow)}
 @keyframes pulse-target{0%{transform:translateY(-2px) scale(1.015)}100%{transform:translateY(0) scale(1)}}
 .offer-card:hover{transform:translateY(-5px);box-shadow:0 10px 20px #000000e7}
-.offer-card.dark{background:#035b75;color:#fff}
+.offer-card.dark{background:#0084b9;color:#fff}
 .offer-image{height:300px;position:relative;overflow:hidden;flex-shrink:0}
 .offer-image img{width:100%;height:100%;object-fit:cover}
 .offer-image::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,80,94,.28),transparent 55%)}
@@ -69,28 +69,30 @@ button,input{font-family:inherit}
 .offer-content{padding:18px 20px 24px;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:5px}
 .offer-content h3{font-size:20px;margin:3px 0}
 .offer-content p{color:var(--muted);font-size:11px;max-width:92%}
-.offer-card.dark p{color:rgba(255,255,255,.78)}
+.offer-card.dark p{color:rgba(255,255,255,.92)}
 .offer-note{font-size:10.5px;font-weight:700;color:var(--card-teal);margin-top:2px}
-.offer-card.dark .offer-note{color:var(--lime)}
-.card-cta{margin-top:14px;min-height:40px;padding:0 18px;border-radius:100px;display:inline-flex;justify-content:center;align-items:center;font-size:11px;font-weight:800;letter-spacing:.02em;background:var(--accent);color:#fff;border:1px solid var(--accent);box-shadow:0 10px 22px rgba(12,119,151,.28);transition:.25s}
+.offer-card.dark .offer-note{color:#e6f8ff}
+.card-cta{margin-top:14px;min-height:40px;padding:0 18px;border-radius:100px;display:inline-flex;justify-content:center;align-items:center;font-size:11px;font-weight:800;letter-spacing:.02em;background:var(--accent);color:#fff;border:1px solid var(--accent);box-shadow:0 10px 22px rgba(12,175,224,.28);transition:.25s}
 .card-cta:hover{background:#fff;color:var(--accent);transform:translateY(-3px);box-shadow:0 10px 23px rgba(0,0,0,.3)}
 .offer-card.dark .card-cta{background:#fff;color:var(--card-teal);border-color:#fff}
-.offer-card.dark .card-cta:hover{background:var(--lime);color:#08303c}
+.offer-card.dark .card-cta:hover{background:#004b7e;color:#fff;border-color:#0084b9}
 
 /* BANDS */
 .band{width:100%;padding:38px 0 42px}
-.band.tint{background:#02495f}
-.band.tint .section-header h2,.band.tint .section-header h2 em{color:#fff}
-.band.tint .section-description{color:#cee6ec}
-.band.tint .view-all{border-color:#0c7797;color:#f9fbfc}
-.band.tint .view-all:hover{background:#fff;color:#09537e}
+.band.tint,.band.teal{background:#0084b9}
+.band.white{background:#fff}
+.band.tint .section-header h2,.band.tint .section-header h2 em,
+.band.teal .section-header h2,.band.teal .section-header h2 em{color:#fff}
+.band.tint .section-description,.band.teal .section-description{color:#f0fbff}
+.band.tint .view-all,.band.teal .view-all{border-color:#fff;color:#fff}
+.band.tint .view-all:hover,.band.teal .view-all:hover{background:#fff;color:#0084b9}
 .band .section{margin:0 auto}
 .affiliate-note{margin-top:11px;color:var(--muted);font-size:9px}
-.band.tint .affiliate-note{color:rgba(214,214,214,.72)}
+.band.tint .affiliate-note,.band.teal .affiliate-note{color:rgba(255,255,255,.9)}
 
 /* FOOTER */
-footer{background:#044558;color:#dce4df;padding:50px 3% 20px}
-.footer-grid{width:var(--content-width);max-width:var(--max-width);margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+footer{background:#002136;color:#dce4df;padding:50px 3% 20px}
+.footer-grid{width:var(--content-width);max-width:var(--max-width);margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
 .footer-description{max-width:330px;color:#9eafa8;font-size:11px;margin-top:15px}
 .footer-title{color:#fff;font-size:10px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:13px}
 .footer-column a{display:block;color:#9eafa8;font-size:11px;margin:7px 0;transition:.2s}
@@ -101,19 +103,20 @@ footer .logo-image{border-color:#fff}
 /* TABLET */
 @media(max-width:1000px){
 .navigation{gap:2px}
-.navigation a{padding:6px 9px;font-size:10px}
+.navigation a{padding:8px 10px;font-size:11.5px}
+.logo-text strong{font-size:23px}
 .offer-grid{grid-template-columns:1fr 1fr}
 .footer-grid{grid-template-columns:2fr 1fr 1fr}
 }
 
 /* MOBILE */
 @media(max-width:720px){
-.header{width:96%;min-height:52px}
-.logo-image{width:34px;height:34px;padding:3px}
-.logo-text strong{font-size:15px}
-.navigation{display:none;position:absolute;left:0;right:0;top:50px;padding:8px;background:rgba(255,255,255,.97);border:1px solid rgba(16,43,37,.12);border-radius:20px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:4px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.header{width:100%;min-height:58px;padding:0 10px}
+.logo-image{width:36px;height:36px;padding:3px}
+.logo-text strong{font-size:17px}
+.navigation{display:none;position:absolute;left:0;right:0;top:56px;padding:8px;background:rgba(255,255,255,.97);border:1px solid rgba(16,43,37,.12);border-radius:20px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:4px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
 .navigation.show{display:flex}
-.navigation a{width:100%;padding:9px 15px;border-radius:13px;font-size:11px}
+.navigation a{width:100%;padding:10px 15px;border-radius:13px;font-size:12.5px}
 .menu-button{display:block}
 .section-header{flex-direction:column;align-items:center;text-align:center;gap:10px;margin-bottom:19px}
 .section-header h2{font-size:36px}
@@ -145,7 +148,6 @@ footer{padding:45px 4% 20px}
   <nav class="navigation" id="navigation" aria-label="Main navigation">
     <a href="index.html">Home</a>
     <a href="travel-center.html" class="active">Travel Center</a>
-    <a href="travel-center.html#essentials">Travel Essentials</a>
     <a href="travel-center.html#packages">Tour Packages</a>
     <a href="travel-center.html#transportation">Transportation</a>
     <a href="travel-center.html#bookings">Bookings</a>
@@ -160,56 +162,58 @@ footer{padding:45px 4% 20px}
 </section>
 
 <!-- TOUR PACKAGES -->
-<section class="section" id="packages" aria-labelledby="packages-title">
-  <div class="section-header">
-    <div>
-      <h2 id="packages-title">Tour <em>packages.</em></h2>
-      <p class="section-description">Guided tours, day trips and multi-day packages, ready to book with a trusted partner.</p>
+<div class="band teal">
+  <section class="section" id="packages" aria-labelledby="packages-title">
+    <div class="section-header">
+      <div>
+        <h2 id="packages-title">Tour <em>packages.</em></h2>
+        <p class="section-description">Guided tours, day trips and multi-day packages, ready to book with a trusted partner.</p>
+      </div>
+      <a href="https://www.travelpayouts.com/" class="view-all" target="_blank" rel="noopener sponsored">Browse all tours →</a>
     </div>
-    <a href="https://www.travelpayouts.com/" class="view-all" target="_blank" rel="noopener sponsored">Browse all tours →</a>
-  </div>
-  <div class="offer-grid">
-    <a href="https://www.getyourguide.com/" class="offer-card" id="guided-group-tours" target="_blank" rel="noopener sponsored" aria-label="Multi-day guided tours">
-      <div class="offer-image">
-        <span class="offer-badge">BEST SELLER</span><span class="offer-price">From $89/day</span>
-        <img src="images/travelguide.webp" alt="Guided group tour through a historic old town" loading="lazy">
-      </div>
-      <div class="offer-content">
-        <h3>Guided Group Adventures</h3>
-        <p>Small-group itineraries with a local guide, transport and most meals included.</p>
-        <span class="offer-note">Free cancellation up to 24h before</span>
-        <span class="card-cta">Find a tour →</span>
-      </div>
-    </a>
-    <a href="https://www.viator.com/" class="offer-card" id="private-day-tours" target="_blank" rel="noopener sponsored" aria-label="Private day tours">
-      <div class="offer-image">
-        <span class="offer-badge">POPULAR</span><span class="offer-price">From $45</span>
-        <img src="images/stays.webp" alt="Private boat tour along a tropical coastline" loading="lazy">
-      </div>
-      <div class="offer-content">
-        <h3>Private Day Experiences</h3>
-        <p>Skip-the-line entries, private drivers and half or full-day excursions.</p>
-        <span class="offer-note">Instant confirmation</span>
-        <span class="card-cta">See day tours →</span>
-      </div>
-    </a>
-    <a href="https://www.klook.com/" class="offer-card" id="city-passes" target="_blank" rel="noopener sponsored" aria-label="City experience passes">
-      <div class="offer-image">
-        <span class="offer-badge">SAVE MORE</span><span class="offer-price">From $29</span>
-        <img src="images/transport.webp" alt="City skyline with landmark attractions" loading="lazy">
-      </div>
-      <div class="offer-content">
-        <h3>Attraction &amp; Activity Passes</h3>
-        <p>Bundle museums, landmarks and activities into one pass and pay less per stop.</p>
-        <span class="offer-note">Up to 30% off single tickets</span>
-        <span class="card-cta">View city passes →</span>
-      </div>
-    </a>
-  </div>
-</section>
+    <div class="offer-grid">
+      <a href="https://www.getyourguide.com/" class="offer-card" id="guided-group-tours" target="_blank" rel="noopener sponsored" aria-label="Multi-day guided tours">
+        <div class="offer-image">
+          <span class="offer-badge">BEST SELLER</span><span class="offer-price">From $89/day</span>
+          <img src="images/travelguide.webp" alt="Guided group tour through a historic old town" loading="lazy">
+        </div>
+        <div class="offer-content">
+          <h3>Guided Group Adventures</h3>
+          <p>Small-group itineraries with a local guide, transport and most meals included.</p>
+          <span class="offer-note">Free cancellation up to 24h before</span>
+          <span class="card-cta">Find a tour →</span>
+        </div>
+      </a>
+      <a href="https://www.viator.com/" class="offer-card" id="private-day-tours" target="_blank" rel="noopener sponsored" aria-label="Private day tours">
+        <div class="offer-image">
+          <span class="offer-badge">POPULAR</span><span class="offer-price">From $45</span>
+          <img src="images/stays.webp" alt="Private boat tour along a tropical coastline" loading="lazy">
+        </div>
+        <div class="offer-content">
+          <h3>Private Day Experiences</h3>
+          <p>Skip-the-line entries, private drivers and half or full-day excursions.</p>
+          <span class="offer-note">Instant confirmation</span>
+          <span class="card-cta">See day tours →</span>
+        </div>
+      </a>
+      <a href="https://www.klook.com/" class="offer-card" id="city-passes" target="_blank" rel="noopener sponsored" aria-label="City experience passes">
+        <div class="offer-image">
+          <span class="offer-badge">SAVE MORE</span><span class="offer-price">From $29</span>
+          <img src="images/transport.webp" alt="City skyline with landmark attractions" loading="lazy">
+        </div>
+        <div class="offer-content">
+          <h3>Attraction &amp; Activity Passes</h3>
+          <p>Bundle museums, landmarks and activities into one pass and pay less per stop.</p>
+          <span class="offer-note">Up to 30% off single tickets</span>
+          <span class="card-cta">View city passes →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+</div>
 
 <!-- TRANSPORTATION -->
-<div class="band tint">
+<div class="band white">
   <section class="section" id="transportation" aria-labelledby="transportation-title">
     <div class="section-header">
       <div>
@@ -260,103 +264,54 @@ footer{padding:45px 4% 20px}
 </div>
 
 <!-- BOOKINGS -->
-<section class="section" id="bookings" aria-labelledby="bookings-title">
-  <div class="section-header">
-    <div>
-      <h2 id="bookings-title">Places to <em>stay.</em></h2>
-      <p class="section-description">Hotels, villas, apartments and hostels — compare and book a stay that fits your trip and your budget.</p>
-    </div>
-    <a href="https://www.booking.com/" class="view-all" target="_blank" rel="noopener sponsored">Browse all stays →</a>
-  </div>
-  <div class="offer-grid">
-    <a href="https://www.booking.com/" class="offer-card" id="hotels" target="_blank" rel="noopener sponsored" aria-label="Book hotels">
-      <div class="offer-image">
-        <span class="offer-badge">TOP RATED</span><span class="offer-price">From $65/night</span>
-        <img src="images/stays.webp" alt="Hotel room with ocean view" loading="lazy">
-      </div>
-      <div class="offer-content">
-        <h3>Hotels &amp; Resorts</h3>
-        <p>From budget rooms to beachfront resorts, filtered by rating and location.</p>
-        <span class="offer-note">Pay at the property, mostly</span>
-        <span class="card-cta">Find a hotel →</span>
-      </div>
-    </a>
-    <a href="https://www.airbnb.com/" class="offer-card" id="villas" target="_blank" rel="noopener sponsored" aria-label="Book villas and apartments">
-      <div class="offer-image">
-        <span class="offer-badge">WHOLE PLACE</span><span class="offer-price">From $110/night</span>
-        <img src="images/travelguide.webp" alt="Villa with private pool surrounded by greenery" loading="lazy">
-      </div>
-      <div class="offer-content">
-        <h3>Villas &amp; Private Apartments</h3>
-        <p>Full kitchens and more space for families, groups or longer stays.</p>
-        <span class="offer-note">Great for stays over 5 nights</span>
-        <span class="card-cta">Browse villas →</span>
-      </div>
-    </a>
-    <a href="https://www.hostelworld.com/" class="offer-card" id="hostels" target="_blank" rel="noopener sponsored" aria-label="Book hostels">
-      <div class="offer-image">
-        <span class="offer-badge">BUDGET PICK</span><span class="offer-price">From $14/night</span>
-        <img src="images/packing.webp" alt="Hostel common area with travelers" loading="lazy">
-      </div>
-      <div class="offer-content">
-        <h3>Hostels &amp; Shared Stays</h3>
-        <p>Dorms and private rooms with real reviews from other travelers.</p>
-        <span class="offer-note">Free Wi-Fi at most listings</span>
-        <span class="card-cta">Find a hostel →</span>
-      </div>
-    </a>
-  </div>
-</section>
-
-<!-- TRAVEL ESSENTIALS -->
-<div class="band tint">
-  <section class="section" id="essentials" aria-labelledby="essentials-title">
+<div class="band teal">
+  <section class="section" id="bookings" aria-labelledby="bookings-title">
     <div class="section-header">
       <div>
-        <h2 id="essentials-title">Pack less. <em>Choose better.</em></h2>
-        <p class="section-description">Practical gear worth bringing, picked for packing, comfort and staying connected on the move.</p>
+        <h2 id="bookings-title">Places to <em>stay.</em></h2>
+        <p class="section-description">Hotels, villas, apartments and hostels — compare and book a stay that fits your trip and your budget.</p>
       </div>
-      <a href="https://www.amazon.com/s?k=travel+essentials" class="view-all" target="_blank" rel="noopener sponsored">Browse all essentials →</a>
+      <a href="https://www.booking.com/" class="view-all" target="_blank" rel="noopener sponsored">Browse all stays →</a>
     </div>
     <div class="offer-grid">
-      <a href="https://www.amazon.com/s?k=packing+cubes+travel" class="offer-card" id="packing-essentials" target="_blank" rel="noopener sponsored" aria-label="Shop packing essentials">
+      <a href="https://www.booking.com/" class="offer-card" id="hotels" target="_blank" rel="noopener sponsored" aria-label="Book hotels">
         <div class="offer-image">
-          <span class="offer-badge">TRAVEL SMART</span><span class="offer-price">From $19</span>
-          <img src="images/packing.webp" alt="Travel luggage and packing cubes" loading="lazy">
+          <span class="offer-badge">TOP RATED</span><span class="offer-price">From $65/night</span>
+          <img src="images/stays.webp" alt="Hotel room with ocean view" loading="lazy">
         </div>
         <div class="offer-content">
-          <h3>Smart Packing Essentials</h3>
-          <p>Compression cubes, packable bags and organizers that keep every trip tidy.</p>
-          <span class="offer-note">Fits most carry-ons</span>
-          <span class="card-cta">Shop on Amazon →</span>
+          <h3>Hotels &amp; Resorts</h3>
+          <p>From budget rooms to beachfront resorts, filtered by rating and location.</p>
+          <span class="offer-note">Pay at the property, mostly</span>
+          <span class="card-cta">Find a hotel →</span>
         </div>
       </a>
-      <a href="https://www.amazon.com/s?k=travel+comfort+accessories" class="offer-card" id="travel-comfort" target="_blank" rel="noopener sponsored" aria-label="Shop travel comfort products">
+      <a href="https://www.airbnb.com/" class="offer-card" id="villas" target="_blank" rel="noopener sponsored" aria-label="Book villas and apartments">
         <div class="offer-image">
-          <span class="offer-badge">FLIGHT READY</span><span class="offer-price">From $24</span>
-          <img src="images/comfort.webp" alt="Comfortable airplane travel accessories" loading="lazy">
+          <span class="offer-badge">WHOLE PLACE</span><span class="offer-price">From $110/night</span>
+          <img src="images/travelguide.webp" alt="Villa with private pool surrounded by greenery" loading="lazy">
         </div>
         <div class="offer-content">
-          <h3>Travel Comfort Essentials</h3>
-          <p>Neck pillows, eye masks and compression socks for longer flights.</p>
-          <span class="offer-note">Popular for red-eye flights</span>
-          <span class="card-cta">Shop on Amazon →</span>
+          <h3>Villas &amp; Private Apartments</h3>
+          <p>Full kitchens and more space for families, groups or longer stays.</p>
+          <span class="offer-note">Great for stays over 5 nights</span>
+          <span class="card-cta">Browse villas →</span>
         </div>
       </a>
-      <a href="https://www.amazon.com/s?k=travel+tech+adapter+charger" class="offer-card" id="travel-tech" target="_blank" rel="noopener sponsored" aria-label="Shop travel technology">
+      <a href="https://www.hostelworld.com/" class="offer-card" id="hostels" target="_blank" rel="noopener sponsored" aria-label="Book hostels">
         <div class="offer-image">
-          <span class="offer-badge">STAY CHARGED</span><span class="offer-price">From $32</span>
-          <img src="images/traveltech.webp" alt="Travel technology and smartphone charging" loading="lazy">
+          <span class="offer-badge">BUDGET PICK</span><span class="offer-price">From $14/night</span>
+          <img src="images/packing.webp" alt="Hostel common area with travelers" loading="lazy">
         </div>
         <div class="offer-content">
-          <h3>Smart Travel Technology</h3>
-          <p>Universal adapters, power banks and eSIMs to stay connected abroad.</p>
-          <span class="offer-note">Works in 150+ countries</span>
-          <span class="card-cta">Shop on Amazon →</span>
+          <h3>Hostels &amp; Shared Stays</h3>
+          <p>Dorms and private rooms with real reviews from other travelers.</p>
+          <span class="offer-note">Free Wi-Fi at most listings</span>
+          <span class="card-cta">Find a hostel →</span>
         </div>
       </a>
     </div>
-    <p class="affiliate-note">Some links on this page are affiliate links, including partners such as Amazon and Travelpayouts. If you book or purchase through them, Pinpoint Travel may earn a commission at no extra cost to you.</p>
+    <p class="affiliate-note">Some links on this page are affiliate links, including partners such as Travelpayouts. If you book or purchase through them, Pinpoint Travel may earn a commission at no extra cost to you.</p>
   </section>
 </div>
 
@@ -372,13 +327,6 @@ footer{padding:45px 4% 20px}
         </span>
       </a>
       <p class="footer-description">Smart inspiration for travelers who want to discover more, plan better and travel with confidence.</p>
-    </div>
-    <div class="footer-column">
-      <h4 class="footer-title">Travel Center</h4>
-      <a href="travel-center.html#bookings">Bookings</a>
-      <a href="travel-center.html#essentials">Travel Essentials</a>
-      <a href="travel-center.html#transportation">Transportation</a>
-      <a href="travel-center.html#packages">Tour Packages</a>
     </div>
     <div class="footer-column">
       <h4 class="footer-title">Pinpoint Travel</h4>
