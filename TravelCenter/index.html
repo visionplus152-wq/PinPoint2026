@@ -17,24 +17,25 @@
 <style>
 :root{--dark:#022e3b;--cream:#f7f5ef;--white:#fff;--text:#000102;--muted:#687771;--lime:#dce9b6;--accent:#0084b9;--card-teal:#0084b9;--shadow:0 20px 55px rgba(16,43,37,.12);--radius:25px;--content-width:98%;--max-width:1500px}
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:25px}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{font-family:"DM Sans",Arial,sans-serif;background:var(--cream);color:var(--text);line-height:1.6;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 button,input{font-family:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:4px}
 
-/* HEADER (full width, low side padding, no color difference at the edges) */
-.header{width:100%;min-height:68px;margin:0;padding:0 12px;display:flex;align-items:center;gap:30px;position:relative;z-index:100;background:#fff}
+/* HEADER (sticky on desktop and mobile, full width, low side padding) */
+.header{width:100%;min-height:68px;margin:0;padding:0 12px;display:flex;align-items:center;gap:30px;position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 4px 18px rgba(0,0,0,.08)}
 .logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
 .logo-image{width:42px;height:42px;object-fit:contain;flex-shrink:0;border:2.5px solid #0084b9;border-radius:50%;padding:3px;transition:.2s}
-.logo:hover .logo-image{transform:scale(1.04);border-color:var(--accent)}
+.logo:hover .logo-image{transform:scale(1.04);border-color:#0084b9}
 .logo-text{display:flex;flex-direction:column;justify-content:center;line-height:1}
 .logo-text strong{font-family:"Baloo 2",sans-serif;font-weight:700;letter-spacing:.03em;font-size:27px;color:#00151b}
 .navigation{margin-left:auto;display:flex;align-items:center;gap:3px;padding:4px;background:rgba(255,255,255,.55);border:1px solid #0084b9;border-radius:100px;box-shadow:0 7px 22px rgba(16,43,37,.05);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .navigation a{font-size:14.5px;font-weight:800;color:#080808;transition:color .2s,background .2s,transform .2s;position:relative;padding:9px 16px;border-radius:100px;white-space:nowrap}
-.navigation a:hover{color:#0084b9;background:#000000e3;transform:translateY(-1px)}
+.navigation a:hover{color:#3ec8ff;background:#000000e3;transform:translateY(-1px)}
 .navigation a.active{color:#fff;background:#0084b9;box-shadow:0 5px 15px rgba(5,5,5,.16)}
+.navigation a.active:hover{color:#3ec8ff;background:#000000e3}
 .navigation a.active::after{display:none}
 .menu-button{display:none;border:none;background:transparent;font-size:27px;cursor:pointer;margin-left:auto}
 
@@ -111,6 +112,7 @@ footer .logo-image{border-color:#fff}
 
 /* MOBILE */
 @media(max-width:720px){
+html{scroll-padding-top:70px}
 .header{width:100%;min-height:58px;padding:0 10px}
 .logo-image{width:36px;height:36px;padding:3px}
 .logo-text strong{font-size:17px}
@@ -140,17 +142,17 @@ footer{padding:45px 4% 20px}
 
 <!-- HEADER -->
 <header class="header">
-  <a href="index.html" class="logo" aria-label="Pinpoint Travel home">
+  <a href="https://pinpointtravel.store/" class="logo" aria-label="Pinpoint Travel home">
     <img src="/favicon.png" alt="Pinpoint Travel Logo" class="logo-image">
     <span class="logo-text"><strong>PINPOINT TRAVEL</strong></span>
   </a>
   <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-controls="navigation" aria-expanded="false">☰</button>
   <nav class="navigation" id="navigation" aria-label="Main navigation">
-    <a href="index.html">Home</a>
+    <a href="https://pinpointtravel.store/">Home</a>
     <a href="travel-center.html" class="active">Travel Center</a>
-    <a href="travel-center.html#packages">Tour Packages</a>
-    <a href="travel-center.html#transportation">Transportation</a>
-    <a href="travel-center.html#bookings">Bookings</a>
+    <a href="#packages">Tour Packages</a>
+    <a href="#transportation">Transportation</a>
+    <a href="#bookings">Bookings</a>
   </nav>
 </header>
 
@@ -169,7 +171,7 @@ footer{padding:45px 4% 20px}
         <h2 id="packages-title">Tour <em>packages.</em></h2>
         <p class="section-description">Guided tours, day trips and multi-day packages, ready to book with a trusted partner.</p>
       </div>
-      <a href="https://www.travelpayouts.com/" class="view-all" target="_blank" rel="noopener sponsored">Browse all tours →</a>
+      <a href="#packages" class="view-all">Browse all tours →</a>
     </div>
     <div class="offer-grid">
       <a href="https://www.getyourguide.com/" class="offer-card" id="guided-group-tours" target="_blank" rel="noopener sponsored" aria-label="Multi-day guided tours">
@@ -220,7 +222,7 @@ footer{padding:45px 4% 20px}
         <h2 id="transportation-title">Get <em>moving.</em></h2>
         <p class="section-description">Compare flights, car rentals and transfers so you spend less time waiting and more time traveling.</p>
       </div>
-      <a href="https://www.aviasales.com/" class="view-all" target="_blank" rel="noopener sponsored">Compare all options →</a>
+      <a href="#transportation" class="view-all">Compare all options →</a>
     </div>
     <div class="offer-grid">
       <a href="https://www.aviasales.com/" class="offer-card dark" id="flights" target="_blank" rel="noopener sponsored" aria-label="Search flights">
@@ -271,7 +273,7 @@ footer{padding:45px 4% 20px}
         <h2 id="bookings-title">Places to <em>stay.</em></h2>
         <p class="section-description">Hotels, villas, apartments and hostels — compare and book a stay that fits your trip and your budget.</p>
       </div>
-      <a href="https://www.booking.com/" class="view-all" target="_blank" rel="noopener sponsored">Browse all stays →</a>
+      <a href="#bookings" class="view-all">Browse all stays →</a>
     </div>
     <div class="offer-grid">
       <a href="https://www.booking.com/" class="offer-card" id="hotels" target="_blank" rel="noopener sponsored" aria-label="Book hotels">
@@ -319,7 +321,7 @@ footer{padding:45px 4% 20px}
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <a href="https://pinpointtravel.store" class="logo" aria-label="Pinpoint Travel home">
+      <a href="https://pinpointtravel.store/" class="logo" aria-label="Pinpoint Travel home">
         <img src="/favicon.png" alt="Pinpoint Travel Logo" class="logo-image">
         <span class="logo-text">
           <strong style="color:white;">PINPOINT</strong>
@@ -336,9 +338,9 @@ footer{padding:45px 4% 20px}
     </div>
     <div class="footer-column">
       <h4 class="footer-title">Follow</h4>
-      <a href="#">Instagram</a>
-      <a href="#">Pinterest</a>
-      <a href="#">Facebook</a>
+      <a href="https://www.instagram.com/pinpointtravel1" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.pinterest.com/visionplus152/" target="_blank" rel="noopener">Pinterest</a>
+      <a href="https://www.facebook.com/PinPointTravel" target="_blank" rel="noopener">Facebook</a>
     </div>
   </div>
   <div class="footer-bottom">
