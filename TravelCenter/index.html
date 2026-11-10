@@ -47,16 +47,16 @@ button,input{font-family:inherit}
 
 /* SECTIONS */
 .section{width:var(--content-width);max-width:var(--max-width);margin:32px auto;scroll-margin-top:20px}
-.section-header{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:20px}
+.section-header{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;margin-bottom:26px}
 .section-header h2{font-size:clamp(34px,3vw,45px);line-height:.98;letter-spacing:-.045em}
 .section-header h2 em{font-family:"Playfair Display",serif;font-weight:600}
-.section-description{max-width:100%;color:var(--muted);font-size:15px;margin-top:9px}
+.section-description{max-width:720px;margin:9px auto 0;color:var(--muted);font-size:15px}
 .view-all{font-size:13px;font-weight:800;color:#0084b9;white-space:nowrap;display:inline-flex;align-items:center;padding:10px 18px;border:1.5px solid #0084b9;border-radius:100px;transition:.25s}
 .view-all:hover{background:#0084b9;color:#fff;transform:translateY(-2px)}
 
 /* OFFER CARDS */
 .offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.offer-card{background:#fff;color:var(--text);border-radius:var(--radius);overflow:hidden;border:1px solid rgba(16,43,37,.08);box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s,outline-color .25s;display:flex;flex-direction:column;height:100%;scroll-margin-top:26px;outline:3px solid transparent;outline-offset:4px}
+.offer-card{position:relative;background:#fff;color:var(--text);border-radius:var(--radius);overflow:hidden;border:1px solid rgba(16,43,37,.08);box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s,outline-color .25s;display:flex;flex-direction:column;height:100%;scroll-margin-top:26px;outline:3px solid transparent;outline-offset:4px}
 .offer-card:target{outline-color:var(--accent);box-shadow:0 0 0 8px rgba(12,175,224,.14),var(--shadow);animation:pulse-target 1.6s ease-out 1}
 .offer-card.dark:target{outline-color:#fff;box-shadow:0 0 0 8px rgba(255,255,255,.18),var(--shadow)}
 @keyframes pulse-target{0%{transform:translateY(-2px) scale(1.015)}100%{transform:translateY(0) scale(1)}}
@@ -65,18 +65,27 @@ button,input{font-family:inherit}
 .offer-image{height:300px;position:relative;overflow:hidden;flex-shrink:0}
 .offer-image img{width:100%;height:100%;object-fit:cover}
 .offer-image::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,80,94,.28),transparent 55%)}
-.offer-badge{position:absolute;top:13px;left:13px;z-index:5;background:#fff;color:var(--card-teal);padding:6px 10px;border-radius:100px;font-size:10px;font-weight:800;letter-spacing:.1em}
-.offer-price{position:absolute;top:13px;left:13px;z-index:5;background:rgba(0, 0, 0, 0.945);color:#ffffff;padding:8px 16px;border-radius:100px;font-size:18px;font-weight:800;letter-spacing:-.01em;backdrop-filter:blur(4px)}
 .offer-content{padding:20px 22px 26px;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px}
 .offer-content h3{font-size:24px;margin:3px 0;line-height:1.2}
 .offer-content p{color:var(--muted);font-size:14px;line-height:1.55;max-width:94%}
 .offer-card.dark p{color:rgba(255,255,255,.95)}
-.offer-note{font-size:13px;font-weight:700;color:var(--card-teal);margin-top:2px}
-.offer-card.dark .offer-note{color:#e6f8ff}
 .card-cta{margin-top:14px;min-height:46px;padding:0 24px;border-radius:100px;display:inline-flex;justify-content:center;align-items:center;font-size:14px;font-weight:800;letter-spacing:.02em;background:var(--accent);color:#fff;border:1px solid var(--accent);box-shadow:0 10px 22px rgba(12,175,224,.28);transition:.25s}
 .card-cta:hover{background:#fff;color:var(--accent);transform:translateY(-3px);box-shadow:0 10px 23px rgba(0,0,0,.3)}
 .offer-card.dark .card-cta{background:#fff;color:var(--card-teal);border-color:#fff}
 .offer-card.dark .card-cta:hover{background:#004b7e;color:#fff;border-color:#0084b9}
+
+/* TOUR PACKAGE CARDS: centered text, one Explore button, whole card links to your own page */
+.offer-grid.four{grid-template-columns:repeat(4,1fr)}
+.card-actions{display:flex;justify-content:center;margin-top:auto;padding-top:16px}
+.card-actions .card-cta{margin-top:0}
+.card-link::after{content:"";position:absolute;inset:0;z-index:1}
+.tour-card .offer-image{height:270px}
+.tour-card .offer-content{align-items:center;justify-content:flex-start;text-align:center;padding:22px 20px 26px;gap:6px}
+.tour-card .offer-content h3{font-size:28px}
+.tour-card .offer-content p{max-width:100%}
+.offer-card.dark.tour-card .card-cta.card-link{min-height:50px;padding:0 28px;font-size:15px;background:#fff;color:var(--card-teal);border-color:#fff;box-shadow:0 10px 22px rgba(0,0,0,.18)}
+.offer-card.dark.tour-card .card-cta.card-link:hover,
+.offer-card.dark.tour-card:hover .card-cta.card-link{background:#002136;color:#fff;border-color:#002136}
 
 /* BANDS */
 .band{width:100%;padding:38px 0 42px}
@@ -137,6 +146,26 @@ footer{padding:45px 4% 20px}
 .footer-bottom div,.footer-bottom span+span{display:block;margin-top:7px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
+@media(max-width:1100px){.offer-grid.four{grid-template-columns:1fr 1fr}}
+@media(max-width:720px){
+/* Tour packages: compact 2 x 2 grid */
+.offer-grid.four{grid-template-columns:1fr 1fr;gap:10px}
+.tour-card .offer-image{height:185px}
+.tour-card .offer-content{padding:14px 10px 16px;gap:4px}
+.tour-card .offer-content h3{font-size:20px}
+.tour-card .offer-content p{font-size:12.5px;line-height:1.45;max-width:100%}
+.card-actions{width:100%}
+.offer-card.dark.tour-card .card-cta.card-link{width:100%;min-height:40px;padding:0 8px;font-size:12.5px}
+/* Transportation + Stays: swipe sideways like a carousel */
+.offer-grid:not(.four){display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding:4px 2px 18px;scroll-padding:0 2px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.offer-grid:not(.four)::-webkit-scrollbar{display:none}
+.offer-grid:not(.four) .offer-card{flex:0 0 76%;scroll-snap-align:start;height:auto;border-radius:20px}
+.offer-grid:not(.four) .offer-image{height:215px}
+.offer-grid:not(.four) .offer-content{padding:14px 14px 18px;gap:4px}
+.offer-grid:not(.four) .offer-content h3{font-size:18px}
+.offer-grid:not(.four) .offer-content p{font-size:12.5px;line-height:1.45}
+.offer-grid:not(.four) .card-cta{margin-top:10px;min-height:40px;padding:0 18px;font-size:13px}
+}
 </style>
 </head>
 
@@ -162,10 +191,11 @@ footer{padding:45px 4% 20px}
 
 <!-- BANNER -->
 <section class="banner" aria-label="Featured banner">
-  <img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/tcbanner.webp" alt="Discover the World with PinPoint Travel" width="2048" height="768" fetchpriority="high">
+  <img src="https://pinpointtravel.store/images/tcbanner.webp" alt="Discover the World with PinPoint Travel" width="2048" height="768" fetchpriority="high">
 </section>
 
-<!-- TOUR PACKAGES (white band, teal cards) -->
+<!-- TOUR PACKAGES (white band, teal cards)
+     Each card links (whole card + Explore button) to your own destination page -->
 <div class="band white">
   <section class="section" id="packages" aria-labelledby="packages-title">
     <div class="section-header">
@@ -173,45 +203,61 @@ footer{padding:45px 4% 20px}
         <h2 id="packages-title">Tour <em>packages.</em></h2>
         <p class="section-description">Guided tours, day trips and multi-day packages, ready to book with a trusted partner.</p>
       </div>
-      <a href="#packages" class="view-all">Browse all tours →</a>
     </div>
-    <div class="offer-grid">
-      <a href="https://www.getyourguide.com/" class="offer-card dark" id="guided-group-tours" target="_blank" rel="noopener sponsored" aria-label="Multi-day guided tours">
+    <div class="offer-grid four">
+
+      <div class="offer-card dark tour-card" id="europe">
         <div class="offer-image">
-          <span class="offer-price">From €17.58</span>
-          <img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/toycastle.webp" alt="Guided group tour through a historic old town" loading="lazy">
+          <img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/europe.webp" alt="Medieval castle in Europe" loading="lazy">
         </div>
         <div class="offer-content">
-          <h3>Toy Museum + Fairytale Castle</h3>
-          <p>Toy Museum of Colmar and the breathtaking medieval Haut-Koenigsbourg Castle pass</p>
-          <span class="offer-note">Save 5% Instantly</span>
-          <span class="card-cta">Get Your Tickets →</span>
+          <h3>Europe</h3>
+          <p>Castles, old towns, coastlines and city breaks across the continent.</p>
+          <div class="card-actions">
+            <a href="europe.html" class="card-cta card-link">Explore Europe →</a>
+          </div>
         </div>
-      </a>
-      <a href="https://www.viator.com/" class="offer-card dark" id="private-day-tours" target="_blank" rel="noopener sponsored" aria-label="Private day tours">
+      </div>
+
+      <div class="offer-card dark tour-card" id="america">
         <div class="offer-image">
-          <span class="offer-price">From $45</span>
-          <img src="images/stays.webp" alt="Private boat tour along a tropical coastline" loading="lazy">
+          <img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/america.webp" alt="North and South America landmarks" loading="lazy">
         </div>
         <div class="offer-content">
-          <h3>Private Day Experiences</h3>
-          <p>Skip-the-line entries, private drivers and half or full-day excursions.</p>
-          <span class="offer-note">Instant confirmation</span>
-          <span class="card-cta">See day tours →</span>
+          <h3>America</h3>
+          <p>North and South America, from New York skylines to Amazon jungles and Patagonia.</p>
+          <div class="card-actions">
+            <a href="america.html" class="card-cta card-link">Explore America →</a>
+          </div>
         </div>
-      </a>
-      <a href="https://www.klook.com/" class="offer-card dark" id="city-passes" target="_blank" rel="noopener sponsored" aria-label="City experience passes">
+      </div>
+
+      <div class="offer-card dark tour-card" id="asia">
         <div class="offer-image">
-          <span class="offer-price">From $29</span>
-          <img src="images/transport.webp" alt="City skyline with landmark attractions" loading="lazy">
+          <img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/asia.webp" alt="Asian temple and city scene" loading="lazy">
         </div>
         <div class="offer-content">
-          <h3>Attraction &amp; Activity Passes</h3>
-          <p>Bundle museums, landmarks and activities into one pass and pay less per stop.</p>
-          <span class="offer-note">Up to 30% off single tickets</span>
-          <span class="card-cta">View city passes →</span>
+          <h3>Asia</h3>
+          <p>Temples, street food, islands and busy cities from Japan to Thailand.</p>
+          <div class="card-actions">
+            <a href="asia.html" class="card-cta card-link">Explore Asia →</a>
+          </div>
         </div>
-      </a>
+      </div>
+
+      <div class="offer-card dark tour-card" id="africa">
+        <div class="offer-image">
+          <img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/africa.webp" alt="African safari landscape" loading="lazy">
+        </div>
+        <div class="offer-content">
+          <h3>Africa</h3>
+          <p>Safaris, desert dunes, beaches and ancient wonders across the continent.</p>
+          <div class="card-actions">
+            <a href="africa.html" class="card-cta card-link">Explore Africa →</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 </div>
@@ -224,42 +270,35 @@ footer{padding:45px 4% 20px}
         <h2 id="transportation-title">Get <em>moving.</em></h2>
         <p class="section-description">Compare flights, car rentals and transfers so you spend less time waiting and more time traveling.</p>
       </div>
-      <a href="#transportation" class="view-all">Compare all options →</a>
     </div>
     <div class="offer-grid">
       <a href="https://www.aviasales.com/" class="offer-card" id="flights" target="_blank" rel="noopener sponsored" aria-label="Search flights">
         <div class="offer-image">
-          <span class="offer-price">From $79</span>
-          <img src="images/transport.webp" alt="Airplane wing above the clouds" loading="lazy">
+          <img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/flight.webp" alt="Airplane wing above the clouds" loading="lazy">
         </div>
         <div class="offer-content">
-          <h3>Search &amp; Compare Flights</h3>
+          <h3>Flights</h3>
           <p>Search hundreds of airlines at once and set a price alert for your route.</p>
-          <span class="offer-note">Price-drop alerts included</span>
           <span class="card-cta">Search flights →</span>
         </div>
       </a>
       <a href="https://www.rentalcars.com/" class="offer-card" id="car-rentals" target="_blank" rel="noopener sponsored" aria-label="Compare car rentals">
         <div class="offer-image">
-          <span class="offer-price">From $19/day</span>
-          <img src="images/traveltech.webp" alt="Car parked on a scenic coastal road" loading="lazy">
+          <img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/carrent.webp" alt="Car parked on a scenic coastal road" loading="lazy">
         </div>
         <div class="offer-content">
-          <h3>Rental Cars, Any Destination</h3>
+          <h3>Vehicle Rental</h3>
           <p>Compare rental providers side by side and lock in a rate with no upfront card fee.</p>
-          <span class="offer-note">No card fee to reserve</span>
           <span class="card-cta">Compare cars →</span>
         </div>
       </a>
       <a href="https://www.kiwitaxi.com/" class="offer-card" id="airport-transfers" target="_blank" rel="noopener sponsored" aria-label="Book airport transfers">
         <div class="offer-image">
-          <span class="offer-price">From $15</span>
-          <img src="images/comfort.webp" alt="Airport terminal with arriving traveler" loading="lazy">
+          <img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/transfer.webp" alt="Airport terminal with arriving traveler" loading="lazy">
         </div>
         <div class="offer-content">
-          <h3>Airport &amp; City Transfers</h3>
+          <h3>Transfers</h3>
           <p>Fixed-price rides booked ahead, with the driver waiting at arrivals.</p>
-          <span class="offer-note">Fixed price, no meter</span>
           <span class="card-cta">Book a transfer →</span>
         </div>
       </a>
@@ -275,42 +314,35 @@ footer{padding:45px 4% 20px}
         <h2 id="bookings-title">Places to <em>stay.</em></h2>
         <p class="section-description">Hotels, villas, apartments and hostels — compare and book a stay that fits your trip and your budget.</p>
       </div>
-      <a href="#bookings" class="view-all">Browse all stays →</a>
     </div>
     <div class="offer-grid">
       <a href="https://www.booking.com/" class="offer-card dark" id="hotels" target="_blank" rel="noopener sponsored" aria-label="Book hotels">
         <div class="offer-image">
-          <span class="offer-price">From $65/night</span>
           <img src="images/stays.webp" alt="Hotel room with ocean view" loading="lazy">
         </div>
         <div class="offer-content">
           <h3>Hotels &amp; Resorts</h3>
           <p>From budget rooms to beachfront resorts, filtered by rating and location.</p>
-          <span class="offer-note">Pay at the property, mostly</span>
           <span class="card-cta">Find a hotel →</span>
         </div>
       </a>
       <a href="https://www.airbnb.com/" class="offer-card dark" id="villas" target="_blank" rel="noopener sponsored" aria-label="Book villas and apartments">
         <div class="offer-image">
-          <span class="offer-price">From $110/night</span>
           <img src="images/travelguide.webp" alt="Villa with private pool surrounded by greenery" loading="lazy">
         </div>
         <div class="offer-content">
           <h3>Villas &amp; Private Apartments</h3>
           <p>Full kitchens and more space for families, groups or longer stays.</p>
-          <span class="offer-note">Great for stays over 5 nights</span>
           <span class="card-cta">Browse villas →</span>
         </div>
       </a>
       <a href="https://www.hostelworld.com/" class="offer-card dark" id="hostels" target="_blank" rel="noopener sponsored" aria-label="Book hostels">
         <div class="offer-image">
-          <span class="offer-price">From $14/night</span>
           <img src="images/packing.webp" alt="Hostel common area with travelers" loading="lazy">
         </div>
         <div class="offer-content">
           <h3>Hostels &amp; Shared Stays</h3>
           <p>Dorms and private rooms with real reviews from other travelers.</p>
-          <span class="offer-note">Free Wi-Fi at most listings</span>
           <span class="card-cta">Find a hostel →</span>
         </div>
       </a>
