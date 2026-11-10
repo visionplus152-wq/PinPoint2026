@@ -12,10 +12,10 @@
 <title>Travel Center | Pinpoint Travel</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Baloo+2:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Baloo+2:wght@600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="/favicon.png">
 <style>
-:root{--dark:#022e3b;--cream:#f7f5ef;--white:#fff;--text:#000102;--muted:#687771;--lime:#dce9b6;--accent:#0084b9;--card-teal:#0084b9;--shadow:0 20px 55px rgba(16,43,37,.12);--radius:25px;--content-width:98%;--max-width:1500px;--header-bg:#002136}
+:root{--dark:#022e3b;--cream:#f7f5ef;--white:#fff;--text:#000102;--muted:#687771;--lime:#000000;--accent:#0084b9;--card-teal:#0084b9;--shadow:0 20px 55px rgba(16,43,37,.12);--radius:25px;--content-width:98%;--max-width:1500px;--header-bg:#002136}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{font-family:"DM Sans",Arial,sans-serif;background:var(--cream);color:var(--text);line-height:1.6;overflow-x:hidden}
@@ -24,7 +24,7 @@ a{text-decoration:none;color:inherit}
 button,input{font-family:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:4px}
 
-/* HEADER (sticky, dark #002136 background) */
+/* HEADER */
 .header{width:100%;min-height:68px;margin:0;padding:0 12px;display:flex;align-items:center;gap:30px;position:sticky;top:0;z-index:100;background:var(--header-bg);box-shadow:0 4px 18px rgba(0,0,0,.25)}
 .logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
 .logo-image{width:42px;height:42px;object-fit:contain;flex-shrink:0;border:2.5px solid #0084b9;border-radius:50%;padding:3px;transition:.2s}
@@ -41,15 +41,16 @@ button,input{font-family:inherit}
 
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-/* BANNER (full width, no side gaps, no link) */
+/* BANNER */
 .banner{width:100%;max-width:none;margin:0;background:#0084b9;line-height:0}
 .banner img{width:100%;height:auto;display:block}
 
 /* SECTIONS */
 .section{width:var(--content-width);max-width:var(--max-width);margin:32px auto;scroll-margin-top:20px}
 .section-header{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;margin-bottom:26px}
-.section-header h2{font-size:clamp(34px,3vw,45px);line-height:.98;letter-spacing:-.045em}
-.section-header h2 em{font-family:"Playfair Display",serif;font-weight:600}
+/* One font only for all section headings (Poppins); highlighted word uses same font, only colour changes */
+.section-header h2{font-family:"Poppins",Arial,sans-serif;font-weight:700;font-size:clamp(34px,3vw,45px);line-height:1.1;letter-spacing:-.02em}
+.section-header h2 em{font-family:inherit;font-style:normal;font-weight:inherit;color:var(--accent)}
 .section-description{max-width:720px;margin:9px auto 0;color:var(--muted);font-size:15px}
 .view-all{font-size:13px;font-weight:800;color:#0084b9;white-space:nowrap;display:inline-flex;align-items:center;padding:10px 18px;border:1.5px solid #0084b9;border-radius:100px;transition:.25s}
 .view-all:hover{background:#0084b9;color:#fff;transform:translateY(-2px)}
@@ -74,7 +75,7 @@ button,input{font-family:inherit}
 .offer-card.dark .card-cta{background:#fff;color:var(--card-teal);border-color:#fff}
 .offer-card.dark .card-cta:hover{background:#004b7e;color:#fff;border-color:#0084b9}
 
-/* TOUR PACKAGE CARDS: centered text, one Explore button, whole card links to your own page */
+/* TOUR PACKAGE CARDS */
 .offer-grid.four{grid-template-columns:repeat(4,1fr)}
 .card-actions{display:flex;justify-content:center;margin-top:auto;padding-top:16px}
 .card-actions .card-cta{margin-top:0}
@@ -91,8 +92,8 @@ button,input{font-family:inherit}
 .band{width:100%;padding:38px 0 42px}
 .band.tint,.band.teal{background:#0084b9}
 .band.white{background:#fff}
-.band.tint .section-header h2,.band.tint .section-header h2 em,
-.band.teal .section-header h2,.band.teal .section-header h2 em{color:#fff}
+.band.tint .section-header h2,.band.teal .section-header h2{color:#fff}
+.band.tint .section-header h2 em,.band.teal .section-header h2 em{color:var(--lime)}
 .band.tint .section-description,.band.teal .section-description{color:#f0fbff}
 .band.tint .view-all,.band.teal .view-all{border-color:#fff;color:#fff}
 .band.tint .view-all:hover,.band.teal .view-all:hover{background:#fff;color:#0084b9}
@@ -102,7 +103,7 @@ button,input{font-family:inherit}
 
 /* FOOTER */
 footer{background:#002136;color:#dce4df;padding:50px 3% 20px}
-.footer-grid{width:var(--content-width);max-width:var(--max-width);margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+.footer-grid{width:var(--content-width);max-width:var(--max-width);margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
 .footer-description{max-width:380px;color:#b4c3bd;font-size:14px;line-height:1.65;margin-top:15px}
 .footer-title{color:#fff;font-size:13px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:14px}
 .footer-column a{display:block;color:#b4c3bd;font-size:14.5px;margin:9px 0;transition:.2s}
@@ -116,7 +117,7 @@ footer .logo-image{border-color:#fff}
 .navigation a{padding:8px 10px;font-size:12.5px}
 .logo-text strong{font-size:23px}
 .offer-grid{grid-template-columns:1fr 1fr}
-.footer-grid{grid-template-columns:2fr 1fr 1fr}
+.footer-grid{grid-template-columns:2fr 1fr 1fr 1fr;gap:28px}
 }
 
 /* MOBILE */
@@ -129,16 +130,19 @@ html{scroll-padding-top:70px}
 .navigation.show{display:flex}
 .navigation a{width:100%;padding:11px 15px;border-radius:13px;font-size:14px}
 .menu-button{display:block}
-.section-header{flex-direction:column;align-items:center;text-align:center;gap:10px;margin-bottom:19px}
-.section-header h2{font-size:36px}
-.section-description{max-width:100%;margin:8px auto 0;font-size:14.5px}
+
+/* Smaller headings, tighter top padding, no subtext (mobile only) */
+.section-header{flex-direction:column;align-items:center;text-align:center;gap:0;margin-bottom:14px}
+.section-header h2{font-size:26px;line-height:1.15;letter-spacing:-.01em}
+.section-description{display:none}
 .view-all{display:inline-block;margin-top:10px}
+.band{padding:20px 0 24px}
+
 .offer-grid{grid-template-columns:1fr;gap:13px}
 .offer-image{height:230px}
 .offer-content{padding:18px 18px 24px}
 .offer-content h3{font-size:22px}
 .offer-content p{font-size:14px}
-.band{padding:30px 0 33px}
 footer{padding:45px 4% 20px}
 .footer-grid{width:96%;grid-template-columns:1fr 1fr;gap:30px}
 .footer-brand{grid-column:span 2}
@@ -191,11 +195,10 @@ footer{padding:45px 4% 20px}
 
 <!-- BANNER -->
 <section class="banner" aria-label="Featured banner">
-  <img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/tcbanner.webp" alt="Discover the World with PinPoint Travel" width="2048" height="768" fetchpriority="high">
+  <img src="https://pinpointtravel.store/images/tcbanner.webp" alt="Discover the World with PinPoint Travel" width="2048" height="768" fetchpriority="high">
 </section>
 
-<!-- TOUR PACKAGES (white band, teal cards)
-     Each card links (whole card + Explore button) to your own destination page -->
+<!-- TOUR PACKAGES -->
 <div class="band white">
   <section class="section" id="packages" aria-labelledby="packages-title">
     <div class="section-header">
@@ -262,7 +265,7 @@ footer{padding:45px 4% 20px}
   </section>
 </div>
 
-<!-- TRANSPORTATION (teal band, white cards) -->
+<!-- TRANSPORTATION -->
 <div class="band teal">
   <section class="section" id="transportation" aria-labelledby="transportation-title">
     <div class="section-header">
@@ -306,44 +309,45 @@ footer{padding:45px 4% 20px}
   </section>
 </div>
 
-<!-- BOOKINGS (white band, teal cards) -->
+<!-- PLACES TO STAY -->
 <div class="band white">
   <section class="section" id="bookings" aria-labelledby="bookings-title">
     <div class="section-header">
       <div>
         <h2 id="bookings-title">Places to <em>stay.</em></h2>
-        <p class="section-description">Hotels, villas, apartments and hostels — compare and book a stay that fits your trip and your budget.</p>
+        <p class="section-description">Resorts, remote getaways and budget-friendly rooms — compare and book a stay that fits your trip and your budget.</p>
       </div>
     </div>
     <div class="offer-grid">
-      <a href="https://www.booking.com/" class="offer-card dark" id="hotels" target="_blank" rel="noopener sponsored" aria-label="Book hotels">
+      <!-- Replace the image files below with your own photos that match each card (e.g. images/hotels.webp, images/nature-retreats.webp, images/budget-stays.webp) -->
+      <a href="https://www.booking.com/" class="offer-card dark" id="hotels" target="_blank" rel="noopener sponsored" aria-label="Book hotels and resorts">
         <div class="offer-image">
-          <img src="images/stays.webp" alt="Hotel room with ocean view" loading="lazy">
+          <img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/hotels.webp" alt="Hotel room with ocean view" loading="lazy">
         </div>
         <div class="offer-content">
           <h3>Hotels &amp; Resorts</h3>
-          <p>From budget rooms to beachfront resorts, filtered by rating and location.</p>
+          <p>From city hotels to beachfront resorts, filtered by rating and location.</p>
           <span class="card-cta">Find a hotel →</span>
         </div>
       </a>
-      <a href="https://www.airbnb.com/" class="offer-card dark" id="villas" target="_blank" rel="noopener sponsored" aria-label="Book villas and apartments">
+      <a href="https://www.airbnb.com/" class="offer-card dark" id="nature-retreats" target="_blank" rel="noopener sponsored" aria-label="Book nature and remote retreats">
         <div class="offer-image">
-          <img src="images/travelguide.webp" alt="Villa with private pool surrounded by greenery" loading="lazy">
+          <img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/nature.webp" alt="Secluded cabin surrounded by forest and mountains" loading="lazy">
         </div>
         <div class="offer-content">
-          <h3>Villas &amp; Private Apartments</h3>
-          <p>Full kitchens and more space for families, groups or longer stays.</p>
-          <span class="card-cta">Browse villas →</span>
+          <h3>Nature &amp; Remote Retreats</h3>
+          <p>Cabins, eco lodges and hidden villas far from the crowds, built for quiet escapes.</p>
+          <span class="card-cta">Find a retreat →</span>
         </div>
       </a>
-      <a href="https://www.hostelworld.com/" class="offer-card dark" id="hostels" target="_blank" rel="noopener sponsored" aria-label="Book hostels">
+      <a href="https://www.hostelworld.com/" class="offer-card dark" id="budget-stays" target="_blank" rel="noopener sponsored" aria-label="Book budget-friendly stays">
         <div class="offer-image">
-          <img src="images/packing.webp" alt="Hostel common area with travelers" loading="lazy">
+          <img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/budget.webp" alt="Cozy budget room and shared hostel space" loading="lazy">
         </div>
         <div class="offer-content">
-          <h3>Hostels &amp; Shared Stays</h3>
-          <p>Dorms and private rooms with real reviews from other travelers.</p>
-          <span class="card-cta">Find a hostel →</span>
+          <h3>Budget-Friendly Stays</h3>
+          <p>Hostels, guesthouses and affordable rooms with real reviews from other travelers.</p>
+          <span class="card-cta">Find a budget stay →</span>
         </div>
       </a>
     </div>
@@ -369,6 +373,13 @@ footer{padding:45px 4% 20px}
       <a href="about.html">About Us</a>
       <a href="contact.html">Contact</a>
       <a href="privacy.html">Privacy Policy</a>
+    </div>
+    <div class="footer-column">
+      <h4 class="footer-title">Travel Center</h4>
+      <!-- Blank links for now: replace "#" with the real page URLs when the pages are ready -->
+      <a href="#">Tour Packages</a>
+      <a href="#">Transportation</a>
+      <a href="#">Accommodation</a>
     </div>
     <div class="footer-column">
       <h4 class="footer-title">Follow</h4>
