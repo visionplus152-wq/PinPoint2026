@@ -519,7 +519,7 @@ const SEL=[
  ['s-partner','partner','Partner',Object.keys(P).map(x=>[x,P[x].n])],
  ['s-type','type','Tour type',Object.keys(T).map(x=>[x,T[x]])]
 ];
-let f={trend:1},q='';
+let f={},q='';
 $('fgrid').innerHTML=SEL.map(([id,k,l,it])=>`<label>${l}<select id="${id}" data-k="${k}"><option value="">All</option>${it.map(([v,t])=>`<option value="${v}">${t}</option>`).join('')}</select></label>`).join('')+'<div class="row"><button class="trend" id="trend">Trending only</button><button class="clear" id="clear">Clear all</button></div>';
 function drawFilters(){
   const m=all.filter(({p,country})=>
