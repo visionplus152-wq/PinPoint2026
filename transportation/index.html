@@ -314,8 +314,14 @@ function openPanel(k,scroll){
 }
 document.querySelectorAll('.offer-card').forEach(c=>c.querySelector('.toggle').addEventListener('click',()=>openPanel(c.dataset.k,true)));
 document.querySelectorAll('.close').forEach(b=>b.addEventListener('click',()=>{openPanel(b.dataset.close,false);$(IDS[b.dataset.close]).scrollIntoView({behavior:'smooth',block:'center'})}));
-const h=Object.keys(IDS).find(k=>IDS[k]===location.hash.slice(1));
-if(h)openPanel(h,false);
+function openFromHash(){
+  const k=Object.keys(IDS).find(k=>IDS[k]===location.hash.slice(1));
+  if(!k)return;
+  if(!$('panel-'+k).classList.contains('open'))openPanel(k,false);
+  setTimeout(()=>$('panel-'+k).scrollIntoView({behavior:'smooth',block:'start'}),350);
+}
+openFromHash();
+window.addEventListener('hashchange',openFromHash);
 
 /* mobile menu */
 const mb=$('menuButton'),nav=$('navigation');
