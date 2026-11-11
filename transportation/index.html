@@ -1,1 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false" seraph-accel-crit="1" data-no-defer="1" data-cmp-ab="2">
+(function(){var s=document.createElement("script");s.async=1;s.setAttribute("data-cmp-ab","2");s.src='https://emrldco.com/NTYxOTk5.js?t=561999';document.head.appendChild(s);})();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Compare flights, car rentals and airport transfers. Pick a popular route or city and book with a trusted partner.">
+<meta name="author" content="Pinpoint Travel">
+<link rel="canonical" href="https://pinpointtravel.store/transportation/">
+<title>Transportation | Pinpoint Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Baloo+2:wght@600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="/favicon.png">
+<style>
+:root{--navy:#002136;--accent:#0084b9;--sky:#03b8ff;--cream:#f7f5ef;--text:#000102;--muted:#687771;--line:rgba(16,43,37,.1);--sh:0 12px 22px rgba(0,0,0,.45);--sh-h:0 16px 24px #000000e7;--r:25px;--max:1500px;--ease:.35s ease}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:"DM Sans",Arial,sans-serif;background:var(--cream);color:var(--text);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 
+/* HEADER */
+.header{position:sticky;top:0;z-index:100;min-height:68px;padding:0 12px;display:flex;align-items:center;gap:30px;background:var(--navy);box-shadow:0 4px 18px rgba(0,0,0,.25)}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo-image{width:42px;height:42px;object-fit:contain;padding:3px;border:2.5px solid var(--accent);border-radius:50%;transition:.2s}
+.logo:hover .logo-image{transform:scale(1.04);border-color:#3ec8ff}
+.logo-text{display:flex;flex-direction:column;justify-content:center;line-height:1}
+.logo-text strong{font-family:"Baloo 2",sans-serif;font-weight:700;letter-spacing:.03em;font-size:27px;color:#fff}
+.logo-text small{font-size:11px;letter-spacing:.2em;color:#9eafa8}
+.navigation{margin-left:auto;display:flex;align-items:center;gap:3px;padding:4px;background:rgba(255,255,255,.06);border:1px solid var(--accent);border-radius:100px;box-shadow:0 7px 22px rgba(0,0,0,.2);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.navigation a{font-size:14.5px;font-weight:800;color:#fff;padding:9px 16px;border-radius:100px;white-space:nowrap;transition:color .2s,background .2s,transform .2s}
+.navigation a:hover{color:#000d13;background:var(--sky);transform:translateY(-1px)}
+.navigation a.active{background:var(--accent);box-shadow:0 5px 15px rgba(0,0,0,.3)}
+.navigation a.active:hover{color:#fff;background:#0099d6}
+.menu-button{display:none;margin-left:auto;border:none;background:transparent;font-size:27px;color:#fff}
+
+/* PAGE TITLE */
+.page-title{background:var(--accent);color:#fff;text-align:center;padding:52px 4% 48px}
+.crumbs{font-size:12px;font-weight:800;letter-spacing:.14em;margin-bottom:12px;color:#d9f2fb}
+.page-title h1{font-family:"Poppins",Arial,sans-serif;font-weight:700;font-size:clamp(36px,5vw,60px);line-height:1.1;letter-spacing:-.02em}
+.page-title h1 em{font-style:normal;color:#000}
+.page-title p.lead{max-width:680px;margin:12px auto 0;font-size:16px;color:#f0fbff}
+
+/* BANDS */
+.band{width:100%;padding:38px 0 42px}
+.band.white{background:#fff}.band.blue{background:var(--accent)}
+.section{width:98%;max-width:var(--max);margin:0 auto}
+.section-header{text-align:center;margin-bottom:26px}
+.section-header h2{font-family:"Poppins",Arial,sans-serif;font-weight:700;font-size:clamp(34px,3vw,45px);line-height:1.1;letter-spacing:-.02em}
+.section-header h2 em{font-style:normal;color:var(--accent)}
+.section-description{max-width:720px;margin:9px auto 0;color:var(--muted);font-size:15px}
+.blue .section-header h2{color:#fff}.blue .section-header h2 em{color:#000}.blue .section-description{color:#f0fbff}
+
+/* CATEGORY CARDS */
+.offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.offer-card{position:relative;display:flex;flex-direction:column;height:100%;background:var(--accent);color:#fff;border-radius:var(--r);overflow:hidden;border:2px solid #fff;box-shadow:var(--sh);transition:transform .25s,box-shadow .25s,border-color .25s}
+.offer-card:hover{transform:translateY(-5px);box-shadow:var(--sh-h)}
+.offer-card.open{border-color:var(--navy);box-shadow:0 0 0 6px rgba(0,33,54,.25),var(--sh)}
+.offer-image{height:280px;position:relative;overflow:hidden;flex-shrink:0}
+.offer-image img{width:100%;height:100%;object-fit:cover}
+.offer-image::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,80,94,.28),transparent 55%)}
+.badge{position:absolute;z-index:3;top:14px;left:14px;background:#fff;color:var(--navy);font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:7px 14px;border-radius:100px;box-shadow:0 6px 14px rgba(0,0,0,.35)}
+.offer-content{padding:22px 24px 26px;flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px}
+.offer-content h3{font-family:"Poppins",sans-serif;font-size:28px;line-height:1.2}
+.offer-content p{font-size:14.5px;line-height:1.55;max-width:94%;color:rgba(255,255,255,.95)}
+.toggle{margin-top:auto;width:100%;max-width:320px;min-height:50px;padding:0 26px;border-radius:100px;display:inline-flex;justify-content:center;align-items:center;gap:10px;font-size:15px;font-weight:800;letter-spacing:.02em;background:#fff;color:var(--accent);border:1px solid #fff;box-shadow:0 10px 22px rgba(0,0,0,.18);transition:.25s}
+.offer-content p+.toggle{margin-top:18px}
+.toggle:hover,.offer-card.open .toggle{background:var(--navy);color:#fff;border-color:var(--navy)}
+.chev{width:10px;height:10px;border-right:3px solid currentColor;border-bottom:3px solid currentColor;transform:rotate(45deg);margin-bottom:4px;transition:transform .25s}
+.offer-card.open .chev{transform:rotate(-135deg);margin-bottom:-4px}
+.site-link{margin-top:12px;font-size:13px;font-weight:700;color:#e6f7ff;text-decoration:underline;text-underline-offset:3px}
+.site-link:hover{color:#fff}
+
+/* UNFOLD PANELS */
+.panels{margin-top:22px}
+.panel{display:none;background:var(--accent);border:2px solid var(--navy);border-radius:var(--r);box-shadow:var(--sh);padding:26px 20px 28px;animation:unfold .35s ease}
+.panel.open{display:block}
+@keyframes unfold{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+.panel-head{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:18px;color:#fff}
+.panel-head h3{font-family:"Poppins",sans-serif;font-size:clamp(22px,2.4vw,30px);line-height:1.2}
+.panel-head h3 em{font-style:normal;color:#000}
+.close{height:42px;padding:0 20px;border-radius:100px;border:1.5px solid #fff;background:transparent;color:#fff;font-weight:800;font-size:13.5px;transition:.2s}
+.close:hover{background:#fff;color:var(--accent)}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+
+/* ROUTE / CITY CARDS */
+.pk{display:flex;flex-direction:column;background:#fff;border-radius:22px;overflow:hidden;border:1px solid var(--line);color:var(--text);box-shadow:var(--sh);transition:transform .25s,box-shadow .25s}
+.pk:hover{transform:translateY(-4px);box-shadow:var(--sh-h)}
+.pk-top{position:relative;padding:22px 20px 18px;background:linear-gradient(135deg,var(--navy),#00557a);color:#fff;text-align:center}
+.pk-top .codes{display:flex;justify-content:center;align-items:center;gap:12px;font-family:"Poppins",sans-serif;font-weight:700;font-size:34px;line-height:1.1;letter-spacing:.02em}
+.pk-top .codes i{font-style:normal;color:var(--sky);font-size:26px}
+.pk-top .big{font-family:"Poppins",sans-serif;font-weight:700;font-size:30px;line-height:1.15}
+.pk-top small{display:block;margin-top:6px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#b9e8fb;font-weight:800}
+.tag{position:absolute;top:10px;right:10px;background:#fff;color:var(--navy);font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:100px}
+.pk-b{padding:18px 20px 22px;display:flex;flex-direction:column;gap:6px;flex:1;text-align:center}
+.pk-b .where{font-size:12.5px;font-weight:800;letter-spacing:.14em;color:var(--accent);text-transform:uppercase}
+.pk-b h4{font-size:20px;line-height:1.3;color:var(--navy)}
+.pk-b p{font-size:13.5px;color:var(--muted)}
+.go{margin-top:auto;min-height:46px;display:flex;justify-content:center;align-items:center;border-radius:100px;font-size:14px;font-weight:800;letter-spacing:.02em;background:var(--accent);color:#fff;border:1px solid var(--accent);transition:.25s}
+.pk-b p+.go{margin-top:14px}
+.go:hover{background:#fff;color:var(--accent);box-shadow:0 8px 18px rgba(0,0,0,.25)}
+.note{margin-top:22px;font-size:12px;line-height:1.5;color:var(--muted);text-align:center}
+
+/* FOOTER */
+footer{background:var(--navy);color:#dce4df;padding:50px 3% 20px}
+.footer-grid,.footer-bottom{width:98%;max-width:var(--max);margin-inline:auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-description{max-width:380px;margin-top:15px;font-size:14px;line-height:1.65;color:#b4c3bd}
+.footer-title{margin-bottom:14px;font-size:13px;letter-spacing:.13em;text-transform:uppercase;color:#fff}
+.footer-column a{display:block;margin:9px 0;font-size:14.5px;color:#b4c3bd;transition:.2s}
+.footer-column a:hover{color:#fff}
+.footer-bottom{display:flex;justify-content:space-between;gap:20px;margin-top:35px;padding-top:15px;border-top:1px solid rgba(255,255,255,.1);font-size:11.5px;letter-spacing:.08em;color:#8fa39b}
+footer .logo-image{border-color:#fff}
+
+@media(max-width:1000px){
+.navigation{gap:2px}.navigation a{padding:8px 10px;font-size:12.5px}.logo-text strong{font-size:23px}
+.offer-grid{grid-template-columns:1fr 1fr}.pgrid{grid-template-columns:1fr 1fr}.footer-grid{gap:28px}
+}
+@media(max-width:720px){
+html{scroll-padding-top:70px}
+.header{min-height:58px;padding:0 10px}.logo-image{width:36px;height:36px}.logo-text strong{font-size:17px}
+.menu-button{display:block}
+.navigation{display:none;position:absolute;top:56px;left:0;right:0;flex-direction:column;align-items:stretch;gap:4px;padding:8px;background:rgba(0,33,54,.98);border-radius:20px;box-shadow:var(--sh)}
+.navigation.show{display:flex}.navigation a{width:100%;padding:11px 15px;border-radius:13px;font-size:14px}
+.page-title{padding:36px 5% 32px}.page-title p.lead{font-size:14px}
+.band{padding:20px 0 24px}
+.section-header{margin-bottom:14px}.section-header h2{font-size:26px}.section-description{display:none}
+.offer-grid{grid-template-columns:1fr;gap:13px}
+.offer-image{height:210px}.offer-content{padding:18px 18px 22px}.offer-content h3{font-size:24px}
+.panel{padding:18px 12px 20px}.pgrid{grid-template-columns:1fr;gap:12px}
+.pk-top .codes{font-size:30px}
+footer{padding:45px 4% 20px}.footer-grid{grid-template-columns:1fr 1fr;gap:30px;width:96%}.footer-brand{grid-column:span 2}
+.footer-bottom{display:block;width:96%;margin-top:30px;font-size:11px}.footer-bottom span{display:block;margin-top:7px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <a href="https://pinpointtravel.store/" class="logo" aria-label="Pinpoint Travel home">
+    <img src="/favicon.png" alt="Pinpoint Travel Logo" class="logo-image">
+    <span class="logo-text"><strong>PINPOINT TRAVEL</strong></span>
+  </a>
+  <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-controls="navigation" aria-expanded="false">☰</button>
+  <nav class="navigation" id="navigation" aria-label="Main navigation">
+    <a href="https://pinpointtravel.store/">Travel Center</a>
+    <a href="https://pinpointtravel.store/tourpackages/">Tour Packages</a>
+    <a href="https://pinpointtravel.store/transportation/" class="active">Transportation</a>
+    <a href="https://pinpointtravel.store/#bookings">Accommodations</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<section class="page-title" aria-labelledby="page-title">
+  <p class="crumbs">TRAVEL CENTER / TRANSPORTATION</p>
+  <h1 id="page-title">Get <em>moving.</em></h1>
+  <p class="lead">Compare flights, car rentals and transfers so you spend less time waiting and more time traveling.</p>
+</section>
+
+<div class="band white" id="transport">
+  <section class="section" aria-labelledby="transport-title">
+    <div class="section-header">
+      <h2 id="transport-title">Book your <em>ride.</em></h2>
+      <p class="section-description">Choose a service, then open it to see popular routes and cities with direct links to our partners.</p>
+    </div>
+
+    <div class="offer-grid">
+      <div class="offer-card" id="flights" data-k="flights">
+        <div class="offer-image"><span class="badge">Aviasales</span><img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/flight.webp" alt="Airplane wing above the clouds" loading="lazy"></div>
+        <div class="offer-content">
+          <h3>Flights</h3>
+          <p>Search hundreds of airlines at once and set a price alert for your route.</p>
+          <button class="toggle" aria-expanded="false" aria-controls="panel-flights">Popular routes <i class="chev"></i></button>
+          <a class="site-link" data-site="flights" target="_blank" rel="noopener sponsored">Or search any route →</a>
+        </div>
+      </div>
+      <div class="offer-card" id="car-rentals" data-k="cars">
+        <div class="offer-image"><span class="badge">Rentalcars.com</span><img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/carrent.webp" alt="Car parked on a scenic coastal road" loading="lazy"></div>
+        <div class="offer-content">
+          <h3>Vehicle Rental</h3>
+          <p>Compare rental providers side by side and lock in a rate with no upfront card fee.</p>
+          <button class="toggle" aria-expanded="false" aria-controls="panel-cars">Popular cities <i class="chev"></i></button>
+          <a class="site-link" data-site="cars" target="_blank" rel="noopener sponsored">Or search any city →</a>
+        </div>
+      </div>
+      <div class="offer-card" id="airport-transfers" data-k="transfers">
+        <div class="offer-image"><span class="badge">Kiwitaxi</span><img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/transfer.webp" alt="Airport terminal with arriving traveler" loading="lazy"></div>
+        <div class="offer-content">
+          <h3>Transfers</h3>
+          <p>Fixed-price rides booked ahead, with the driver waiting at arrivals.</p>
+          <button class="toggle" aria-expanded="false" aria-controls="panel-transfers">Popular transfers <i class="chev"></i></button>
+          <a class="site-link" data-site="transfers" target="_blank" rel="noopener sponsored">Or book any transfer →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="panels" id="panels"></div>
+    <p class="note">Some links on this page are affiliate links, including partners such as Travelpayouts. If you book or purchase through them, Pinpoint Travel may earn a commission at no extra cost to you.</p>
+  </section>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="https://pinpointtravel.store/" class="logo" aria-label="Pinpoint Travel home">
+        <img src="/favicon.png" alt="Pinpoint Travel Logo" class="logo-image">
+        <span class="logo-text"><strong>PINPOINT</strong><small>TRAVEL</small></span>
+      </a>
+      <p class="footer-description">Smart inspiration for travelers who want to discover more, plan better and travel with confidence.</p>
+    </div>
+    <div class="footer-column">
+      <h4 class="footer-title">Pinpoint Travel</h4>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+    <div class="footer-column">
+      <h4 class="footer-title">Travel Center</h4>
+      <a href="https://pinpointtravel.store/tourpackages/">Tour Packages</a>
+      <a href="https://pinpointtravel.store/transportation/">Transportation</a>
+      <a href="https://pinpointtravel.store/#bookings">Accommodations</a>
+    </div>
+    <div class="footer-column">
+      <h4 class="footer-title">Follow</h4>
+      <a href="https://www.instagram.com/pinpointtravel1" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.pinterest.com/visionplus152/" target="_blank" rel="noopener">Pinterest</a>
+      <a href="https://www.facebook.com/PinPointTravel" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Pinpoint Travel. All rights reserved.</span>
+    <span>PACK LIGHT · WANDER FAR · DISCOVER MORE</span>
+  </div>
+</footer>
+
+<script>
+/* ===================== SETTINGS =====================
+   AFFILIATE: tp() wraps any partner URL in your Travelpayouts tracking link (marker 764206).
+   To use an exact deep link from the Travelpayouts tool, paste it into that card's `link` field
+   (it will be used as-is). Otherwise each card builds its link from the partner URL pattern below.
+   Rentalcars.com: no Travelpayouts link was provided, so its cards use plain URLs. If you get a
+   tracked link, set RC_CAMPAIGN / RC_P below. */
+const MARKER='764206',TRS='561999',PAGE='https://pinpointtravel.store/transportation/';
+const RC_CAMPAIGN='',RC_P='';
+const tp=(c,p,u)=>`https://emrldco.com/re?campaign_id=${c}&marker=${MARKER}&p=${p}&trs=${TRS}&u=${encodeURIComponent(u)}&product_type=linkswitcher&promo_kind=tp_other&page_url=${encodeURIComponent(PAGE)}&install_type=partner`;
+const flightURL=(a,b)=>tp(100,4114,`https://www.aviasales.com/routes/${a.toLowerCase()}/${b.toLowerCase()}`);
+const carURL=(cc,city)=>{const u=`https://www.rentalcars.com/en/city/${cc}/${city}/`;return RC_CAMPAIGN?tp(RC_CAMPAIGN,RC_P,u):u};
+const transferURL=city=>tp(1,647,`https://kiwitaxi.com/en/transfers/${city}`);
+const SITE={flights:tp(100,4114,'https://www.aviasales.com/'),cars:RC_CAMPAIGN?tp(RC_CAMPAIGN,RC_P,'https://www.rentalcars.com/'):'https://www.rentalcars.com/',transfers:tp(1,647,'https://www.kiwitaxi.com/')};
+
+/* flight: [fromName, fromCode, toName, toCode, tag, optional link] */
+const FLIGHTS=[
+ ['Dubai','DXB','London','LON','Popular'],
+ ['Dubai','DXB','Manchester','MAN',''],
+ ['Dubai','DXB','Birmingham','BHX',''],
+ ['Dubai','DXB','Edinburgh','EDI',''],
+ ['Colombo','CMB','Dubai','DXB','Trending'],
+ ['Colombo','CMB','London','LON',''],
+ ['London','LON','New York','NYC','Popular'],
+ ['Dubai','DXB','Paris','PAR',''],
+ ['Singapore','SIN','Bangkok','BKK','']
+];
+/* car: [city, country, countryCode, citySlug, tag, optional link] */
+const CARS=[
+ ['Dubai','United Arab Emirates','ae','dubai','Popular'],
+ ['London','United Kingdom','gb','london',''],
+ ['Paris','France','fr','paris',''],
+ ['Rome','Italy','it','rome',''],
+ ['Barcelona','Spain','es','barcelona','Trending'],
+ ['New York','United States','us','new-york',''],
+ ['Bangkok','Thailand','th','bangkok',''],
+ ['Colombo','Sri Lanka','lk','colombo',''],
+ ['Bali','Indonesia','id','bali','']
+];
+/* transfer: [from, to, citySlug, tag, optional link] */
+const TRANSFERS=[
+ ['Dubai Airport (DXB)','Hotels & city','dubai','Popular'],
+ ['London Heathrow (LHR)','Central London','london',''],
+ ['Paris CDG','Paris center','paris',''],
+ ['Rome Fiumicino (FCO)','Rome center','rome',''],
+ ['Barcelona El Prat (BCN)','City & hotels','barcelona','Trending'],
+ ['Bangkok Suvarnabhumi (BKK)','City & hotels','bangkok',''],
+ ['Phuket Airport (HKT)','Beaches & resorts','phuket',''],
+ ['Bali Ngurah Rai (DPS)','Ubud, Seminyak & more','bali',''],
+ ['Istanbul Airport (IST)','City & hotels','istanbul','']
+];
+
+const PANELS={
+ flights:{title:'Popular <em>flight routes.</em>',cards:FLIGHTS.map(r=>`<article class="pk"><div class="pk-top">${r[4]?`<span class="tag">${r[4]}</span>`:''}<div class="codes">${r[1]}<i>✈</i>${r[3]}</div><small>Flights</small></div><div class="pk-b"><p class="where">One-way or return</p><h4>${r[0]} to ${r[2]}</h4><p>Compare airlines and set a price alert.</p><a class="go" href="${r[5]||flightURL(r[1],r[3])}" target="_blank" rel="noopener sponsored">Check flights →</a></div></article>`)},
+ cars:{title:'Popular <em>rental cities.</em>',cards:CARS.map(r=>`<article class="pk"><div class="pk-top">${r[4]?`<span class="tag">${r[4]}</span>`:''}<div class="big">${r[0]}</div><small>Car rental</small></div><div class="pk-b"><p class="where">${r[1]}</p><h4>Rent a car in ${r[0]}</h4><p>Compare providers side by side.</p><a class="go" href="${r[5]||carURL(r[2],r[3])}" target="_blank" rel="noopener sponsored">Compare cars →</a></div></article>`)},
+ transfers:{title:'Popular <em>transfers.</em>',cards:TRANSFERS.map(r=>`<article class="pk"><div class="pk-top">${r[3]?`<span class="tag">${r[3]}</span>`:''}<div class="big">${r[0].split(' (')[0]}</div><small>Airport transfer</small></div><div class="pk-b"><p class="where">${r[0]}</p><h4>To ${r[1]}</h4><p>Fixed price, driver waiting at arrivals.</p><a class="go" href="${r[4]||transferURL(r[2])}" target="_blank" rel="noopener sponsored">Book transfer →</a></div></article>`)}
+};
+const IDS={flights:'flights',cars:'car-rentals',transfers:'airport-transfers'};
+
+/* ===================== CODE ===================== */
+const $=id=>document.getElementById(id);
+$('panels').innerHTML=Object.keys(PANELS).map(k=>`<div class="panel" id="panel-${k}" role="region" aria-label="${k}"><div class="panel-head"><h3>${PANELS[k].title}</h3><button class="close" data-close="${k}">Close ✕</button></div><div class="pgrid">${PANELS[k].cards.join('')}</div></div>`).join('');
+document.querySelectorAll('.site-link').forEach(a=>a.href=SITE[a.dataset.site]);
+
+function openPanel(k,scroll){
+  const was=$('panel-'+k).classList.contains('open');
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('open'));
+  document.querySelectorAll('.offer-card').forEach(c=>{c.classList.remove('open');c.querySelector('.toggle').setAttribute('aria-expanded','false')});
+  if(was)return;
+  $('panel-'+k).classList.add('open');
+  const c=$(IDS[k]);c.classList.add('open');c.querySelector('.toggle').setAttribute('aria-expanded','true');
+  if(scroll)$('panel-'+k).scrollIntoView({behavior:'smooth',block:'start'});
+}
+document.querySelectorAll('.offer-card').forEach(c=>c.querySelector('.toggle').addEventListener('click',()=>openPanel(c.dataset.k,true)));
+document.querySelectorAll('.close').forEach(b=>b.addEventListener('click',()=>{openPanel(b.dataset.close,false);$(IDS[b.dataset.close]).scrollIntoView({behavior:'smooth',block:'center'})}));
+const h=Object.keys(IDS).find(k=>IDS[k]===location.hash.slice(1));
+if(h)openPanel(h,false);
+
+/* mobile menu */
+const mb=$('menuButton'),nav=$('navigation');
+mb.addEventListener('click',()=>{const o=nav.classList.toggle('show');mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?'Close navigation':'Open navigation')});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('show');mb.setAttribute('aria-expanded','false');mb.setAttribute('aria-label','Open navigation')}));
+</script>
+</body>
+</html>
