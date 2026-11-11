@@ -256,14 +256,159 @@ footer{padding:45px 12px 20px}.footer-grid,.footer-bottom{width:100%}
 
 <script>
 /* ===================== SETTINGS =====================
-   IMAGES: upload your files to these folders (webp, jpg or png - change IMG_EXT to match).
-     Countries -> images/countries/<country-name>.webp   e.g. images/countries/france.webp
-     Tours     -> images/tours/<tour-title>.webp         e.g. images/tours/eiffel-tower-summit-access.webp
-   The exact file name each slot expects is printed inside the empty image box.
-   AFFILIATE LINKS: replace each `base` with your own tracking link, or add a direct URL as the
-   8th item of any package. */
-const IMG_DIR='images/', IMG_EXT='webp';
+   COUNTRY IMAGES (automatic): upload them to the GitHub folder images/countries/ and name each one
+     after the country, lowercase with hyphens: france.webp, united-states.webp, new-zealand.webp
+     The page finds them on its own. The file name is printed inside each empty image box.
+   TOUR IMAGES (manual): paste the image link (or path) for each tour inside the quotes in TOUR_IMG.
+   TOUR PRICES / LINKS (manual, optional): use TOUR_PRICE and TOUR_LINK further down.
+   AFFILIATE LINKS: replace each `base` in P with your own tracking link. */
+const COUNTRY_DIR='https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/countries/', IMG_EXT='webp';
 const CONT_IMG='https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/';
+
+/* ---- TOUR IMAGES: put the link/path between the quotes, e.g. 'https://.../eiffel.webp' or 'images/tours/eiffel.webp' ---- */
+const TOUR_IMG={
+ /* France */
+ 'Eiffel Tower Summit Access':'',
+ 'Paris Pass City Bundle':'',
+ 'Loire Valley Castles Day Trip':'',
+ /* Italy */
+ 'Colosseum & Roman Forum Tour':'',
+ 'Amalfi Coast Boat Day':'',
+ 'Florence & Tuscany Day Trip':'',
+ /* Spain */
+ 'Sagrada Família Skip-the-Line':'',
+ 'Barcelona Tapas & Old Town Walk':'',
+ 'Alhambra Granada Day Trip':'',
+ /* Iceland */
+ 'Northern Lights Hunt':'',
+ 'Golden Circle Day Trip':'',
+ 'Blue Lagoon Entry':'',
+ /* Germany */
+ 'Neuschwanstein Castle Day Trip':'',
+ 'Berlin Highlights Walking Tour':'',
+ /* Greece */
+ 'Acropolis Skip-the-Line Tickets':'',
+ 'Santorini Sunset Sailing':'',
+ /* United Kingdom */
+ 'London Pass':'',
+ 'Stonehenge & Bath Day Trip':'',
+ /* Netherlands */
+ 'Keukenhof Gardens Entry':'',
+ 'Amsterdam Canal Cruise':'',
+ /* United States */
+ 'New York City Pass':'',
+ 'Grand Canyon Day Tour':'',
+ 'Orlando Theme Park Tickets':'',
+ /* Mexico */
+ 'Chichén Itzá Day Trip':'',
+ 'Tulum & Cenote Swim':'',
+ 'Mexico City Street Food Tour':'',
+ /* Peru */
+ 'Machu Picchu Entry & Train':'',
+ 'Rainbow Mountain Hike':'',
+ 'Sacred Valley Day Tour':'',
+ /* Canada */
+ 'Niagara Falls Day Tour':'',
+ 'Banff & Rockies Day Trip':'',
+ /* Brazil */
+ 'Christ the Redeemer & Sugarloaf':'',
+ 'Iguazu Falls Tour':'',
+ /* Argentina */
+ 'Tango Show & Dinner':'',
+ 'Perito Moreno Glacier Day Trip':'',
+ /* Costa Rica */
+ 'Arenal Volcano & Hot Springs':'',
+ 'Monteverde Zipline Adventure':'',
+ /* Colombia */
+ 'Cartagena Old City Walking Tour':'',
+ 'Coffee Region Farm Experience':'',
+ /* Japan */
+ 'Kyoto Temples & Geisha District':'',
+ 'Mt. Fuji Day Trip':'',
+ 'Osaka Street Food Tour':'',
+ /* Thailand */
+ 'Phi Phi Islands Speedboat':'',
+ 'Bangkok Temples & Floating Market':'',
+ 'Chiang Mai Elephant Sanctuary':'',
+ /* UAE */
+ 'Burj Khalifa At the Top':'',
+ 'Desert Safari with BBQ Dinner':'',
+ 'Dubai Explorer Pass':'',
+ /* Vietnam */
+ 'Ha Long Bay Day Cruise':'',
+ 'Hoi An Lantern & Cooking Class':'',
+ /* South Korea */
+ 'Seoul DMZ Tour':'',
+ 'Jeju Island Day Tour':'',
+ /* Singapore */
+ 'Gardens by the Bay Tickets':'',
+ 'Singapore Explorer Pass':'',
+ /* Indonesia */
+ 'Bali Temples & Rice Terraces':'',
+ 'Komodo Island Boat Trip':'',
+ /* India */
+ 'Taj Mahal Sunrise Tour':'',
+ 'Jaipur Pink City Tour':'',
+ /* Egypt */
+ 'Pyramids of Giza & Sphinx Tour':'',
+ 'Nile Dinner Cruise':'',
+ 'Luxor Temples Day Trip':'',
+ /* Morocco */
+ 'Sahara Desert 3-Day Trip':'',
+ 'Marrakech Hot Air Balloon':'',
+ 'Chefchaouen Day Trip':'',
+ /* Tanzania */
+ 'Serengeti Safari':'',
+ 'Zanzibar Spice & Stone Town':'',
+ 'Ngorongoro Crater Day Safari':'',
+ /* South Africa */
+ 'Table Mountain Cable Car':'',
+ 'Cape Point & Penguins Day Trip':'',
+ /* Kenya */
+ 'Masai Mara Safari':'',
+ 'Giraffe Centre & Elephant Orphanage':'',
+ /* Namibia */
+ 'Sossusvlei Dunes Tour':'',
+ 'Swakopmund Desert Adventure':'',
+ /* Mauritius */
+ 'Catamaran Cruise to Île aux Cerfs':'',
+ 'Seven Coloured Earths Island Tour':'',
+ /* Seychelles */
+ 'Praslin & La Digue Island Hopping':'',
+ 'Mahé Island Highlights Tour':'',
+ /* Australia */
+ 'Sydney Opera House Tour':'',
+ 'Great Barrier Reef Snorkel Cruise':'',
+ /* New Zealand */
+ 'Milford Sound Cruise':'',
+ 'Hobbiton Movie Set Tour':'',
+ /* Fiji */
+ 'Island Hopping Cruise':'',
+ 'Cloud 9 Floating Bar Day':'',
+ /* French Polynesia */
+ 'Bora Bora Lagoon Tour':'',
+ 'Moorea Island Day Trip':'',
+ /* Cook Islands */
+ 'Rarotonga Island Circle Tour':'',
+ 'Aitutaki Lagoon Cruise':'',
+ /* Samoa */
+ 'To Sua Ocean Trench Day Tour':'',
+ 'Upolu Island Highlights':'',
+ /* Vanuatu */
+ 'Mount Yasur Volcano Tour':'',
+ 'Blue Lagoon Snorkel Day':'',
+ /* Palau */
+ 'Rock Islands & Jellyfish Lake':'',
+ 'Ngardmau Waterfall Trek':'',
+};
+
+/* ---- OPTIONAL per-tour price and direct affiliate link, e.g.  'Eiffel Tower Summit Access':79  ---- */
+const TOUR_PRICE={
+ /* 'Eiffel Tower Summit Access':79, */
+};
+const TOUR_LINK={
+ /* 'Eiffel Tower Summit Access':'https://your-affiliate-link', */
+};
 const P={
   klook:{n:'Klook',base:'https://www.klook.com/en-US/search/result/?query='},
   tiqets:{n:'Tiqets',base:'https://www.tiqets.com/en/search/?q='},
@@ -272,12 +417,13 @@ const P={
 };
 const S={spring:'Spring',summer:'Summer',autumn:'Autumn',winter:'Winter',all:'Year-round'};
 const B={1:'$ Budget',2:'$$ Mid-range',3:'$$$ Premium'};
-/* Default price shown on each card, by budget level. Set a real price per package with the 7th item (price) in the package list. */
+/* Default price shown on each card, by budget level. Set a real price for a tour in TOUR_PRICE above. */
 const PRICE={1:40,2:85,3:160};
 const T={a:'Attraction tickets',d:'Day trips',p:'City passes',x:'Tours & experiences',m:'Multi-day'};
 
-/* package = [title, partner, season, budget 1-3, trending 0/1, type, optionalPrice, optionalUrl]
-   e.g. ['Eiffel Tower Summit Access','tiqets','spring',2,1,'a',79,'https://your-affiliate-link'] */
+/* package = [title, partner, season, budget 1-3, trending 0/1, type]
+   partner: klook | tiqets | gocity | gyg     season: spring | summer | autumn | winter | all
+   type: a attraction tickets | d day trip | p city pass | x tour/experience | m multi-day */
 const D={
 europe:{n:'Europe',c:[
  ['France',[['Eiffel Tower Summit Access','tiqets','spring',2,1,'a'],['Paris Pass City Bundle','gocity','all',2,0,'p'],['Loire Valley Castles Day Trip','klook','summer',2,0,'d']]],
@@ -319,7 +465,7 @@ africa:{n:'Africa',c:[
  ['Mauritius',[['Catamaran Cruise to Île aux Cerfs','klook','winter',2,1,'x'],['Seven Coloured Earths Island Tour','gyg','all',1,0,'d']]],
  ['Seychelles',[['Praslin & La Digue Island Hopping','klook','all',3,0,'x'],['Mahé Island Highlights Tour','gyg','all',2,0,'d']]]
 ]},
-oceania:{n:'Oceania',c:[
+oceania:{n:'Oceania',img:'',c:[ /* optional: paste a full image link in img:'' if your file name or folder is different */
  ['Australia',[['Sydney Opera House Tour','tiqets','all',2,1,'a'],['Great Barrier Reef Snorkel Cruise','klook','winter',3,1,'x']]],
  ['New Zealand',[['Milford Sound Cruise','klook','summer',3,1,'x'],['Hobbiton Movie Set Tour','gyg','all',2,1,'a']]],
  ['Fiji',[['Island Hopping Cruise','klook','summer',2,1,'x'],['Cloud 9 Floating Bar Day','klook','all',2,0,'x']]],
@@ -341,10 +487,10 @@ function slot(src,label){
   return `<div class="im"><span><b>ADD IMAGE</b>${label}</span><img src="${src}" alt="" loading="lazy" onerror="this.remove()"></div>`;
 }
 function card(o){
-  const [t,pt,se,bu,tr,ty,pc,url]=o.p,pr=P[pt],price=pc||PRICE[bu];
+  const [t,pt,se,bu,tr,ty]=o.p,pr=P[pt],price=TOUR_PRICE[t]||PRICE[bu],url=TOUR_LINK[t];
   const href=url||(pr.base.endsWith('=')?pr.base+encodeURIComponent(t+' '+o.country):pr.base);
-  const f=`${IMG_DIR}tours/${slug(t)}.${IMG_EXT}`;
-  return `<article class="pk"><div class="im" style="position:relative"><span><b>ADD IMAGE</b>${f}</span><img src="${f}" alt="${t}" loading="lazy" onerror="this.remove()"><em class="price">$${price}</em></div>
+  const f=TOUR_IMG[t]||'';
+  return `<article class="pk"><div class="im" style="position:relative"><span><b>ADD IMAGE</b>${t}</span>${f?`<img src="${f}" alt="${t}" loading="lazy" onerror="this.remove()">`:''}<em class="price">$${price}</em></div>
   <div class="pk-b"><p class="where">${o.country}</p><h4>${t}</h4>
   <a class="go" href="${href}" target="_blank" rel="noopener sponsored">Check on ${pr.n} →</a></div></article>`;
 }
@@ -352,12 +498,12 @@ function card(o){
 /* destinations */
 let cur='europe';
 function drawConts(){
-  $('conts').innerHTML=Object.keys(D).map(k=>`<button class="cont" data-k="${k}" aria-pressed="${k===cur}">${slot(`${CONT_IMG}${k}.webp`,k+'.webp')}<span class="lab"><b>${D[k].n}</b><small>${D[k].c.length} countries</small></span></button>`).join('');
+  $('conts').innerHTML=Object.keys(D).map(k=>`<button class="cont" data-k="${k}" aria-pressed="${k===cur}">${slot(D[k].img||`${CONT_IMG}${k}.webp`,k+'.webp')}<span class="lab"><b>${D[k].n}</b><small>${D[k].c.length} countries</small></span></button>`).join('');
 }
 function drawCountries(){
   const cols=[[],[]];
-  D[cur].c.forEach((c,i)=>{const f=`${IMG_DIR}countries/${slug(c[0])}.${IMG_EXT}`;
-    cols[i%2].push(`<div class="country"><button class="ch" aria-expanded="false">${slot(f,f)}<span class="nm"><strong>${c[0]}</strong><small>${c[1].length} tour packages</small></span><span class="tg">View packages</span><span class="chev"></span></button>
+  D[cur].c.forEach((c,i)=>{const f=`${COUNTRY_DIR}${slug(c[0])}.${IMG_EXT}`;
+    cols[i%2].push(`<div class="country"><button class="ch" aria-expanded="false">${slot(f,`countries/${slug(c[0])}.${IMG_EXT}`)}<span class="nm"><strong>${c[0]}</strong><small>${c[1].length} tour packages</small></span><span class="tg">View packages</span><span class="chev"></span></button>
     <div class="panel"><div class="pgrid">${c[1].map(p=>card({p,country:c[0]})).join('')}</div></div></div>`);});
   $('countries').innerHTML=cols.map(a=>`<div class="ccol">${a.join('')}</div>`).join('');
 }
