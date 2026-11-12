@@ -67,9 +67,21 @@ button{cursor:pointer}
 .cont .im{height:190px}
 .cont .lab{position:absolute;z-index:2;left:18px;right:18px;bottom:14px;color:#fff;display:flex;justify-content:space-between;align-items:end}
 .cont .lab b{font-family:"Poppins",sans-serif;font-size:28px;line-height:1.1;color:#fff;letter-spacing:.01em;text-shadow:-3px -3px 0 #002136,3px -3px 0 #002136,-3px 3px 0 #002136,3px 3px 0 #002136,0 -3px 0 #002136,0 3px 0 #002136,-3px 0 0 #002136,3px 0 0 #002136,0 6px 10px rgba(0,0,0,.45)}
-.cont .lab small{display:none}
-.cont[aria-pressed=true]{border-color:var(--accent);box-shadow:0 0 0 6px rgba(0,132,185,.18),var(--shadow)}
+.cont .lab small{font-size:12px;font-weight:700;background:rgba(0,0,0,.35);padding:3px 10px;border-radius:100px}
+.cont[aria-pressed=true]{border-color:var(--navy);box-shadow:0 0 0 6px rgba(0,33,54,.25),var(--sh)}
+.cont[aria-pressed=true] .lab small{background:#fff;color:var(--navy)}
 .cont:hover{transform:translateY(-4px);box-shadow:var(--sh-h)}
+
+/* UNFOLD PANEL (opens right under the clicked continent) */
+.upanel{grid-column:1/-1;position:relative;background:var(--navy);border:2px solid #fff;border-radius:var(--r);box-shadow:var(--sh);padding:22px 16px 24px;animation:unfold .35s ease}
+.upanel::before{content:"";position:absolute;top:-11px;left:50%;width:18px;height:18px;background:var(--navy);border-left:2px solid #fff;border-top:2px solid #fff;transform:translateX(-50%) rotate(45deg)}
+@keyframes unfold{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+.uhead{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:16px;color:#fff}
+.uhead h3{font-family:"Poppins",sans-serif;font-size:clamp(20px,2.2vw,28px);line-height:1.2}
+.uhead h3 em{font-style:normal;color:var(--sky)}
+.uclose{height:40px;padding:0 20px;border-radius:100px;border:1.5px solid #fff;background:transparent;color:#fff;font-weight:800;font-size:13.5px;transition:.2s}
+.uclose:hover{background:#fff;color:var(--navy)}
+.upanel .countries{margin-top:0}
 
 /* COUNTRY ACCORDION */
 .countries{margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
@@ -151,14 +163,15 @@ footer .logo-image{border-color:#fff}
 html{scroll-padding-top:70px}
 .header{min-height:58px;padding:0 10px}.logo-image{width:36px;height:36px}.logo-text strong{font-size:17px}
 .menu-button{display:block}
-.navigation{display:none;position:absolute;top:56px;left:0;right:0;flex-direction:column;align-items:stretch;gap:4px;padding:8px;background:rgba(0,33,54,.98);border-radius:20px;box-shadow:var(--shadow)}
+.navigation{display:none;position:absolute;top:56px;left:0;right:0;flex-direction:column;align-items:stretch;gap:4px;padding:8px;background:rgba(0,33,54,.98);border-radius:20px;box-shadow:var(--sh)}
 .navigation.show{display:flex}.navigation a{width:100%;padding:11px 15px;border-radius:13px;font-size:14px}
 .page-title{padding:36px 5% 32px}.page-title p{font-size:14px}
 .band{padding:20px 0 24px}
 .section-header{margin-bottom:14px}.section-header h2{font-size:26px}.section-description{display:none}
-.conts{gap:10px}.cont .im{height:130px}.cont .lab{left:12px;right:12px}.cont .lab b{font-size:20px;text-shadow:-2px -2px 0 #002136,2px -2px 0 #002136,-2px 2px 0 #002136,2px 2px 0 #002136,0 -2px 0 #002136,0 2px 0 #002136,-2px 0 0 #002136,2px 0 0 #002136}.cont .lab small{display:none}.conts{grid-template-columns:1fr 1fr}.cont:last-child:nth-child(odd){grid-column:span 2}
+.conts{gap:10px}.cont .im{height:130px}.cont .lab{left:12px;right:12px}.cont .lab b{font-size:20px;text-shadow:-2px -2px 0 #002136,2px -2px 0 #002136,-2px 2px 0 #002136,2px 2px 0 #002136,0 -2px 0 #002136,0 2px 0 #002136,-2px 0 0 #002136,2px 0 0 #002136}.conts{grid-template-columns:1fr}
 .ch{gap:12px;padding:10px 14px 10px 10px}.ch .im{width:84px;height:62px}.ch .nm strong{font-size:18px}.ch .tg{display:none}
 .panel .pk{flex-direction:column}.panel .pk .im{width:100%;height:180px;min-height:0}.vstrip .pk{flex-basis:80%}.fgrid{grid-template-columns:1fr 1fr;padding:12px}.fbar .ftoggle{padding:0 16px}
+.upanel{padding:18px 10px 20px}
 .rhead{font-size:14px}
 footer{padding:45px 12px 20px}.footer-grid,.footer-bottom{width:100%}
 .footer-grid{grid-template-columns:1fr 1fr;gap:30px}.footer-brand{grid-column:span 2}
@@ -177,10 +190,10 @@ footer{padding:45px 12px 20px}.footer-grid,.footer-bottom{width:100%}
   <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-controls="navigation" aria-expanded="false">☰</button>
   <nav class="navigation" id="navigation" aria-label="Main navigation">
     <a href="https://pinpointtravel.store/">Travel Center</a>
-    <a href="https://pinpointtravel.store/tourpackages/" class="active">Tour Packages</a>
-    <a href="https://pinpointtravel.store/transportation">Transportation</a>
-    <a href="https://pinpointtravel.store/accommodations">Accommodations</a>
-    <a href="">About</a>
+    <a href="tour-packages.html" class="active">Tour Packages</a>
+    <a href="https://pinpointtravel.store/#transportation">Transportation</a>
+    <a href="https://pinpointtravel.store/#bookings">Accommodations</a>
+    <a href="about.html">About</a>
   </nav>
 </header>
 
@@ -198,7 +211,6 @@ footer{padding:45px 12px 20px}.footer-grid,.footer-bottom{width:100%}
       <p class="section-description">Select a continent, then open a country to see its tour packages.</p>
     </div>
     <div class="conts" id="conts"></div>
-    <div class="countries" id="countries"></div>
     <p class="note">Some links on this page are affiliate links. If you book through them, Pinpoint Travel may earn a commission at no extra cost to you.</p>
   </section>
 </div>
@@ -495,22 +507,44 @@ function card(o){
   <a class="go" href="${href}" target="_blank" rel="noopener sponsored">Check on ${pr.n} →</a></div></article>`;
 }
 
-/* destinations */
-let cur='europe';
-function drawConts(){
-  $('conts').innerHTML=Object.keys(D).map(k=>`<button class="cont" data-k="${k}" aria-pressed="${k===cur}">${slot(D[k].img||`${CONT_IMG}${k}.webp`,k+'.webp')}<span class="lab"><b>${D[k].n}</b><small>${D[k].c.length} countries</small></span></button>`).join('');
+/* destinations: the country list opens right under the clicked continent,
+   and the other continents move down (on mobile each continent is one row) */
+let cur='';
+const colsOf=g=>getComputedStyle(g).gridTemplateColumns.split(' ').length;
+function place(el,panel){
+  const items=[...$('conts').querySelectorAll('.cont')],i=items.indexOf(el),c=colsOf($('conts'));
+  items[Math.min(items.length-1,Math.floor(i/c)*c+c-1)].after(panel);
 }
-function drawCountries(){
+const stateText=k=>cur===k?'Hide ▴':`${D[k].c.length} countries ▾`;
+function drawConts(){
+  $('conts').innerHTML=Object.keys(D).map(k=>`<button class="cont" data-k="${k}" aria-pressed="false" aria-expanded="false" aria-controls="contPanel">${slot(D[k].img||`${CONT_IMG}${k}.webp`,k+'.webp')}<span class="lab"><b>${D[k].n}</b><small>${stateText(k)}</small></span></button>`).join('');
+}
+function countriesHTML(k){
   const cols=[[],[]];
-  D[cur].c.forEach((c,i)=>{const f=`${COUNTRY_DIR}${slug(c[0])}.${IMG_EXT}`;
+  D[k].c.forEach((c,i)=>{const f=`${COUNTRY_DIR}${slug(c[0])}.${IMG_EXT}`;
     cols[i%2].push(`<div class="country"><button class="ch" aria-expanded="false">${slot(f,`countries/${slug(c[0])}.${IMG_EXT}`)}<span class="nm"><strong>${c[0]}</strong><small>${c[1].length} tour packages</small></span><span class="tg">View packages</span><span class="chev"></span></button>
     <div class="panel"><div class="pgrid">${c[1].map(p=>card({p,country:c[0]})).join('')}</div></div></div>`);});
-  $('countries').innerHTML=cols.map(a=>`<div class="ccol">${a.join('')}</div>`).join('');
+  return `<div class="uhead"><h3>${D[k].n} <em>countries.</em></h3><button class="uclose">Close ✕</button></div><div class="countries">${cols.map(a=>`<div class="ccol">${a.join('')}</div>`).join('')}</div>`;
 }
-$('conts').addEventListener('click',e=>{const b=e.target.closest('.cont');if(!b)return;cur=b.dataset.k;drawConts();drawCountries();});
-$('countries').addEventListener('click',e=>{const b=e.target.closest('.ch');if(!b)return;const o=b.parentElement.classList.toggle('open');b.setAttribute('aria-expanded',o);});
-if(D[location.hash.slice(1)])cur=location.hash.slice(1);
-drawConts();drawCountries();
+function openCont(k,scroll){
+  const old=$('contPanel');if(old)old.remove();
+  cur=cur===k?'':k;
+  document.querySelectorAll('.cont').forEach(b=>{const on=b.dataset.k===cur;b.setAttribute('aria-pressed',on);b.setAttribute('aria-expanded',on);b.querySelector('small').textContent=stateText(b.dataset.k);});
+  if(!cur)return;
+  const btn=document.querySelector(`.cont[data-k="${cur}"]`),p=document.createElement('div');
+  p.className='upanel';p.id='contPanel';p.innerHTML=countriesHTML(cur);
+  place(btn,p);
+  if(scroll)setTimeout(()=>btn.scrollIntoView({behavior:'smooth',block:'center'}),60);
+}
+$('conts').addEventListener('click',e=>{
+  if(e.target.closest('.uclose')){const b=document.querySelector(`.cont[data-k="${cur}"]`);openCont(cur,false);b.scrollIntoView({behavior:'smooth',block:'center'});return;}
+  const h=e.target.closest('.ch');
+  if(h){const o=h.parentElement.classList.toggle('open');h.setAttribute('aria-expanded',o);return;}
+  const b=e.target.closest('.cont');if(b)openCont(b.dataset.k,true);
+});
+window.addEventListener('resize',()=>{const p=$('contPanel');if(p&&cur)place(document.querySelector(`.cont[data-k="${cur}"]`),p);});
+drawConts();
+if(D[location.hash.slice(1)])openCont(location.hash.slice(1),true);
 
 /* filters (all combine with AND) */
 const SEL=[
