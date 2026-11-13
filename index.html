@@ -51,9 +51,10 @@ button,input{font-family:inherit}
 .section-header h2 em{font-family:inherit;font-style:normal;font-weight:inherit;color:var(--accent)}
 .section-description{max-width:720px;margin:9px auto 0;color:var(--muted);font-size:15px}
 
-/* OFFER CARDS */
+/* OFFER CARDS (every card is one full clickable link) */
 .offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.offer-card{position:relative;background:#fff;color:var(--text);border-radius:var(--radius);overflow:hidden;border:1px solid rgba(16,43,37,.08);box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s,outline-color .25s;display:flex;flex-direction:column;height:100%;scroll-margin-top:26px;outline:3px solid transparent;outline-offset:4px}
+.offer-grid.five{grid-template-columns:repeat(5,1fr)}
+.offer-card{position:relative;background:#fff;color:var(--text);border-radius:var(--radius);overflow:hidden;border:1px solid rgba(16,43,37,.08);box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s,outline-color .25s;display:flex;flex-direction:column;height:100%;scroll-margin-top:26px;outline:3px solid transparent;outline-offset:4px;cursor:pointer}
 .offer-card:target{outline-color:var(--accent);box-shadow:0 0 0 8px rgba(12,175,224,.14),var(--shadow);animation:pulse-target 1.6s ease-out 1}
 .offer-card.dark:target{outline-color:#fff;box-shadow:0 0 0 8px rgba(255,255,255,.18),var(--shadow)}
 @keyframes pulse-target{0%{transform:translateY(-2px) scale(1.015)}100%{transform:translateY(0) scale(1)}}
@@ -71,18 +72,13 @@ button,input{font-family:inherit}
 .offer-card.dark .card-cta{background:#fff;color:var(--card-teal);border-color:#fff}
 .offer-card.dark .card-cta:hover{background:#004b7e;color:#fff;border-color:#0084b9}
 
-/* TOUR PACKAGE CARDS */
-.offer-grid.four{grid-template-columns:repeat(4,1fr)}
-.card-actions{display:flex;justify-content:center;margin-top:auto;padding-top:16px}
-.card-actions .card-cta{margin-top:0}
-.card-link::after{content:"";position:absolute;inset:0;z-index:1}
-.tour-card .offer-image{height:270px}
-.tour-card .offer-content{align-items:center;justify-content:flex-start;text-align:center;padding:22px 20px 26px;gap:6px}
-.tour-card .offer-content h3{font-size:28px}
-.tour-card .offer-content p{max-width:100%}
-.offer-card.dark.tour-card .card-cta.card-link{min-height:50px;padding:0 28px;font-size:15px;background:#fff;color:var(--card-teal);border-color:#fff;box-shadow:0 10px 22px rgba(0,0,0,.18)}
-.offer-card.dark.tour-card .card-cta.card-link:hover,
-.offer-card.dark.tour-card:hover .card-cta.card-link{background:#002136;color:#fff;border-color:#002136}
+/* Tour package cards: 5 across on desktop */
+.offer-grid.five .offer-image{height:250px}
+.offer-grid.five .offer-content{justify-content:flex-start;padding:20px 16px 24px}
+.offer-grid.five .offer-content h3{font-size:26px}
+.offer-grid.five .offer-content p{max-width:100%}
+.offer-grid.five .offer-content .card-cta{margin-top:auto}
+.offer-grid.five .offer-content p{margin-bottom:14px}
 
 /* BANDS */
 .band{width:100%;padding:38px 0 42px}
@@ -107,13 +103,14 @@ footer .logo-text small{font-size:11px;letter-spacing:.2em;color:#9eafa8}
 
 /* TABLET */
 @media(max-width:1100px){
-.offer-grid.four{grid-template-columns:1fr 1fr}
+.offer-grid.five{grid-template-columns:repeat(3,1fr)}
 }
 @media(max-width:1000px){
 .navigation{gap:2px}
 .navigation a{padding:8px 10px;font-size:12.5px}
 .logo-text strong{font-size:23px}
 .offer-grid{grid-template-columns:1fr 1fr}
+.offer-grid.five{grid-template-columns:repeat(3,1fr)}
 .footer-grid{gap:28px}
 }
 
@@ -131,28 +128,15 @@ html{scroll-padding-top:70px}
 .section-header h2{font-size:26px;line-height:1.15;letter-spacing:-.01em}
 .section-description{display:none}
 .band{padding:20px 0 24px}
-.offer-grid{grid-template-columns:1fr;gap:13px}
-.offer-image{height:230px}
-.offer-content{padding:18px 18px 24px}
-.offer-content h3{font-size:22px}
-.offer-content p{font-size:14px}
-/* Tour packages: compact 2 x 2 grid */
-.offer-grid.four{grid-template-columns:1fr 1fr;gap:10px}
-.tour-card .offer-image{height:185px}
-.tour-card .offer-content{padding:14px 10px 16px;gap:4px}
-.tour-card .offer-content h3{font-size:20px}
-.tour-card .offer-content p{font-size:12.5px;line-height:1.45}
-.card-actions{width:100%}
-.offer-card.dark.tour-card .card-cta.card-link{width:100%;min-height:40px;padding:0 8px;font-size:12.5px}
-/* Transportation + Stays: swipe carousel */
-.offer-grid:not(.four){display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding:4px 2px 18px;scroll-padding:0 2px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.offer-grid:not(.four)::-webkit-scrollbar{display:none}
-.offer-grid:not(.four) .offer-card{flex:0 0 76%;scroll-snap-align:start;height:auto;border-radius:20px}
-.offer-grid:not(.four) .offer-image{height:215px}
-.offer-grid:not(.four) .offer-content{padding:14px 14px 18px;gap:4px}
-.offer-grid:not(.four) .offer-content h3{font-size:18px}
-.offer-grid:not(.four) .offer-content p{font-size:12.5px;line-height:1.45}
-.offer-grid:not(.four) .card-cta{margin-top:10px;min-height:40px;padding:0 18px;font-size:13px}
+/* ALL sections (Tour packages, Transportation, Stays): swipe carousel */
+.offer-grid,.offer-grid.five{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding:4px 2px 18px;scroll-padding:0 2px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.offer-grid::-webkit-scrollbar{display:none}
+.offer-grid .offer-card{flex:0 0 76%;scroll-snap-align:start;height:auto;border-radius:20px}
+.offer-grid .offer-image,.offer-grid.five .offer-image{height:215px}
+.offer-grid .offer-content,.offer-grid.five .offer-content{padding:14px 14px 18px;gap:4px;justify-content:center}
+.offer-grid .offer-content h3,.offer-grid.five .offer-content h3{font-size:18px}
+.offer-grid .offer-content p,.offer-grid.five .offer-content p{font-size:12.5px;line-height:1.45;margin-bottom:0}
+.offer-grid .card-cta,.offer-grid.five .offer-content .card-cta{margin-top:10px;min-height:40px;padding:0 18px;font-size:13px}
 /* Footer */
 footer{padding:45px 4% 20px}
 .footer-grid{width:96%;grid-template-columns:1fr 1fr;gap:30px}
@@ -198,59 +182,62 @@ footer{padding:45px 4% 20px}
         <p class="section-description">Guided tours, day trips and multi-day packages, ready to book with a trusted partner.</p>
       </div>
     </div>
-    <div class="offer-grid four">
+    <div class="offer-grid five">
 
-      <div class="offer-card dark tour-card" id="europe">
+      <a href="https://pinpointtravel.store/tourpackages/#europe" class="offer-card dark tour-card" id="europe" aria-label="Explore Europe tour packages">
         <div class="offer-image">
           <img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/europe.webp" alt="Medieval castle in Europe" loading="lazy">
         </div>
         <div class="offer-content">
           <h3>Europe</h3>
           <p>Castles, old towns, coastlines and city breaks across the continent.</p>
-          <div class="card-actions">
-            <a href="https://pinpointtravel.store/tourpackages/#europe" class="card-cta card-link">Explore Europe →</a>
-          </div>
+          <span class="card-cta">Explore Europe →</span>
         </div>
-      </div>
+      </a>
 
-      <div class="offer-card dark tour-card" id="america">
+      <a href="https://pinpointtravel.store/tourpackages/#america" class="offer-card dark tour-card" id="america" aria-label="Explore America tour packages">
         <div class="offer-image">
           <img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/america.webp" alt="North and South America landmarks" loading="lazy">
         </div>
         <div class="offer-content">
           <h3>America</h3>
           <p>North and South America, from New York skylines to Amazon jungles and Patagonia.</p>
-          <div class="card-actions">
-            <a href="https://pinpointtravel.store/tourpackages/#america" class="card-cta card-link">Explore America →</a>
-          </div>
+          <span class="card-cta">Explore America →</span>
         </div>
-      </div>
+      </a>
 
-      <div class="offer-card dark tour-card" id="asia">
+      <a href="https://pinpointtravel.store/tourpackages/#asia" class="offer-card dark tour-card" id="asia" aria-label="Explore Asia tour packages">
         <div class="offer-image">
           <img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/asia.webp" alt="Asian temple and city scene" loading="lazy">
         </div>
         <div class="offer-content">
           <h3>Asia</h3>
           <p>Temples, street food, islands and busy cities from Japan to Thailand.</p>
-          <div class="card-actions">
-            <a href="https://pinpointtravel.store/tourpackages/#asia" class="card-cta card-link">Explore Asia →</a>
-          </div>
+          <span class="card-cta">Explore Asia →</span>
         </div>
-      </div>
+      </a>
 
-      <div class="offer-card dark tour-card" id="africa">
+      <a href="https://pinpointtravel.store/tourpackages/#africa" class="offer-card dark tour-card" id="africa" aria-label="Explore Africa tour packages">
         <div class="offer-image">
           <img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/africa.webp" alt="African safari landscape" loading="lazy">
         </div>
         <div class="offer-content">
           <h3>Africa</h3>
           <p>Safaris, desert dunes, beaches and ancient wonders across the continent.</p>
-          <div class="card-actions">
-            <a href="https://pinpointtravel.store/tourpackages/#africa" class="card-cta card-link">Explore Africa →</a>
-          </div>
+          <span class="card-cta">Explore Africa →</span>
         </div>
-      </div>
+      </a>
+
+      <a href="https://pinpointtravel.store/tourpackages/#oceania" class="offer-card dark tour-card" id="oceania" aria-label="Explore Oceania tour packages">
+        <div class="offer-image">
+          <img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/oceania.webp" alt="Tropical island lagoon in Oceania" loading="lazy">
+        </div>
+        <div class="offer-content">
+          <h3>Oceania</h3>
+          <p>Reefs, island lagoons, volcanoes and fjords across Australia and the Pacific.</p>
+          <span class="card-cta">Explore Oceania →</span>
+        </div>
+      </a>
 
     </div>
   </section>
