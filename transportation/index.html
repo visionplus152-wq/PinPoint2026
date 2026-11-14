@@ -57,14 +57,13 @@ button{font-family:inherit;cursor:pointer}
 .blue .section-header h2{color:#fff}.blue .section-header h2 em{color:#000}.blue .section-description{color:#f0fbff}
 
 /* CATEGORY CARDS */
-.offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.offer-card{position:relative;display:flex;flex-direction:column;height:100%;background:var(--accent);color:#fff;border-radius:var(--r);overflow:hidden;border:2px solid #fff;box-shadow:var(--sh);transition:transform .25s,box-shadow .25s,border-color .25s}
+.offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:start}
+.offer-card{position:relative;display:flex;flex-direction:column;height:100%;background:var(--accent);color:#fff;border-radius:var(--r);overflow:hidden;border:2px solid #fff;box-shadow:var(--sh);cursor:pointer;transition:transform .25s,box-shadow .25s,border-color .25s}
 .offer-card:hover{transform:translateY(-5px);box-shadow:var(--sh-h)}
 .offer-card.open{border-color:var(--navy);box-shadow:0 0 0 6px rgba(0,33,54,.25),var(--sh)}
 .offer-image{height:280px;position:relative;overflow:hidden;flex-shrink:0}
 .offer-image img{width:100%;height:100%;object-fit:cover}
 .offer-image::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,80,94,.28),transparent 55%)}
-.badge{position:absolute;z-index:3;top:14px;left:14px;background:#fff;color:var(--navy);font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:7px 14px;border-radius:100px;box-shadow:0 6px 14px rgba(0,0,0,.35)}
 .offer-content{padding:22px 24px 26px;flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px}
 .offer-content h3{font-family:"Poppins",sans-serif;font-size:28px;line-height:1.2}
 .offer-content p{font-size:14.5px;line-height:1.55;max-width:94%;color:rgba(255,255,255,.95)}
@@ -78,6 +77,7 @@ button{font-family:inherit;cursor:pointer}
 
 /* UNFOLD PANELS */
 .panels{margin-top:22px}
+.panels:empty{margin-top:0}
 .panel{display:none;background:var(--accent);border:2px solid var(--navy);border-radius:var(--r);box-shadow:var(--sh);padding:26px 20px 28px;animation:unfold .35s ease}
 .panel.open{display:block}
 @keyframes unfold{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
@@ -131,6 +131,7 @@ html{scroll-padding-top:70px}
 .band{padding:20px 0 24px}
 .section-header{margin-bottom:14px}.section-header h2{font-size:26px}.section-description{display:none}
 .offer-grid{grid-template-columns:1fr;gap:13px}
+.offer-card{height:auto}
 .offer-image{height:210px}.offer-content{padding:18px 18px 22px}.offer-content h3{font-size:24px}
 .panel{padding:18px 12px 20px}.pgrid{grid-template-columns:1fr;gap:12px}
 .pk-top .codes{font-size:30px}
@@ -170,9 +171,9 @@ footer{padding:45px 4% 20px}.footer-grid{grid-template-columns:1fr 1fr;gap:30px;
       <p class="section-description">Choose a service, then open it to see popular routes and cities with direct links to our partners.</p>
     </div>
 
-    <div class="offer-grid">
+    <div class="offer-grid" id="offerGrid">
       <div class="offer-card" id="flights" data-k="flights">
-        <div class="offer-image"><span class="badge">Aviasales</span><img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/flight.webp" alt="Airplane wing above the clouds" loading="lazy"></div>
+        <div class="offer-image"><img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/flight.webp" alt="Airplane wing above the clouds" loading="lazy"></div>
         <div class="offer-content">
           <h3>Flights</h3>
           <p>Search hundreds of airlines at once and set a price alert for your route.</p>
@@ -181,7 +182,7 @@ footer{padding:45px 4% 20px}.footer-grid{grid-template-columns:1fr 1fr;gap:30px;
         </div>
       </div>
       <div class="offer-card" id="car-rentals" data-k="cars">
-        <div class="offer-image"><span class="badge">Rentalcars.com</span><img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/carrent.webp" alt="Car parked on a scenic coastal road" loading="lazy"></div>
+        <div class="offer-image"><img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/carrent.webp" alt="Car parked on a scenic coastal road" loading="lazy"></div>
         <div class="offer-content">
           <h3>Vehicle Rental</h3>
           <p>Compare rental providers side by side and lock in a rate with no upfront card fee.</p>
@@ -190,7 +191,7 @@ footer{padding:45px 4% 20px}.footer-grid{grid-template-columns:1fr 1fr;gap:30px;
         </div>
       </div>
       <div class="offer-card" id="airport-transfers" data-k="transfers">
-        <div class="offer-image"><span class="badge">Kiwitaxi</span><img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/transfer.webp" alt="Airport terminal with arriving traveler" loading="lazy"></div>
+        <div class="offer-image"><img src="https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/transfer.webp" alt="Airport terminal with arriving traveler" loading="lazy"></div>
         <div class="offer-content">
           <h3>Transfers</h3>
           <p>Fixed-price rides booked ahead, with the driver waiting at arrivals.</p>
@@ -222,8 +223,8 @@ footer{padding:45px 4% 20px}.footer-grid{grid-template-columns:1fr 1fr;gap:30px;
     </div>
     <div class="footer-column">
       <h4 class="footer-title">Travel Center</h4>
+      <a href="https://pinpointtravel.store/">Travel Center</a>
       <a href="https://pinpointtravel.store/tourpackages/">Tour Packages</a>
-      <a href="https://pinpointtravel.store/transportation/">Transportation</a>
       <a href="https://pinpointtravel.store/#bookings">Accommodations</a>
     </div>
     <div class="footer-column">
@@ -300,25 +301,58 @@ const IDS={flights:'flights',cars:'car-rentals',transfers:'airport-transfers'};
 
 /* ===================== CODE ===================== */
 const $=id=>document.getElementById(id);
-$('panels').innerHTML=Object.keys(PANELS).map(k=>`<div class="panel" id="panel-${k}" role="region" aria-label="${k}"><div class="panel-head"><h3>${PANELS[k].title}</h3><button class="close" data-close="${k}">Close ✕</button></div><div class="pgrid">${PANELS[k].cards.join('')}</div></div>`).join('');
+const mobileQ=window.matchMedia('(max-width:720px)');
+const panelsBox=$('panels');
+
+panelsBox.innerHTML=Object.keys(PANELS).map(k=>`<div class="panel" id="panel-${k}" role="region" aria-label="${k}"><div class="panel-head"><h3>${PANELS[k].title}</h3><button class="close" data-close="${k}">Close ✕</button></div><div class="pgrid">${PANELS[k].cards.join('')}</div></div>`).join('');
 document.querySelectorAll('.site-link').forEach(a=>a.href=SITE[a.dataset.site]);
+
+/* Mobile: panel sits directly under its own card (other cards move down).
+   Desktop/tablet: panel sits below all three cards. */
+function placePanel(k){
+  const p=$('panel-'+k),card=$(IDS[k]);
+  if(mobileQ.matches) card.after(p);
+  else panelsBox.appendChild(p);
+}
 
 function openPanel(k,scroll){
   const was=$('panel-'+k).classList.contains('open');
   document.querySelectorAll('.panel').forEach(p=>p.classList.remove('open'));
   document.querySelectorAll('.offer-card').forEach(c=>{c.classList.remove('open');c.querySelector('.toggle').setAttribute('aria-expanded','false')});
   if(was)return;
+  placePanel(k);
   $('panel-'+k).classList.add('open');
   const c=$(IDS[k]);c.classList.add('open');c.querySelector('.toggle').setAttribute('aria-expanded','true');
-  if(scroll)$('panel-'+k).scrollIntoView({behavior:'smooth',block:'start'});
+  if(scroll){
+    /* mobile: show the card at the top with its panel right below; desktop: jump to panel */
+    (mobileQ.matches?c:$('panel-'+k)).scrollIntoView({behavior:'smooth',block:'start'});
+  }
 }
-document.querySelectorAll('.offer-card').forEach(c=>c.querySelector('.toggle').addEventListener('click',()=>openPanel(c.dataset.k,true)));
-document.querySelectorAll('.close').forEach(b=>b.addEventListener('click',()=>{openPanel(b.dataset.close,false);$(IDS[b.dataset.close]).scrollIntoView({behavior:'smooth',block:'center'})}));
+
+/* whole card is clickable (links inside still work) */
+document.querySelectorAll('.offer-card').forEach(c=>{
+  c.addEventListener('click',e=>{
+    if(e.target.closest('.site-link'))return;
+    openPanel(c.dataset.k,true);
+  });
+});
+
+document.querySelectorAll('.close').forEach(b=>b.addEventListener('click',()=>{
+  openPanel(b.dataset.close,false);
+  $(IDS[b.dataset.close]).scrollIntoView({behavior:'smooth',block:'center'});
+}));
+
+/* re-place the open panel if the screen size changes */
+mobileQ.addEventListener('change',()=>{
+  const open=document.querySelector('.panel.open');
+  if(open)placePanel(open.id.replace('panel-',''));
+});
+
 function openFromHash(){
   const k=Object.keys(IDS).find(k=>IDS[k]===location.hash.slice(1));
   if(!k)return;
   if(!$('panel-'+k).classList.contains('open'))openPanel(k,false);
-  setTimeout(()=>$('panel-'+k).scrollIntoView({behavior:'smooth',block:'start'}),350);
+  setTimeout(()=>(mobileQ.matches?$(IDS[k]):$('panel-'+k)).scrollIntoView({behavior:'smooth',block:'start'}),350);
 }
 openFromHash();
 window.addEventListener('hashchange',openFromHash);
