@@ -55,7 +55,7 @@ button{cursor:pointer}
 .page-title p{max-width:640px;margin:12px auto 0;font-size:16px;color:#f0fbff}
 .crumbs{font-size:12px;font-weight:800;letter-spacing:.14em;margin-bottom:12px;color:#d9f2fb}
 
-/* IMAGE SLOT (shows a clean placeholder until the image file exists) */
+/* IMAGE SLOT */
 .im{position:relative;overflow:hidden;background:#d8e4ea;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;flex-shrink:0}
 .im span{font-size:11.5px;color:#5d7380;line-height:1.35;word-break:break-all}
 .im span b{display:block;font-size:12px;letter-spacing:.1em;margin-bottom:2px}
@@ -66,14 +66,13 @@ button{cursor:pointer}
 .conts{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
 .cont{position:relative;display:block;width:100%;padding:0;border:3px solid #fff;border-radius:var(--r);overflow:hidden;background:#fff;box-shadow:var(--sh);text-align:left;transition:transform var(--ease),box-shadow var(--ease)}
 .cont .im{height:235px}
-/* name plate: a curved tab tucked into the bottom-left corner, behind the text */
 .cont .lab{position:absolute;z-index:2;left:0;bottom:0;display:block}
 .cont .lab b{display:block;font-family:"Poppins",sans-serif;font-size:28px;line-height:1.15;color:#fff;letter-spacing:.01em;padding:9px 26px 11px 20px;background:rgba(0,33,54,.9);border-top-right-radius:32px;text-shadow:0 2px 4px rgba(0,0,0,.4)}
 .cont[aria-pressed=true]{border-color:var(--navy);box-shadow:0 0 0 6px rgba(0,33,54,.25),var(--sh)}
 .cont[aria-pressed=true] .lab b{background:var(--accent)}
 .cont:hover{transform:translateY(-4px);box-shadow:var(--sh-h)}
 
-/* UNFOLD PANEL (opens right under the clicked continent) */
+/* UNFOLD PANEL */
 .upanel{grid-column:1/-1;position:relative;background:var(--navy);border:2px solid #fff;border-radius:var(--r);box-shadow:var(--sh);padding:22px 16px 24px;animation:unfold .35s ease}
 .upanel::before{content:"";position:absolute;top:-11px;left:50%;width:18px;height:18px;background:var(--navy);border-left:2px solid #fff;border-top:2px solid #fff;transform:translateX(-50%) rotate(45deg)}
 @keyframes unfold{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
@@ -90,7 +89,7 @@ button{cursor:pointer}
 .country{background:var(--accent);color:#fff;border-radius:var(--r);border:2px solid #fff;box-shadow:var(--sh);overflow:hidden;transition:transform var(--ease),box-shadow var(--ease)}
 .country:hover{transform:translateY(-3px);box-shadow:var(--sh-h)}
 .country.open{border-color:var(--navy)}
-.ch{width:100%;display:flex;align-items:center;gap:18px;padding:12px 20px 12px 12px;background:none;border:none;text-align:left}
+.ch{width:100%;display:flex;align-items:center;gap:18px;padding:12px 20px 12px 12px;background:none;border:none;text-align:left;color:#fff}
 .ch:hover{background:#0094cf}
 .ch .im{width:120px;height:80px;border-radius:16px}
 .ch .nm{display:flex;flex-direction:column}
@@ -156,7 +155,6 @@ footer{background:var(--navy);color:#dce4df;padding:50px 12px 20px}
 .footer-bottom{display:flex;justify-content:space-between;gap:20px;margin-top:35px;padding-top:15px;border-top:1px solid rgba(255,255,255,.1);font-size:11.5px;letter-spacing:.08em;color:#8fa39b}
 footer .logo-image{border-color:#fff}
 
-/* DESKTOP + TABLET ONLY: no triangle pointer on the opened panel (mobile keeps it) */
 @media(min-width:721px){.upanel::before{display:none}}
 
 @media(max-width:1000px){
@@ -216,7 +214,7 @@ footer{padding:45px 12px 20px}.footer-grid,.footer-bottom{width:100%}
   </section>
 </div>
 
-<!-- FILTERS -->
+<!-- FILTERS / FULL LIST -->
 <div class="band blue" id="filters">
   <section class="section" aria-labelledby="filters-title">
     <div class="section-header">
@@ -269,166 +267,67 @@ footer{padding:45px 12px 20px}.footer-grid,.footer-bottom{width:100%}
 
 <script>
 /* ===================== SETTINGS =====================
-   COUNTRY IMAGES (automatic): upload them to the GitHub folder images/countries/ and name each one
-     after the country, lowercase with hyphens: france.webp, united-states.webp, new-zealand.webp
-     The page tries .webp, .jpg, .jpeg and .png on its own. The file name is printed inside each empty image box.
-     If a file has a different name, add it to COUNTRY_IMG below.
-   TOUR IMAGES (manual): paste the image link (or path) for each tour inside the quotes in TOUR_IMG.
-   TOUR PRICES / LINKS (manual, optional): use TOUR_PRICE and TOUR_LINK further down.
-   AFFILIATE LINKS: replace each `base` in P with your own tracking link. */
+   1. COUNTRY IMAGES (small picture on each country bar): GitHub folder images/countries/, named after the
+      country, lowercase with hyphens: france.webp, united-states.webp, new-zealand.webp
+   2. MAIN 3 CARDS inside each country: broad links to a partner's country page. No price badge.
+      Images: GitHub folder images/countries/main/ named country+partner with no spaces/hyphens:
+      franceklook.webp, francetiqets.webp, francegyg.webp, francegocity.webp, unitedstatesklook.webp
+      Or paste any internet image link in MAIN (see below).
+   3. SPECIFIC TOURS (in D) appear only in the full list at the bottom of the page.
+   4. AFFILIATE LINKS: replace each `base` in P with your tracking link, or set links per card in MAIN / EXTRA. */
+
 const COUNTRY_DIR='https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/countries/', IMG_EXT='webp';
 const CONT_IMG='https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/';
+const MAIN_DIR='https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/countries/main/';
 const IMG_TRY=['webp','jpg','jpeg','png'];
+const flat=s=>s.toLowerCase().replace(/[^a-z0-9]/g,'');
 
-/* ---- COUNTRY IMAGE OVERRIDES (only if a file name differs), e.g. 'Seychelles':'https://.../my-seychelles-photo.jpg' ---- */
+/* ---- COUNTRY BAR IMAGE OVERRIDES (only if a file name differs) ---- */
 const COUNTRY_IMG={
- /* 'Seychelles':'', */
+ /* 'Seychelles':'https://example.com/seychelles.jpg', */
 };
 
-/* ---- TOUR IMAGES: put the link/path between the quotes, e.g. 'https://.../eiffel.webp' or 'images/tours/eiffel.webp' ---- */
-const TOUR_IMG={
- /* France */
- 'Eiffel Tower Summit Access':'',
- 'Paris Pass City Bundle':'',
- 'Loire Valley Castles Day Trip':'',
- /* Italy */
- 'Colosseum & Roman Forum Tour':'',
- 'Amalfi Coast Boat Day':'',
- 'Florence & Tuscany Day Trip':'',
- /* Spain */
- 'Sagrada Família Skip-the-Line':'',
- 'Barcelona Tapas & Old Town Walk':'',
- 'Alhambra Granada Day Trip':'',
- /* Iceland */
- 'Northern Lights Hunt':'',
- 'Golden Circle Day Trip':'',
- 'Blue Lagoon Entry':'',
- /* Germany */
- 'Neuschwanstein Castle Day Trip':'',
- 'Berlin Highlights Walking Tour':'',
- /* Greece */
- 'Acropolis Skip-the-Line Tickets':'',
- 'Santorini Sunset Sailing':'',
- /* United Kingdom */
- 'London Pass':'',
- 'Stonehenge & Bath Day Trip':'',
- /* Netherlands */
- 'Keukenhof Gardens Entry':'',
- 'Amsterdam Canal Cruise':'',
- /* United States */
- 'New York City Pass':'',
- 'Grand Canyon Day Tour':'',
- 'Orlando Theme Park Tickets':'',
- /* Mexico */
- 'Chichén Itzá Day Trip':'',
- 'Tulum & Cenote Swim':'',
- 'Mexico City Street Food Tour':'',
- /* Peru */
- 'Machu Picchu Entry & Train':'',
- 'Rainbow Mountain Hike':'',
- 'Sacred Valley Day Tour':'',
- /* Canada */
- 'Niagara Falls Day Tour':'',
- 'Banff & Rockies Day Trip':'',
- /* Brazil */
- 'Christ the Redeemer & Sugarloaf':'',
- 'Iguazu Falls Tour':'',
- /* Argentina */
- 'Tango Show & Dinner':'',
- 'Perito Moreno Glacier Day Trip':'',
- /* Costa Rica */
- 'Arenal Volcano & Hot Springs':'',
- 'Monteverde Zipline Adventure':'',
- /* Colombia */
- 'Cartagena Old City Walking Tour':'',
- 'Coffee Region Farm Experience':'',
- /* Japan */
- 'Kyoto Temples & Geisha District':'',
- 'Mt. Fuji Day Trip':'',
- 'Osaka Street Food Tour':'',
- /* Thailand */
- 'Phi Phi Islands Speedboat':'',
- 'Bangkok Temples & Floating Market':'',
- 'Chiang Mai Elephant Sanctuary':'',
- /* UAE */
- 'Burj Khalifa At the Top':'',
- 'Desert Safari with BBQ Dinner':'',
- 'Dubai Explorer Pass':'',
- /* Vietnam */
- 'Ha Long Bay Day Cruise':'',
- 'Hoi An Lantern & Cooking Class':'',
- /* South Korea */
- 'Seoul DMZ Tour':'',
- 'Jeju Island Day Tour':'',
- /* Singapore */
- 'Gardens by the Bay Tickets':'',
- 'Singapore Explorer Pass':'',
- /* Indonesia */
- 'Bali Temples & Rice Terraces':'',
- 'Komodo Island Boat Trip':'',
- /* India */
- 'Taj Mahal Sunrise Tour':'',
- 'Jaipur Pink City Tour':'',
- /* Egypt */
- 'Pyramids of Giza & Sphinx Tour':'',
- 'Nile Dinner Cruise':'',
- 'Luxor Temples Day Trip':'',
- /* Morocco */
- 'Sahara Desert 3-Day Trip':'',
- 'Marrakech Hot Air Balloon':'',
- 'Chefchaouen Day Trip':'',
- /* Tanzania */
- 'Serengeti Safari':'',
- 'Zanzibar Spice & Stone Town':'',
- 'Ngorongoro Crater Day Safari':'',
- /* South Africa */
- 'Table Mountain Cable Car':'',
- 'Cape Point & Penguins Day Trip':'',
- /* Kenya */
- 'Masai Mara Safari':'',
- 'Giraffe Centre & Elephant Orphanage':'',
- /* Namibia */
- 'Sossusvlei Dunes Tour':'',
- 'Swakopmund Desert Adventure':'',
- /* Mauritius */
- 'Catamaran Cruise to Île aux Cerfs':'',
- 'Seven Coloured Earths Island Tour':'',
- /* Seychelles */
- 'Praslin & La Digue Island Hopping':'',
- 'Mahé Island Highlights Tour':'',
- /* Australia */
- 'Sydney Opera House Tour':'',
- 'Great Barrier Reef Snorkel Cruise':'',
- /* New Zealand */
- 'Milford Sound Cruise':'',
- 'Hobbiton Movie Set Tour':'',
- /* Fiji */
- 'Island Hopping Cruise':'',
- 'Cloud 9 Floating Bar Day':'',
- /* French Polynesia */
- 'Bora Bora Lagoon Tour':'',
- 'Moorea Island Day Trip':'',
- /* Cook Islands */
- 'Rarotonga Island Circle Tour':'',
- 'Aitutaki Lagoon Cruise':'',
- /* Samoa */
- 'To Sua Ocean Trench Day Tour':'',
- 'Upolu Island Highlights':'',
- /* Vanuatu */
- 'Mount Yasur Volcano Tour':'',
- 'Blue Lagoon Snorkel Day':'',
- /* Palau */
- 'Rock Islands & Jellyfish Lake':'',
- 'Ngardmau Waterfall Trek':'',
+/* ---- MAIN 3 CARDS: which partners show by default in every country ---- */
+const MAIN_PARTNERS=['klook','tiqets','gocity'];   /* options: klook, tiqets, gyg, gocity */
+
+/* ---- DEFAULT CARD TEXT. {c} becomes the country name. Edit the words here to change every country. ---- */
+const MAIN_TEXT={
+ klook:'Explore {c}',
+ tiqets:'Things to do in {c}',
+ gyg:'Tours & tickets in {c}',
+ gocity:'{c} city pass'
 };
 
-/* ---- OPTIONAL per-tour price and direct affiliate link, e.g.  'Eiffel Tower Summit Access':79  ---- */
-const TOUR_PRICE={
- /* 'Eiffel Tower Summit Access':79, */
+
+const MAIN={
+'France':[
+   ['klook','','','https://mozcp.truetrips.com/wp-content/uploads/2025/06/France_gallery_1.jpg'],
+   ['tiqets','','','https://mozcp.truetrips.com/wp-content/uploads/2025/06/France_gallery.jpg'],
+   ['gocity','','','https://cdn.kimkim.com/files/a/content_articles/featured_photos/ad4152414df2cdd37318a45116425968e54660f5/big-be61419e9d977f19df34a89410365609.jpg']
+ ],
+ 'Spain':[
+   ['klook','','','https://images.unsplash.com/photo-1578912996078-305d92249aa6?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D'],
+   ['tiqets','','','https://znaki.fm/static/content/thumbs/984x553/9/b0/r2hha6---c1034x582x50px50p--5b261f709647e359b082172e23dcdb09.webp'],
+   ['gocity','','','https://static.independent.co.uk/2023/11/14/17/iStock-1083456786.jpg?quality=75&width=1368&crop=3%3A2%2Csmart&auto=webp']
+ ],
+ 'Germany':[
+   ['klook','','','https://example.com/italy-klook.jpg'],
+   ['tiqets','','','https://example.com/italy-tiqets.jpg'],
+   ['gocity','','','https://example.com/italy-gocity.jpg']
+ ],
 };
-const TOUR_LINK={
- /* 'Eiffel Tower Summit Access':'https://your-affiliate-link', */
-};
+
+/* ---- EXTRA CARDS (full list only). Use an internet image link, no GitHub upload needed.
+   [title, country, partner, season, budget 1-3, trending 0/1, type, imageLink, price, affiliateLink] ---- */
+const EXTRA=[
+ /* ['Seine River Cruise','France','gyg','all',1,0,'x','https://images.unsplash.com/your-photo.jpg',25,'https://your-affiliate-link'], */
+];
+
+/* ---- OPTIONAL fallbacks by tour name (images, prices, links). You can instead put these straight in the D lines below ---- */
+const TOUR_IMG={ /* 'Eiffel Tower Summit Access':'https://.../eiffel.jpg', */ };
+const TOUR_PRICE={ /* 'Eiffel Tower Summit Access':79, */ };
+const TOUR_LINK={ /* 'Eiffel Tower Summit Access':'https://your-affiliate-link', */ };
+
 const P={
   klook:{n:'Klook',base:'https://www.klook.com/en-US/search/result/?query='},
   tiqets:{n:'Tiqets',base:'https://www.tiqets.com/en/search/?q='},
@@ -437,11 +336,11 @@ const P={
 };
 const S={spring:'Spring',summer:'Summer',autumn:'Autumn',winter:'Winter',all:'Year-round'};
 const B={1:'$ Budget',2:'$$ Mid-range',3:'$$$ Premium'};
-/* Default price shown on each card, by budget level. Set a real price for a tour in TOUR_PRICE above. */
-const PRICE={1:40,2:85,3:160};
+const PRICE={1:40,2:85,3:160};   /* default price by budget level for specific tours */
 const T={a:'Attraction tickets',d:'Day trips',p:'City passes',x:'Tours & experiences',m:'Multi-day'};
 
-/* package = [title, partner, season, budget 1-3, trending 0/1, type]
+/* SPECIFIC TOURS (full list only):
+   [title, partner, season, budget 1-3, trending 0/1, type, imageLink(optional), price(optional), affiliateLink(optional)]
    partner: klook | tiqets | gocity | gyg     season: spring | summer | autumn | winter | all
    type: a attraction tickets | d day trip | p city pass | x tour/experience | m multi-day */
 const D={
@@ -485,7 +384,7 @@ africa:{n:'Africa',c:[
  ['Mauritius',[['Catamaran Cruise to Île aux Cerfs','klook','winter',2,1,'x'],['Seven Coloured Earths Island Tour','gyg','all',1,0,'d']]],
  ['Seychelles',[['Praslin & La Digue Island Hopping','klook','all',3,0,'x'],['Mahé Island Highlights Tour','gyg','all',2,0,'d']]]
 ]},
-oceania:{n:'Oceania',img:'',c:[ /* optional: paste a full image link in img:'' if your file name or folder is different */
+oceania:{n:'Oceania',img:'',c:[
  ['Australia',[['Sydney Opera House Tour','tiqets','all',2,1,'a'],['Great Barrier Reef Snorkel Cruise','klook','winter',3,1,'x']]],
  ['New Zealand',[['Milford Sound Cruise','klook','summer',3,1,'x'],['Hobbiton Movie Set Tour','gyg','all',2,1,'a']]],
  ['Fiji',[['Island Hopping Cruise','klook','summer',2,1,'x'],['Cloud 9 Floating Bar Day','klook','all',2,0,'x']]],
@@ -500,10 +399,8 @@ oceania:{n:'Oceania',img:'',c:[ /* optional: paste a full image link in img:'' i
 /* ===================== CODE ===================== */
 const $=id=>document.getElementById(id);
 const slug=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-const all=[];
-for(const k in D)D[k].c.forEach(c=>c[1].forEach(p=>all.push({p,country:c[0]})));
 
-/* if an image fails to load, try the next file type; when none work, remove it so the placeholder shows */
+/* image fallback: try the next file type, then remove the image so the placeholder shows */
 function nextImg(i){
   const a=i.dataset.alt?i.dataset.alt.split('|'):[];
   if(a.length){i.src=a.shift();i.dataset.alt=a.join('|');}else i.remove();
@@ -511,22 +408,49 @@ function nextImg(i){
 window.nextImg=nextImg;
 function slot(srcs,label){
   const list=Array.isArray(srcs)?srcs:[srcs];
-  return `<div class="im"><span><b>ADD IMAGE</b>${label}</span><img src="${list[0]}" data-alt="${list.slice(1).join('|')}" alt="" onerror="nextImg(this)"></div>`;
+  return `<div class="im"><span><b>ADD IMAGE</b>${label}</span><img src="${list[0]}" data-alt="${list.slice(1).join('|')}" alt="" referrerpolicy="no-referrer" onerror="nextImg(this)"></div>`;
 }
 function countryImgs(name){
   return COUNTRY_IMG[name]?[COUNTRY_IMG[name]]:IMG_TRY.map(e=>`${COUNTRY_DIR}${slug(name)}.${e}`);
 }
+
+/* the 3 broad partner cards of a country */
+function mainCards(country){
+  const list=MAIN[country]||MAIN_PARTNERS.map(p=>[p]);
+  return list.slice(0,3).map(([pt,url,text,img])=>{
+    const pr=P[pt], file=flat(country)+pt;
+    return {main:1,pt,pr,country,file,
+      title:text||MAIN_TEXT[pt].replace('{c}',country),
+      link:url||(pr.base.endsWith('=')?pr.base+encodeURIComponent(country):pr.base),
+      srcs:img?[img]:IMG_TRY.map(e=>`${MAIN_DIR}${file}.${e}`)};
+  });
+}
+
+/* one card: broad (no price) or specific (with price) */
 function card(o){
-  const [t,pt,se,bu,tr,ty]=o.p,pr=P[pt],price=TOUR_PRICE[t]||PRICE[bu],url=TOUR_LINK[t];
+  if(o.main){
+    return `<article class="pk main">${slot(o.srcs,`countries/main/${o.file}.webp`)}
+    <div class="pk-b"><p class="where">${o.pr.n} · ${o.country}</p><h4>${o.title}</h4>
+    <a class="go" href="${o.link}" target="_blank" rel="noopener sponsored">View on ${o.pr.n} →</a></div></article>`;
+  }
+  const [t,pt,se,bu,tr,ty,img,prc,lnk]=o.p,pr=P[pt];
+  const price=prc||TOUR_PRICE[t]||PRICE[bu], url=lnk||TOUR_LINK[t];
   const href=url||(pr.base.endsWith('=')?pr.base+encodeURIComponent(t+' '+o.country):pr.base);
-  const f=TOUR_IMG[t]||'';
-  return `<article class="pk"><div class="im" style="position:relative"><span><b>ADD IMAGE</b>${t}</span>${f?`<img src="${f}" alt="${t}" loading="lazy" onerror="this.remove()">`:''}<em class="price">$${price}</em></div>
+  const f=img||TOUR_IMG[t]||'';
+  return `<article class="pk"><div class="im" style="position:relative"><span><b>ADD IMAGE</b>${t}</span>${f?`<img src="${f}" alt="${t}" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`:''}<em class="price">$${price}</em></div>
   <div class="pk-b"><p class="where">${o.country}</p><h4>${t}</h4>
   <a class="go" href="${href}" target="_blank" rel="noopener sponsored">Check on ${pr.n} →</a></div></article>`;
 }
 
-/* destinations: the country list opens right under the clicked continent,
-   and the other continents move down (on mobile each continent is one row) */
+/* full list data: specific tours + extra cards, and the broad cards */
+const all=[], mains=[];
+for(const k in D)D[k].c.forEach(c=>{
+  c[1].forEach(p=>all.push({p,country:c[0]}));
+  mainCards(c[0]).forEach(m=>mains.push(m));
+});
+EXTRA.forEach(e=>all.push({country:e[1],p:[e[0],e[2],e[3],e[4],e[5],e[6],e[7],e[8],e[9]]}));
+
+/* destinations: country list opens right under the clicked continent */
 let cur='';
 const colsOf=g=>getComputedStyle(g).gridTemplateColumns.split(' ').length;
 function place(el,panel){
@@ -539,8 +463,9 @@ function drawConts(){
 function countriesHTML(k){
   const cols=[[],[]];
   D[k].c.forEach((c,i)=>{
-    cols[i%2].push(`<div class="country"><button class="ch" aria-expanded="false">${slot(countryImgs(c[0]),`countries/${slug(c[0])}.${IMG_EXT}`)}<span class="nm"><strong>${c[0]}</strong><small>${c[1].length} tour packages</small></span><span class="tg">View packages</span><span class="chev"></span></button>
-    <div class="panel"><div class="pgrid">${c[1].map(p=>card({p,country:c[0]})).join('')}</div></div></div>`);});
+    const mc=mainCards(c[0]);
+    cols[i%2].push(`<div class="country"><button class="ch" aria-expanded="false">${slot(countryImgs(c[0]),`countries/${slug(c[0])}.${IMG_EXT}`)}<span class="nm"><strong>${c[0]}</strong><small>Explore with ${mc.length} partners</small></span><span class="tg">View packages</span><span class="chev"></span></button>
+    <div class="panel"><div class="pgrid">${mc.map(card).join('')}</div></div></div>`);});
   return `<div class="uhead"><h3>${D[k].n} <em>countries.</em></h3><button class="uclose">Close ✕</button></div><div class="countries">${cols.map(a=>`<div class="ccol">${a.join('')}</div>`).join('')}</div>`;
 }
 function openCont(k,scroll){
@@ -563,7 +488,7 @@ window.addEventListener('resize',()=>{const p=$('contPanel');if(p&&cur)place(doc
 drawConts();
 if(D[location.hash.slice(1)])openCont(location.hash.slice(1),true);
 
-/* filters (all combine with AND) */
+/* filters (all combine with AND). Broad cards hide when season/budget/trending/type filters are used. */
 const SEL=[
  ['s-season','season','Season',['spring','summer','autumn','winter'].map(x=>[x,S[x]])],
  ['s-budget','budget','Budget',[1,2,3].map(x=>[x,B[x]])],
@@ -576,13 +501,15 @@ function drawFilters(){
   const m=all.filter(({p,country})=>
     (!f.season||p[2]===f.season)&&(!f.budget||p[3]==f.budget)&&(!f.trend||p[4]===1)&&
     (!f.partner||p[1]===f.partner)&&(!f.type||p[5]===f.type)&&
-    (!q||(p[0]+' '+country+' '+T[p[5]]).toLowerCase().includes(q)));
+    (!q||(p[0]+' '+country+' '+T[p[5]]).toLowerCase().includes(q)))
+  .concat(mains.filter(o=>!f.season&&!f.budget&&!f.trend&&!f.type&&
+    (!f.partner||o.pt===f.partner)&&(!q||(o.title+' '+o.country).toLowerCase().includes(q))));
   const n=Object.keys(f).length;
   $('fcount').textContent=n?`(${n})`:'';
   $('trend').setAttribute('aria-pressed',!!f.trend);
   SEL.forEach(([id,k])=>$(id).value=f[k]||'');
   $('count').textContent=`${m.length} package${m.length===1?'':'s'} found`;
-  $('vgrid').innerHTML=m.length?m.map(card).join(''):'<p class="empty" style="grid-column:1/-1;padding:26px 0">No packages match these filters. Try clearing one or two.</p>';
+  $('vgrid').innerHTML=m.length?m.map(o=>card(o)).join(''):'<p class="empty" style="grid-column:1/-1;padding:26px 0">No packages match these filters. Try clearing one or two.</p>';
 }
 $('fgrid').addEventListener('change',e=>{const k=e.target.dataset.k;if(!k)return;e.target.value?f[k]=e.target.value:delete f[k];drawFilters();});
 $('trend').addEventListener('click',()=>{f.trend?delete f.trend:f.trend=1;drawFilters();});
