@@ -305,9 +305,44 @@ const MAIN_DIR='https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images
 const IMG_TRY=['webp','jpg','jpeg','png'];
 const flat=s=>s.toLowerCase().replace(/[^a-z0-9]/g,'');
 
-/* ---- COUNTRY BAR IMAGE OVERRIDES (only if a file name differs) ---- */
 const COUNTRY_IMG={
- /* 'Seychelles':'https://example.com/seychelles.jpg', */
+  'France':'https://cdn.kimkim.com/files/a/content_articles/featured_photos/ad4152414df2cdd37318a45116425968e54660f5/big-be61419e9d977f19df34a89410365609.jpg',
+  'Spain':'https://static.independent.co.uk/2023/11/14/17/iStock-1083456786.jpg?quality=75&width=1368&crop=3%3A2%2Csmart&auto=webp',
+  'Germany':'https://res.cloudinary.com/worldpackers/image/upload/c_fill,f_auto,q_auto,w_1024/v1/guides/article_cover/pb9xvfhhnzdez9ztq41n?_a=BACMTiAE',
+  'United Kingdom':'https://img.jagranjosh.com/images/2025/09/26/article/image/United-Kingdom-Image-1758868948609.webp',
+  'Italy':'https://your-image-link/italy.jpg',
+  'Iceland':'https://your-image-link/japan.jpg',
+  'Greece':'https://your-image-link/thailand.jpg',
+  'Netherlands':'https://your-image-link/singapore.jpg',
+  'United States':'https://your-image-link/usa.jpg',
+  'Peru':'https://your-image-link/australia.jpg',
+  'Brazil':'https://your-image-link/new-zealand.jpg',
+  'Costa Rica':'https://your-image-link/australia.jpg',
+  'Mexico':'https://your-image-link/australia.jpg',
+  'Canada':'https://your-image-link/australia.jpg',
+  'Argentina':'https://your-image-link/australia.jpg',
+  'Colombia':'https://your-image-link/australia.jpg',
+  'Japan':'https://your-image-link/australia.jpg',
+  'UAE':'https://your-image-link/australia.jpg',
+  'South Korea':'https://your-image-link/australia.jpg',
+  'Indonesia':'https://your-image-link/australia.jpg',
+  'Thailand':'https://your-image-link/australia.jpg',
+  'Vietnam':'https://your-image-link/australia.jpg',
+  'Singapore':'https://your-image-link/australia.jpg',
+  'India':'https://your-image-link/australia.jpg',
+  'Egypt':'https://your-image-link/australia.jpg',
+  'Tanzania':'https://your-image-link/australia.jpg',
+  'Kenya':'https://your-image-link/australia.jpg',
+  'Mauritius':'https://your-image-link/australia.jpg',
+  'Morocco':'https://your-image-link/australia.jpg',
+  'South Africa':'https://your-image-link/australia.jpg',
+  'Namibia':'https://your-image-link/australia.jpg',
+  'Seyshelles':'https://your-image-link/australia.jpg',
+  'Fiji':'https://your-image-link/australia.jpg',
+  'New Zealand':'https://your-image-link/australia.jpg',
+  'French Polynesia':'https://your-image-link/australia.jpg',
+  'Samoa':'https://your-image-link/australia.jpg',
+  'Palau':'https://your-image-link/australia.jpg'
 };
 
 /* ---- MAIN 3 CARDS: which partners show by default in every country ---- */
@@ -326,193 +361,155 @@ const MAIN={
 'France':[
    ['klook','','','https://mozcp.truetrips.com/wp-content/uploads/2025/06/France_gallery_1.jpg'],
    ['tiqets','','','https://mozcp.truetrips.com/wp-content/uploads/2025/06/France_gallery.jpg'],
-   ['gocity','','','https://cdn.kimkim.com/files/a/content_articles/featured_photos/ad4152414df2cdd37318a45116425968e54660f5/big-be61419e9d977f19df34a89410365609.jpg']
- ],
+  ],
  'Spain':[
    ['klook','','','https://images.unsplash.com/photo-1578912996078-305d92249aa6?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D'],
    ['tiqets','','','https://znaki.fm/static/content/thumbs/984x553/9/b0/r2hha6---c1034x582x50px50p--5b261f709647e359b082172e23dcdb09.webp'],
-   ['gocity','','','https://static.independent.co.uk/2023/11/14/17/iStock-1083456786.jpg?quality=75&width=1368&crop=3%3A2%2Csmart&auto=webp']
- ],
+  ],
  'Germany':[
    ['klook','','','https://mldvwwasb8tu.i.optimole.com/cb:7ZGO.6206b/w:1100/h:734/q:90/f:best/ig:avif/https://travelaway.me/wp-content/uploads/2013/04/cochem-town-germany.jpg'],
    ['tiqets','','','https://cdn.kimkim.com/files/a/images/e28c94ae4c1bb7b133f6039ab141910c3581949d/original-d8146eba4d5c03ddb9a619c95108daf4.jpg'],
-   ['gocity','','','https://res.cloudinary.com/worldpackers/image/upload/c_fill,f_auto,q_auto,w_1024/v1/guides/article_cover/pb9xvfhhnzdez9ztq41n?_a=BACMTiAE']
  ],
  'United Kingdom':[
    ['klook','','','https://hblimg.mmtcdn.com/content/hubble/img/countryimgs/mmt/destination/t_trp/m_United_Kingdom_country_images_5_l_685_1338.jpg?im=Resize=(750,399)'],
    ['tiqets','','','https://d3gz7d9rg09miz.cloudfront.net/travel/1727059699491-london-cityscape-UKESSAY1222-3c3b4b23062f410080b77839b31243a6.jpg'],
-   ['gocity','','','https://img.jagranjosh.com/images/2025/09/26/article/image/United-Kingdom-Image-1758868948609.webp']
- ],
+  ],
   'Italy':[
    ['klook','','','https://media.bookmundi.com/travel-guides/things-to-do-in-italy/banner-image.jpg?format=auto&quality=90&width=1920'],
    ['tiqets','','','https://media.bookmundi.com/travel-guides/things-to-do-in-italy/content-images/amalfi-coast.jpg'],
-   ['gocity','','','https://media.bookmundi.com/travel-guides/things-to-do-in-italy/content-images/milan-cathedral.jpg']
  ],
    'Iceland':[
    ['klook','','','https://icetstg.wpengine.com/wp-content/uploads/2019/03/Kirkjufell-mountain.jpg'],
    ['tiqets','','','https://content.icelandtravel.is/wp-content/uploads/2018/02/file-109.jpg'],
-   ['gocity','','','https://i.natgeofe.com/n/86226a60-5559-4b7e-8b74-c1869ed4238f/Iceland-mount-Kirkjufell-aurora.jpg']
  ],
     'Greece':[
    ['klook','','','https://internationalliving.com/_next/image/?url=https%3A%2F%2Fimages.ctfassets.net%2Fwv75stsetqy3%2F18jOEJrhKM7WA81nkCKZV8%2F6f70df258ed1233d5c3a8e3f01298b06%2FGreece.jpg%3Fq%3D60%26fit%3Dfill%26fm%3Dwebp&w=3840&q=60'],
    ['tiqets','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGwY89KidKbwtC_qQarPls_xpcHVz1f9N7uZlFsNyUGyYG_i9NgBjWz0o&s=10'],
-   ['gocity','','','https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/7d/24/6a/acropolis-hill.jpg?w=1400&h=-1&s=1']
  ],
   'Netherlands':[
    ['klook','','','https://i.natgeofe.com/n/e2f26e6b-8255-4391-84be-4b0919d4c0d8/20240626-0349-Jonathan%20Irish-NGCW-CITI-AA-Amsterdam-_7R52855.jpg'],
    ['tiqets','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3ZvammkdTpaVmVRQ0cv9aW2OCQ71y2ex3SxtV-DKujL50GedYXqhCu08&s=10'],
-   ['gocity','','','https://cdn.kimkim.com/files/a/images/19ff923c9c5c330842b5e1a1795597472db324ab/original-8e48f980d8b1007966b354a64f68245f.jpg']
  ],
     'United States':[
    ['klook','','','https://static.vecteezy.com/system/resources/thumbnails/034/496/253/small/new-york-city-manhattan-skyline-panorama-at-sunset-with-statue-of-liberty-statue-liberty-and-new-york-city-skyline-at-sunset-ai-generated-free-photo.jpg'],
    ['tiqets','','','https://d19lgisewk9l6l.cloudfront.net/assetbank/Golden_Gate_Bridge_San_Francisco_California_USA_356827.jpg'],
-   ['gocity','','','https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Mount_Rushmore_detail_view_%28100MP%29.jpg/1280px-Mount_Rushmore_detail_view_%28100MP%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail']
  ],
     'Peru':[
    ['klook','','','https://d3gz7d9rg09miz.cloudfront.net/travel/1727192870951-Peru.webp'],
    ['tiqets','','','https://dynamic-media.tacdn.com/media/photo-o/30/f1/b1/01/caption.jpg?f=webp&w=1000&h=700'],
-   ['gocity','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFMSn5qKKR84tu0LpzTJF0hce6MxEEfWo1R_IEmBvmNeYCg9C5ezCW2Oo&s=10']
  ],
     'Brazil':[
    ['klook','','','https://cdn.kimkim.com/files/a/content_articles/featured_photos/67e29f693c4419341c375d333e11c210955cf3dc/medium-210b9fcca7c55b74f260d893a92c58af.jpg'],
    ['tiqets','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgLwEa4QTR1N7GiuXcVuPLv8hF05qAhhw_Js21BQUkbe4aUe_BWoTq0R0&s=10'],
-   ['gocity','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvpzl3Mu05thyIrIMF6s5BBaR_lY5_0loaFpQbph9meyn6VjcgcN9BkTk&s=10']
  ],
     'Costa Rica':[
    ['klook','','','https://cdn.kimkim.com/files/a/content_articles/featured_photos/6ea2a6ccbb174b7853e11f169d975f0302597dbb/big-daf89b8df8bdc96c6ddd680f51b40491.jpg'],
    ['tiqets','','','https://image.urlaubspiraten.de/4x3/image/upload/v1603282785/mediavault_images/njj86gxaivachs4slnzf.jpg'],
-   ['gocity','','','https://cdn.outsideonline.com/wp-content/uploads/2024/09/Costa-Rica-waterfall-family-main.jpg?auto=webp&width=3840&quality=75&fit=cover']
  ],   
   'Mexico':[
    ['klook','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9iBjYX1PLLWfzAQBV6xot-fgJoxaNOfjGoMXyfAl0RNNNSH-IVkDo0jw&s=10'],
    ['tiqets','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsZkJT9Cyeyvu714L2WU-jzi95AaXwgsBgDDCJX1pzjLpfbbAWKcTfHVs&s=10'],
-   ['gocity','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmTU6I0ArBozyAv6d-Pe45s_3Oj2zmIOIzYFkjR0VHo-xxY4flPy_nmNs&s=10']
  ],
   'Canada':[
    ['klook','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzLKB6M6SdlMnb8JCLuEylJ2Hm4hTog-UU7bKTSAXTwUJ8TYhakVvwXYr5&s=10'],
    ['tiqets','','','https://matrix.in/cdn/shop/articles/canada3_960x.jpg?v=1709210626'],
-   ['gocity','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV6dA_qhCTZeTxj7nzAR3yfjxommchJs7EKlXsSzW4gSVIbkkcH3eYa6o&s=10']
  ],
   'Argentina':[
    ['klook','','','https://dtuk-aws-s3-explore-prod.s3.eu-west-1.amazonaws.com/medialibraries/explore/explore-media-v2/shutterstock_1469728634.jpg'],
    ['tiqets','','','https://cdn.kimkim.com/files/a/content_articles/featured_photos/556131d17430d7a35dae9170f605b54caca3ed69/medium-ffc3a377dc4db8937f2637ca0746c458.jpg'],
-   ['gocity','','','https://d3gz7d9rg09miz.cloudfront.net/travel/1727152672106-Argentina.jpg']
  ],
   'Colombia':[
    ['klook','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTQQR2zdxtWyfVi2jUM9LQOzmTq3-sj4hC3Jqms8p1IbjrwmInhEU6Xrlf&s=10'],
    ['tiqets','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLjTzpXS1mpGiw5Cv7uyk7kt6KXqZruQIROuZwLvTd06FbuQ38DcEEFD_1&s=10'],
-   ['gocity','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0uvN6PMu-N3dg3ue22FBrg6pxKwK9YEuRdFva_NopuQ&s=10']
  ],
   'Japan':[
    ['klook','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlvbLr5YGva7D9PbrC5IzMr0I60ZSXMPkBsAPyFO5TcQ&s=10'],
    ['tiqets','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHqdTYAbZpCa93fUzU_ZRMaPSkjWfOvlcqBWo3pYIThw&s=10'],
-   ['gocity','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZi-I6xgO3E-w62QDMakzW28SjTqXzyNmF_djJoLvvJg&s=10']
  ],
   'UAE':[
    ['klook','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH5ZLQHjNazSN8b6q_A0ul0GRbnqSFFNSQipZd0OXrApyuVW_79pEpo7vX&s=10'],
    ['tiqets','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz1NRThQVWyErpgQOtIIOwCsRI1s2EtPjATSN2TD2kpxSh-Ww4F-M8t9DK&s=10'],
-   ['gocity','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR04Yn2Sh-5BSe8PLoJaFScsWM7vrv-jBtXIoKo1To8ohpWsnCo26B8Ms8&s=10']
  ],
   'South Korea':[
    ['klook','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVko6z4t0qPt4wqI50robJG36BYIKpkrU6QwqcJ3R14g&s=10'],
    ['tiqets','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGx_PMxisZcRiohFvdESat09FyNj5cz0RI17KeNtdzKQ&s=10'],
-   ['gocity','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfy0u295Zdl3ZLN1Ip5iEG3udofPVx1gDmFKa2-65_Ust0k0j4c2kJOqc&s=10']
- ],
+  ],
   'Indonesia':[
    ['klook','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXVtFOBd5WtvKUIjNxvdk-OPdxbASWEh1ZI-VpBOm-OA&s=10'],
    ['tiqets','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6wvEqmdCuCtTrwWo8ULhRk3UHCYn59qTTpeFPeJGEwsa0K8DKGNudRQo&s=10'],
-   ['gocity','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTECmxWuxKwbMqd2T_0oLVH7bXODABEELf7prDCb2tcqg&s=10']
  ],
    'Thailand':[
    ['klook','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2hEure12sYWL4LmEfXxtNA23laW-QfFCU9RBmk317Zw&s=10'],
    ['tiqets','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8Xne6AD2DlwZ6M_GEaFdeFZOuyztDQhb-LOw-Iys7oMaP0-5NJqz7f_Q&s=10'],
-   ['gocity','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsKKbGDjwVT7qnaDULWigNE47c26FGWc_70Achp_PstY4DxhMUNdBrmOc&s=10']
  ],
   'Vietnam':[
    ['klook','','','https://cdn.tourradar.com/s3/serp/original/5032_Gia44gKW.jpg'],
    ['tiqets','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3Vk7ISV2uaJW9TA7MRkPa0sNjCHHwfmhFrlzJf6ULWp7qsd0XR0pg-O22&s=10'],
-   ['gocity','','','https://cdn.getyourguide.com/image/format=avif%2Cfit=cover%2Cgravity=auto%2Cquality=60/dam/iStock-1182620587-edit-Header%20Mobile.jpg']
  ],
   'Singapore':[
    ['klook','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR3f8x222EkVnVrAL-389dVzTaiXKmDjaq6BKLtB_JFJ34gJTxsDKD1RA&s=10'],
    ['tiqets','','','https://www.thoughtco.com/thmb/hiX78jivjuLMs6Pg4oTXsQAxriE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(1059x0:1061x2)/singapore--garden-by-the-bay--supertree-grove-638256268-fa59e7e78b6449aaa40f68eafe6ff1a1.jpg'],
-   ['gocity','','','https://cdn.sanity.io/images/nxpteyfv/goguides/92d5d4578c1e98ddf56b79bc0a536fa78d6a1a01-1600x1066.jpg']
  ],
   'India':[
    ['klook','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-qzmkWpewJHgYrR8xSqNzlCPBzm0Q9f-aSncsQ2QcpA&s=10'],
    ['tiqets','','','https://static.ffx.io/images/$zoom_0.384%2C$multiply_0.7725%2C$ratio_1.5%2C$width_756%2C$x_6%2C$y_0/t_crop_custom/q_86%2Cf_auto/a8d974b80f3a098e6ae06b07c71a40ca8f2e42e3'],
-   ['gocity','','','https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/42/73/a4/india-gate.jpg?w=900&h=500&s=1']
  ],
    'Egypt':[
    ['klook','','','https://orionmagazine.org/wp-content/uploads/2015/09/8589130570139-dusk-camel-pyramids-cairo-egypt-top-travel-lists-wallpaper-hd.jpg'],
    ['tiqets','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQD52ExlVb-gz16qBoVFyZ5neEvXPUx-BkYp4elBktYQ&s'],
-   ['gocity','','','https://images.onthegotours.com/Best-of-Egypt-for-Teenagers-news-784141623936013.jpg']
  ],
   'Tanzania':[
    ['klook','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTax9I4TulYIx7mazQ3mfwIlckp1Rs5xUN5rqqE4DOUA&s=10'],
    ['tiqets','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSvf-e9QdQUkVARwut7xa8tfsDRHV3Q823zW-R3HFL16PYujE_FUyxA3Hm&s=10'],
-   ['gocity','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8VIcce5l2O_ptUno-hFZWkSRyUIEeIt039WyGh2SJVaUM_fd1q2SRxOos&s=10']
  ],
   'Kenya':[
    ['klook','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmc6KJ0fsMpkDLbSroT97iBAfT9FOIlvEXZSeucKwmZOVGMc_eETORaIA&s=10'],
    ['tiqets','','', 'https://cdn.kimkim.com/files/a/content_articles/featured_photos/96f5c998de636deeae3b6087d303fc9e3a1e93b3/big-a9f57911d0c8cdecd210c8fe9da40c49.jpg'],
-   ['gocity','','','https://www.holidaymonk.com/wp-content/uploads/2025/09/Travel-Guide-to-Kenya.webp']
  ],
   'Mauritius':[
    ['klook','','','https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2025/10/29172931/mauritius-1600x900.jpg'],
    ['tiqets','','','https://localadventurer.com/wp-content/uploads/2022/12/underwater-waterfall-mauritius.jpg'],
-   ['gocity','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpcUAp2SCQdDbXrdyZKFWpd5-hsWvMjlUhZGapXkMvY2bFysT0MfZyYYzg&s=10']
  ],
   'Morocco':[
    ['klook','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeP-Ki3rRN1wJLnktKE0Hk-uSVAGAT-0UdR7-VjyIqe35kqH7cOzPCz-wZ&s=10'],
    ['tiqets','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKEECuDto5Tp4UvkkVB0bIxIZ9hn_VPIVIy530_k8Qtw&s=10'],
-   ['gocity','','','https://i0.wp.com/www.engagingcultures.com/wp-content/uploads/2025/04/Moroccan-Music-Festival-with-Traditional-Clothing-Smaller-File-abdou-faiz-mBo2EUfJ7sY-unsplash.jpeg?ssl=1']
  ],
   'South Africa':[
    ['klook','','','https://www.perfectwavetravel.com/wp-content/uploads/2019/12/ZAF-Cape-Town.jpg'],
    ['tiqets','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSNgHEbr_Vb-ON2Zp1gse6Ou24_4bxYZrLKKYoTjWlMA&s=10'],
-   ['gocity','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHh5XOpMujOEGvl5MqbHiYG4iNG4wPA04BS7VMnHUvbsvlqk19SdZWg5pf&s=10']
  ],
   'Namibia':[
    ['klook','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT34vvO_O6iTe6gORRstqVG1sQbzxJliBU5DfFsBWZBBIMY-4CvAKbRDwAx&s=10'],
    ['tiqets','','','https://media.architecturaldigest.com/photos/5c3cb5ce92ce212ce3f51081/16:9/w_2560%2Cc_limit/GettyImages-962596192%2520(1).jpg'],
-   ['gocity','','','https://www.africansky.com/img/countries/nam/lodges/swakopmundhotel/social.jpg']
  ],
   'Seychelles':[
    ['klook','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2LTTGNKVwY_nhwcT8WYNQSZv8gyLgUbKzX3K1oOl6SP1DSRxxrGnK26Y1&s=10'],
    ['tiqets','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWB_947UshTA-vWrS3NPZ9poBtyy3HE94L5jXD1B5RMmtVxAft_rZtu6ld&s=10'],
-   ['gocity','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFTRhEOwNeDVUKfOf-zPdDQlaDduQplQuhO9Iu9iOeTmi4gOirEjMMc30&s=10']
  ],
   'Australia':[
    ['klook','','','https://www.aatkings.com/media/ltsk4p42/sydney-city-darling-harbour-north-banner.jpg?center=0.5%2C0.5&format=webp&mode=crop&width=900&height=600&quality=80'],
    ['tiqets','','','https://static.ffx.io/images/$zoom_0.4995%2C$multiply_2%2C$ratio_1.777778%2C$width_1059%2C$x_0%2C$y_109/t_crop_custom/c_scale%2Cw_1200%2Cq_88%2Cf_auto/003ecceca0fa3d7c2f9c161902687807b243fb818ef4af4f1f9eca486114a63f'],
-   ['gocity','','','https://www.celebritycruises.com/blog/content/uploads/2022/03/most-beautiful-places-in-australia-the-great-ocean-roads-12-apostles-hero-1024x683.jpg']
  ],
    'Fiji':[
    ['klook','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFtCmintzJGAq3elWZ8ga1BfNuqsNNXK1R04TZEtlZYcsGItpLlSOS7R5w&s=10'],
    ['tiqets','','','https://www.turtlefiji.com/wp-content/uploads/2020/11/Hero_1230x769_Turtle-Island-Fiji-1.jpg'],
-   ['gocity','','','https://digital.ihg.com/is/image/ihg/intercontinental-natadola-8835125750-2x1']
  ],
    'New Zealand':[
    ['klook','','','https://www.flightgift.com/media/wp/FG/2024/10/NZ-2.webp'],
    ['tiqets','','','https://www.albomadventures.com/wp-content/uploads/2022/12/NZ-Coromandel-cathedral-cove-Depositphotos_457207946_L.jpg'],
-   ['gocity','','','https://www.celebritycruises.com/blog/content/uploads/2022/04/best-cities-in-new-zealand-wellington-1024x683.jpg']
- ],
+  ],
    'French Polynesia':[
    ['klook','','','https://www.downunderendeavours.com/wp-content/uploads/2013/11/Hilton-Moorea-650x400-huts.jpg'],
    ['tiqets','','','https://passportmagazine.com/wp-content/uploads/2020/03/Opening-Photo-Left-page-Bora-Bora-IC-view-of-Mount-Otemanu-Photo-by-Travis-McGhie.jpg'],
-   ['gocity','','','https://dynamic-media.tacdn.com/media/photo-o/34/29/7d/12/caption.jpg?f=webp&w=1000&h=700']
- ],
+  ],
    'Samoa':[
    ['klook','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxGLDrGVpTuKAP56ZS37VZ3h-m-IevqdnYT9_pqULJFPf4CVw8cBZ_sGE&s=10'],
    ['tiqets','','','https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/d2/f6/ee/to-sua-ocean-trench.jpg?w=500&h=500&s=1'],
-   ['gocity','','','https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/f6/f2/46/national-park-of-american.jpg?w=900&h=500&s=1']
  ],
    'Palau':[
    ['klook','','','https://images.squarespace-cdn.com/content/v1/64f313b141fb7b21a8f85c5d/c0506272-ae87-4a45-8cfd-52b0defc38c0/IMG_2044.jpg'],
    ['tiqets','','','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFNrruu86BoN1tEO-eSjMaZMiQ3vHKlEXfPSKqOhI_B83tVeYyYPYt3hE&s=10'],
-   ['gocity','','','https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2026/02/19121135/Untitled-design-2026-02-19T121130.332.png?tr=w-480,f-jpg,pr-true']
- ],
+    ],
 };
 
 /* ---- EXTRA CARDS (full list only). Use an internet image link, no GitHub upload needed.
