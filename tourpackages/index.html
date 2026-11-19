@@ -306,43 +306,46 @@ const IMG_TRY=['webp','jpg','jpeg','png'];
 const flat=s=>s.toLowerCase().replace(/[^a-z0-9]/g,'');
 
 const COUNTRY_IMG={
-  'France':'https://cdn.kimkim.com/files/a/content_articles/featured_photos/ad4152414df2cdd37318a45116425968e54660f5/big-be61419e9d977f19df34a89410365609.jpg',
-  'Spain':'https://static.independent.co.uk/2023/11/14/17/iStock-1083456786.jpg?quality=75&width=1368&crop=3%3A2%2Csmart&auto=webp',
-  'Germany':'https://res.cloudinary.com/worldpackers/image/upload/c_fill,f_auto,q_auto,w_1024/v1/guides/article_cover/pb9xvfhhnzdez9ztq41n?_a=BACMTiAE',
-  'United Kingdom':'https://img.jagranjosh.com/images/2025/09/26/article/image/United-Kingdom-Image-1758868948609.webp',
-  'Italy':'https://your-image-link/italy.jpg',
-  'Iceland':'https://your-image-link/japan.jpg',
-  'Greece':'https://your-image-link/thailand.jpg',
-  'Netherlands':'https://your-image-link/singapore.jpg',
-  'United States':'https://your-image-link/usa.jpg',
-  'Peru':'https://your-image-link/australia.jpg',
-  'Brazil':'https://your-image-link/new-zealand.jpg',
-  'Costa Rica':'https://your-image-link/australia.jpg',
-  'Mexico':'https://your-image-link/australia.jpg',
-  'Canada':'https://your-image-link/australia.jpg',
-  'Argentina':'https://your-image-link/australia.jpg',
-  'Colombia':'https://your-image-link/australia.jpg',
-  'Japan':'https://your-image-link/australia.jpg',
-  'UAE':'https://your-image-link/australia.jpg',
-  'South Korea':'https://your-image-link/australia.jpg',
-  'Indonesia':'https://your-image-link/australia.jpg',
-  'Thailand':'https://your-image-link/australia.jpg',
-  'Vietnam':'https://your-image-link/australia.jpg',
-  'Singapore':'https://your-image-link/australia.jpg',
-  'India':'https://your-image-link/australia.jpg',
-  'Egypt':'https://your-image-link/australia.jpg',
-  'Tanzania':'https://your-image-link/australia.jpg',
-  'Kenya':'https://your-image-link/australia.jpg',
-  'Mauritius':'https://your-image-link/australia.jpg',
-  'Morocco':'https://your-image-link/australia.jpg',
-  'South Africa':'https://your-image-link/australia.jpg',
-  'Namibia':'https://your-image-link/australia.jpg',
-  'Seyshelles':'https://your-image-link/australia.jpg',
-  'Fiji':'https://your-image-link/australia.jpg',
-  'New Zealand':'https://your-image-link/australia.jpg',
-  'French Polynesia':'https://your-image-link/australia.jpg',
-  'Samoa':'https://your-image-link/australia.jpg',
-  'Palau':'https://your-image-link/australia.jpg'
+  'France':'https://mandstravelmoney.com/media/3qdbyp3p/adobestock_147497684.jpeg?width=1100&height=720&v=1dd6b8dd54d8110',
+  'Spain':'https://blog.vanhack.com/wp-content/uploads/2021/06/spain-city-view.png',
+  'Germany':'https://drifttravel.com/wp-content/uploads/2023/03/Visiting-Germanys-Most-Beautiful-Cities.jpeg',
+  'United Kingdom':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE-tIZmTN_ptUtRBoqUWCRb-RFxniLE2-uSZsdlii4cko8r65HBxuvqmc&s=10',
+  'Italy':'https://cdn0.visitukraine.today/031/media/blog/previews/z4MpSyGSXd8fYvYFqaoYhlemjscQG9ss3uNN29AS.jpg',
+  'Iceland':'https://cdn.sanity.io/images/nxpteyfv/goguides/e78c8e0eb335ec53ef86b63c338b444ef795b874-1600x1066.jpg?fp-x=0.5&fp-y=0.5&w=1600&q=75&fit=max&auto=format',
+  'Greece':'https://a-us.storyblok.com/f/1018766/4200x3100/a3b4ca55ea/greece_3_2100x1550.png/m/1536x864',
+  'Netherlands':'https://prod-img.noordhollandsdagblad.nl/public/binnenland/t0syhn-5eaca9d0-a489-42ce-bf40-17d82198a809-tmg-webfeed-bin-anp160626163-1.jpeg/alternates/BASE_THREE_TWO/5eaca9d0-a489-42ce-bf40-17d82198a809_tmg-webfeed-bin_ANP160626163-1.jpeg',
+  'United States':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtanYm-nWBScG4zOOXwxNWNy9kghSkv8g5Mbr0LDICahVfStLm4mYxp3c&s=10',
+  'Peru':'https://blog.incarail.com/wp-content/uploads/2025/02/peru-independence-day.webp',
+  'Brazil':'https://cdn.mappr.co/wp-content/uploads/2023/11/copacabana-beach-brazil-flag.jpg',
+  'Costa Rica':'https://images.entercostarica.com/uploads/pages_798_plan_your_trip_mobile_cd637c8567.webp',
+  'Mexico':'https://cdn.britannica.com/60/92960-050-327CF926/pyramid-Mayan-Chichen-Itza-Mex.jpg',
+  'Canada':'https://cdn.prod.website-files.com/6734b02195be73cdd3fdc0ad/6762a67f870205b695572387_blog_hero-image.jpg',
+  'Argentina':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl8lWXARAFq5FJdOD_TXNSgFLv08iIiLPzF7MkFs1BNYtxiYY_JN7ht2s&s=10',
+  'Colombia':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLjTzpXS1mpGiw5Cv7uyk7kt6KXqZruQIROuZwLvTd06FbuQ38DcEEFD_1&s=10',
+  'Japan':'https://assets.travelodgehotels.asia/cdn-cgi/image/width=1920,quality=75,format=auto,height=1289,fit=crop/shutterstock_2555905833.webp',
+  'UAE':'https://www.printr.ae/blog/wp-content/uploads/2026/10/United-Arab-Emirates-Flag-Over-Dubai-1024x576.png',
+  'South Korea':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd0cnsck7l1R3xd7aKNF24kISqnxo9V4D9w_gEf6ZxXWGUSKBe8bOKnlbl&s=10',
+  'Indonesia':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7KV6q3lu12uvJhW-Ooq3Q6AEV6xPFd4nXGWYFnGaQr2niduijSCBiGLud&s=10',
+  'Thailand':'https://cdn.sanity.io/images/nxpteyfv/goguides/9590faf1e1e32875ed078a20ea5bf2bb547a6eae-1600x1066.jpg',
+  'Vietnam':'https://victoriatour.com/upload_images/images/travel_vietnam_(7).jpg',
+  'Singapore':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJCPkfD04UEvZ-BDF9e6mLMcmpM3a8pan4p6psjM-RCsXeOlS57sExEO8&s=10',
+  'India':'https://assets.gqindia.com/photos/62f9c75e0d4e31701fb885d6/master/pass/Lesser-known-facts-about-India.jpeg',
+  'Egypt':'https://i.natgeofe.com/k/109a4e08-5ebc-48a5-99ab-3fbfc1bbd611/Giza_Egypt_KIDS_0123_16x9.jpg',
+  'Tanzania':'https://www.easytravel.co.tz/wp-content/uploads/2020/12/Giraffes-stand-in-front-of-a-passing-hot-air-balloon-in-Serengeti-National-Park-Tanzania.jpg',
+  'Kenya':'https://www.lionridertours.com/wp-content/uploads/2023/07/6-days-migration-kenya-tanzania-safari-2.jpg',
+  'Mauritius':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ403bxDGls2SbP-mn2tvLcTVcid4lIafP1Q4QJGdY55-0jXy0RsbzH_nB&s=10',
+  'Morocco':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZIzDGjQ_umkwJ9nX4eixt9q7yJ86sjNXIQGddzONbdXBCIXKytmvYjwLu&s=10',
+  'South Africa':'https://ciaps.org/wp-content/uploads/2026/06/Moving-to-South-Africa-from-the-UK-.webp',
+  'Namibia':'https://www.outlooktravelmag.com/media/namibia-1-1582296755.profileImage.2x-scaled-webp.webp',
+  'Seychelles':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKEv6zf6trVAeWVw_hfbZHEB5aANGldGh6tgGhw8-7pMSloJnVMKXFe4zW&s=10',
+  'Australia':'https://images.goway.com/production/featured_images/australia_sydney_opera_house_gt_mag.jpg',
+  'Fiji':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPKeU8jby_2n4n-9Ro-ZpwtWQOBa10XIyKMUawc1P1dA&s=10',
+  'New Zealand':'https://www.theinvisibletourist.com/wp-content/uploads/2017/04/featured_12.jpg',
+  'French Polynesia':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWGaIaaaVIeRHRldhaKcq2oqbygOPQwgOwoAl6Gt45B6DA7zAHeTCIylk&s=10',
+  'Vanuatu':'https://assets.cntraveller.in/photos/60b9f120010276881eb4d3ba/master/pass/1%20Vanuatu-257708306-1366x768.jpg',
+  'Cook Islands':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCOjXv6Nv-UkCex-P-gMuF4Vjz35fS-lvTriFnxO9Qitgd_b79cSZJafs&s=10',
+  'Samoa':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxGLDrGVpTuKAP56ZS37VZ3h-m-IevqdnYT9_pqULJFPf4CVw8cBZ_sGE&s=10',
+  'Palau':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBkBKqS7udBGtWpMHAHbh2kVlBRgUnktyKefhHxNctR3t0wfEWF_m9bayt&s=10'
 };
 
 /* ---- MAIN 3 CARDS: which partners show by default in every country ---- */
@@ -554,8 +557,8 @@ europe:{n:'Europe',c:[
  ['Seine River Cruise by Bateaux-Mouches','tiqets','spring',2,1,'a',"",15,""]]],
  ['Germany',[['Seine River Cruise by Bateaux-Mouches','tiqets','spring',2,1,'x',"",18,""],
  ['Seine River Cruise by Bateaux-Mouches','tiqets','spring',2,1,'a',"",15,""],]],
- ['Greece',[['Seine River Cruise by Bateaux-Mouches','tiqets','spring',2,1,'x',"",18,""],
- ['Seine River Cruise by Bateaux-Mouches','tiqets','spring',2,1,'a',"",15,""]]],
+ /*['Greece',[['Seine River Cruise by Bateaux-Mouches','tiqets','spring',2,1,'x',"",18,""],
+ ['Seine River Cruise by Bateaux-Mouches','tiqets','spring',2,1,'a',"",15,""]]],*/
  ['United Kingdom',[['Seine River Cruise by Bateaux-Mouches','tiqets','spring',2,1,'x',"",18,""],
  ['Seine River Cruise by Bateaux-Mouches','tiqets','spring',2,1,'a',"",15,""]]],
  ['Netherlands',[['Seine River Cruise by Bateaux-Mouches','tiqets','spring',2,1,'x',"",18,""],
@@ -564,22 +567,22 @@ europe:{n:'Europe',c:[
 america:{n:'America',c:[
  ['United States',[['New York City Pass','gocity','all',2,1,'p'],['Grand Canyon Day Tour','klook','spring',2,0,'d'],['Orlando Theme Park Tickets','klook','summer',2,1,'a']]],
  ['Mexico',[['Chichén Itzá Day Trip','klook','winter',2,1,'d'],['Tulum & Cenote Swim','gyg','winter',1,0,'x'],['Mexico City Street Food Tour','gyg','autumn',1,0,'x']]],
- ['Peru',[['Machu Picchu Entry & Train','klook','summer',3,1,'a'],['Rainbow Mountain Hike','klook','summer',1,0,'d'],['Sacred Valley Day Tour','gyg','spring',2,0,'d']]],
+ /*['Peru',[['Machu Picchu Entry & Train','klook','summer',3,1,'a'],['Rainbow Mountain Hike','klook','summer',1,0,'d'],['Sacred Valley Day Tour','gyg','spring',2,0,'d']]],*/
  ['Canada',[['Niagara Falls Day Tour','klook','summer',2,1,'d'],['Banff & Rockies Day Trip','gyg','winter',2,0,'d']]],
  ['Brazil',[['Christ the Redeemer & Sugarloaf','klook','all',1,1,'a'],['Iguazu Falls Tour','gyg','autumn',2,0,'d']]],
- ['Argentina',[['Tango Show & Dinner','klook','all',2,0,'x'],['Perito Moreno Glacier Day Trip','gyg','summer',3,1,'d']]],
+ /*['Argentina',[['Tango Show & Dinner','klook','all',2,0,'x'],['Perito Moreno Glacier Day Trip','gyg','summer',3,1,'d']]],
  ['Costa Rica',[['Arenal Volcano & Hot Springs','klook','winter',2,1,'d'],['Monteverde Zipline Adventure','gyg','winter',2,0,'x']]],
- ['Colombia',[['Cartagena Old City Walking Tour','gyg','winter',1,0,'x'],['Coffee Region Farm Experience','klook','winter',2,0,'x']]]
+ ['Colombia',[['Cartagena Old City Walking Tour','gyg','winter',1,0,'x'],['Coffee Region Farm Experience','klook','winter',2,0,'x']]]*/
 ]},
 asia:{n:'Asia',c:[
  ['Japan',[['Kyoto Temples & Geisha District','klook','spring',2,1,'x'],['Mt. Fuji Day Trip','klook','autumn',2,1,'d'],['Osaka Street Food Tour','gyg','all',1,0,'x']]],
  ['Thailand',[['Phi Phi Islands Speedboat','klook','winter',1,1,'d'],['Bangkok Temples & Floating Market','klook','all',1,0,'x'],['Chiang Mai Elephant Sanctuary','gyg','winter',2,0,'x']]],
  ['UAE',[['Burj Khalifa At the Top','tiqets','winter',2,1,'a'],['Desert Safari with BBQ Dinner','klook','winter',1,1,'x'],['Dubai Explorer Pass','gocity','winter',2,0,'p']]],
- ['Vietnam',[['Ha Long Bay Day Cruise','klook','autumn',2,1,'x'],['Hoi An Lantern & Cooking Class','gyg','all',1,0,'x']]],
+ /*['Vietnam',[['Ha Long Bay Day Cruise','klook','autumn',2,1,'x'],['Hoi An Lantern & Cooking Class','gyg','all',1,0,'x']]],*/
  ['South Korea',[['Seoul DMZ Tour','klook','spring',2,1,'d'],['Jeju Island Day Tour','klook','autumn',2,0,'d']]],
  ['Singapore',[['Gardens by the Bay Tickets','klook','all',1,1,'a'],['Singapore Explorer Pass','gocity','all',2,0,'p']]],
  ['Indonesia',[['Bali Temples & Rice Terraces','klook','all',1,1,'d'],['Komodo Island Boat Trip','gyg','summer',3,0,'m']]],
- ['India',[['Taj Mahal Sunrise Tour','gyg','winter',1,1,'d'],['Jaipur Pink City Tour','klook','winter',2,0,'d']]]
+ /*['India',[['Taj Mahal Sunrise Tour','gyg','winter',1,1,'d'],['Jaipur Pink City Tour','klook','winter',2,0,'d']]]*/
 ]},
 africa:{n:'Africa',c:[
  ['Egypt',[['Pyramids of Giza & Sphinx Tour','klook','winter',1,1,'x'],['Nile Dinner Cruise','klook','all',2,0,'x'],['Luxor Temples Day Trip','gyg','winter',2,0,'d']]],
@@ -588,18 +591,18 @@ africa:{n:'Africa',c:[
  ['South Africa',[['Table Mountain Cable Car','tiqets','all',1,1,'a'],['Cape Point & Penguins Day Trip','gyg','all',2,1,'d']]],
  ['Kenya',[['Masai Mara Safari','gyg','summer',3,1,'m'],['Giraffe Centre & Elephant Orphanage','klook','all',1,0,'x']]],
  ['Namibia',[['Sossusvlei Dunes Tour','gyg','autumn',3,0,'m'],['Swakopmund Desert Adventure','klook','all',2,0,'x']]],
- ['Mauritius',[['Catamaran Cruise to Île aux Cerfs','klook','winter',2,1,'x'],['Seven Coloured Earths Island Tour','gyg','all',1,0,'d']]],
- ['Seychelles',[['Praslin & La Digue Island Hopping','klook','all',3,0,'x'],['Mahé Island Highlights Tour','gyg','all',2,0,'d']]]
+ /*['Mauritius',[['Catamaran Cruise to Île aux Cerfs','klook','winter',2,1,'x'],['Seven Coloured Earths Island Tour','gyg','all',1,0,'d']]],
+ ['Seychelles',[['Praslin & La Digue Island Hopping','klook','all',3,0,'x'],['Mahé Island Highlights Tour','gyg','all',2,0,'d']]]*/
 ]},
 oceania:{n:'Oceania',img:'',c:[
  ['Australia',[['Sydney Opera House Tour','tiqets','all',2,1,'a'],['Great Barrier Reef Snorkel Cruise','klook','winter',3,1,'x']]],
  ['New Zealand',[['Milford Sound Cruise','klook','summer',3,1,'x'],['Hobbiton Movie Set Tour','gyg','all',2,1,'a']]],
  ['Fiji',[['Island Hopping Cruise','klook','summer',2,1,'x'],['Cloud 9 Floating Bar Day','klook','all',2,0,'x']]],
  ['French Polynesia',[['Bora Bora Lagoon Tour','klook','summer',3,1,'x'],['Moorea Island Day Trip','gyg','summer',2,0,'d']]],
- ['Cook Islands',[['Rarotonga Island Circle Tour','gyg','winter',2,0,'d'],['Aitutaki Lagoon Cruise','klook','winter',3,1,'x']]],
+ /*['Cook Islands',[['Rarotonga Island Circle Tour','gyg','winter',2,0,'d'],['Aitutaki Lagoon Cruise','klook','winter',3,1,'x']]],
  ['Samoa',[['To Sua Ocean Trench Day Tour','gyg','summer',1,0,'d'],['Upolu Island Highlights','klook','summer',2,0,'d']]],
  ['Vanuatu',[['Mount Yasur Volcano Tour','klook','all',3,1,'d'],['Blue Lagoon Snorkel Day','gyg','all',1,0,'x']]],
- ['Palau',[['Rock Islands & Jellyfish Lake','klook','winter',3,1,'x'],['Ngardmau Waterfall Trek','gyg','all',2,0,'d']]]
+ ['Palau',[['Rock Islands & Jellyfish Lake','klook','winter',3,1,'x'],['Ngardmau Waterfall Trek','gyg','all',2,0,'d']]]*/
 ]}
 };
 
