@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!--
+  Partner script removed to test the Klook popup / logo / box-button problem.
+  If Travelpayouts asks you to verify the site again, remove the comment markers around it.
 <script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false" seraph-accel-crit="1" data-no-defer="1" data-cmp-ab="2">
 (function(){var s=document.createElement("script");s.async=1;s.setAttribute("data-cmp-ab","2");s.src='https://emrldco.com/NTYxOTk5.js?t=561999';document.head.appendChild(s);})();
 </script>
+-->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Tour packages by continent and country. Tickets, day trips and city passes from Klook, Tiqets, Go City and GetYourGuide, filtered by season, budget and trending.">
@@ -65,7 +69,7 @@ button{cursor:pointer}
 /* CONTINENTS */
 .conts{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
 .cont{position:relative;display:block;width:100%;padding:0;border:3px solid #fff;border-radius:var(--r);overflow:hidden;background:#fff;box-shadow:var(--sh);text-align:left;transition:transform var(--ease),box-shadow var(--ease)}
-.cont .im{height:235px}
+.cont .im{height:300px}
 .cont .lab{position:absolute;z-index:2;left:0;bottom:0;display:block}
 .cont .lab b{display:block;font-family:"Poppins",sans-serif;font-size:28px;line-height:1.15;color:#fff;letter-spacing:.01em;padding:9px 26px 11px 20px;background:rgba(0,33,54,.9);border-top-right-radius:32px;text-shadow:0 2px 4px rgba(0,0,0,.4)}
 .cont[aria-pressed=true]{border-color:var(--navy);box-shadow:0 0 0 6px rgba(0,33,54,.25),var(--sh)}
@@ -75,7 +79,7 @@ button{cursor:pointer}
 /* UNFOLD PANEL */
 .upanel{grid-column:1/-1;position:relative;background:var(--navy);border:2px solid #fff;border-radius:var(--r);box-shadow:var(--sh);padding:22px 16px 24px;animation:unfold .35s ease}
 .upanel::before{content:"";position:absolute;top:-11px;left:50%;width:18px;height:18px;background:var(--navy);border-left:2px solid #fff;border-top:2px solid #fff;transform:translateX(-50%) rotate(45deg)}
-@keyframes unfold{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+@keyframes unfold{from{opacity:0}to{opacity:1}}
 .uhead{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:16px;color:#fff}
 .uhead h3{font-family:"Poppins",sans-serif;font-size:clamp(20px,2.2vw,28px);line-height:1.2}
 .uhead h3 em{font-style:normal;color:var(--sky)}
@@ -91,7 +95,7 @@ button{cursor:pointer}
 .country.open{border-color:var(--navy)}
 .ch{width:100%;display:flex;align-items:center;gap:18px;padding:12px 20px 12px 12px;background:none;border:none;text-align:left;color:#fff}
 .ch:hover{background:#0094cf}
-.ch .im{width:120px;height:80px;border-radius:16px}
+.ch .im{width:180px;height:120px;border-radius:18px}
 .ch .nm{display:flex;flex-direction:column}
 .ch .nm strong{font-family:"Poppins",sans-serif;font-size:22px;line-height:1.2;color:#fff}
 .ch .nm small{font-size:13px;color:rgba(255,255,255,.88)}
@@ -170,9 +174,9 @@ html{scroll-padding-top:70px}
 .page-title{padding:36px 5% 32px}.page-title p{font-size:14px}
 .band{padding:20px 0 24px}
 .section-header{margin-bottom:14px}.section-header h2{font-size:26px}.section-description{display:none}
-.conts{gap:10px;grid-template-columns:1fr}.cont .im{height:165px}
-.cont .lab b{font-size:20px;padding:7px 20px 9px 15px;border-top-right-radius:24px}
-.ch{gap:12px;padding:10px 14px 10px 10px}.ch .im{width:84px;height:62px}.ch .nm strong{font-size:18px}.ch .tg{display:none}
+.conts{gap:8px;grid-template-columns:1fr 1fr}.conts .cont:last-of-type{grid-column:1/-1;justify-self:center;width:calc(50% - 4px)}.cont{border-width:2px}.cont .im{height:115px}
+.cont .lab b{font-size:16px;padding:6px 16px 7px 12px;border-top-right-radius:20px}
+.ch{gap:12px;padding:10px 14px 10px 10px}.ch .im{width:100px;height:74px;border-radius:14px}.ch .nm strong{font-size:18px}.ch .tg{display:none}
 .panel .pk{flex-direction:column}.panel .pk .im{width:100%;height:180px;min-height:0}.vstrip .pk{flex-basis:80%}.fgrid{grid-template-columns:1fr 1fr;padding:12px}.fbar .ftoggle{padding:0 16px}
 .upanel{padding:18px 10px 20px}
 .rhead{font-size:14px}
@@ -181,6 +185,33 @@ footer{padding:45px 12px 20px}.footer-grid,.footer-bottom{width:100%}
 .footer-bottom{display:block;margin-top:30px;font-size:11px}.footer-bottom span{display:block;margin-top:7px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* ---- same CTA button on every card, even if a partner script touches the link ---- */
+.pk{position:relative}
+.pk a.go,.pk a.go:link,.pk a.go:visited{display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;min-height:48px!important;height:auto!important;padding:0 20px!important;margin:auto 0 0!important;border-radius:100px!important;background:var(--accent)!important;color:#fff!important;border:1px solid var(--accent)!important;font-size:14px!important;font-weight:800!important;letter-spacing:.02em!important;line-height:1.2!important;box-shadow:none!important;text-decoration:none!important;float:none!important;position:static!important}
+.pk a.go:hover{background:#fff!important;color:var(--accent)!important}
+.pk a.go::before,.pk a.go::after{content:none!important;display:none!important}
+.pk a.go img,.pk a.go iframe,.pk a.go svg{display:none!important}
+
+/* ---- touch screens: no sticky hover effects ---- */
+@media(hover:none){
+.pk:hover,.cont:hover,.country:hover{transform:none;box-shadow:var(--sh)}
+.pk a.go:hover{background:var(--accent)!important;color:#fff!important}
+}
+
+/* ---- layout shift: reserve space before the cards are drawn ---- */
+#vgrid{min-height:360px}
+.rhead{min-height:26px}
+.fbar{min-height:58px}
+
+/* ---- See more button ---- */
+.morewrap{display:flex;justify-content:center;margin-top:6px}
+.more{height:50px;padding:0 34px;border:none;border-radius:100px;background:#fff;color:var(--navy);font-weight:800;font-size:15px;box-shadow:var(--sh)}
+.more:hover{background:var(--navy);color:#fff}
+.more[hidden]{display:none}
+
+/* ---- highlight when a card is opened from a direct link ---- */
+.pk.hl{outline:4px solid #fff;box-shadow:0 0 0 9px var(--navy),var(--sh)}
 </style>
 <script type="application/ld+json">
 {
@@ -250,6 +281,7 @@ footer{padding:45px 12px 20px}.footer-grid,.footer-bottom{width:100%}
     <div class="fpanel" id="fpanel"><div class="fin"><div class="fgrid" id="fgrid"></div></div></div>
     <div class="rhead"><span id="count"></span></div>
     <div class="vstrip grid" id="vgrid" aria-live="polite"></div>
+    <div class="morewrap"><button class="more" id="more" type="button" hidden>Show more</button></div>
     <p class="note">Some links on this page are affiliate links. If you book through them, Pinpoint Travel may earn a commission at no extra cost to you.</p>
   </section>
 </div>
@@ -297,7 +329,10 @@ footer{padding:45px 12px 20px}.footer-grid,.footer-bottom{width:100%}
       franceklook.webp, francetiqets.webp, francegyg.webp, francegocity.webp, unitedstatesklook.webp
       Or paste any internet image link in MAIN (see below).
    3. SPECIFIC TOURS (in D) appear only in the full list at the bottom of the page.
-   4. AFFILIATE LINKS: replace each `base` in P with your tracking link, or set links per card in MAIN / EXTRA. */
+   4. AFFILIATE LINKS: replace each `base` in P with your tracking link, or set links per card in MAIN / EXTRA.
+   5. DIRECT LINK TO ONE CARD (for Pinterest): https://pinpointtravel.store/tourpackages/?tour=CARD-ID
+      CARD-ID = country + title, lowercase, joined with hyphens (e.g. france-disneyland-paris-theme-park,
+      broad cards: france-klook). Or tap the link button on a card to copy it. */
 
 const COUNTRY_DIR='https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/countries/', IMG_EXT='webp';
 const CONT_IMG='https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/';
@@ -616,9 +651,9 @@ function nextImg(i){
   if(a.length){i.src=a.shift();i.dataset.alt=a.join('|');}else i.remove();
 }
 window.nextImg=nextImg;
-function slot(srcs,label){
+function slot(srcs,label,alt){
   const list=Array.isArray(srcs)?srcs:[srcs];
-  return `<div class="im"><span><b>ADD IMAGE</b>${label}</span><img src="${list[0]}" data-alt="${list.slice(1).join('|')}" alt="" referrerpolicy="no-referrer" onerror="nextImg(this)"></div>`;
+  return `<div class="im"><span><b>ADD IMAGE</b>${label}</span><img src="${list[0]}" data-alt="${list.slice(1).join('|')}" alt="${alt||''}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="nextImg(this)"></div>`;
 }
 function countryImgs(name){
   return COUNTRY_IMG[name]?[COUNTRY_IMG[name]]:IMG_TRY.map(e=>`${COUNTRY_DIR}${slug(name)}.${e}`);
@@ -636,10 +671,12 @@ function mainCards(country){
   });
 }
 
-/* one card: broad (no price) or specific (with price) */
-function card(o){
+/* one card: broad (no price) or specific (with price). linkable=true -> gets an id + copy-link button */
+function card(o,linkable){
+  const idAttr=linkable&&o.id?` id="${o.id}"`:'';
+  const share='';
   if(o.main){
-    return `<article class="pk main">${slot(o.srcs,`countries/main/${o.file}.webp`)}
+    return `<article class="pk main"${idAttr}>${share}${slot(o.srcs,`countries/main/${o.file}.webp`,`${o.title} – ${o.country}`)}
     <div class="pk-b"><p class="where">${o.pr.n} · ${o.country}</p><h4>${o.title}</h4>
     <a class="go" href="${o.link}" target="_blank" rel="noopener sponsored">View on ${o.pr.n} →</a></div></article>`;
   }
@@ -647,18 +684,31 @@ function card(o){
   const price=prc||TOUR_PRICE[t]||PRICE[bu], url=lnk||TOUR_LINK[t];
   const href=url||(pr.base.endsWith('=')?pr.base+encodeURIComponent(t+' '+o.country):pr.base);
   const f=img||TOUR_IMG[t]||'';
-  return `<article class="pk"><div class="im" style="position:relative"><span><b>ADD IMAGE</b>${t}</span>${f?`<img src="${f}" alt="${t}" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`:''}<em class="price">$${price}</em></div>
+  return `<article class="pk"${idAttr}>${share}<div class="im" style="position:relative"><span><b>ADD IMAGE</b>${t}</span>${f?`<img src="${f}" alt="${t} – ${o.country}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">`:''}<em class="price">$${price}</em></div>
   <div class="pk-b"><p class="where">${o.country}</p><h4>${t}</h4>
   <a class="go" href="${href}" target="_blank" rel="noopener sponsored">Check on ${pr.n} →</a></div></article>`;
 }
 
 /* full list data: specific tours + extra cards, and the broad cards */
-const all=[], mains=[];
+/* every country keeps ITS cards together: specific tours first, then its broad partner cards */
+const groups={}, order=[];
+const grp=n=>groups[n]||(order.push(n),groups[n]={spec:[],main:[]});
 for(const k in D)D[k].c.forEach(c=>{
-  c[1].forEach(p=>all.push({p,country:c[0]}));
-  mainCards(c[0]).forEach(m=>mains.push(m));
+  const g=grp(c[0]);
+  c[1].forEach(p=>g.spec.push({p,country:c[0]}));
+  mainCards(c[0]).forEach(m=>g.main.push(m));
 });
-EXTRA.forEach(e=>all.push({country:e[1],p:[e[0],e[2],e[3],e[4],e[5],e[6],e[7],e[8],e[9]]}));
+EXTRA.forEach(e=>grp(e[1]).spec.push({country:e[1],p:[e[0],e[2],e[3],e[4],e[5],e[6],e[7],e[8],e[9]]}));
+const all=[];
+order.forEach(n=>all.push(...groups[n].spec,...groups[n].main));
+
+/* unique id for every card (country + title). Same title twice gets -2, -3 */
+const used={};
+function giveIds(arr){arr.forEach(o=>{
+  const b=o.main?`${slug(o.country)}-${o.pt}`:slug(`${o.country} ${o.p[0]}`);
+  let id=b,n=2;while(used[id])id=b+'-'+(n++);
+  used[id]=1;o.id=id;});}
+giveIds(all);
 
 /* destinations: country list opens right under the clicked continent */
 let cur='';
@@ -668,35 +718,38 @@ function place(el,panel){
   items[Math.min(items.length-1,Math.floor(i/c)*c+c-1)].after(panel);
 }
 function drawConts(){
-  $('conts').innerHTML=Object.keys(D).map(k=>`<button class="cont" data-k="${k}" aria-pressed="false" aria-expanded="false" aria-controls="contPanel">${slot(D[k].img||`${CONT_IMG}${k}.webp`,k+'.webp')}<span class="lab"><b>${D[k].n}</b></span></button>`).join('');
+  $('conts').innerHTML=Object.keys(D).map(k=>`<button class="cont" data-k="${k}" aria-pressed="false" aria-expanded="false" aria-controls="contPanel">${slot(D[k].img||`${CONT_IMG}${k}.webp`,k+'.webp',`${D[k].n} tour packages`)}<span class="lab"><b>${D[k].n}</b></span></button>`).join('');
 }
 function countriesHTML(k){
   const cols=[[],[]];
   D[k].c.forEach((c,i)=>{
     const mc=mainCards(c[0]);
-    cols[i%2].push(`<div class="country"><button class="ch" aria-expanded="false">${slot(countryImgs(c[0]),`countries/${slug(c[0])}.${IMG_EXT}`)}<span class="nm"><strong>${c[0]}</strong><small>Explore with ${mc.length} partners</small></span><span class="tg">View packages</span><span class="chev"></span></button>
-    <div class="panel"><div class="pgrid">${mc.map(card).join('')}</div></div></div>`);});
+    cols[i%2].push(`<div class="country"><button class="ch" aria-expanded="false">${slot(countryImgs(c[0]),`countries/${slug(c[0])}.${IMG_EXT}`,`${c[0]} tour packages`)}<span class="nm"><strong>${c[0]}</strong><small>Explore with ${mc.length} partners</small></span><span class="tg">View packages</span><span class="chev"></span></button>
+    <div class="panel"><div class="pgrid">${mc.map(o=>card(o)).join('')}</div></div></div>`);});
   return `<div class="uhead"><h3>${D[k].n} <em>countries.</em></h3><button class="uclose">Close ✕</button></div><div class="countries">${cols.map(a=>`<div class="ccol">${a.join('')}</div>`).join('')}</div>`;
 }
-function openCont(k,scroll){
+function openCont(k,keep){
+  const btn=document.querySelector(`.cont[data-k="${k}"]`),y=btn.getBoundingClientRect().top;
   const old=$('contPanel');if(old)old.remove();
   cur=cur===k?'':k;
   document.querySelectorAll('.cont').forEach(b=>{const on=b.dataset.k===cur;b.setAttribute('aria-pressed',on);b.setAttribute('aria-expanded',on);});
-  if(!cur)return;
-  const btn=document.querySelector(`.cont[data-k="${cur}"]`),p=document.createElement('div');
-  p.className='upanel';p.id='contPanel';p.innerHTML=countriesHTML(cur);
-  place(btn,p);
-  if(scroll)setTimeout(()=>btn.scrollIntoView({behavior:'smooth',block:'center'}),60);
+  if(cur){
+    const p=document.createElement('div');
+    p.className='upanel';p.id='contPanel';p.innerHTML=countriesHTML(cur);
+    place(btn,p);
+  }
+  /* keep the clicked continent exactly where it was on screen (no jump) */
+  if(keep){const d=btn.getBoundingClientRect().top-y;if(d)window.scrollBy({top:d,behavior:'instant'});}
 }
 $('conts').addEventListener('click',e=>{
-  if(e.target.closest('.uclose')){const b=document.querySelector(`.cont[data-k="${cur}"]`);openCont(cur,false);b.scrollIntoView({behavior:'smooth',block:'center'});return;}
+  if(e.target.closest('.uclose')){openCont(cur,true);return;}
   const h=e.target.closest('.ch');
   if(h){const o=h.parentElement.classList.toggle('open');h.setAttribute('aria-expanded',o);return;}
   const b=e.target.closest('.cont');if(b)openCont(b.dataset.k,true);
 });
 window.addEventListener('resize',()=>{const p=$('contPanel');if(p&&cur)place(document.querySelector(`.cont[data-k="${cur}"]`),p);});
 drawConts();
-if(D[location.hash.slice(1)])openCont(location.hash.slice(1),true);
+if(D[location.hash.slice(1)]){const hk=location.hash.slice(1);openCont(hk,false);setTimeout(()=>document.querySelector(`.cont[data-k="${hk}"]`).scrollIntoView({behavior:'smooth',block:'center'}),60);}
 
 /* filters (all combine with AND). Broad cards hide when season/budget/trending/type filters are used. */
 const SEL=[
@@ -706,27 +759,56 @@ const SEL=[
  ['s-type','type','Tour type',Object.keys(T).map(x=>[x,T[x]])]
 ];
 let f={},q='';
+const FIRST=12;          /* cards shown when the page loads (change to 10, 20 ...) */
+const STEP=12;           /* cards added each time "Show more" is pressed */
+let shown=FIRST,lastList=[];
 $('fgrid').innerHTML=SEL.map(([id,k,l,it])=>`<label>${l}<select id="${id}" data-k="${k}"><option value="">All</option>${it.map(([v,t])=>`<option value="${v}">${t}</option>`).join('')}</select></label>`).join('')+'<div class="row"><button class="trend" id="trend">Trending only</button><button class="clear" id="clear">Clear all</button></div>';
+function updateMore(){const left=lastList.length-shown;$('more').hidden=left<=0;$('more').textContent=`Show more (${left} left)`;}
 function drawFilters(){
-  const m=all.filter(({p,country})=>
-    (!f.season||p[2]===f.season)&&(!f.budget||p[3]==f.budget)&&(!f.trend||p[4]===1)&&
-    (!f.partner||p[1]===f.partner)&&(!f.type||p[5]===f.type)&&
-    (!q||(p[0]+' '+country+' '+T[p[5]]).toLowerCase().includes(q)))
-  .concat(mains.filter(o=>!f.season&&!f.budget&&!f.trend&&!f.type&&
-    (!f.partner||o.pt===f.partner)&&(!q||(o.title+' '+o.country).toLowerCase().includes(q))));
+  const m=all.filter(o=>{
+    if(o.main)return !f.season&&!f.budget&&!f.trend&&!f.type&&
+      (!f.partner||o.pt===f.partner)&&(!q||(o.title+' '+o.country).toLowerCase().includes(q));
+    const p=o.p,country=o.country;
+    return (!f.season||p[2]===f.season)&&(!f.budget||p[3]==f.budget)&&(!f.trend||p[4]===1)&&
+      (!f.partner||p[1]===f.partner)&&(!f.type||p[5]===f.type)&&
+      (!q||(p[0]+' '+country+' '+T[p[5]]).toLowerCase().includes(q));
+  });
+  lastList=m;
   const n=Object.keys(f).length;
   $('fcount').textContent=n?`(${n})`:'';
   $('trend').setAttribute('aria-pressed',!!f.trend);
   SEL.forEach(([id,k])=>$(id).value=f[k]||'');
   $('count').textContent=`${m.length} package${m.length===1?'':'s'} found`;
-  $('vgrid').innerHTML=m.length?m.map(o=>card(o)).join(''):'<p class="empty" style="grid-column:1/-1;padding:26px 0">No packages match these filters. Try clearing one or two.</p>';
+  $('vgrid').innerHTML=m.length?m.slice(0,shown).map(o=>card(o,true)).join(''):'<p class="empty" style="grid-column:1/-1;padding:26px 0">No packages match these filters. Try clearing one or two.</p>';
+  updateMore();
 }
-$('fgrid').addEventListener('change',e=>{const k=e.target.dataset.k;if(!k)return;e.target.value?f[k]=e.target.value:delete f[k];drawFilters();});
-$('trend').addEventListener('click',()=>{f.trend?delete f.trend:f.trend=1;drawFilters();});
-$('q').addEventListener('input',e=>{q=e.target.value.trim().toLowerCase();drawFilters();});
-$('clear').addEventListener('click',()=>{f={};q='';$('q').value='';drawFilters();});
+$('fgrid').addEventListener('change',e=>{const k=e.target.dataset.k;if(!k)return;e.target.value?f[k]=e.target.value:delete f[k];shown=FIRST;drawFilters();});
+$('trend').addEventListener('click',()=>{f.trend?delete f.trend:f.trend=1;shown=FIRST;drawFilters();});
+$('q').addEventListener('input',e=>{q=e.target.value.trim().toLowerCase();shown=FIRST;drawFilters();});
+$('clear').addEventListener('click',()=>{f={};q='';shown=FIRST;$('q').value='';drawFilters();});
 $('ftoggle').addEventListener('click',()=>{const o=$('fpanel').classList.toggle('open');$('ftoggle').setAttribute('aria-expanded',o);});
+
+/* Show more: only ADD the next cards (nothing is redrawn, so nothing jumps) */
+$('more').addEventListener('click',()=>{
+  const from=shown;shown+=STEP;
+  $('vgrid').insertAdjacentHTML('beforeend',lastList.slice(from,shown).map(o=>card(o,true)).join(''));
+  updateMore();
+});
+
+/* Direct link to one card: ?tour=card-id  (or #card-id). Opens the list, scrolls to the card, highlights it */
+function openDeep(){
+  const id=new URLSearchParams(location.search).get('tour')||decodeURIComponent(location.hash.slice(1));
+  if(!id||D[id]||!used[id])return;
+  f={};q='';$('q').value='';shown=FIRST;drawFilters();
+  const i=lastList.findIndex(o=>o.id===id);
+  if(i<0)return;
+  if(i>=shown){shown=i+1;drawFilters();}
+  const el=document.getElementById(id);if(!el)return;
+  setTimeout(()=>{el.scrollIntoView({behavior:'smooth',block:'center'});el.classList.add('hl');setTimeout(()=>el.classList.remove('hl'),4000);},200);
+}
 drawFilters();
+openDeep();
+window.addEventListener('hashchange',openDeep);
 
 /* mobile menu */
 const mb=$('menuButton'),nav=$('navigation');
