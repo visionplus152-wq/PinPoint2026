@@ -332,7 +332,9 @@ footer{padding:45px 12px 20px}.footer-grid,.footer-bottom{width:100%}
    4. AFFILIATE LINKS: replace each `base` in P with your tracking link, or set links per card in MAIN / EXTRA.
    5. DIRECT LINK TO ONE CARD (for Pinterest): https://pinpointtravel.store/tourpackages/?tour=CARD-ID
       CARD-ID = country + title, lowercase, joined with hyphens (e.g. france-disneyland-paris-theme-park,
-      broad cards: france-klook). Or tap the link button on a card to copy it. */
+      broad cards: france-klook). Or tap the link button on a card to copy it.
+   6. PARTNER NAME in a tour line must be: klook | tiqets | gocity | gyg
+      (writing "Go city" or "Go City" is now also accepted and fixed automatically). */
 
 const COUNTRY_DIR='https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/countries/', IMG_EXT='webp';
 const CONT_IMG='https://cdn.jsdelivr.net/gh/visionplus152-wq/PinPoint2026/images/';
@@ -567,6 +569,10 @@ const P={
   gocity:{n:'Go City',base:'https://gocity.com/'},
   gyg:{n:'GetYourGuide',base:'https://www.getyourguide.com/s/?q='}
 };
+/* FIX: accept "Go city", "Go City", "GO CITY", "getyourguide" etc. and turn them into the real partner key */
+const PALIAS={gocity:'gocity',klook:'klook',tiqets:'tiqets',gyg:'gyg',getyourguide:'gyg'};
+const normPartner=s=>PALIAS[flat(String(s||''))]||'klook';
+
 const S={spring:'Spring',summer:'Summer',autumn:'Autumn',winter:'Winter',all:'Year-round'};
 const B={1:'$ Budget',2:'$$ Mid-range',3:'$$$ Premium'};
 const PRICE={1:40,2:85,3:160};   /* default price by budget level for specific tours */
@@ -600,31 +606,33 @@ europe:{n:'Europe',c:[
  ['Giethoorn Day Trip with Canal Tour','klook','',2,1,'d',"https://resortvenetie.eu/storage/upload/Giethoorn.jpg",74,"https://klook.tpx.gr/S9i2Kbp8"]]]
 ]},
 america:{n:'America',c:[
- ['United States',[['Universal Studios Hollywood Tickets','klook','',2,1,'a',"https://stuffedsuitcase.com/wp-content/uploads/2019/05/Universal-Studios-Hollywood-California.jpg",89,"https://klook.tpx.gr/ZzFpHBUh"],
+ ['United States',[
  ['Walt Disney World Resort Ticket','klook','',2,1,'a',"https://res.klook.com/image/upload/c_crop,h_1875,w_3000,x_0,y_97,z_0.3/w_1265,h_791,c_fill,q_85/activities/l7utff9eneqs3kcxil7s.webp",126,"https://klook.tpx.gr/7FGkMc2x"],
  ['High Roller Ticket in Las Vegas','klook','',2,1,'a',"https://cdn-imgix.headout.com/media/images/69c105340e15dd1a8013316baad783ce-The%20High%20Roller.jpg?auto=compress%2Cformat&w=1222.3999999999999&h=687.6&q=90&ar=16%3A9&crop=faces&fit=crop",21,"https://klook.tpx.gr/TWO5W3gR"],
  ['Miami Zoo Tickets','tiqets','',2,1,'a',"https://www.zoomiami.org/assets/2891/vip-tour-pic.jpg",22,"https://tiqets.tpx.gr/TXE5T6C6"],
  ['The 9/11 Memorial & Museum Tickets','tiqets','',2,1,'a',"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxwRiLBkofqyKJItRabvTiGzUe8X9i60YsgoOCdh99IQ5-2xnFhgJBwU63&s=10",32,"https://tiqets.tpx.gr/UfaoOVUn"],
  ['USS Midway Museum Tickets','tiqets','',2,1,'a',"https://aws-tiqets-cdn.imgix.net/images/content/793e487771874420ac8f87663b9cee21.jpg?auto=format%2Ccompress&fit=crop&q=70",37,"https://tiqets.tpx.gr/fRQWgKE8"],
- ['Explore Boston','Go city','',2,1,'p',"https://www.travelandleisure.com/thmb/ZEKbYPYOZhWtnv4V9R4TK4tReak=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-lead-image-BOSTONMA0426-d4d1be656e934a47bc5aa71a8b418758.jpg",69,"https://gocity.tpx.gr/OXDvIDvj"],
- ['abcd','klook','',2,1,'d',"",74,""],
- ['abcd','klook','',2,1,'d',"",74,""],
- ['abcd','klook','',2,1,'d',"",74,""]]],
+ /* FIX: partner was written as 'Go city' (not a valid key) which crashed the whole page. Now 'gocity'. */
+ ['Explore Boston','gocity','',2,1,'p',"https://www.travelandleisure.com/thmb/ZEKbYPYOZhWtnv4V9R4TK4tReak=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-lead-image-BOSTONMA0426-d4d1be656e934a47bc5aa71a8b418758.jpg",69,"https://gocity.tpx.gr/OXDvIDvj"],
+ ['Universal Studios Hollywood Tickets','klook','',2,1,'d',"https://stuffedsuitcase.com/wp-content/uploads/2019/05/Universal-Studios-Hollywood-California.jpg",89,"https://klook.tpx.gr/ZzFpHBUh"]
+ /* placeholder line, delete the comment marks when you have a real tour:
+ ,['abcd','klook','',2,1,'d',"",74,""] */
+ ]],
  /*['Mexico',[['abcd','klook','',2,1,'d',"",74,""],['abcd','klook','',2,1,'d',"",74,""],['abcd','klook','',2,1,'d',"",74,""]]],
  ['Peru',[['Machu Picchu Entry & Train','klook','summer',3,1,'a'],['Rainbow Mountain Hike','klook','summer',1,0,'d'],['Sacred Valley Day Tour','gyg','spring',2,0,'d']]],*/
- ['Canada',[['abcd','klook','',2,1,'d',"",74,""],['abcd','klook','',2,1,'d',"",74,""]]],
+ /*['Canada',[['abcd','klook','',2,1,'d',"",74,""],['abcd','klook','',2,1,'d',"",74,""]]],*/
  /*['Brazil',[['Christ the Redeemer & Sugarloaf','klook','all',1,1,'a'],['Iguazu Falls Tour','gyg','autumn',2,0,'d']]],
  ['Argentina',[['Tango Show & Dinner','klook','all',2,0,'x'],['Perito Moreno Glacier Day Trip','gyg','summer',3,1,'d']]],
  ['Costa Rica',[['Arenal Volcano & Hot Springs','klook','winter',2,1,'d'],['Monteverde Zipline Adventure','gyg','winter',2,0,'x']]],
  ['Colombia',[['Cartagena Old City Walking Tour','gyg','winter',1,0,'x']]]*/
 ]},
 asia:{n:'Asia',c:[
- ['Japan',[['Kyoto Temples & Geisha District','klook','spring',2,1,'x'],['Mt. Fuji Day Trip','klook','autumn',2,1,'d'],['Osaka Street Food Tour','gyg','all',1,0,'x']]],
+ /*['Japan',[['Kyoto Temples & Geisha District','klook','spring',2,1,'x'],['Mt. Fuji Day Trip','klook','autumn',2,1,'d'],['Osaka Street Food Tour','gyg','all',1,0,'x']]],
  ['Thailand',[['Phi Phi Islands Speedboat','klook','winter',1,1,'d'],['Bangkok Temples & Floating Market','klook','all',1,0,'x'],['Chiang Mai Elephant Sanctuary','gyg','winter',2,0,'x']]],
  ['UAE',[['Burj Khalifa At the Top','tiqets','winter',2,1,'a'],['Desert Safari with BBQ Dinner','klook','winter',1,1,'x'],['Dubai Explorer Pass','gocity','winter',2,0,'p']]],
- /*['Vietnam',[['Ha Long Bay Day Cruise','klook','autumn',2,1,'x'],['Hoi An Lantern & Cooking Class','gyg','all',1,0,'x']]],
+ ['Vietnam',[['Ha Long Bay Day Cruise','klook','autumn',2,1,'x'],['Hoi An Lantern & Cooking Class','gyg','all',1,0,'x']]],
  ['South Korea',[['Seoul DMZ Tour','klook','spring',2,1,'d'],['Jeju Island Day Tour','klook','autumn',2,0,'d']]],
- ['Singapore',[['Gardens by the Bay Tickets','klook','all',1,1,'a'],['Singapore Explorer Pass','gocity','all',2,0,'p']]],*/
+ ['Singapore',[['Gardens by the Bay Tickets','klook','all',1,1,'a'],['Singapore Explorer Pass','gocity','all',2,0,'p']]],
  ['Indonesia',[['Bali Temples & Rice Terraces','klook','all',1,1,'d'],['Komodo Island Boat Trip','gyg','summer',3,0,'m']]],
  /*['India',[['Taj Mahal Sunrise Tour','gyg','winter',1,1,'d'],['Jaipur Pink City Tour','klook','winter',2,0,'d']]]*/
 ]},
@@ -639,8 +647,8 @@ africa:{n:'Africa',c:[
  ['Seychelles',[['Praslin & La Digue Island Hopping','klook','all',3,0,'x'],['Mahé Island Highlights Tour','gyg','all',2,0,'d']]]*/
 ]},
 oceania:{n:'Oceania',img:'',c:[
- ['Australia',[['Sydney Opera House Tour','tiqets','all',2,1,'a'],['Great Barrier Reef Snorkel Cruise','klook','winter',3,1,'x']]],
- /*['New Zealand',[['Milford Sound Cruise','klook','summer',3,1,'x'],['Hobbiton Movie Set Tour','gyg','all',2,1,'a']]],
+ /*['Australia',[['Sydney Opera House Tour','tiqets','all',2,1,'a'],['Great Barrier Reef Snorkel Cruise','klook','winter',3,1,'x']]],
+ ['New Zealand',[['Milford Sound Cruise','klook','summer',3,1,'x'],['Hobbiton Movie Set Tour','gyg','all',2,1,'a']]],
  ['Fiji',[['Island Hopping Cruise','klook','summer',2,1,'x'],['Cloud 9 Floating Bar Day','klook','all',2,0,'x']]],
  ['French Polynesia',[['Bora Bora Lagoon Tour','klook','summer',3,1,'x'],['Moorea Island Day Trip','gyg','summer',2,0,'d']]],
  ['Cook Islands',[['Rarotonga Island Circle Tour','gyg','winter',2,0,'d'],['Aitutaki Lagoon Cruise','klook','winter',3,1,'x']]],
@@ -671,8 +679,8 @@ function countryImgs(name){
 /* the 3 broad partner cards of a country */
 function mainCards(country){
   const list=MAIN[country]||MAIN_PARTNERS.map(p=>[p]);
-  return list.slice(0,3).map(([pt,url,text,img])=>{
-    const pr=P[pt], file=flat(country)+pt;
+  return list.slice(0,3).map(([pt0,url,text,img])=>{
+    const pt=normPartner(pt0), pr=P[pt], file=flat(country)+pt;
     return {main:1,pt,pr,country,file,
       title:text||MAIN_TEXT[pt].replace('{c}',country),
       link:url||(pr.base.endsWith('=')?pr.base+encodeURIComponent(country):pr.base),
@@ -689,7 +697,7 @@ function card(o,linkable){
     <div class="pk-b"><p class="where">${o.pr.n} · ${o.country}</p><h4>${o.title}</h4>
     <a class="go" href="${o.link}" target="_blank" rel="noopener sponsored">View on ${o.pr.n} →</a></div></article>`;
   }
-  const [t,pt,se,bu,tr,ty,img,prc,lnk]=o.p,pr=P[pt];
+  const [t,pt0,se,bu,tr,ty,img,prc,lnk]=o.p,pt=normPartner(pt0),pr=P[pt];
   const price=prc||TOUR_PRICE[t]||PRICE[bu], url=lnk||TOUR_LINK[t];
   const href=url||(pr.base.endsWith('=')?pr.base+encodeURIComponent(t+' '+o.country):pr.base);
   const f=img||TOUR_IMG[t]||'';
@@ -704,10 +712,10 @@ const groups={}, order=[];
 const grp=n=>groups[n]||(order.push(n),groups[n]={spec:[],main:[]});
 for(const k in D)D[k].c.forEach(c=>{
   const g=grp(c[0]);
-  c[1].forEach(p=>g.spec.push({p,country:c[0]}));
+  c[1].forEach(p=>{p[1]=normPartner(p[1]);g.spec.push({p,country:c[0]});});   /* partner name is cleaned here */
   mainCards(c[0]).forEach(m=>g.main.push(m));
 });
-EXTRA.forEach(e=>grp(e[1]).spec.push({country:e[1],p:[e[0],e[2],e[3],e[4],e[5],e[6],e[7],e[8],e[9]]}));
+EXTRA.forEach(e=>grp(e[1]).spec.push({country:e[1],p:[e[0],normPartner(e[2]),e[3],e[4],e[5],e[6],e[7],e[8],e[9]]}));
 const all=[];
 order.forEach(n=>all.push(...groups[n].spec,...groups[n].main));
 
