@@ -600,10 +600,19 @@ europe:{n:'Europe',c:[
  ['Giethoorn Day Trip with Canal Tour','klook','',2,1,'d',"https://resortvenetie.eu/storage/upload/Giethoorn.jpg",74,"https://klook.tpx.gr/S9i2Kbp8"]]]
 ]},
 america:{n:'America',c:[
- ['United States',[['New York City Pass','gocity','all',2,1,'p'],['Grand Canyon Day Tour','klook','spring',2,0,'d'],['Orlando Theme Park Tickets','klook','summer',2,1,'a']]],
- ['Mexico',[['Chichén Itzá Day Trip','klook','winter',2,1,'d'],['Tulum & Cenote Swim','gyg','winter',1,0,'x'],['Mexico City Street Food Tour','gyg','autumn',1,0,'x']]],
- /*['Peru',[['Machu Picchu Entry & Train','klook','summer',3,1,'a'],['Rainbow Mountain Hike','klook','summer',1,0,'d'],['Sacred Valley Day Tour','gyg','spring',2,0,'d']]],*/
- ['Canada',[['Niagara Falls Day Tour','klook','summer',2,1,'d'],['Banff & Rockies Day Trip','gyg','winter',2,0,'d']]],
+ ['United States',[['Universal Studios Hollywood Tickets','klook','',2,1,'a',"https://stuffedsuitcase.com/wp-content/uploads/2019/05/Universal-Studios-Hollywood-California.jpg",89,"https://klook.tpx.gr/ZzFpHBUh"],
+ ['Walt Disney World Resort Ticket','klook','',2,1,'a',"https://res.klook.com/image/upload/c_crop,h_1875,w_3000,x_0,y_97,z_0.3/w_1265,h_791,c_fill,q_85/activities/l7utff9eneqs3kcxil7s.webp",126,"https://klook.tpx.gr/7FGkMc2x"],
+ ['High Roller Ticket in Las Vegas','klook','',2,1,'a',"https://cdn-imgix.headout.com/media/images/69c105340e15dd1a8013316baad783ce-The%20High%20Roller.jpg?auto=compress%2Cformat&w=1222.3999999999999&h=687.6&q=90&ar=16%3A9&crop=faces&fit=crop",21,"https://klook.tpx.gr/TWO5W3gR"],
+ ['Miami Zoo Tickets','tiqets','',2,1,'a',"https://www.zoomiami.org/assets/2891/vip-tour-pic.jpg",22,"https://tiqets.tpx.gr/TXE5T6C6"],
+ ['The 9/11 Memorial & Museum Tickets','tiqets','',2,1,'a',"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxwRiLBkofqyKJItRabvTiGzUe8X9i60YsgoOCdh99IQ5-2xnFhgJBwU63&s=10",32,"https://tiqets.tpx.gr/UfaoOVUn"],
+ ['USS Midway Museum Tickets','tiqets','',2,1,'a',"https://aws-tiqets-cdn.imgix.net/images/content/793e487771874420ac8f87663b9cee21.jpg?auto=format%2Ccompress&fit=crop&q=70",37,"https://tiqets.tpx.gr/fRQWgKE8"],
+ ['Explore Boston','Go city','',2,1,'p',"https://www.travelandleisure.com/thmb/ZEKbYPYOZhWtnv4V9R4TK4tReak=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-lead-image-BOSTONMA0426-d4d1be656e934a47bc5aa71a8b418758.jpg",69,"https://gocity.tpx.gr/OXDvIDvj"],
+ ['abcd','klook','',2,1,'d',"",74,""],
+ ['abcd','klook','',2,1,'d',"",74,""],
+ ['abcd','klook','',2,1,'d',"",74,""]]],
+ /*['Mexico',[['abcd','klook','',2,1,'d',"",74,""],['abcd','klook','',2,1,'d',"",74,""],['abcd','klook','',2,1,'d',"",74,""]]],
+ ['Peru',[['Machu Picchu Entry & Train','klook','summer',3,1,'a'],['Rainbow Mountain Hike','klook','summer',1,0,'d'],['Sacred Valley Day Tour','gyg','spring',2,0,'d']]],*/
+ ['Canada',[['abcd','klook','',2,1,'d',"",74,""],['abcd','klook','',2,1,'d',"",74,""]]],
  /*['Brazil',[['Christ the Redeemer & Sugarloaf','klook','all',1,1,'a'],['Iguazu Falls Tour','gyg','autumn',2,0,'d']]],
  ['Argentina',[['Tango Show & Dinner','klook','all',2,0,'x'],['Perito Moreno Glacier Day Trip','gyg','summer',3,1,'d']]],
  ['Costa Rica',[['Arenal Volcano & Hot Springs','klook','winter',2,1,'d'],['Monteverde Zipline Adventure','gyg','winter',2,0,'x']]],
@@ -760,7 +769,7 @@ const SEL=[
 ];
 let f={},q='';
 const FIRST=20;          /* cards shown when the page loads (change to 10, 20 ...) */
-const STEP=22;           /* cards added each time "Show more" is pressed */
+const STEP=24;           /* cards added each time "Show more" is pressed */
 let shown=FIRST,lastList=[];
 $('fgrid').innerHTML=SEL.map(([id,k,l,it])=>`<label>${l}<select id="${id}" data-k="${k}"><option value="">All</option>${it.map(([v,t])=>`<option value="${v}">${t}</option>`).join('')}</select></label>`).join('')+'<div class="row"><button class="trend" id="trend">Trending only</button><button class="clear" id="clear">Clear all</button></div>';
 function updateMore(){const left=lastList.length-shown;$('more').hidden=left<=0;$('more').textContent=`Show more (${left} left)`;}
